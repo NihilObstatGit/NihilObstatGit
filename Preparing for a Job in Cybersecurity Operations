@@ -1,0 +1,281 @@
+Module 16
+Introduction
+1.	In this module, you will look at roles, responsibilities, tasks, and technologies associated with key job roles, as well as defensive technologies you can use in your own defense-in-depth strategies. Furthermore, you will examine many of the issues and failures that lead to many of the cyber breaches that you read about in the news on a regular basis. You will take a first-hand look at the process and approach for diagnosing critical issues or cyber shortcomings. As such, you will also look at the necessary fixes and stopgap measures you can apply in order to mitigate and remediate gap areas. Taking a holistic approach to the Secure Development Lifecycle further reinforces this approach and gives you ample tools to implement security within internal systems and products from cradle to grave. 
+SOC and IR Roles
+1.	As of today, there are so many exciting and rewarding career opportunities within the cybersecurity field. Job roles can span the spectrum from highly specialized technical or engineering roles to managerial and leadership positions. 
+a.	There is an array of potential roles within the cybersecurity spectrum that you can choose from. Two indispensable roles that are central to security operations and defense are the security operations center (SOC) professional (e.g., analyst) and incident response practitioner. 
+b.	SOC roles are crucial for monitoring, detecting, analyzing, and escalating potential cybersecurity threats. Incident response professionals are key for responding to critical threats that may be affecting your organization. Both are key for safeguarding key assets, identifying threats, and responding to any attacks.
+2.	Working in a SOC can be both a challenging and rewarding opportunity. It often offers the opportunity to develop your skills and capabilities with respect to threat detection, analysis, and triage. Furthermore, you can learn how to leverage threat intelligence and open-source threat information to identify threats and defend the organization. Conversely, SOC work can often be demanding and fast-paced due to the work environment and time-critical nature of the work. Depending on the organization, it may require shift work and off-hours as well. The SOC environment offers an abundance of pros and cons for any aspiring security professional. It’s also a great place to cut your teeth within the cybersecurity arena and gain front row access to threat detection and response. 
+3.	When thinking about a job in cybersecurity, keep in mind the importance of soft skills. The cybersecurity industry has changed dramatically over the last decade or two. What was once a relatively technical domain with little need for soft skills and management prowess has transformed into a more mature discipline, and cybersecurity has also become more aligned with business as a whole. As such, the need for soft skills and the ability to articulate complex cybersecurity concepts to organizational management or senior executives has increased precipitously. Considering the continued need to secure organizations against the onslaught of cybersecurity threats and headline risk, cybersecurity will continue to integrate further within the organizational management ranks, and the need for soft skills both internally and externally will continue to grow in kind. This is a key area with little to no downside. The ability to bolster your own soft skills yields dividends for both your team members and you and will markedly increase your marketability and mobility within your organization. 
+4.	Two Main Roles in Cybersecurity: 
+a.	Incident Responder
+i.	First tier of operational response:
+1.	Receives notices or alerts
+2.	Detects incidents
+3.	Analyzes events
+4.	Resolves incidents and cybersecurity events.
+b.	SOC Analyst
+i.	Cybersecurity command center of organization
+ii.	Performs real-time monitoring and analysis:
+1.	Prevents, detects, analyzes, and reports on potential security threats. 
+iii.	Reports on weakness and incidents that might harm: 
+1.	Confidentiality
+2.	Integrity
+3.	Availability
+5.	Recognizing cybersecurity issues is critical in order to defend against potential attacks. 
+6.	Different Types of Analysts:
+a.	Threat and Vulnerability Intelligence Analyst:
+i.	Seeks out knowledge of new threats and vulnerabilities and makes others in the security team aware. 
+b.	Security Event Analyst:
+i.	Operates tools to collect and detect threats. 
+c.	Firewall and Intrusion Detection Analyst:
+i.	Ensures the proper working of tools. 
+ii.	Sets parameters for tools and secures them with appropriate access management and passwords. 
+7.	The security team that does the defensive work is called the blue team. 
+Cryptography Meets Network Authentication Services
+1.	Defense-in-depth allows you to better secure and protect the multiple layers and avenues of attack within your complex information infrastructure. In this section, you’ll explore some of the specific tools that you can weave into your defense-in-depth strategy to bolster the defensive posture of your organization. 
+2.	Defense-in-depth servers as a strong foundation for your defensive architecture. By applying logical and administrative controls across multiple layers within your technology stack, you’re better able to protect against an array of potential attacks across a spectrum of systems or information devices. Leveraging technologies such as a virtual private network (VPN) helps to authenticate users and provide transport layer security. Using a VPN for authenticating users and securing sessions can help to ensure that only approved devices and users are allowed on the network. Furthermore, it helps to secure the session and ensure data is transmitted in a safe and secure fashion. 
+3.	Defense-in-depth Architecture:
+a.	Layer 1:
+i.	VPN
+ii.	Features of a Good VPN:
+1.	Only the sender and the VPN provider know the sender’s information.
+2.	Does not leave a trace, such as search history or cookies.
+3.	Detect interruption and terminate all the ongoing process.
+4.	Reduce chances of a data breach. 
+5.	Multiple authentication methods. 
+a.	User enter phone number
+b.	User authentic mobile
+c.	User enter OTP
+6.	Some VPNs use IEEE 802.1X, an IEEE standard for port-based network access control. 
+a.	End user supplicant/client enters username and password to an authenticator switch that relays username and password to a Radius authenticator server. That server accepts the username and password to the authenticator switch, which grants internet access to the end user. 
+b.	Access Rules:
+i.	User device should be a part of an approved inventory.
+ii.	User device must be running approved with approved configuration.
+iii.	User device need to be authenticated; that means bringing in cryptography.
+iv.	User has to update time and place of arrival. 
+7.	Users and devices must be approved. 
+8.	Ensure that the data is not corrupted or accessed inappropriately while being transported. 
+4.	Things to remember: 
+a.	For effective security, use a VPN with IEEE 802.1X, which is the advanced way of designing.
+b.	A VPN is a secure connection, but it does not protect the organization from hackers. 
+c.	A VPN is a secure transport layer, but organizations must still put security in place to ensure their safety. 
+VPN Selection
+	OpenVPN in my opinion is the best open-source VPN solution, which can provide access to remote access clients and enable site-to-site connectivity. This is best for my environment in particular, because I make use of cloud services like Linode to establish a VPN in the cloud. This way I have a VPN in the cloud that doesn’t utilize very many other services other than networking and only costs me around 20 dollars and allows me to connect to my PC remotely. If I ever forgot to save a document and flash it to another online service like dropbox, then I can I always remote into my PC and save that document. My selection criteria for a strong VPN are that only me and the provider (OpenVPN) know my information, logs are useful for troubleshooting connection issues, and allows for X.509 (also known as TLS, SSL, or PKI). Furthermore, OpenVPN, supports 802.1X authentication which allows for remote access to servers connected to the VPN. I caught wind of OpenVPN after getting involved in Tryhackme and it’s use cases in connecting to a vpn to allow for secure shell access to boxes was enticing, because it essentially connects you to several machines able to be accessed via procedurally generated IP ranges in OpenVPN and allows for anonymity on the internet and secure transport of data. Other key criteria to any VPN any enterprise should look into is logging controls. Since most VPN providers these days share data it is prudent to ensure that your VPN provider does not share your data with other users. Since OpenVPN is customizable and allows for users to be able to build their own VPN under their own terms and using their own services such as Linode any user can disable logging. I choose to keep it enabled, because it helps me in understanding whether or not someone other than myself is trying or succeeding in connecting to my VPN and plus it helps with troubleshooting general connectivity issues. 
+References: 
+OpenVPN. Virtual Private Networks - OpenVPN | pfSense Documentation. (n.d.). Retrieved June 19, 2022, from https://docs.netgate.com/pfsense/en/latest/vpn/openvpn/index.html 
+Privileged Access Management
+1.	Accounts with privileged access typically have a higher level of access to information systems and associated resources. Generally, accounts with elevated privileges (such as “root” or “superuser”) are able to access potentially sensitive data or administer key system resources. Accounts with privileged access must be provisioned with discipline and monitored/reviewed on a regular basis. By leveraging privileged access management principles, you can ensure you appropriately restrict account privileges and mange those accounts that require additional access. 
+2.	Layers 2:
+a.	Privileged access management (PAM):
+i.	Refers to strategies and technologies used to manage the most powerful accounts or the privileged or elevated accounts in our systems. 
+3.	What is Privileged Access Management:
+a.	Privileged access:
+i.	Refers to the super user accounts that have special access beyond a standard user.
+ii.	Might be:
+1.	Access to override
+2.	Bypass of security levels
+3.	Configuration of networks
+4.	Configuration of systems
+5.	Security parameters
+6.	System shutdown
+7.	Safety switch override
+b.	Examples:
+i.	Unix-root account
+ii.	Windows system-System admin
+iii.	Network database, and operational technology
+4.	PAM is an important tool for managing systems because it can override almost all the other account permissions but at the same time can be used to accidentally misconfigure systems. 
+5.	Types of PAM Accounts:
+a.	Emergency accounts
+b.	Local administrative accounts
+c.	Application accounts
+d.	Active directory
+e.	Window domain service accounts
+6.	Privileged Access Management:
+a.	Have individual identifiers
+b.	Avoid concentration of power
+c.	Constantly monitor the use of credentials
+Privileged Access Management
+	Having special access beyond the means of a super user inherently goes against the rule of least privilege; however, at times they are necessary in order to complete tasks that no standard user can complete by themselves and it’s up to the people with these powers to exercise them responsibly and keep their credentials private. There are inherent risks that come with allowing privileged access. Since privileged access can override almost all other account permissions it’s clear that the user with these privileges must keep their credentials safe or the access to data and resources they are entitled to is at risk. Detrimental outcomes could include misconfiguration of software that lead to vulnerabilities in the network or credentials are leaked (they forget to empty their clipboard when utilizing their credentials for example) and suddenly their access and entitlements are being used by a bad actor. If an attacker were to gain control of an elevated account with privileged access, then it means that attacker now has the same capabilities as that privileged user and can lead to distribution of malware, command and control, or lateral movement through the network and finally lead to a data breach. This kind of damage can cause millions in lost revenue to the company and loss of trust with stakeholders. 
+Security Considerations of IT Change Management
+1.	As systems are updated, patched, and reconfigured during regular or routine maintenance, it’s important that policies and procedures are in place to verify the appropriate levels of security controls are established. Ideally, security should be an embedded aspect of the change management process and included within relevant procedures or general practices. 
+2.	Security Consideration of IT Change Management:
+a.	Configuration management
+i.	Manages the configurations of all network appliances. 
+ii.	Establish policies and controls as a layer of defense.
+iii.	Ensure configurations meet security policies. 
+iv.	Re-evaluate the configurations to monitor the security impact. 
+v.	Ensure change management board is in place to review and approve proposed changes in configurations. 
+1.	A change management board is a group of people who will:
+a.	Review proposed changes. 
+b.	Offer advice on the impact that the changes might have on the overall IT environment. 
+b.	Release management
+i.	Releases are new versions of:
+1.	Applications
+2.	Operating systems
+3.	Software databases
+ii.	Helps us to know the controls in each version and the version in production. 
+iii.	You want to keep a copy of the older versions in case you have to roll back to something prior to the current configuration. 
+c.	Maintenance
+i.	Update security processes for updates or new releases. 
+ii.	Remote access is done through outside physical organizations and security vendors. 
+iii.	Give a vendor a new one-time password when required and turn off the password when not needed. 
+iv.	Keep track of who has access to the password on the system.
+1.	Track who was here, what they did, and when, should a breach occur. 
+v.	Figure out how it happened. 
+vi.	Remote maintenance:
+1.	When maintenance is done remotely, it introduces a whole new level of vulnerabilities: 
+a.	Where is the remote maintenance coming from?
+b.	Who’s doing it?
+c.	What tools are they using?
+d.	Compliance Testing
+i.	Maintain the necessary compliance, regulation, and management practices. 
+ii.	Test out the new release: 
+1.	Comply with the security controls that we need to have in place for protection. 
+2.	Ensure updated compliance practices are in place. 
+3.	Solar Winds is an example of a failure of secure IT change management processes because it failed in validating updates. 
+Integrating Security Within Enterprise Processes
+	In regard to my environment, I believe that configuration management has a strong presence and integrated approach to security. To achieve this, I recently utilized the common criteria for Information Technology Security Evaluation to examine two things. A protection profile and a security target. I looked at three things first off. I want to acquire a particular type of security product such as OpenVPN that defines my security needs. Second, I take a look at this protection profile and write a security target that follows the protection profile and have it evaluated. Third, I build a target of evaluation (TOE) which follows seven evaluation levels. I ensure that the product is functionally tested, structurally tested, methodically tested, and checked, methodically designed, tested, and reviewed, semi-formally designed and tested, semi-formally verified design and tested, and formally verified design and tested. All of this seems a little overkill for personal use; however, it’s good practice, because it also allows for threat modeling of specific processes and ensures that those processes are monitored and logged. Microsoft’s threat modeling tool not only looks at services and the application itself, but the underlying processes that allow that application to work. For example, spoofing OS processes or entity is something other than its claimed identity; therefore, times and places are crucial to setting up a generic trust border boundary (Jegeib, n.d.). These processes in and of themselves lead me to threat modeling, because compliance testing inherently does not have a strong approach to security. These types of processes are often overlooked and lead to breaches that last years without anyone ever being none the wiser. It’s because of secure change management processes that security must be embedded within general IT functions by process and policy. Ways to mitigate this are also outlined by CISA in their Software Security Framework, which touch on governance, intelligence, SDL touchpoints, and deployment of said software. Organizations ought to build organizational support for this software, establish a unified approach to address regulatory and customer needs, promote an organizational culture of security, and provide awareness training at the policy level. At the technical level, organizations ought to ensure a solid security infrastructure for software development and validation of these attack surfaces, as they ought to be looked at, evaluate the attacker perspective, and develop and test using appropriate host/network security. This list is non-exhaustive and definitely includes more activities an organization must address according to Citigal and Fortify’s Software Security Framework, but for my purposes allows me to understand where I can improve on gap areas when it comes to compliance testing and definitely provides the remedy needed to secure those gaps. 
+References: 
+Jegeib. (n.d.). Microsoft Threat Modeling Tool Overview - Azure. overview - Azure | Microsoft Docs. Retrieved June 19, 2022, from https://docs.microsoft.com/en-us/azure/security/develop/threat-modeling-tool 
+Secure software development life cycle processes. CISA. (n.d.). Retrieved June 19, 2022, from https://www.cisa.gov/uscert/bsi/articles/knowledge/sdlc-process/secure-software-development-life-cycle-processes#cc 
+Reasons for Cyber Failures
+1.	Cyber failures can come in many forms – some avoidable and others not so much. In this section, you’ll evaluate the various aspects of cyber failures and some of the simple and effective approaches you can employ to mitigate undue risk.
+a.	Patching and updating software on a regular basis may come at a cost in terms of time and resources but neglecting such crucial practices can have negative effects. Unpatched and vulnerable systems can be left unprotected to even well-known attacks if left open and unmitigated. Regular and routine patch management can play a key role in preventing many common cyber failures. 
+2.	Reasons for Cybersecurity Failures:
+a.	Believing that adequate security protocols are good enough.
+i.	Security protocols do not have a comprehensive cybersecurity plan, which is important for identifying the holes in a defensive posture. 
+ii.	NIST model:
+1.	Essential characteristics:
+a.	Broad network access
+b.	Rapid elasticity
+c.	Measured service
+d.	On-demand self-service
+e.	Resource pooling
+2.	Service models:
+a.	SaaS
+b.	PaaS
+c.	IaaS
+3.	Deployment models:
+a.	Public
+b.	Private
+c.	Hybrid
+d.	Community
+iii.	The security model in an organization:
+1.	Ensures that holes are plugged.
+2.	Enables the use of various tools for security operations. 
+b.	Supposing that all security compliance issues are met.
+i.	Challenges with cloud computing:
+1.	Leaders presume that all safety and enforcement issues are covered.
+2.	Organizations must be aware of the security services included in third-party agreements. 
+c.	Neglecting or delaying IT security upgrades.
+i.	Organizations’ delay in installing updates could open the door for cyber attackers. So, the more promptly updates are installed, the better. 
+d.	The inability to properly manage corporate cybersecurity risk.
+i.	Risk officers and cybersecurity leaders struggle to identify both the vulnerabilities and the chance of causing damage to their organization. 
+e.	The lack of alignment of management on priorities. 
+i.	Senior management is getting regular reports on cybersecurity, but it has nothing standardized to follow when wanting to know the methods and metrics used. 
+f.	The lack of adequate funding. 
+3.	Cybersecurity Incidents:
+a.	Businesses continue to use systems discontinued by Microsoft.
+b.	Organizations’ production software only runs on Windows 7 or older versions. 
+i.	These systems are highly vulnerable to cyber-attacks.
+c.	Attackers visit resources on the dark web that target these known openings. 
+i.	Attackers use technology available on the dark web to break into these older versions to create an attack vector. 
+4.	Subset of IT: 
+a.	IT and cybersecurity, a subset of IT, are often seen as a never-ending expense because:
+i.	It’s difficult to quantify the benefit of security resources.
+ii.	Funding is often cut off before adequate security programs are implemented. 
+iii.	The best defensive cybersecurity operations keep out high-potential attacks while monitoring and having response plans such as backups, alternative sites for computing, and many other recovery mechanisms in place. 
+Defining Patch Management for your Environment
+	I work at State Farm as an IT analyst and patch management is very clear in our knowledge base. All software that is installed must be logged and if any software is not on the approved software list, then an intake form must be filled out and sent to the technology governance board who gets back to the user and decides whether or not a specific piece of software can be allowed devices. This is especially true for plugins and patches to software. Most software that is installed is done so via a software distribution application that already has pre-approved software to be installed for end-users. Furthermore, the Technology Governance Board (TGB) follows the common criteria for Information Technology Security Evaluation (CCITSE), even though it doesn’t state or cite that it does, but it’s easy to tell that when the software asset team installs software they must follow the seven evaluation levels to ensure software is safe to be installed on our systems. Normally, the software asset team also assists end-users in looking at different options that allow end-users to do the same thing with approved software in the meantime, while user’s preferred software is tested and reviewed. The TGB intake form also has a service level agreement of 3-5 business days, which is usually worked a lot quicker, but allows for a time frame in case users overflow or inundate the service desk with software requests. The Technology Governance Board at State Farm oversees IT service operations and IT infrastructure; so, generally patch management is a culture that oversees all of the service desk including helpdesk positions, even if they don’t understand it. It’s a rather simple process and at this point patching is more of an orchestrated event that occurs during employees off hours without a human ever needing to look at it. In case of software errors that is why versions of software are including in the configuration line item (CLI) in ServiceNow and can flag a user that this particular software needs to be updated if need be. 
+Describe how Patch Management plays a role in security
+	One May 16, 2022, Apple disclosed and patched two zero-day vulnerabilities titled CVE-2022-22675 and CVE-2022-26736; these vulnerabilities effected AppleAVD and AVEVideoEncoder. CVE-2022-22675 and CVE-2022-26736 are vulnerabilities that allows an application to be able to read, write, and execute arbitrary code with kernel privileges. Typically, this can result in corruption of data, a crash, or code execution within applications that utilizes these plugins. What makes these vulnerabilities dangerous to the average user is that it essentially creates a large attack surface for attackers to launch man-in-the-middle attacks or employ more effective spear phishing campaigns and catch a whale who thinks they may just be watching a Tik-Tok video or a developer accessing a particularly vulnerable library. The software may modify an index or perform pointer arithmetic that references a memory location that is outside of the boundaries of the buffer; a subsequent write operation then produces undefined or unexpected results within any application that utilizes AppleAVD or AVEVideoEncoder. If the patch is not installed users are vulnerable to memory corruption attacks or even remote code execution via the kernel and as such ought to be treated as a targeted attack and vulnerable-highly-privileged users are likely targeted. The probability of such an attack occurring is higher against individuals with privileged access to systems and can allow attackers a foothold into high-ranking peoples within organizations. In addition to updating to Ios 15.5 using automated static analysis tools that allow for data flow analysis or constraint-based techniques to minimize number of false positives can be highly effective at detecting such attacks. Furthermore, environment hardening, such as running or compiling software using features or extensions that randomly arrange the position of a program’s executable and libraries in memory can make addresses unpredictable preventing an attacker from reliably jumping to exploitable code. To sum these mitigations up, use of a VPN and exiting applications with each use to refresh the application and the kernel memory of such an application are effective at mitigating kernel attacks like this. 
+References:
+Apple, Inc. (2022, May 26). CVE-2022-22675 Detail.. NVD. Retrieved June 20, 2022, from https://nvd.nist.gov/vuln/detail/CVE-2022-22675#vulnCurrentDescriptionTitle 
+Apple, Inc. (2022, May 26). CVE-2022-26736 Detail. NVD. Retrieved June 20, 2022, from https://nvd.nist.gov/vuln/detail/CVE-2022-26736#vulnCurrentDescriptionTitle 
+Common weakness enumeration. CWE. (2009, October 21). Retrieved June 20, 2022, from https://cwe.mitre.org/data/definitions/787.html 
+SDL Overview and its Importance
+1.	Due to market forces, it’s often common to have a significant need to move quickly through the software development lifecycle in order to implement a crucial system or bring a product to market. As such, incorporating a security-minded approach to the development lifecycle is not always top of mind for many corporate leaders or product managers. Furthermore, sometimes security can be viewed as slowing the development lifecycle due to overbearing or onerous requirements. With this in mind, it’s important that you partner with product and system developers as well as implementing departments in order to serve as a facilitator and enabler for the secure development lifecycle (SDL). Weaving security checks throughout the development lifecycle process in a systematic, repeatable, and process-driven approach will allow project managers to incorporate security needs into the timeline and bake in necessary cycles for security safeguards and review. 
+2.	There is a correlation between strong security safeguards and protections within organizational systems and a relative competitive advantage for the organization. As such, it’s important to incorporate the following 5 phases into SDL process:
+a.	Requirements
+b.	Design
+c.	Implementation
+d.	Test
+e.	Release
+3.	The SDL process provides a good opportunity for security to collaborate and interlock with partner organizations and relevant business departments. Taking a holistic and security-minded approach to the SDL process helps to foster an integrated approach to security, a more informed project or product team, as well as an enhanced partnership between the security team and the organization as a whole. 
+4.	Standard approaches for building software, SDL, or the current Agile development processes, do not inherently address security. 
+5.	Designing Criteria of Products:
+a.	Security is often bolted on after the initial design of the product. 
+b.	Time to market
+c.	Ease of manufacturing
+d.	Ease of use
+e.	Elegance of design
+f.	High quality
+g.	Low cost
+h.	Developing secure products is no longer nice to have, but it is a necessity. 
+6.	Secure Development Lifecycle (SDL):
+a.	Part of security protocol layers, for internally developed and used digital products. 
+b.	Layer of defense in depth, as it’s a part of the IT system. 
+c.	Development process and part of an organizational defense in depth, for companies developing software for internal or external use. 
+7.	History of SDL: 
+a.	Bill Gates emphasized the need to build security into Microsoft products after witnessing an uptick in malware. 
+b.	Microsoft Trustworthy Computing initiative was created, and SDL was launched.
+c.	Microsoft made SDL mandatory in their product development.
+d.	Many other companies followed Microsoft and implemented their own version of SDL. 
+8.	Microsoft’s Version of SDL:
+a.	Provide training
+b.	Define security requirements
+c.	Define metrics and compliance reporting
+d.	Perform threat modeling
+e.	Establish design requirements
+f.	Define and use cryptography standards
+g.	Manage the security risk of using third-party components
+h.	Use approved tools
+i.	Perform static analysis security testing (SAST)
+j.	Perform dynamic analysis security testing (DAST)
+k.	Perform penetration testing
+l.	Establish a standard incident response process
+9.	Secure Development Lifecycle (SDL) is methodology neutral and works with Agile and DevOps
+10.	Five Phases of SDL:
+a.	Requirements: 
+i.	Security requirements are brought into a requirement plan. For example, it says ‘a product must/may/should do a certain change’.
+b.	Design: 
+i.	Security vulnerability is minimized by: 
+1.	Secure design standards
+2.	Threat modeling
+3.	Attack surface is minimized
+4.	Designing with security in mind
+c.	Implementation:
+i.	Secure code is written
+ii.	Ensure whether the configuration parameters meet security policies and standards
+d.	Testing:
+i.	Quality assurance
+ii.	Security testing
+iii.	Vulnerability scanning
+iv.	Security functional tests
+v.	Penetration tests
+e.	Release:
+i.	Ensure the secure maintenance and operation of all areas.
+1.	Secure software release
+2.	Process for reporting security issues or vulnerabilities
+3.	Transition issues arise when replacing old system with new ones
+f.	Bake-in instead of bolt-on cybersecurity into your development. 
+11.	Retrofitting process: Process of redesigning something if it is not secure and does not pass the security tests. 
+a.	SolarWinds breach highlighted vulnerabilities in the design process and the need for a more vigilant SDL process. 
+b.	Pen tests help to identify things that might be in systems, but it might take an aware developer or engineer to notice that something is wrong with the system that they designed. 
+Describe the Secure Development Lifecycle Process and when it is used
+Secure Development Lifecycle in Phases
+Requirements:
+Security requirements must be baked into the product, and it must do a certain change while meeting those security requirements. There is a need in the organization to consider security and privacy as a fundamental aspect of developing highly secure applications and systems regardless of development methodology being used. Security requirements must be continually updated to reflect changes in required functionality and changes to the threat landscape. These requirements ought to be tracked through a work-tracking system or through telemetry derived from the engineering pipeline. 
+Design:
+The Secure Development Lifecycle (SDL) is not only about assurance activities that help engineers implement secure features. This is thought of as bolting on security. Features must be well engineered in respect to security. Security isn’t an addition to the product it is one of the goals in developing a secure product. To achieve this, engineers will rely on security features, such as cryptography, authentication, logging, and security requirements. Security vulnerabilities is minimized by adhering to secure design standards, modeling threats, minimizing attack surfaces, and designing the software with security as the goal. 
+Implementation:
+Implementation of secure code ensures whether the configuration parameters meet security policies and standards and if not they are sent back to the design stage. It’s crucially important that implementation of security policies is applied consistently and with a consistent understanding of the protections that they provide to the organization as a whole. 
+Testing: 
+Testing secure code must pass 5 different tests: quality assurance, security testing, vulnerability scanning, security functional tests, and penetration tests. Quality assurance ensures that software holds acceptable levels of security quality and to hold engineering teams accountable to meet those criteria. Static Analysis Security testing (SAST) ought to be integrated into the commit pipeline to identify vulnerabilities each time software is built or packaged. Dynamic analysis security testing (DAST) performs run-time verification of fully compiled or packaged software to check functionality that is only apparent when all components are integrated and running and also acts as a functional test for security built into software. Finally, performing penetration tests analyzes the security of software systems performed by skilled security professionals simulating the actions of a hacker. The objective here is to uncover potential vulnerabilities resulting from coding errors, system configuration faults, or other operational deployment weaknesses, and as such the test typically finds the broadest variety of vulnerabilities. 
+Release:
+Releasing a secure product means the organization must ensure the secure maintenance and operation of all areas of the product including a secure software release, establishing a process for reporting security issues or vulnerabilities such as bug bounty, and ensure that transition issues that may arise when replacing old systems with new ones are handled by an incident response process. 
+Plan of Action
+	The current state of affairs when it comes to the secure development lifecycle and its implementation and management within the organization is one that must be improved upon if we are to prevent cybersecurity breaches and mitigate risk. Currently, our organization has a clear understanding of the requirement to develop secure software, but there is hardly a cybersecurity culture that maintains a design and implementation for those security requirements. Microsoft’s Security Development Lifecycle consists of a set of practices that support security assurance and compliance requirements. It’s clear that we have a strong understanding of requirements and compliance with regulatory law, but implementing these practices require improved threat models and overwriting policies that bolt on security. Crowd strike Falcon and elegant coding processes can only get us so far when it comes to security. Utilizing techniques such as performing static analysis security testing (SAST), which is integrated into the commit pipeline to identify vulnerabilities each time software is built or packaged can help ensure that software engineers are meeting security requirements and over time will build a culture for security at the design stage. Furthermore, utilizing approved tools by the Technology Governance Board (TGB) is already a strong step in the right direction, but it may also lead to more security risks as it increases the attack surface through which attackers can develop a foothold into our organization. It’s best that we develop with the principle of least privilege and only utilize tools that allow end-users to fulfill their role. Managing the security risk of using third-party components is not the only attack surface; we must also protect our engineers by defining and using cryptography standards that allow engineers to work with peace of mind. To be effective at developing secure software and maintaining data integrity we must be effective at securing the systems we use to create those systems and/or products. As for releasing products there is already a good incident response team within the organization; however, utilizing bug bounty can also be a very effective way of securing our products post-release and ensuring the secure maintenance of those products, such as patch management and establishing a process for reporting security issues or vulnerabilities must be improved upon. It must be easy to perform and automated if at all possible. Other than the flaws within the design, implementation, and release phase, secure development within the organization is developing well and I have no doubt in my mind that it will only improve with these recommendations. 
+References:
+Microsoft Security Development Lifecycle practices. Microsoft Security Development Lifecycle Practices. (n.d.). Retrieved June 21, 2022, from https://www.microsoft.com/en-us/securityengineering/sdl/practices#practice5
