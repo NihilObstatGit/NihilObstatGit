@@ -1,0 +1,541 @@
+Module 7 Notes
+Architectural Layers and Practices for IAM Control
+1.	Session Management
+a.	Start point: Identification and authentication. 
+b.	Session secret: Persistent interaction between endpoints. 
+i.	Presented by the web browser through a cookie.
+ii.	Presented by the operating system as a token. 
+c.	End point: Session termination. 
+2.	Every page of a website or application should permit an on-demand log out, enabling users to end a particular session. 
+3.	Tips for good session management should: 
+a.	Protect session secrets, helping to prevent bad actors from hijacking a session. 
+b.	Limit the amount of time a session secret can live, which helps to curtail unauthorized use of the session. 
+4.	Session Management Standards:
+a.	Describe approved mechanisms to store session secrets:
+i.	Cookies
+ii.	Tokens
+iii.	Tickets
+iv.	Parameter settings in an operating system/application.
+b.	Describe ways to securely store and expire a session secret.
+i.	Avoid exposing a session secret in a URL/audit log record. 
+c.	Determine the authenticity of a session secret.
+i.	Use a digital signature. 
+d.	Offer a log out button on every page of the application/website.
+e.	Provide approved values for security parameter settings.
+i.	Enforces a maximum idle time or session duration.
+Session Management Best Practices
+Good session management standards and practices are used to make things convenient for the end user while also ensuring the user understands these practices. Good session management should: protect session secrets, helping to prevent bad actors from hijacking a session and also limit the amount of time a secret can live, which helps to curtail unauthorized use of the session. In scenario 2 an attacker has collected hundreds of authenticated session ID values used by a mobile health (mhealth) application to identify authenticated users. After deciphering the structure of the mhealth app session ID, the attacker was able to generate and test different values of session IDs until they successfully gained access to the application. In this scenario best practices for the app developers were to limit the amount of time a secret can live. For the user to be able to collect hundreds of authenticated session ID values and be able to use them outside of the original session that would mean he had more than enough time to decrypt these values and impersonate end users. Best standards to implement to mitigate this type of attack in the future is to describe ways to securely store and expire a session secret, mainly avoiding exposing a session secret in the URL/audit log record. The hacker in the scenario generated different test values of session IDs meaning it was available through the application. Second, automatic session expiration and in particular idle timeouts could have wasted the attacker’s time and resources as well, because once a user get’s what they need and for the attacker to generate the session ID within the timeframe the customer is accessing their resources is very low. Idle timeout would definitely help with mitigating most potential risks. Third, Considerations into using multiple cookies should have taken place as well. For example, for the attacker to gain entry through the session layer they will be met with a relationship enforcement policy asking them to re-enter their password. Now the attacker must be able to brute force the password within the allotted timeframe before the session times out in order to gain access to the resource. Finally, considering all session IDs to be untrusted and thus depending on the session management mechanism used; in this case an application, must be thoroughly validated and verified. Whether it be through the use of cookies, tokens, tickets, or a parameter setting in the application then it stands to reason that an attack like this would be much more difficult to pull off with a general policy as this. 
+References:
+Session management cheat sheet. Session Management – OWASP Cheat Sheet Series. (n.d.). Retrieved April 11, 2022, from https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html 
+Client IAM
+1.	Typical Client IAM Specification:
+a.	Disable local administrative access.
+i.	The user would not have privileged mode to their own device.
+b.	Refer over to:
+i.	Accounts provisioning standard
+ii.	Credential management standard
+iii.	Authorization standard
+iv.	Audit and accountability standard
+v.	Session management standard
+c.	Call out various security parameter settings.
+2.	Acceptable Use Policy for Client Device Users:
+a.	Specify requirements for the user to:
+i.	Provide physical protection.
+ii.	Activate the screen lock when a device is unattended.
+iii.	Log out at the end of a session.
+iv.	Protect passwords and personal ID numbers (PINs).
+v.	Not tamper with security controls.
+vi.	Report immediately if client is lost, stolen, or tampered with.
+3.	Security Terms:
+a.	Client Configuration Standard: A term used in the payment card industry.
+b.	Baseline: A term used for testing ISACA or (ISC)**2 certification.
+4.	Client Access Control: Mobile Device Management (MDM)
+a.	Companies use MDM software as a layer of security that allows them to:
+i.	Access laptop or phone remotely.
+ii.	Set the password or PIN length.
+iii.	Set the maximum session time/idle time. 
+iv.	Perform patch management and encryption.
+v.	Track device location.
+vi.	Wipe out company data if the device is reported lost or stolen.
+b.	Installing MDM software is an important control in IAM for bring-your-own-device (BYOD) personnel. 
+Network IAM Techniques
+1.	Network IAM techniques will:
+a.	Permit authorized users and devices to join a network.
+b.	Prevent unauthorized users.
+c.	Network Access Standard details requirements for the Network IAM designers, team managers, and analysts to be able to create and follow operating procedures.
+2.	Network Access Standard: 
+a.	Provides general Network Access Control (NAC) requirements.
+b.	Specifies requirements for: 
+i.	Authorized support vendor access.
+ii.	Authorized third-party site-to-site network access.
+3.	Port-based Network Access Control (NAC): Uses a protocol known as IEEE 802.1x.
+4.	Network IAM:
+a.	IEEE 802.1x Framework for Network IAM
+i.	Blocks data communications while there’s a request to join the network and that request is evaluated against requirements, including IAM requirements.
+ii.	Port-based NAC solutions work with a Remote Access Control Service, such as TACACS+, RADIUS, or DIAMETER.
+iii.	Consults with an IAM Directory Server, such as Active Directory, LDAP, or X.500. 
+b.	Microsoft Active Directory:
+i.	Is Microsoft’s directory service based on Kerberos.
+ii.	Has replaced the insecure NT LAN Manager (NTLM).
+c.	Lightweight Directory Access Protocol (LDAP):
+i.	Was originally used for reading and writing directories across an IP network.
+ii.	Is used nowadays as a protocol and a directory service. 
+d.	X.500 is an electronic directory of employees in an organization. 
+e.	Allows users to join through a static replayable password or multi-factor authentication (MFA). 
+i.	MFA includes a one-time password (OTP), such as a token, a smart card, or biometrics. 
+5.	Other IAM criteria to consider: 
+a.	Display a login warning banner.
+b.	Confirm a device’s identity inside an approved inventory list.
+c.	Confirm a device’s authenticity.
+d.	Require user identification/authentication.
+e.	Require user identification/authentication. 
+6.	Network Access Standard: This standard specifies requirements to manage third-party risk related to authorized support vendor temporary access.
+a.	Provisions vendor accounts through IAM procedures. 
+b.	Enables disabled vendor accounts for an authorized maintenance request for an agreed upon amount of time.
+c.	Strengthens with MFA to prove that the remote vendor is who that remote vendor claims to be. 
+d.	Terminates the session at the end.
+e.	Disables vendor account, confirms it is disabled, and reviews logs.
+f.	Specifies requirements to manage third-party risk related to authorized site-to-site network access. 
+g.	Enforces a group encrypted session for business partners who require routine access.
+h.	Uses individual third-party user accounts.
+i.	Accounts must expire with the end of contract.
+j.	Disables vendor accounts if they are reassigned from your company’s contract to another’s.
+k.	Enables expiry of site-to-site network with the end of contract, renewal, and review of the audit logs. 
+System IAM
+1.	A System Access Standard is to:
+a.	Secure system log-on procedures.
+b.	Restrict the use of privileged programs.
+2.	Oldsmar, Florida Water Treatment Plant Attack:
+a.	A bad actor entered the system through a remote desktop software-Team viewer.
+i.	Adjusted the sodium hydroxide level to more than 100 times its normal level.
+b.	An operator noticed mouse movements and thought it was his supervisor accessing his system.
+c.	Then, the operator noticed the sodium hydroxide level being moved to a very dangerous level. 
+d.	The operator reversed it back to normal, protecting the town. 
+3.	In a secure system log-on procedures, a system can be any of the following:
+a.	Servers, Network devices, Application servers, data, database, file servers.
+4.	Remove any unnecessary applications, utilities, or services from your system as they might have vulnerabilities allowing unauthorized access into your environment using backdoors, trapdoors, or maintenance hooks. 
+5.	IAM Standards reminders:
+a.	Require every account to be authorized.,
+b.	Change the vendor default supply password.
+c.	Assign users a unique ID and authentication credentials. 
+d.	Remove or disable unnecessary default accounts.
+e.	Configure service accounts as non-interactive to prelude users from using them.
+f.	Remove any development accounts, test accounts, and maintenance hooks. 
+g.	Prohibit the use of generic user IDs or shared accounts. 
+h.	Prohibit shared user IDs for system administration and other critical functions. 
+i.	Set your audit and accountability.
+j.	Set session management.
+k.	Display your login warning banner. 
+l.	Apply your secure configuration standard, also known as the baseline. 
+6.	Public sources that offer guidance or recommendations are:
+a.	Center for Internet Security (CIS)
+b.	Security Technical Implementation Guide (STIG)
+7.	Secure System Administrative Tasks
+a.	Remove any unnecessary privileged utility programs.
+i.	Reduce privilege: lower it from system manager or root to normal user access.
+b.	Enhance the audit and accountability event logging.
+c.	Encourage direct console access.
+i.	If the admin is not sitting at the system console, employ dedicated and highly secured client devices. 
+d.	Encrypt communication channels.
+e.	Strengthen authentication with multi-factor authentication. 
+i.	Add a one-time password (OTP) or biometric.
+f.	Access from a separate network segment. 
+8.	To protect a client device, you should:
+a.	Deny direct access to the internet due to potential threat of bad actor or malware.
+b.	Use an intermediary or a broker tool.
+c.	Avoid granting direct access to the root or system management account.
+9.	Accounts for users with Administrative Privilege:
+a.	Primary account: 
+i.	For normal user activities such as: email, timekeeping, and online research.
+b.	Secondary account: 
+i.	For elevated privileges.
+IAM Application Access Control
+1.	Application IAM Features Example:
+a.	Permit you to view your car loan details and balance.
+b.	Prevent you from decreasing the interest rate and declaring your loan as paid in full. 
+2.	Application Access Standard:
+a.	In an organization, it conveys:
+i.	Requirements for designers and analysts with regard to secure application log-on procedures. 
+ii.	Controlled access to program source code, change control, and release management.
+3.	IAM Secure Application Log-on Procedures:
+a.	Before installing an application into your production environment:
+i.	Ensure there are no plain-text passwords or authentication credentials inside that application. 
+ii.	Ensure the application has passed security tests and evaluation acceptance criteria to avoid: 
+1.	Improper access control techniques.
+2.	Failure to validate input. 
+3.	Failure to protect against buffer overflow.
+4.	Cross-site scripting.
+5.	Cross-site request forgery.
+iii.	Remove unnecessary elements such as:
+1.	Utilities and services that are not needed.
+a.	Might have vulnerabilities allowing unauthorized access into the environment. 
+4.	IAM Standards Examples:
+a.	Remove and disable unnecessary default accounts.
+b.	Remove development and test accounts including maintenance hooks.
+c.	Prohibit the use of generic user IDs or shared accounts.
+d.	Prohibit shared user IDs for system administration and other critical functions.
+e.	Change the vendor default password.
+f.	Assign unique user IDs and authentication credentials.
+g.	Display log-on warning banner.
+h.	Apply a secure configuration standard. 
+5.	Approaches to maintaining user access to least privilege:
+a.	Application menus control access and offer only authorized features.
+b.	Your bank’s website menu for a car loan might:
+i.	Allow you to choose from various loan durations and bank-determined interest rates.
+ii.	Not allow you to create your own loan duration and interest rate for that loan.
+6.	Role-Based Access Control Example:
+a.	Access control list (ACL): List of people who can use the application.
+b.	Menu: Application features that customer can use. 
+c.	Constrained User interface (UI): Specific functions assigned to the buttons on the ATM. 
+d.	Role-based access control (RBAC): Specific roles with defined access to applications.
+e.	Rule-based access control (RuBAC): Specific roles with fixed criteria.
+f.	Attribute-based access control (ABAC): Modular approach.
+g.	Loan officer Loan applications: 
+i.	Access to loan application.
+ii.	Override capability to certain fields.
+h.	Loan officer Separation of duty:
+i.	All of the above. 
+ii.	Access to the application feature to declare a loan paid off.
+7.	Target Data Breach and the SolarWinds Attack
+a.	Bad actors tampered with source code in the configuration-controlled library.
+b.	They inserted malware propagated under normal IT release management process.
+8.	Program Source Code Library Access Control:
+a.	Log all changes made to that code.
+b.	Under separation of duty, review changes to see they were authorized or discover any unauthorized changes.
+c.	Access control list to the configuration-controlled library.
+d.	Restrict writing permission-create, update, or delete. 
+e.	Use the file integrity monitoring software to alert you on changes. 
+f.	Separate duty review and reconcile the changes.
+g.	Continue with audit and accountability logs.
+Shopify Insider Breach
+Lax controls around privileged account use can definitely increase the likelihood of rogue insider activity like the one that was suffered by Shopify. Application authorization mechanisms plays a vital role in ways to prevent, mitigate, and even detect this type of activity. For example, two rogue members of its support team worked in concert to steal transaction records, data like customer emails, names, addresses, and orders. When Tassilo Heinrich was indicted it was found that the goal of the scam was to gain a competitive edge and take business away from merchants who they targeted. Under Heinrich’s direction, one co-conspirator took screenshots of data and uploaded it to Google Drive. Furthermore, Heinrich and one of his co-conspirators used two deleted accounts to communicate. The ambiguity behind the case and the fact that Heinrich was able to possess more than 3000 files of stolen data related to merchants who used the Shopify platform shows there weren’t any mitigations in place by the company to prevent the exfiltration of data like email addresses, names, and screen captures. Having mitigations in place such as an audit/log record for screen captures to ensure exfiltration of such data is not going to places like a google drive, but more so ONLY to ticketing systems. Denying access to the internet outside of necessary applications to fulfill one’s role also could have been a mitigating preventative measure in place. Furthermore, role-based access controls like an access control list describing what applications users utilize and for WHAT purposes should also be logged as well. The moment a screenshot is taken place, that should be a log to be reviewed and if a ticket was not filed for issues with hardware or other justifications for that specific application was not made in an appropriate amount of time would have definitely caught the user, before they even had time to utilize that information. 
+Data IAM Control Techniques
+1.	Examples of Data Access Control Techniques:
+a.	Maintain an inventory of sensitive data that the organization:
+i.	Collects
+ii.	Creates
+iii.	Stores
+iv.	Processes
+v.	Transmits
+b.	The inventory should also identify: 
+i.	Business owner of the data.
+ii.	Classification or sensitivity level of the data. 
+2.	Examples: Baseline of Controls
+a.	Data sensitivity level
+b.	Authenticity
+c.	Authorization
+d.	Encryption
+e.	Data loss/Data leak protection
+f.	Security controls to protect high-risk information
+3.	A company directory offers a display of authorized fields sourced from the company’s human resource information system. 
+4.	View-Based Access Control:
+a.	Describes a view for a company directory of the fields that anyone within the company can access, such as:
+i.	Title
+ii.	Reporting manager
+iii.	Location
+iv.	Company email address
+v.	Company phone number
+b.	Hides or omits sensitive fields, such as:
+i.	Home contact details
+ii.	Social security number
+c.	Salary
+5.	Database Accounts and IAM Standards:
+a.	Database accounts must meet:
+i.	IAM standards
+ii.	Provisioning
+iii.	
+iv.	Authentication credentials
+v.	Authorization
+vi.	Audit and accountability log
+b.	Application accounts for database applications:
+i.	Can only be used by database applications.
+ii.	Cannot be used by individuals or other non-application purpose.
+c.	Restrict access to databases that have sensitive data.
+i.	No direct access to the database by the users.
+ii.	Access through some type of programmatic method by the users.
+d.	The database administrator has the ability to directly access or query databases.
+The Risks and Controls in On-Site and Remote Access
+1.	On-site vs Remote Access Risks and Controls
+a.	On-site access:
+i.	Has physical security as an extra layer of protection
+b.	Remote access:
+i.	Impersonate trusted users.
+ii.	Pretend to be a trusted device.
+iii.	Eavesdrop upon or tamper with unprotected networks and network connections.
+iv.	Cause a denial of service. 
+c.	Organizations strengthen IAM for remote access and for insiders by:
+i.	Having multi-factor authentication for users.
+ii.	Adding identification and authentication for a device.
+iii.	Implementing more stringent session management, logging, and monitoring.
+iv.	Using encryption.
+v.	Using zero-trust approach.
+2.	Zero-Trust Problem:
+a.	Perimeter-based network protections assume that all systems within a network can be trusted.
+b.	The assumption that all systems within a network can be trusted does not always hold true because of:
+i.	Third-party computers and users.
+ii.	Remote workforce and mobile workforce.
+iii.	Public cloud services.
+iv.	Bring Your Own Device (BYOD).
+c.	Zero-trust approach examines the device, the user, and trust claims, to better control access to valuable data and resources.
+i.	Has a continuous evaluation and diagnostics approach.
+ii.	Integrates threat intelligence information. 
+3.	International Remote IAM Legal Risk Issues:
+a.	IAM encryption tools may be under import or export restrictions.
+i.	Kerberos has export restrictions.
+b.	IAM software licenses restrictions for import.
+c.	Privacy restrictions or mandated privacy protection for attributes collected about an entity. 
+d.	Privacy restrictions related to fine-grain keystroke logging. 
+4.	Fine-Grained Keystroke Logging:
+a.	Countries expect companies to:
+i.	Provide a disclaimer in the employee handbook, specifically stating that the company has the right to monitor all activities. 
+ii.	Make people aware and remind them about key logging through login warning banners.
+iii.	Provide annual refresher trainings. 
+Compare Onsite vs Remote Access Risks and Controls
+Remote access vs onsite risks and controls vary greatly in those onsite risks are mitigated by perimeter-based security; nevertheless, the cyber threat landscape is one that still effects the perimeter regardless of your location now at this point. If it has access to the internet, then it will always be vulnerable to attack. Remote access is generally ruled by the principle of zero-trust within an organization’s cybersecurity framework. It is with zero-trust that you even get the rule of least privilege or ensuring users only have access to the applications that are needed in order to fulfill their role and users must be authenticated. With measures in place to ensure identification, authentication, and authorization of users have a clear policy then at that point you’re implementing good IAM procedures. Nevertheless, violations of IAM procedure are still vulnerable even on-site. Risks for spearphishing and even outright paying for user credentials is a thing in this day and age and even those measures can still be cracked using standard application data sets and most of those data sets still utilize SSH and any bad actor with the right credentials will be able to gain access to company resources whether they’re on-site or remote. Whether it be through extortion, bribery, or through unauthorized means like phishing an employee or using social engineering to gain access into the perimeter it stands to reason that their risks and the controls associated with on-site and remote work are already things that must have been anticipated before when creating applications that users inevitably utilize. Mitigating those risks are where our security controls come into play. VPN use has skyrocketed since the pandemic began and it’s clear that the lines between work and the internet are beginning to blur and thus IAM security controls are necessary. Integrating threat intelligence information is one of the most difficult aspects of this and is evident in the ex-cisco engineer who plead guilty to providing his credentials to allow unauthorized access to a hacker who recklessly caused damage to Cisco’s resources. Intrusion Prevention Systems ought to have seen changes in user behavior and thus threat intelligence is a clear lesson Cisco learned in this breach for example. 
+Single Sign-On
+1.	Single Sign-on (SSO) reduces the number of login account IDs and thereby reduces the number of passwords. 
+2.	Benefits of Using SSO:
+a.	Allows users to access all their authorized platforms and applications with one set of credentials.
+b.	Provides a more enhanced productive experience.
+c.	Allows users to employ multi-factor authentication.
+d.	Reduces IAM costs. 
+e.	Has a central authority to:
+i.	Provision
+ii.	Modify access
+iii.	Revoke access
+iv.	Disable accounts
+f.	Allow users to employ session management for idle time and maximum session time.
+g.	Has centralized reports for policy, access rights, and security audit events.
+h.	Improves compliance for companies that are under a lot of legal mandates, laws, regulations, and contracts.
+3.	Concerns when using SSO:
+a.	Strength of authentication credentials. 
+b.	Protection of transmission of the authentication credentials. 
+c.	Protection of the authentication service from tampering.
+d.	Protection of back-end database against tampering. 
+i.	Ensure passwords are not stored in plain text. 
+ii.	Prefer passwords to be salted hash or peppered hash.
+e.	Implementation of SSO in different systems and applications.
+i.	Create bridges or connectors for systems and applications that don’t speak the SSO language.
+f.	Synchronization of time service for SSO systems. 
+4.	SSO Approaches:
+a.	Directory services:
+i.	Have a single point database for users to locate users, network resources and services.
+ii.	Have a single point for administrators to manage resources, objects, and their attributes.
+1.	Container objects: Country, organizational units.
+2.	Leaf objects: Users, devices like computers, printers, or files. 
+iii.	Databases can be replicated and distributed as domain controllers. 
+iv.	Examples:
+1.	Lightweight Directory Access Protocol (LDAP)
+2.	X.500
+3.	Microsoft’s Active Directory
+b.	True SSO:
+i.	Can be accomplished through the following standards:
+1.	Kerberos
+2.	OpenID
+5.	Kerberos is used in the following environments:
+a.	Microsoft Active Directory
+b.	Microsoft Azure
+c.	Many different UNIX environments
+6.	Kerberos’ Three Heads:
+a.	Client who wants access
+b.	Server that has the desired resource
+c.	Kerberos system
+7.	The three parts to the Kerberos system include:
+a.	Database of all the principals (e.g., users and devices).
+b.	Authentication server
+c.	Ticket granting server
+8.	The Strengths of Kerberos
+a.	Does not transmit passwords on the network.
+i.	Not vulnerable to eavesdropping types of attacks.
+b.	Is a realm of mutual authentication.
+i.	Both humans and resources need to prove they are who they claim to be.
+c.	Employs two types of tickets.
+i.	Ticket-granting ticket indicating that authentication has been granted for a pre-determined period of time.
+ii.	Service ticket for use of a particular service for a predetermined period of time. 
+d.	Allows configuration of a ticket life to limit attack span.
+e.	Cryptographically protect tickets. 
+9.	Challenges of using Kerberos:
+a.	Protect the confidentiality of the Kerberos system. 
+b.	Protect its availability through redundancy. 
+c.	If you need to authenticate a non-Kerberized service or resource, use:
+i.	Scripted SSO
+ii.	Password synchronization
+iii.	Web portal
+10.	The OpenID standard specifies how authentication information exchanged amongst:
+a.	User
+b.	OpenID relying parties
+c.	OpenID provider
+Kerberos Attack Types
+Kerberos is a network authentication protocol widely used in Microsoft enterprises that uses tickets for both verifying a user’s identity and specifying what a user is authorized to do on the network. The three components of a Kerberos transaction are:
+1.	Key Distribution Center (KDC) (Typically, the domain controller)
+2.	Requesting Client (For example, a user entity)
+3.	Service (resource to which the client is attempting to gain access) 
+Created as a byproduct of Project Athena (Links to an external site.) at Massachusetts Institute of Technology (MIT) in the 1980’s, the developers gave away licenses for use of this technology to encourage widespread implementation. Kerberos was rapidly adopted, as it is superior to earlier authentication protocols, such as NTLM (Windows NT LAN Manager) because it is not vulnerable to replay attacks. In addition, it uses shared secrets for authentication, not passing the plaintext password across the network (Frederick, 2018).
+Sean Metcalf, in his AD Security blog (Links to an external site.), provides a simple overview of the Kerberos authentication as well as details many of the vulnerabilities that exist in this protocol (Metcalf, 2015). The below authentication process is based on Metcalf’s walk-through, following Bob, a junior security analyst, as he attempts to log in to his workstation with his domain username and password.
+1. Authentication Ticket Request (AS-REQ) -> Domain Access
+•	Bob’s password is first converted to an NTLM hash.
+•	Then, a timestamp is encrypted with the hash.
+•	This information is sent to the KDC as an authenticator.
+•	The Domain Controller (KDC) checks Bob’s user account information (logon restrictions, group membership, etc) and creates Ticket-Granting Ticket (TGT).
+2. Authentication Ticket Response (AS-REP)
+•	The TGT is encrypted, signed, and delivered to Bob (AS-REP).
+•	Only the Kerberos service (KRBTGT) in the domain can open and read TGT data.
+3. Ticket Granting Service Ticket Request (TGS-REQ) -> File Server Access
+•	Bob presents the TGT to the DC when requesting a TGS-REQ to access a networked file server. 
+•	The DC opens the TGT & validates PAC checksum – If the DC can open the ticket and the checksum check out, TGT = valid. 
+•	The data in the TGT is effectively copied to create the TGS ticket.
+4. Ticket Granting Service Ticket Response (TGS-REP)
+•	The TGS ticket is encrypted using the target service accounts’ NTLM password hash and sent to Bob (TGS-REP).
+5. Kerberos Application Request (KRB-AP-REQ)
+•	Bob connects to the file server on the appropriate port and presents the TGS and the authenticator, which is encrypted with the session key. 
+•	The file server opens the TGS ticket using its NTLM password hash.
+6. Kerberos Application Response (KRB-AP-REP)
+•	If Bob’s workstation is configured to require mutual authentication, the file server returns an application server response message (AP-REP) encrypted with the session key. 
+•	Bob’s workstation (the client) can use this message to verify the identity of the file server.
+Now that you are familiar with the steps involved in Kerberos authentication, recognize that this ticket-based protocol is not impervious to subversion and abuse. The 2020 report ManyKatz: How Active Directory Hacks Went Mainstream (Links to an external site.) by QOMPLX points to the release of Mimikatz by Benjamin Delphy in 2011 as a groundbreaking milestone that amplified the ease of use for threat actors seeking to employ Kerberos attack methods. Over the last decade, numerous tools have been made public that specifically target Kerberos protocol weaknesses. QOMPLIX states in their report, “The widespread availability of tool kits has made the path from “proof of concept” to “push-button” access ever shorter.” (QOMPLX, 2020) 
+For this activity, research one of the following Kerberos attacks. 
+•	Kerberoasting
+•	Golden Ticket
+•	Silver Ticket
+•	Bronze Bit Attack
+•	Harvesting Tickets
+•	Over-Pass-The-Hash/Pass-the-Key
+•	AS-REP Roast
+Utilize Powerpoint (or your preferred drawing application) to create a visual depiction of the kerberos attack you selected. In addition, be sure to include the details outlined below:
+•	Overview of attack 
+•	Visual depiction of attack
+•	Kerberos weakness your attack exploits
+•	Commonly used kerberos attack tools (examples include: Impacket, Mimikatz, Rubeus)
+•	Mitigations for your attack
+•	Detection strategies for this specific kerberos attack
+3. Describe cross-functional dependencies for successful IAM deployment. 
+Ubiquiti disclosed to customers in January 2021 that they had suffered a security breach. In their notification email, they stated that there was no indication of unauthorized activity regarding user accounts (Krebs, 2021). Brian Krebs later shared insights from a whistleblower who had taken part in the Ubqiuiti investigation, revealing the true severity and exposure of the organization’s compromise.
+For this assignment, you review the resources below to gain a deeper understanding of the Ubiquiti breach.  
+Resources
+•	Krebs Whistleblower Says Ubiquiti Breach was Catastrophic (Links to an external site.)” by Lawrence Systems
+•	“Ubiquiti All But Confirms Breach Response Iniquity (Links to an external site.)” by Brian Krebs
+  Address the following in your assignment:
+•	Based on the additional details shared by the whistleblower, describe the extent of the Ubiquiti compromise. How did attackers initially gain access to privileged credentials?
+•	During the breach investigation, it was determined Ubiquiti lacked access to logging on their databases. Detail the multiple ways this failure to audit complicated the investigation.
+•	Ubiquiti received a great deal of backlash from customers due to their attempts to downplay the extent of the breach. Should this company have consulted you for advice on breach disclosure, what recommendations would you offer?
+Federated Identity Management (FIM) Concepts
+1.	Many companies are adopting Federated Identity Management (FIM) to make access more convenient for customers.
+2.	Benefits of FIM:
+a.	Creates SSO access for users to various participating service provider organizations.
+b.	Structures a trust relationship between the user, the FIM provider, and the website, or service provider, who all agree on a common user identifier. 
+c.	Recognizes the identity provider as a trusted intermediary that acts as a broker between all parties.
+i.	The identity provider:
+1.	Authenticates and authorizes users to participate in service providers or websites. 
+2.	Controls which user attributes are shared with the service provider or website. 
+3.	Never shares a password with the service provider. 
+d.	Reduces IAM costs.
+e.	Supports identification, authentication, and audit and accountability (IAAA), along with session management. 
+3.	FIM Risks:
+a.	Strength of the authenticator.
+b.	Authorizers in the IAM workflow.
+c.	Potential compromise of the identity provider.
+d.	Tampering to an FIM token or assertion.
+4.	FIM Standards:
+a.	Security Assertion Markup Language (SAML)
+i.	SAML is used when an organization chooses an identity provider and selects participating business partner service providers.
+ii.	Service providers in a university include:
+1.	Bursar
+2.	Financial services
+3.	Registration services for the classroom
+4.	Dormitory services
+5.	Food and beverage services
+6.	Recreation services
+iii.	SAML in a University:
+1.	BrowserLoginService provider
+2.	BrowserActual loginIdentity provider (identifies and authenticates)
+3.	Login and actual login creates a SAML assertion, digitally signs it and sends it to the service provider. Service provider then provides services. 
+b.	OpenID Connect
+i.	Is used when an organization is a relying party, that selects one or more common OpenID providers and permits users to select from that list. 
+ii.	Example of OpenID Connect:
+1.	Client web browserloginE-Commerce siteOpenID
+2.	OpenIDAuth codeE-commerce site
+3.	E-commerce siteAuth codeOpenID
+4.	OpenIDID tokenE-commerce site
+5.	E-commerce siteID tokenClient web browser
+c.	OAuth
+i.	Example of OAuth:
+1.	User access resource in web application and is authenticated and authorized through OpenID connect provider. OpenID connect provider requests for permission to the user and the user decides whether to share once, not to share, or to share for an interval of time. If you click yes to share data to OpenID connect provider then the web application is given an authorization token. OAuth digitally signs the authorization token to make sure it’s genuine. 
+5.	Your company can use commercial identity providers, such as:
+a.	Microsoft Azure
+b.	Okta
+c.	Ping
+6.	Governance of Policy Standards and Procedures:
+a.	An organization will approve of an FIM standard that declares:
+i.	Its technology decision
+ii.	Its risk-based requirements for IAM characteristics
+iii.	Its security parameter decisions, such as the time to live for the SAML assertion, OpenID, or OAuth token, and their protections.
+iv.	Its workflow environments.
+8. Identify the benefits, risks, and technologies of single sign-on.
+In the earlier video, you learned about OAuth2.0, an open-standard authorization framework that allows Internet users to approve one application to authorize access to multiple websites on their behalf. OAuth uses JSON (JavaScript Object Notation) to pass messages in the authorization code flow as well as the extensive implementation of API calls. When you answer affirmatively to the login question posed frequently by today’s websites, “Do you want to login to our site using your Google (or Twitter, Facebook or Amazon) account?”, the original account holder (Google, for example) acts as an authorization server, providing authorization via access tokens, encrypted in transit, to the requesting service, known as the relying party (RP). It is important to remember that OAuth was not designed for authentication, just authorization.
+OpenID Connect (OIDC) works on top of OAuth2.0, providing a means of authentication by acquiring an ID token in addition to the OAuth access token. OIDC’s ID token provides some details on the resource owner and enables Single Sign On (SSO). A good analogy for OIDC ID token is a conference badge that displays a quick response code (QRC). Upon “consenting” to a scan of your badge by a vendor, perhaps in exchange for some swag, the vendor can read the details from the QRC about you, such as name, employer and job title.
+For this Try-It Activity, you will walk through setting up OpenID Connect “authorization flow” calls step by step using the OpenID.net playground (Links to an external site.), designed to provide users insight into each step of this authentication using an Auth0 template, a Google Accounts API template or your own OIDC URLs.  (Auth0 is an organization that provides authentication and authorization services that make use of OAuth2.0, similar to Okta, CyberArk and OneLogin.)
+Step 1. Sending the Request
+•	Visit the OpenID Connect Playground at https://openidconnect.net/ (Links to an external site.) 
+•	Scroll down to the Debugger and ensure “OpenID Connect and OAuth2” is selected in the dropdown on the left.
+•	Select “Configuration” on the right. In the dialogue box that appears, select AuthO for the “server template”. Leave all other fields set as the default values and click “Save”.
+•	Back on the Debugger webpage, note the details contained in the request (ClientID, Redirect URI , Response Type and Scope). The scope “OPENID” specifies to the authorization server that this exchange will be an OPENID Connect.
+•	Back on the Debugger webpage, click “Start” to request an authorization code via the OpenID Connect Server.
+Step 2. Exchange Code from Token
+•	In the logon window, select Google, Twitter or Facebook, based on your preferences. 
+•	You will then be presented with an option to select which account you would like to use. Select your preferred account. If you are already logged in with your OpenID provider, you move automatically to Step 3.
+•	If you are not already logged in with your OpenID provider, you will be prompted for your username and password for your Google, Twitter or Facebook account. This is your OpenID provider’s way of making sure you are really you.
+Step 3. Obtain Access Token
+•	If your login with your OpenID provider is successful, your authorization code will be shown to you on the Debugger webpage.
+•	The debugger has prepopulated the authorization code into the next request it will send to request access and ID tokens. 
+•	Select “Exchange” to send this request and note the returned access and ID tokens.
+Step 4. ID Token Verification 
+•	The ID token is formatted as a JSON web token (JWT). 
+•	Select the option “View on JWT.io” to view the account details embedded in your new ID token. 
+•	Note that the JWT token contains your user name derived from your selected Google, Twitter or Facebook account.
+•	Select “Verify” on the debugger webpage. The OpenIDConnect.net webpage should reveal the same details decoded from the JWT.io site.
+Step 5. Determine Token Expiration
+•	The last value shown in your decoded JWT token is the “EXP” field. 
+•	Copy the value shown in your verification window and convert the Unix Epoch time using this online converter (Links to an external site.). 
+•	Your user token’s expiration should be ten hours from the time it was issued.
+Resources:
+•	“Configure Authentication Providers (Links to an external site.)” Microsoft’s overview of OpenID Connect
+•	“An Illustrated Guide to OAuth and OpenID Connect (Links to an external site.)” YouTube video by OktaDev
+Describe the Benefits, Risks, and Technologies for FIM
+The two techniques employed by the SolarWinds attackers in compromised federated authentication environments occurred after the actors gained initial access to a victim’s on-premises network. First the attackers compromised on-premises components of a federated SSO infrastructure and stole the credentials or private keys used to sign Security Assertion Markup Language (SAML) tokens. This type of SAML forgery technique has been known by experts since at least 2017. Second, the attackers leveraged a compromised global administrator account to assign credentials to cloud application service principals. The attackers then invoked the application’s credentials for automated access to cloud resources. 
+Mitigations recommended by the NSA to secure SSO and federated services include a strong defense against automated techniques that forge SAML tokens and implement IAM security controls for cloud administrators. Administrators must pay careful attention to locking down tenant SSO configuration and service principal usage, as well as hardening the systems that run on-premises identity and federation services. Establishing an audit and accountability record of the use of SSO tokens and the use of service principals in the cloud can help detect the compromise of identity services. 
+For example, in the case of the SolarWinds attack, hardening Azure authentication and authorization configuration must deviate from common practices to make moving laterally through the system forging SAML tokens something that isn’t “textbook”. The NSA specifically requested Azure tenants to refer to Microsoft guidance on securing privileged access, token claims being consistent with organization policy; thus, providing a sense of confidentiality when it comes to the token claims. Furthermore, Azure tenants ought to lock down the use of service principals and remove credentials that are unnecessary, or simply cleaning up service principals and ensuring deactivated accounts are still unable to be accessed. Finally, to harden Azure authentication following recommended Azure Active Directory security practices such as enforcing multi-factor authentication and disabling legacy authentication. 
+The ability of the attackers to conduct this operation hinged on the initial compromise of on-premises systems. Beginning with keeping systems patched and software updates is where the NSA advised. Deploying Federated intrusion prevention systems (FIPS) validated Hardware Security Module (HSM) to store on-premises token signing certificate private keys. An HSM that is aggressively updated, makes it very difficult for attackers who have compromised the system to steal private keys and use them outside of the network. Furthermore, ensuring core privileged cloud admins, groups, and roles are not impacted by data synchronized from on-premises environments, and that cloud admin roles do not authenticate using SMAL SSO, but instead rely on cloud-only authentication.
+There are also detection strategies that were provided by the NSA to aid in identifying past attacks against federated services, or more specifically, past forged SAML token usage. The NSA advises that detecting forged SAML token usage is a shared responsibility between the cloud provider and the tenant. On-premises the NSA recommends and advises on the importance of inspecting and retaining cloud logs for analysis. When available, it is best to utilize log correlation tools that use environmental values and sophisticated AI/ML algorithms to detect unusual patterns in user authentication and authorization. For, AAD it is best to utilize Azure AD Identity Protection, Microsoft Cloud Application Security, and Azure Sentinel. Examining logs for suspicious tokens that do not match the baseline for SAML tokens are typical for the cloud tenant, and auditing SAML token use to detect anomalies. The NSA specifically states that tokens with an unusually long lifetime, tokens with unusual claims that do not match organizational policy, tokens that claim to have been authenticated using a method that is not used by the organization, tokens presented without corresponding log entries, such as tokens with MFA claims where there is no corresponding MFA system transaction, or tokens consumed at the resource with no corresponding federation server transaction, tokens that include a claim that it is for inside the corporate network, when it is clearly not, and tokens that are used to access cloud resources that do not have records of being created by the on-premises identity provider in its logs. Furthermore, examining logs for the suspicious use of service principals such as: auditing the creation and use of service principal credentials, looking for unusual application usage, such as a dormant or forgotten application being used again, and auditing the assignment of credentials to applications that allows non-interactive sign-in by the application. 
+Resources: 
+Detecting abuse of authentication mechanisms - U.S. department of defense. (n.d.). Retrieved April 13, 2022, from https://media.defense.gov/2020/Dec/17/2002554125/-1/-1/0/AUTHENTICATION_MECHANISMS_CSA_U_OO_198854_20.PDF 
+
+ 
+Bibliography
+1.	“Attack Catalog.” Stealthbits. n.d. https://attack.stealthbits.com/.
+2.	Brook, Chris. “US Indicts Man Behind Shopify Insider Breach.” Digital Guardian. 12 Apr. 2021. https://digitalguardian.com/blog/us-indicts-man-behind-shopify-insider-breach.
+3.	Common Weakness Enumeration. n.d. https://cwe.mitre.org/index.html.
+4.	“Detecting Abuse of Authentication Mechanisms.” PDF file. National Security Agency | Cybersecurity Advisory. n.d. https://media.defense.gov/2020/Dec/17/2002554125/-1/-1/0/AUTHENTICATION_MECHANISMS_CSA_U_OO_198854_20.PDF. 
+5.	“EP 86: The LinkedIn Incident.” Darknet Diaries. 2 Mar. 2021. https://darknetdiaries.com/episode/86/.
+6.	“EP 91: WebJedi.” Darknet Diaries. 27 Apr. 2021. https://darknetdiaries.com/episode/91/.
+7.	“Epoch & Unix Timestamp Conversion Tools.” EpochConverter. n.d. https://www.epochconverter.com/.
+8.	Fender, Kristin and Robin Reynolds-Haertle. “Configure Authentication Providers.” Microsoft Ignite. 6 Jul. 2021. https://docs.microsoft.com/en-us/dynamics365/commerce/dev-itpro/configure-authentication-providers.
+9.	Ferguson, Scott. “Ex-Cisco Engineer Pleads Guilty in Insider Threat Case.” Data Breach Today. 29 Aug. 2020. https://www.databreachtoday.com/ex-cisco-engineer-pleads-guilty-in-insider-threat-case-a-14917.
+10.	Fox News. “World Bank Under Cyber Siege in ‘Unprecedented Crisis'." Fox News. 13 Jan. 2015. https://www.foxnews.com/story/world-bank-under-cyber-siege-in-unprecedented-crisis.
+11.	Frederick, Eva Charles Ann. “Looking Back at Project Athena.” MIT News. 11 Nov. 2018. https://news.mit.edu/2018/mit-looking-back-project-athena-distributed-computing-for-students-1111.
+12.	Kaiser, Leah. “Mandatory Breach Notification Requirements are Coming for Government Contractors.” Husch Blackwell. 19 Apr. 2021. https://www.contractorsperspective.com/cybersecurity/mandatory-breach-notification-requirements-are-coming-for-government-contractors/.
+13.	Krebs, Brian. “Ubiquiti All But Confirms Breach Response Iniquity.” KrebsonSecurity. 4 Apr. 2021. https://krebsonsecurity.com/2021/04/ubiquiti-all-but-confirms-breach-response-iniquity/.
+14.	Lawrence Systems. “Krebs Whistleblower Says Ubiquiti Breach Was 'Catastrophic'?” YouTube video, 11:39. 21 Mar. 2021. https://www.youtube.com/watch?v=OVQkS2Tk13w.
+15.	Lebrero, Daniel. “Kerberos Explained in Pictures.” DanLebrero. 26 Mar. 2017. https://danlebrero.com/2017/03/26/Kerberos-explained-in-pictures/.
+16.	“ManyKatz: How Active Directory Hacks Went Mainstream.” PDF file. QOMPLX. n.d. https://cybersecuritycollaboration.com/wp-content/uploads/2020/09/Whitepaper-DES-474-ManyKatz-Whitepaper-RELEASED.pdf.
+17.	Medin, Tim. “Kerberos & Attacks 101.” PDF file. RedSiege Information Security. n.d. https://www.redsiege.com/wp-content/uploads/2020/04/20200430-kerb101.pdf.
+18.	Metcalf, Sean. “Active Directory Security Risk #101: Kerberos Unconstrained Delegation (or How Compromise of a Single Server Can Compromise the Domain).” Active Directory Security. 13 Aug. 2015. https://adsecurity.org/?p=1667.
+19.	“New Report Reveals Increased Cybersecurity Risks for Companies Around the World.” Keeper. n.d. https://www.keepersecurity.com/blog/2020/10/14/new-report-reveals-increased-cybersecurity-risks-for-companies-around-the-world/.
+20.	“NIST Special Publication 800-63B Digital Identity Guidelines.” Section 7. NIST. n.d. https://pages.nist.gov/800-63-3/sp800-63b.html#sec7. 
+21.	OktaDev. “An Illustrated Guide to OAuth and OpenID Connect?” YouTube video, 16:35. 5 Nov. 2019. https://www.youtube.com/watch?v=t18YB3xD.
+22.	“OpenID Connect Playground.” OpenID. n.d. https://openidconnect.net/.
+23.	“OWASP Top 10 Application Security Risks — 2017.” OWASP. n.d. https://owasp.org/www-project-top-ten/2017/Top_10.html.
+24.	Paganini, Pierluigi. “Crooks Are Offering Apple Employees Up to $23,000 for Their Login Credentials.” Security Affairs. 10 Feb. 2016. https://securityaffairs.co/wordpress/44390/cyber-crime/apple-insiders.html.
+25.	“Protecting the Future: The Fastest-Growing Cybersecurity Skills.” PDF file. BurningGlass Technologies. Oct. 2020. https://www.burning-glass.com/wp-content/uploads/2020/10/Fastest_Growing_Cybersecurity_Skills_Report.pdf. 
+26.	“Session Management Cheat Sheet.” OWASP Cheat Sheet Series. n.d. https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html.
+27.	“US Grand Jury Indictment Tassilo Heinrich.” PDF file. United States District Court for the Central District of California. 19 Feb. 2021. https://s3.documentcloud.org/documents/20580321/us-grand-jury-indictment-tassilo-heinrich.pdf.
+
