@@ -1,0 +1,334 @@
+Module 17
+Introduction
+1.	In today’s dynamic cyber threat landscape, organizations’ networks, hardware, applications, devices, and employees are constantly a target of cyber criminals, both from inside and outside. Therefore, people responsible for ensuring the confidentiality, integrity, and availability of an organization’s assets are frequently overwhelmed with finding, prioritizing, and remediating vulnerabilities before attackers exploit them. Offensive security involves understanding an attacker’s mindset and proactively identifying vulnerabilities using the same tools, techniques, and procedures that cyber criminals exploit. 
+2.	“Even the bravest cyber defense will experience defeat when weaknesses are neglected.” – Stephane Nappo
+a.	Protecting organizations across industries, regions, and sizes from cyber attacks is becoming more critical and challenging than ever. And while many factors have contributed to this challenge, one key element includes the substantial amount of valuable data that organizations now hold, process, and need to safeguard. Furthermore, organizations no longer have a well-defined perimeter to monitor and defend with the proliferation of cloud computing, mobile devices, and geographically dispersed users. Instead, organizations need to ensure that users have secure, efficient, and reliable access to data and resources from anywhere in the world. This complex and dynamic infrastructure makes it challenging to understand the threats and vulnerabilities facing the organization’s assets accurately and promptly without proactively thinking like an attacker. 
+3.	Offensive Cybersecurity Vs. Defensive Cybersecurity:
+a.	Offensive Cybersecurity:
+i.	Proactive activities:
+1.	Ethical hacking
+2.	Penetration testing
+3.	Red teaming
+4.	Social engineering training
+5.	AIML-based training
+b.	Defensive Cybersecurity:
+i.	Reactive activities:
+1.	Policies and controls
+2.	Patching software
+3.	Fixing vulnerabilities
+4.	Monitoring and detecting malware
+5.	IAM teams
+4.	Most companies engage in offensive cybersecurity to keep their own organization safe and secure. 
+5.	Examples of Offensive Cybersecurity Approaches:
+a.	Approach 1 – Ethical hacking:
+i.	Companies hire trained security professionals to carry out a cyber attack or try to hack into their systems to find vulnerabilities before malicious actors find and exploit them. 
+ii.	Bug bounty programs allow companies to pay outsiders to find and report bugs in their systems.
+b.	Approach 2 – Social engineering prevention:
+i.	Malicious actors manipulate victims in order to get credentials, confidential information, or possibly physical access. 
+ii.	Prevention programs teach people to identify malicious actors and stop them from falling for their scams. 
+1.	Eg: Phishing
+c.	Approach 3 – penetration testing:
+i.	Similar to ethical hacking.
+ii.	Security professional tries to penetrate a system to find vulnerabilities.
+iii.	Pen tester is hired to find weaknesses in a specific system.
+iv.	Ethical hacker has a broader focus and is hired to find whatever they can and in whatever way they need to. 
+6.	Offensive Security:
+a.	Validate security controls:
+i.	Are they working?
+ii.	Are they tested to ensure that they work as planned?
+iii.	Do the controls in place do what they are designed to do?
+Security Architecture and Strategy
+1.	Over the last few years, sophisticated cyber threats have become a reality, and attacks across various sectors have become routine. Consequently, executive leadership in organizations is beginning to accept that the traditional “react-and-defend” strategy followed for years is no longer sustainable. As a result of this, the idea of offensive cybersecurity has become much more mainstream. In today’s threat landscape, organizations can only protect themselves by understanding and employing offensive cyber methods to uncover attackers’ evolving tactics, techniques, and procedures (TTPs). Additionally, effectively managing the threat landscape involves knowing the nature of your attack surface, proactively and continuously finding security gaps, and identifying the critical assets that are most appealing to attackers. The outcome of these efforts is improved detection and response abilities that are both swift and effective. 
+2.	“If you don’t know where you are going, any road can take you there.” – Lewis Carroll, Alice in Wonderland
+a.	Today, organizations are investing heavily in more sophisticated technical solutions than ever before to protect and defend against cyber-attacks. However, just having the latest cybersecurity technology in place does not mean you can become complacent about your security posture. One reason for this is that while technological solutions are vital for any security organization, those resources can only take you so far if you lack a clear and holistic cybersecurity strategy. Furthermore, operating without a cybersecurity strategy is like playing a game of Whac-A-Mole: As soon as one attack is fended off, another pops up. Several components make up a security strategy, including security architecture and infrastructure. 
+3.	Differences between Strategy and Architecture:
+a.	Strategy:
+i.	Is the vision and goals that comes from a business. 
+ii.	Identifies what is important to the business at high level, business function as expected by the business leaders, and attributes that make a business unique. 
+b.	Architecture: 
+i.	Is the blueprint that translates the business strategy into infrastructure. 
+ii.	Is made up of hardware, software, and networks. 
+iii.	Is the plan that comes from the business strategy and dictates what the infrastructure will do. 
+4.	Security strategy is the vision, goals, and high-level plan or objectives for an organization to stay secure. 
+5.	Strategy starts with a Strategic Goal:
+a.	Questions to consider about strategy and architecture:
+i.	What is the cybersecurity mission?
+ii.	What is the cybersecurity vision for success?
+iii.	What are the priorities?
+iv.	What are the objectives?
+v.	How should the objectives reflect in the strategy?
+vi.	What is the scope of key requirements?
+vii.	What is outside the scope?
+viii.	What are the higher-level objectives to keep the organization secure?
+ix.	How do we support the strategic goal?
+6.	Considerations for Business Strategy:
+a.	Risk:
+i.	Identify the key assets and the associated business risk.
+ii.	What’s the risk involved if the company’s data is stolen, compromised, or held for ransom?
+b.	Threat:
+i.	Identify vulnerabilities and threats to the assets. 
+7.	Security Architecture:
+a.	Is a bridge between the high-level objectives for mitigating the risk and the daily defense process and services.
+b.	Balances the risk with the organization’s value, enables security operations, and adapts as threats change. 
+c.	Addresses the needs and risks of the environment.
+d.	Specifies when and where to apply security controls, and documents design principles, control specifications, and how components of the security plans are connected. 
+e.	Specifies relationships and dependencies between various components of the IT architecture. 
+f.	Assists with cost and risk management. 
+g.	Driven by risk management plans, benchmarking, best practices, financial costs, and the legal and regulatory compliances rules. 
+8.	Phases in Building Secure Systems and Operations:
+a.	Phase 1: Security strategy: 
+i.	Use the security strategy to identify objectives and risks, and to avoid disruption and protect assets. 
+b.	Phase 2: Architecture design:
+i.	Create the security architecture and relationship diagrams.
+c.	Phase 3: Implementation
+i.	Create the infrastructure which includes the security systems and processes. 
+d.	Phase 4: Operations and monitoring:
+i.	Run services, processes and set up monitoring systems to assess security processes and service operations. 
+9.	Architecture and Strategy:
+a.	Logical Security Architecture:
+i.	Map security policies to business functions.
+ii.	Involves stakeholders in every architecture security. 
+iii.	Example of creating logical security architecture:
+1.	Implementing dual factor authentication for customer login may not seem user friendly. 
+2.	Ensure marketing team is informed of the new security implementation for continuous business operation. 
+b.	Secure Development Operations (SecDevOps):
+i.	Uses development tools and techniques, such as automation and agile development, to create the security operations. 
+ii.	Automation of repetitive tasks, such as configuration and reconfiguration would help leverage more out of our security operations team. 
+10.	NIST CSF:
+a.	Identity: Strategy development’s first step.
+b.	Detect: How will we detect?
+c.	Protect: How will we protect? 
+d.	Respond: How will we respond? 
+e.	Recover: Get the organization back to its normal operational state. 
+Describe the importance of Security Architecture and Strategy
+	Security strategy and architecture essential components to the creation of any security program because it essentially brings the abstract “security” into concrete processes that enable the business to empower security operations and adapt to an ever-changing threat landscape, while also mapping security policies to enhance business functions. Security strategy is the vision and goals that comes from a business and identifies what is important to the business at a high level, business function as expected by the business leaders, and the attributes that make that business unique. Security architecture is the blueprint that translates the business strategy into infrastructure. When it comes to security strategy and architecture there are many questions to consider. What is the cybersecurity mission? What is the cybersecurity vision for success? What are the priorities? What are the objectives? How should the objectives reflect in the strategy? What is the scope of key requirements? What is outside the scope? What are the higher-level objectives to keep the organization secure? How do we support the strategic goal? When considering these questions, the organization is effectively identifying objectives and risks to the organization and how to avoid disruption in normal business activities and implement those relationships to create infrastructure which includes the security systems and process. As for offensive security, in today’s threat landscape, organizations must protect themselves by understanding and employing offensive security methods to uncover attackers’ evolving tactics, techniques, and procedures (TTPs). Offensive security allows the organization to manage the threat landscape by knowing the nature of the organization’s attack surface, proactively and continuously finding security gaps, and identifying the critical assets that are vulnerable to attackers. The outcome of security strategy, architecture, and offensive security is improved detection and response abilities that are both swift and effective. 
+The NIST Cybersecurity Framework (NIST CSF) can be utilized to develop an organization’s security strategy by taking the abstract concept that is security and dividing it into 5 different capabilities an organization must be capable of. These include: Identifying what processes and assets need protection, protecting those assets by implementing appropriate safeguards, detecting potential attacks by implementing appropriate mechanisms to identify the occurrence of cybersecurity incidents, responding to those threats by developing techniques to contain the impact of cybersecurity events, and recovering from those incidents by implementing appropriate processes to restore capabilities and services impaired by cybersecurity events (Balbix, 2022). The NIST CSF essentially allows the organization to be proactive in strategy development because it provides a framework for consistent improvement in a changing threat landscape. 
+	Security Development Operations (SecDevOps) is a component to successful security architectures that allow an organization to build security into service delivery, allowing teams to put repetitive tasks related to security configuration or reconfiguration on autopilot. With SecDevOps, organizations are able to automate more of the repetitive tasks such as configuration and reconfiguration and thus leverage more out of their security operations team. Embracing SecDevOps may involve value-stream mapping, which is a visual exercise that helps align workflows to business outcomes and identifies issues related to performance and quality (Noyes, 2021). 
+References:
+Noyes, K. (2021, September 21). 3 considerations when Building Your Security Architecture. WWT. Retrieved June 26, 2022, from https://www.wwt.com/article/security-architecture-considerations/ 
+What is the NIST Cybersecurity Framework? Balbix. (2022, April 20). Retrieved June 26, 2022, from https://www.balbix.com/insights/nist-cybersecurity-framework/ 
+Threat Modeling
+1.	“If you know neither the enemy nor yourself, you will succumb in every battle.” – Sun Tzu, The Art of War
+a.	When you study the strategy of most cyber criminals, you realize that in the vast majority of their attacks, they have nothing personal against their victims. Instead, most phishing, ransomware, and vulnerability exploitation attacks are widespread campaigns. With this approach, attackers want to apply the least amount of effort and spend as little as possible to quickly target the defenses of enough organizations in the hope that they will be successful with a few. Knowing the above information about most cyber-attacks, organizations can effectively improve their security posture by proactively identifying, prioritizing, and reducing their exposure. This process can begin with simply asking questions such as “Where I am most vulnerable to attacks?” and “What are the key risks and what can I do to reduce these risks?” By addressing such questions early on, and continuously afterward, organizations can improve their cyber hygiene to a level where they are not viable targets to the majority of the cyber criminals out there. Threat modeling is a method for proactively identifying security vulnerabilities in the application, system or business process and implementing appropriate countermeasures. 
+2.	Threat Modeling:
+a.	When an organization sets up processes and procedures to better understand the effect of threats and then designs responses for each possibility. 
+b.	Starts with a system.
+c.	Identifies all possible threats. 
+d.	Specifies a mitigation strategy for each threat. 
+e.	Validates the threat model to check the defense network is in place. 
+3.	Types of Threat Modeling:
+a.	STRIDE stands for:
+i.	Spoofing
+ii.	Tampering
+iii.	Repudiation
+iv.	Information disclosure
+v.	Denial of service
+vi.	Elevation of privilege
+b.	PASTA
+c.	CVSS
+d.	Attack trees
+e.	Security cards
+f.	HTMM
+g.	OWASP – A modeling tool used to create diagrams of threats and mitigations, it’s part of a secure development lifecycle. 
+4.	Threats of Security Properties:
+a.	Each threat is a violation of one of the basic security properties of a system.
+Threat	Desired property
+Spoofing	Authenticity
+Tampering	Integrity
+Repudiation	Non-repudiability
+Information disclosure	Confidentiality
+Denial of service	Availability
+Elevation of privilege	Authorization
+
+b.	Spoofing identity can be mitigated by controls for authentication and protecting secrets. 
+c.	Tampering with data can be mitigated by using hashes, digital signatures, tamper-resistant protocols, and controls for authorization. 
+5.	Threat modeling is connected to the activities necessary to build an appropriate security strategy and architecture. 
+Explain how Threat Modeling is used in Architecture design and pen testing
+	In any organization threat modeling works by identifying the types of threat agents that cause harm to an application or computer system. Threat modeling adopts the perspective of malicious attackers to see how much damage they could possibly do given a system’s architecture. When an organization conducts threat modeling, they perform a thorough analysis of the software architecture, business context, and other artifacts. This process enables a deeper understanding and discovery of important aspects of the system. Threat modeling involves four steps typically and they include a diagram, identifying threats, mitigation, and validation. When looking at these steps there are also four questions that developers generally ask: What are we building? What could go wrong? What are we doing to defend against threats? Have we acted on each of the previous steps? The advantages of having a threat modeling process include providing the organization with a clear line of sight across a software project, helping to justify security efforts, and documenting knowable security threats to an application and make rational decisions on how to address them (Synopsys, n.d.). 
+OWASP has a four-question framework when it comes to threat modeling and is used to help organize threat modeling when a possible threat exists combined with the likelihood of the threat occurring and impact it would have on the organization. The four questions include: What are we working on? What can go wrong? What are we going to do about it? Did we do a good job? There are many methods and techniques that are utilized in the cyber threat landscape that can be used to answer each of these questions; yet, attempting to evaluate all the possible combinations of threat agent, attack, vulnerability, and impact is often a waste of time and effort. Therefore, OWASP has a threat modeling process that organizes these questions into 3 steps. Step 1 is to decompose the application. How does the application interact with external activities? This involves: Creating use cases to understand how the application is used, identifying entry points to see where a potential attacker could interact with the application, identifying assets, i.e., items or areas that the attacker would be interested in, and identifying trust levels that represent the access rights that the application will grant to external entities. Step 2 is to determine and rank threats.  Critical to the identification of threats is using a threat categorization methodology. A threat categorization such as STRIDE can be used, or the Application Security Frame (ASF) that defines threat categories such as Auditing and Logging, Authentication, Authorization, Configuration management, data protection in storage and transit, data validation, and exception management. The goal of determining and ranking threats is to help identify threats both from the attacker and the defensive perspective. Data flow diagrams (DFD) from step 1 help to identify the potential threat targets from the attacker’s perspective, such as data sources, processes, data flows, and interactions with users. These threats can be classified further as the roots for threat trees; there is one tree for each threat goal. From the defensive perspective, ASF categorization helps to identify threats as weaknesses of security controls for such threats. These weaknesses are used to identify common threat lists as examples to help in the identification of such threats. Step 3 is to determine countermeasures and mitigation. Countermeasures are security implementations that mitigate vulnerabilities; essentially once risk ranking is assigned to the threats in step 2, it is possible to sort threats from the highest to the lowest risk and prioritize mitigation efforts. Risk mitigation strategy may involve evaluating threats from the business impact they may pose; once the possible impact is identified, options for addressing the risk include accepting said risk, eliminating the components that make the vulnerability possible, and mitigating risks by adding checks or controls that reduce the risk impact, or the chances of its occurrence (Threat modeling process, n.d.). 
+Common misconceptions about threat modeling include the belief that threat modeling is only a design-stage activity; some see it as an optional exercise for which penetration testing or code review can substitute, and some think the process is simply too complicated. These misconceptions are remedied by signaling the need for threat modeling to uncover design flaws-penetration testing and secure code are effective at finding bugs, but design flaws is purely a threat modeling aspect and can be integral to penetration testing. There is also good reason to conduct a threat model after deployment, because understanding the issues in the current deployment influences future security architecture strategy. Furthermore, threat modeling isn’t all that complicated, because the process itself can become systematic or even automated (Synopsis, n.d.). 
+References: 
+Threat modeling. Threat Modeling | OWASP Foundation. (n.d.). Retrieved June 26, 2022, from https://owasp.org/www-community/Threat_Modeling 
+Threat modeling process. Threat Modeling Process | OWASP Foundation. (n.d.). Retrieved June 26, 2022, from https://owasp.org/www-community/Threat_Modeling_Process
+What is threat modeling and how does it work? Synopsys. (n.d.). Retrieved June 26, 2022, from https://www.synopsys.com/glossary/what-is-threat-modeling.html 
+Red Teaming
+1.	“If you want to stop an attacker, you have to think like an attacker.” – Kelly Sheridan
+a.	There is no question that today’s cyber attackers are constantly developing and targeting their victims with evolving tactics and techniques. Unfortunately, as a result, organizations are often caught unprepared which leads to breaches that frequently go undetected for weeks or even months. Most organizations have a false sense of security and assume that the antiquated controls they have put in place are still adequate. To withstand the volume and sophistication of today’s attacks, organizations need a dedicated group that assumes the adversarial role and challenges the effectiveness of security controls and defensive teams. Furthermore, simulating real-world threat scenarios provides the organization with the most accurate security posture assessment. Red teaming is a crucial role in building an organization’s security capabilities, resilience, and overall maturity.
+2.	Primary Tasks of System Security:
+a.	Vulnerability assessment:
+i.	What are the vulnerabilities and threats that might happen? 
+ii.	Are we prepared should they happen?
+b.	Penetration testing: Do the systems and technologies function as expected?
+c.	Red team operations: DO the processes and organizational controls work as intended? 
+3.	Red team: 
+a.	A concept where security professionals from the organization or well-vetted outsiders simulate realistic threats and use adversarial techniques designed to test our systems processes, organization, and the responses. 
+4.	Results of red team tests provides: 
+a.	A list of flaws in our systems.
+b.	A better idea of how the organization responds.
+c.	The weaknesses and strengths of security operations. 
+d.	Ways to improve defenses. 
+5.	The Red Team: 
+a.	Tests are typically very explicit. 
+b.	Mimics a specific threat that a real malicious actor might launch on an organization. 
+c.	Uses tactics, techniques, and procedures (TTPs) to emulate threats. 
+d.	Measures the effectiveness of the tests. 
+e.	Provides more information than a typical penetration test. 
+i.	Uses a holistic approach to find weaknesses in the whole system. 
+f.	Does engagements that have specific scope, objective, duration, budget, deliverables, process, and rules to be followed. 
+g.	Red team tests should ensure that their exercises do not harm systems and people. 
+Roles and Responsibilities of the Red Team
+“Tell me things others don’t and make [senior officials] feel uncomfortable.”-George Tenet, Director of Central Intelligence
+With cyber threats unfolding at an unprecedented pace examining our organization’s ability to identify, detect, respond, and recover from cyber attacks is more critical than ever. Consequently, a proactive approach is a must to sufficiently guard against these threats, where regular security assessments are performed on controls and processes to ensure their adequacy. 
+Red teaming to me is the practice of  simulating an adversarial attack from the adversarial viewpoint; thus, challenging an organization to improve on their reactive processes and procedures. Some key benefits of red teaming include a general list of security flaws an attacker can utilize to move laterally within an organization, a better idea of how the organization responds or ought to respond in the case of such an attack, and a general overview of ways to improve defenses or mitigate risk. Typical responsibilities of someone in a red team include finding weak points and mimicking an attack within controlled, natural environments. Red team members essentially play the role of an attacker or competitor to provide feedback to a company. They typically use pentesting, exploit development, and or web and mobile application pentesting. Additionally, red team members explore vulnerabilities or potential angles of attack, finding areas of risk, and reporting findings back to the company. While red team members may use vulnerabilities and exploits they are simply a means to an end and not the end itself. Control and management of IOC’s (indicators of compromise) is a core red team role. Penetration testing focuses primarily on those vulnerabilities and ethical hacking gives actors the freedom to use whatever attack methods they have at their disposal-a good example of ethical hacking would be in participating in bug bounties. These ethical hackers use their powers to protect people on the internet and generally get paid by the organization but are not necessarily employed by the organization. 
+NIST CSF and Offensive Cybersecurity
+1.	For almost every organization today, cybersecurity and privacy are top concerns. However, in the face of ruthless and persistent attackers, the task of keeping sensitive data private, intellectual property proprietary, and critical business systems operational often seems nearly impossible. Moreover, this challenge has become even more difficult with the proliferation of the IoT and OT coming online. An excellent resource that organizations can use to help better identify, manage, reduce, and communicate cybersecurity risk is the National Institute of Standards and Technology’s Cybersecurity Framework (NIST CSF). The NIST CSF came into existence in 2013 through an executive order from the President of the United States of America. According to NIST, “It is the policy of the United States to enhance the security and resilience of the NMation’s critical infrastructure and to maintain a cyber environment that encourages efficiency, innovation, and economic prosperity while promoting safety, security, business confidentiality, privacy, and civil liberties” (n.d.). While NIST CSF compliance is voluntary, it has become a gold standard across federal and non-federal organizations. 
+2.	NIST CSF:
+a.	Used by security professionals to: 
+i.	Drive security strategy.
+ii.	Easily communicate security functions with non-security colleagues. 
+iii.	Ensure control framework is complete and comprehensive. 
+iv.	Provide a set of areas to help manage limitations or vulnerabilities exposed by offensive cybersecurity.
+3.	Additional Control Frameworks:
+a.	NIST SP 800-82:
+i.	Guide for industrial control system security. 
+ii.	Covers:
+1.	Supervisory control and data acquisition systems (SCADA).
+2.	Distributed control systems (DCS). 
+3.	Programmable logic controllers (PLC).
+iii.	Useful for cybersecurity professionals operating in an industrial control environment.
+iv.	Covers threats and vulnerabilities and recommends counter measures to mitigate risks. 
+b.	IEC 62443:
+i.	Industrial automation and control system security.
+ii.	Global standard for the security of ICS networks. 
+iii.	Specifies standards, policies, procedures, systems, and components for ICS networks.
+iv.	Specifies metrics for system security.
+1.	Specifies concepts, models, and key terms.
+2.	Specifies abbreviations for industrial control environment. 
+c.	NISTIR 8259:
+i.	Has a series of important documents outlining cybersecurity activities for IoT devices. 
+ii.	Defines federal IoT cybersecurity requirements to ensure the right security and privacy controls for devices. 
+iii.	Provides tools and gives guidance for IoT manufacturers to ensure their processes and products are secure. 
+The Attacker Mindset
+Ted Harrington: And sure, enough he found a way that he could actually in a very trivial manner do that. And so now what would happen was it would say 500 coins minus negative 100 coins and as we all learned in middle school, you know, subtracting a negative is actually addition. So, his account balance would increase, he would get the secret weapon or whatever. And that's a great example of using the way that a system is supposed to work, right. It's supposed to process a transaction using a numerical value, but it was not intended to work that way. And this is why these types of techniques are really, really important, organizations really need to not just, you know, run some scanner that looks for some known vulnerability but actually look at the unique context of a system the way that works to be able to say, "Well, if someone has a malicious mindset and they have a certain motivation, could they abuse this system and achieve some unintended outcome?"
+The key takeaway to “Embrace an Attacker Mindset to Improve Security” with Perry Carpenter is surprisingly found at the beginning of the podcast. To sum up this podcast we must listen to Sun Tzu’s words in The Art of War: “All warfare is based on deception. Hints, when we are able to attack, we must seem unable. When using our forces, we must appear inactive. When we are near, we must make the enemy believe that we are far away. When we are far away, we must make him believe that we are near. If you know the enemy and know yourself, you need not fear the result of 100 battles. If you know yourself but not the enemy, for every victory gained, you will also settle the defeat. If you know neither the enemy nor yourself, you will succumb in every battle. Engage people with what they expect. It is what they are able to discern and confirms their projections. It settles them into predictable patterns of response, occupying their minds while you wait for the extraordinary moment, that which they cannot anticipate. If your enemy is secure at all points, be prepared for him. If he is in superior strength, evade him. If your opponent is temperamental, seek to irritate him. Pretend to be weak that he may grow arrogant. If he is taking his ease, give him no rest. If his forces are united, separate them. If sovereign and subject are in accord, put division between them. Attack him where he is unprepared. Appear where you are not expected.” Sun Tzu’s words are essentially a penetration tester’s playbook and essentially allows you to prepare or embrace the mindset of an attacker. The most interesting thing I found in the podcast is how an attacker seeks to break things or how an attacker views the world. I’m one of those people who see systems and think to myself how does this system work and how can that system be broken to benefit me? The one example where Ted Harrington explains a transaction process using numerical values to an unintended outcome of basically changing a positive value to a negative in order to generate income inside of a video game is nothing short of clever and masterfully said of an attacker’s mindset (Carpenter, 2021). 
+The NIST Cybersecurity Framework (CSF) affords any organization a standard framework organized by 5 key functions – identify, protect, detect, respond, and recover. This framework can be utilized for offensive purposes because it allows attackers a standard script to an organization’s security. Just as Sun Tzu stated: “All warfare is based on deception. Hints, when we are able to attack, we must seem unable. When using our forces, we must appear inactive. When we are near, we must make the enemy believe that we are far away. When we are far away, we must make him believe that we are near. If you know the enemy and know yourself, you need not fear the result of 100 battles.” Since we understand an organization must identify critical enterprise processes and assets we must assume their assets are secure and their users are trained. We must also assume they have some type of detection response capabilities we must evade and if we are seeking to damage things then we must also assume they have the ability to recover from damages. Essentially this framework becomes a chain that must be broken and like any chain it is only as strong as its weakest link. One of the easiest and surefire ways to evade detection is to simply utilize social engineering and gain access to resources. Say we are able and have done some research on an insider and we just end up calling them one day after doing sufficient open-source intelligence on the company to masquerade as a member of IT. We understand the lingo of people within the organization, and we utilize elicitation techniques in order to gain rapport with our victim. And then we ask them to run a diagnostic and that device we ask them to connect with has no safeguards in place and the device we connect to is a command-and-control center masked as a standard VPN connection and the user is none the wiser, because they see this screen every day. The user will not report it to IT, because they believe we are IT and at this point in time we have established a foothold within the organization, and we can utilize that user’s role to move laterally through the system and eventually elevate our privilege to effectively own the organization’s resources. This is why phishing is involved in 36% of data breaches. The human element within an organization is the weakest link when it comes to security and is one of the reasons why user awareness and training is often found in vulnerability assessments as being a predominant factor in expanded cybersecurity strategies within organizations (Computer Security, n.d.). 
+References:
+Carpenter, P. (2021, August 3). Embrace an attacker mindset to improve security. The CyberWire. Retrieved June 27, 2022, from https://thecyberwire.com/podcasts/8th-layer-insights/6/transcript 
+Computer Security Division, I. T. L. (n.d.). NIST Cybersecurity Framework: A quick start guide - cybersecurity framework: CSRC. CSRC. Retrieved June 27, 2022, from https://csrc.nist.gov/projects/cybersecurity-framework/nist-cybersecurity-framework-a-quick-start-guide 
+Identify how the NIST CSF applies to offensive cybersecurity
+	The purpose of NIST’s Special Publication 800-82, aptly named Guide to Industrial Control Systems (ICS) Security, is to provide guidance for securing industrial control systems, including supervisory control and data acquisition (SCADA) systems, distributed control systems (DCS), and other systems performing control functions. In addition, it provides a notional overview of ICS, reviews typical system topologies and architectures, identifies known threats and vulnerabilities to these systems, and provides recommended security countermeasures to mitigate the associate risks. ICS is important, because they are found in many industries such as electric, water and wastewater, oil, and natural gas, chemical, pharmaceutical, pulp and paper, food and beverage, and discrete manufacturing (e.g., automotive, aerospace, and durable goods). Furthermore, the guide to ICS Security’s intended audience includes: control engineers, integrators, and architects who design or implement secure ICS, system administrators, engineers, and other IT professionals who administer, patch, or secure ICS, security consultants who perform security assessments and penetration testing of ICS, managers who are responsible for ICS, senior management who are trying to understand implications and consequences as they justify and apply an ICS cybersecurity program to help mitigate impacts to business functionality, researchers and analysts who are trying to understand the unique security needs of ICS, and vendors that are developing products that will be deployed as part of an ICS. 
+	The major security objectives for an ICS implementation include restricting logical access to the ICS network and network activity, restricting physical access to the ICS network and devices, protecting individual ICS components from exploitation, restricting unauthorized modification of data, detecting security events and incidents, maintaining functionality during adverse conditions, and restoring systems after an incident. All of these goals fulfill the NIST Cybersecurity Framework’s five functions of identifying assets, protecting those assets, detecting events, responding to those events, and recovering from an event. The main takeaway from all of this is the security objectives. Going into depth an ICS must be able to include unidirectional gateways, a DMZ network architecture with firewalls to prevent network traffic from passing directly between the corporate and ICS networks and having separate authentication mechanisms and credentials for users of the corporate and ICS networks. The ICS should also use a network topology that has multiple layers, with the most critical communications occurring in the most secure and reliable layer, and thus, fulfilling a security objective in restricting logical access to the ICS network and network activity. As for restricting physical access to the ICS network and devices, unauthorized physical access to components must be communicated to staff and user awareness is critical in this area, because physical access to these components could cause serious disruption of the ICS’s functionality. A combination of physical access controls should be used, such as locks, card readers, and/or guards. Third, protecting individual ICS components from exploitation includes deploying security patches in as expeditious a manner as possible, after testing them under field conditions; disabling all unused ports and services and assuring that they remain disabled; restricting ICS user privileges to only those that are required for each person’s role (least privilege); tracking and monitoring audit trails; and using security controls such as antivirus software and file integrity checking software where technically feasible to prevent, deter, detect, and mitigate malware. Fourth, restrictions of unauthorized modifications of data must include data that is in transit and at rest – Utilizing TCP and IPSec for reliable communication and tracking of data is essential in this area. Fifth, detecting security events, which have not yet escalated into incidents, can help defenders break the attack chain before attackers attain their objectives. This includes the capability to detect failed ICS components, unavailable services, and exhausted resources that are important to provide proper and safe functioning of the ICS. Sixth, maintaining functionality during adverse conditions involves designing the ICS so that each critical component has a redundant counterpart. Additionally, if a component fails, it should fail in a manner that does not generate unnecessary traffic on the ICS or other networks, or does not cause another problem elsewhere, such as a cascading event. The ICS should also allow for graceful degradation such as moving from “normal operation” with full automation to “emergency operation” with operators more involved and less automation to “manual operation” with no automation. Finally, restoring the system after an incident involves an incident response plan. A major characteristic of a good security program is how quickly the system can be recovered after an incident has occurred, and thus, is a critical component to responding to and recovering from an event. 
+All of these objectives are nothing without a good defense-in-depth strategy that includes developing security policies, procedures, training, and educational material that applies specifically to the ICS. Addressing security throughout the lifecycle of the ICS from architecture design to procurement to installation to maintenance and to decommissioning is essential and not only a practice of the secure development lifecycle. Using modern technology, such as smart cards for personal identity verification (PIV) and implementing security controls such as intrusion detection software, antivirus software and file integrity checking software, where technically feasible, to prevent, deter, detect, and mitigate the introduction, exposure, and propagation of malicious software to, within, and from the ICS. Finally, tracking and monitoring audit trails on critical areas of ICS and employing reliable and secure network protocols and services where feasible are all good strategies to keep in mind when focusing on the objective of protecting ICS. 
+References: 
+Stouffer, K., Lightman, S., Pillitteri, V., Abrams, M., & Hahn, A. (2015, June 3). Guide to industrial control systems (ICS) security. CSRC. Retrieved June 27, 2022, from https://csrc.nist.gov/publications/detail/sp/800-82/rev-2/final 
+Security Assessment, Evaluation, and Testing Cycle
+1.	“If you can’t measure it, you can’t improve it.” – Peter Drucker
+a.	In response to various cyber attackers online today with diverse motives and sophistication, organizations have no choice but to stay diligent and identify and address vulnerabilities before a malicious actor takes advantage of them. Unfortunately, the reality is that organizations frequently neglect the importance of their technical, physical, and people security until they experience a breach. So how can organizations effectively evaluate their defensive measures against various attack methods used by attackers, both internal and external? 
+2.	“Attack is the secret of defense; defense is the planning of an attack.” – Sun Tzu, The Art of War
+a.	In today’s hyper-connected world, regardless of how sophisticated an organization’s system is, it is never immune to cybersecurity attacks. Attackers with varying means and motives are constantly hard at work looking for the slightest security gaps to take advantage of. Therefore, it behooves an organization to engage in proactive, regular assessments to identify gaps in its defenses and ensure that appropriate controls are in place. 
+3.	Security assessment, evaluation, and tests provide a holistic view of the security infrastructure’s effectiveness. 
+4.	Types of Security Assessments:
+a.	Software testing:
+i.	Identifies vulnerabilities in the code or system.
+b.	Enterprise security assessments:
+i.	Identify vulnerabilities in the organization, controls, and physical enterprise. 
+5.	CISSP:
+a.	Common certification for cyber professionals.
+b.	Official training guide states:
+i.	Security assessment and training involves the evaluation of information assets and associated infrastructure using various tools and techniques for the purpose of identifying and mitigating risk to maintain an information system’s ability to deliver its intended functionality in a secure manner. 
+6.	Responsibilities of a Security Professional:
+a.	Design and validate assessment and test strategies.
+b.	Conduct security control testing.
+c.	Collect security process data.
+d.	Analyze and report test outputs.
+e.	Facilitate audits.
+7.	Security Assessments:
+a.	Enterprise security assessments:
+i.	Control tests
+ii.	Vulnerability tests
+iii.	Security audits
+b.	Organizational security assessments:
+i.	Reviewing system logs
+ii.	Leading policy audits
+iii.	Evaluating processes for compliance
+iv.	Assessing effectiveness of administrative controls
+c.	Software testing: 
+i.	Software development lifecycle
+8.	Software Testing Approaches:
+a.	Static and dynamic testing:
+i.	Reviewing software code for errors in syntax to make sure the programming logic works correctly. 
+b.	Synthetic transaction testing:
+i.	Evaluating how the software system performs by:
+1.	Putting in random data to see what output results come out.
+2.	Putting in biased data to see whether the output results are appropriate. 
+3.	Using AI tools. 
+9.	Threat modeling test results help organizations to:
+a.	Measure risks and compare them with the risk profile.
+b.	Understand the effectiveness the people, the process, and the technology in the organization.
+c.	Perform required audits. 
+Outline the Importance of Assessment Approaches and Results
+1.	A phishing email containing an infected attachment installed spyware and stole employees’ credentials, bank account information, and keystrokes. 
+a.	Regular security audits are capable of detecting spyware and will overall assist in automating and evolving our security posture when it comes to detection within the NIST Cybersecurity Framework (CSF). Organizational security assessments such as reviewing system logs, leading policy audits (ensuring users are aware and trained on a regular basis when it comes to cybersecurity policies), evaluating processes for compliance, and assessing the effectiveness of administrative controls are crucial to the security posture of the organization as a whole. We need to be able to ensure that administrative controls are in place that make sure users are aware not to open attachments originating from outside the organization and we need to be able to ensure that evaluations for compliance are held in high regard and practiced by our employees.  Furthermore, control tests can prove the effectiveness of antivirus/antimalware, network intrusion prevention, and restrictions of web-based content configurations. 
+2.	Another phishing attack successfully deceived the assistant of the chief financial officer to wire transfer thousands of dollars to a fraudulent account. 
+a.	This attack involves spearphishing and these types of attacks cannot be easily mitigated with preventative controls since it is based on the abuse of system features; however, conducting security audits reviewing system logs for applications and network traffic could prove useful in understanding the tactics, techniques, and procedures involved in such an attack. Internal vulnerability tests that are utilized by groups such as the Gamaredon Group, Kimsuky, Lazarus Group, and Leviathan can help us understand and make users aware of these types of threats and thus be more careful in relation to these types of attacks (Technique T1534, 2019). 
+3.	A misconfiguration of the public customers’ portal allowed an attacker unauthorized access to sensitive customer records. 
+a.	All types of security assessments are useful in revealing misconfigurations. When taking the software development lifecycle into account Static Application Security Testing (SAST) can be useful in identifying misconfigurations during development. If that fails then dynamic application security testing (DAST) could prove useful in finding vulnerabilities towards the end of the SDLC (Synopsys, n.d.). In addition, in order to detect such a vulnerability, control tests, vulnerability tests, and regular security audits of these critical portals, such as ensuring no large amounts of data are leaving an endpoint without follow through from an administrator and flagged for review at the SOC level could prove useful in mitigating these issues. Furthermore, cryptographic techniques and ensuring no one, but someone from within our Network domains are capable of decrypting customer proprietary information (CPI) as security control can prove useful to ensure the safety of customer records. 
+4.	A malicious actor claiming to be a support technician managed to dupe the staff and gained unauthorized access to the data center. 
+a.	Organizational security assessments such as leading policy audits and evaluating processes for compliance can hold employees responsible for their actions. When our staff is vulnerable to social engineering so is our organization and its resources. It must be made clear to staff that regular security audits of policies to test compliance are regarded in high esteem and can ensure employees think twice before they allow safeguards that are put in place for a reason are followed and users are aware. 
+5.	An attacker compromised a publicly exposed server by following well-known adversary tradecraft. The security team did not identify this compromise until a third-party notification came several months later. 
+a.	These are known as “in-the-wild attacks”. A well-known adversary often has their own MITRE ATT&CK page with their own tactics, techniques, and procedures. It’s clear these techniques should definitely be looked at when conducting vulnerability security assessments. Furthermore, regular security audits and control tests to mitigate risk from these types of attacks should also be looked at. In addition, assessing the effectiveness of administrative security controls can also be effective at creating and automating system logs to our security team’s effectiveness at being able to catch such techniques. Automating these types of well-known tactics, techniques, and procedures and utilizing machine learning in order to understand these attacks can be very useful in automating detection of these attacks. 
+6.	Numerous other incidents have been caused due to employees installing unauthorized software, visiting social media sites, and using weak passwords. 
+a.	User awareness and training while leading policy audits and evaluating processes for compliance are essential. Users should not have the capability to install unauthorized software unless it is first documented within a ticketing system such as ServiceNow and then checked by an IT administrator to ensure only approved software is installed. Furthermore, adding security controls that automate employee effectiveness in creating strong passwords and restricting visitation of offending social media sites are not done on the company network. 
+References: 
+Internal spearphishing. Internal Spearphishing, Technique T1534 – Enterprise | MITRE ATT&CK®. (2019, September 4). Retrieved June 28, 2022, from https://attack.mitre.org/techniques/T1534/ 
+What is SAST and how does static code analysis work? Synopsys. (n.d.). Retrieved June 28, 2022, from https://www.synopsys.com/glossary/what-is-sast.html#E 
+Compliance and Audits
+1.	“One of the main cyber risks is to think they don’t exist. The other is to try to treat all potential risks. Fix the basics, protect first what matters for your business and be ready to react properly to pertinent threats. Think data, but also business services integrity, awareness, customer experience, compliance, and reputation.” – Stephane Nappo
+a.	According to 2021 IBM’s Cost of a Data Breach Report, the average cost of a data breach reached 3.86 million in 2020. The same report highlighted those credentials were compromised as the most common initial attack vector, responsible for 20% of breaches. In most cases, organizations can significantly reduce the risk of being breached through regular audits. At a high level, the purpose behind security audits is to perform an overall assessment of the organization’s security posture, both physical and non-physical. Therefore, regular audits are one of the most proactive and effective ways organizations can identify vulnerabilities or gaps in security controls. Furthermore, audits are also how organizations prove compliance with regulations such as HIPAA and PCI-DSS. 
+2.	Information security audit:
+a.	Happens when the information security of an organization is checked, tested, and evaluated. 
+b.	Is a type of offensive security activity.
+c.	Evaluates the controls and finds areas to be improved. 
+i.	Checks if the controls are operational, turned on or off and effective. 
+3.	Types of Audits:
+a.	Encryption audit: Evaluates the function of encryption.
+b.	Physical audit: Ensures physical security.
+c.	Tool audit: Evaluates the function of tools.
+d.	Behavioral audit: Evaluates employees’ functions. 
+4.	Organization has a list of controls that need to be audited and after auditing will be granted certification. An audit would determine whether all the required controls are implemented in a satisfactory manner to be effective. 
+5.	Audit Process:
+a.	Planning and preparation of audit
+b.	Setting up audit objectives
+c.	Performing audit
+d.	Issuing report with the results of audit
+Compliance vs Security
+	Payment Card Industry Data Security Standard, or PCI DSS provides stakeholders and users assurance that companies in compliance operate with minimum standards to ensure credit/debit security. They also cover how to secure data handling processes; while most organizations work to avoid PCI compliance breaches through stringent conditions, Verizon’s forensics team, which conducts regular payment security reports, has never found an organization that was wholly PCI DSS compliant at the time it was breached. One such attack as an example is the Magecart Attack on Warner Music Group (WMG). Magecart, is a conglomerate of hacking groups that target payment card data online and for three months in late 2020 WMG was the victim of such attackers. Payment card information, including card numbers, CVC/CVV, and expiration date were exposed in the months the attack was ongoing. Their techniques focused on the supply chain, where third-party software was infected and used to skim customer data as purchases were made. Even though WMG was compliant in setting out to utilize such standards and educate on their importance within the organization, their software development lifecycle had little to do with PCI DSS and thus led to non-compliance. Being compliant does not necessarily mean applications and software are necessarily secure as the threat landscape changes and it’s clear that software security assessments are essential to being compliant in today’s threat landscape. When taking the software development lifecycle into account Static Application Security Testing (SAST) can be useful in identifying misconfigurations during development. If that fails then dynamic application security testing (DAST) could prove useful in finding vulnerabilities towards the end of the SDLC (Synopsys, n.d.).
+References: 
+The 5 biggest PCI compliance breaches. www.goanywhere.com. (2021, January 26). Retrieved June 28, 2022, from https://www.goanywhere.com/blog/the-5-biggest-pci-compliance-breaches 
+What is SAST and how does static code analysis work? Synopsys. (n.d.). Retrieved June 28, 2022, from https://www.synopsys.com/glossary/what-is-sast.html#E 
+Module Summary
+1.	“Rather than fearing or ignoring cyber-attacks, do ensure your cyber resilience to them.” — Stephane Nappo
+a.	The scale and kinds of threats that organizations face today are unprecedented, ranging from criminal groups to nation states and from individual malicious insiders to hacktivism groups. Furthermore, with easy access to free hacking information and resources online, threat groups are using and rapidly changing their TTPs more than ever before. Therefore, if organizations want to defeat today's threats, they need to think like an attacker. The shift to the attacker mindset starts with a deep understanding of the attacker's TTPs and then proactively and continuously simulating those same TTPs to measure the effectiveness of their security controls. Examples of such proactive engagements include red teaming and audits. Furthermore, proven industry frameworks such as NIST CSF are excellent resources that guide those looking to get started on or enhance their existing security programs. In this module, you received an introduction to various elements of offensive cybersecurity and how they help improve an organization's defenses and resilience against attacks. In the coming modules, you will explore some of these topics in much more detail.
+Capstone Preview
+As you continue your cybersecurity journey, it is time to begin thinking about your capstone project and applying what you have learned throughout this course. The capstone project will be due after you have completed Module 24. 
+For your capstone project, you will be creating a defensive and offensive strategy proposal for a specific case study. You will submit a report outlining the proposals and record a 5–10-minute presentation explaining each. More details will be provided at the end of Module 23.
+Bibliography
+“Cost of a Data Breach Report 2021.” IBM. n.d. https://www.ibm.com/security/data-breach. 
+Embrace an Attacker Mindset to Improve Security. The CyberWire. Podcast audio. 2021. https://thecyberwire.com/podcasts/8th-layer-insights/6/notes. 
+“Gaining the Advantage: Applying Cyber Kill Chain Methodology to Network Defense.” PDF file. Lockhead Martin Corporation, 2015. https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/Gaining_the_Advantage_Cyber_Kill_Chain.pdf
+“Getting Started with the NIST Cybersecurity Framework: A Quick Start Guide.” NIST. n.d. https://csrc.nist.gov/Projects/cybersecurity-framework/nist-cybersecurity-framework-a-quick-start-guide. 
+Heath, Kath. “The 5 Biggest PCI Compliance Breaches.” goanywhere. 26 Jan. 2021. https://www.goanywhere.com/blog/the-5-biggest-pci-compliance-breaches
+“History and Creation of the Framework.” NIST. n.d. https://www.nist.gov/cyberframework/online-learning/history-and-creation-framework. 
+“ISA99, Industrial Automation, and Control Systems Security.” International Society of Automation. n.d. https://www.isa.org/standards-and-publications/isa-standards/isa-standards-committees/isa99. 
+“Largest Healthcare Data Breaches in 2020.” HIPAA Journal. 1 Jan. 2021. https://www.hipaajournal.com/largest-healthcare-data-breaches-in-2020/. 
+Megas, Katerina. “Rounding Up Your IoT Security Requirements: Draft NIST Guidance for Federal Agencies.” NIST (blog). 15 Dec. 2020. https://www.nist.gov/blogs/cybersecurity-insights/rounding-your-iot-security-requirements-draft-nist-guidance-federal. 
+Morgan, Steve. “Cybercrime to Cost the World $10.5 Trillion Annually by 2025.” Cybercrime Magazine. 13 Nov. 2020. https://cybersecurityventures.com/cybercrime-damage-costs-10-trillion-by-2025/. 
+Noyes, Kent. “3 Considerations When Building Your Security Architecture.” World Wide Technology. 21 Sept. 2021. https://www.wwt.com/article/security-architecture-considerations. 
+“Gartner Glossary: Operational Technology (OT).” Gartner. n.d. https://www.gartner.com/en/information-technology/glossary/operational-technology-ot. 
+“Guide to Industrial Control Systems (ICS) Security.” NIST. n.d. https://csrc.nist.gov/publications/detail/sp/800-82/rev-2/final
+“Ponemon Study: Only 28 Percent of Enterprises Say CEO and Board Approves Acceptable Level of Cyber Risk, Demonstrating Clear Lack of Accountability.” Business Wire. 15 Oct. 2019. https://www.businesswire.com/news/home/20191015005326/en/Ponemon-Study-28-Percent-Enterprises-CEO-Board. 
+“Threat Modeling.” NIST. n.d. https://csrc.nist.gov/glossary/term/threat_modeling. 
+“Threat Modeling.” Synopsys. n.d. https://www.synopsys.com/glossary/what-is-threat-modeling.html. 
+Vest, Joe and James Tubberville. Red Team Development and Operations: A Practical Guide. Independently published, 2020. 
+yeyintminthuhtut. “Awesome-Red-Teaming.” GitHub. n.d. https://github.com/chihebchebbi/Awesome-Red-Teaming. 
+
