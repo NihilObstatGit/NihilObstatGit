@@ -1,0 +1,185 @@
+Review of IAM Role
+1.	The Identity and Access Management (IAM) function: 
+a.	Is a set of critical activities
+b.	Has many job opportunities in the IAM space
+2.	Malicious actors can get around the IAM barriers by:
+a.	Impersonating someone.
+b.	Using orphaned accounts
+c.	Taking advantage of poorly sanitized accounts. 
+3.	Life Cycle of IAM
+a.	Creation of credentials
+b.	Assignment of privileges
+c.	Maintenance of credentials
+d.	Removal/disposal of credentials
+IAM Position Reflection
+A position in Identity and Access Management (IAM) encompasses all of which allows access to an organization’s network. Nevertheless, access to such a precious resource is one that is heavily scrutinized and process oriented, so attention to detail is a must. This role mainly allows access to employees, customers, vendors, and contractors to resources required to fulfill their role or privileges to the organization’s network, which is mainly known as the principle of least privilege. A role in IAM also helps the organization protect their systems and data. The goals of IAM are to mainly ensure operational efficiency ensuring availability of systems to those who require it, following regulatory compliance with systems and access to those systems/networks, fraud detection, lifecycle management, and properly sanitizing access to ensure malicious actors cannot break IAM barriers. 
+	The adoption of emerging technologies such as cloud computing, bring your own device (BYOD), the internet of things (IoT), and the increasingly remote workforce is going to require IAM responsibilities to evolve in the future. Given these changes, proper network segmentation, and network hardening are possibly going to be new responsibilities to ensure the security of company systems and data is secure and confidential. Cloud computing on the other hand may be the answer to all of these things in general and ensure that the responsibilities entailed with keeping company data and systems secure is as simple as connecting to a vpn on a properly segmented network that utilizes audit and accountability measures to ensure the confidentiality, integrity, and availability of systems all depends on one access point. Thus lowering, the amount of effort on part of the employee and the organization as a whole to protecting their assets on a wide area of surface that can be attacked or intruded upon. 
+An IAM Professional’s Daily Roles and Responsibilities
+1.	Monitor systems
+2.	Are we properly synchronizing our passwords within the organization?
+3.	Are we properly managing the lifecycle of IAM for users within the organization?
+4.	There will always be end users that require some support in getting access back into their system if it is behaving inappropriately. 
+Review of Asset Protection Nature
+1.	Review of Key Ideas in Asset Protection
+a.	Information Assets: 
+i.	Identify vulnerable assets such as data, systems, and networks that need protection.
+ii.	Inventory assets which need to be protected. 
+b.	Asset owner:
+i.	Identify the owners of the asset, and they will specify the classification system their information assets should have.
+ii.	Be aware that the owner’s decision about the classification level dictates control standards for that information asset. 
+c.	Users:
+i.	Have permission from their managers and the asset owners to have access to the information that they will use.
+ii.	Are responsible for assets, such as storing, processing, modifying, sharing, if they print the information. 
+Comparing Security Frameworks
+1.	NIST CSF:
+a.	Who puts it out there? NIST
+b.	Basic use: Lifecycle of an organization’s cybersecurity strategy.
+c.	Number of groups: 5 core functions: identify, protect, detect, respond, and recover.
+d.	Number of controls: 23 categories and 105 subcategories (which looks like controls).
+2.	ISO27001:
+a.	Who puts it out there? International Standards Organization comprises
+3.	Third-Party Risk Management Components:
+a.	Identify your organization’s policies about how a third-party vendor would have access to it.
+b.	Understanding business documents like contracts and service-level agreements that help specify and document the requirements.
+i.	NDA (Access and rights information).
+ii.	Insurance requirements.
+iii.	Minimal acceptable security requirements.
+iv.	Notification requirements for security incidents.
+v.	Right to audit.
+c.	Assigning a relationship manager from the organization to manage third-party arrangements and vendors actively.
+d.	Clear understanding of your organization’s requirements. 
+Assets
+On August 17, 2021 T-Mobile released a statement regarding a Cybersecurity breach reporting that about 40 million former or prospective T-Mobile customers (now includes concurrent T-Mobile customers as well) data had been leaked, including first and last names, date of birth, SSN, and driver’s license/ID information. In an article written by Jonathan Greig on August 26, 2021 on ZdNet, John Binns, a 21-year-old Virginia native living in Turkey admitted to being the main force behind the T-Mobile hack and advised that he originally gained access to T-Mobile’s network in July by means of accessing through an unprotected router. Jeremy Kirk on Twitter provided proof that John Binns was able to gain entry through a gateway GPRS support node that was used for testing. This node was in fact exposed to the internet and this allowed the attacker to eventually pivot to the local area network. The attacker utilized brute force/credential stuffing in order to pivot onto more than 100+ servers arriving at customer data eventually and exfiltrated over 106 gigabytes or more than 100 million data sets for each customer. According to John Binns there was no web application firewall or IAM security controls in place for this specific router and he was quoted saying: “[T-Mobile] security is awful”. T-Mobile was actually notified of the breach by a cybersecurity company called Unit221B LLC, which advised their customer data was being marketed on the dark web. Keep in mind, T-Mobile had no intrusion detection systems in place and didn’t revoke access until the data was already for sale on the dark web. As soon as August 17, 2021, when T-Mobile was informed of the breach they brought in world-leading cybersecurity experts such as Mandiant to respond and recover from this breach. The gateway was closed immediately. 
+Given all of this information, mitigations were not at the forefront of T-Mobile’s agenda when it comes to keeping good cybersecurity practice. Instead, they chose to keep the goal of profit as their main objective. Any negative goals like cybersecurity would be dealt with on a reactionary basis as is shown with their past 4 data breaches. Implementing good identity and access management principles along with micro-segmentation of networks would have greatly aided in the security of customer data. Micro-segmentation is the first step to zero trust security. To give a visual overview of the attack: First, the attacker was given an IP address to a GPRS Gateway that had access to over 100 servers, one of them including Oracle DB and Customer records. Proper segmentation of the GPRS gateway from customer records and implementing security policies should have been the access control between a router used for testing and other servers. Second, the attacker was able to brute force his way into the Oracle Database. Incorporating SSH rate limits ought to have stopped an attacker from utilizing such a method and a notification would be sent to a security team in charge of overlooking the Oracle Database. No such policy existed, and the attacker was able to enter the Oracle Database and decrypt customer records and then transfer over 106 GB of data to an external IP address. Incorporating simple security policies that restrict the flow of information outside of the company is another zero-trust principle that could have prevented this breach. IAM lifecycle management is another mechanism by which this breach could have been prevented. It is clear that the router that was misconfigured was able to be fuzzed a month before the selling of customer data. It should have been clear from the addition of the GPRS gateway, that if it has access to the internet, then it has no business communicating with several different servers and an audit and accountability record should have been in place and reviewed. In another article, by Vice nearly 8 months later, Joseph Cox notes that T-Mobile attempted to pay to have the data returned. Unfortunately, this group may have not been associated at all with the original hacking group and made off with nearly a quarter of a million dollars in bitcoin. It’s clear that T-Mobile still needs assistance in the cybersecurity world and unfortunately, this is another clear reminder to never pay the ransom. Proper endpoint protection is another mitigation technique that can be utilized. Carbon Black endpoint also has intrusion prevention systems, along with a dedicated team to allow for 24/7 monitoring and detection of cybersecurity threats along with proper mitigation techniques that can also enhance the availability of systems IT professionals and customer service representatives can utilize in a world that is rapidly moving to remote work. 
+Resources: 
+Cox, J. (2022, April 12). T-Mobile secretly bought its customer data from hackers to stop leak. it failed. VICE. Retrieved April 19, 2022, from https://www.vice.com/en/article/k7w9mv/tmobile-hacked-bought-data-mandiant 
+Greig, J. (2021, August 16). T-Mobile says hackers accessed user data but won't confirm SSN breach of 100 million customers. ZDNet. Retrieved April 19, 2022, from https://www.zdnet.com/home-and-office/networking/t-mobile-says-hackers-accessed-user-data-but-wont-confirm-ssn-breach-of-100-million-customers/ 
+Greig, J. (2021, August 26). 21-year-old tells WSJ he was behind massive T-Mobile Hack. ZDNet. Retrieved April 19, 2022, from https://www.zdnet.com/article/21-year-old-tells-wsj-he-was-behind-massive-t-mobile-hack/ 
+Joe Panettieri • Aug 27, 2021. (2021, August 30). T-mobile cyberattack: Incident investigation & data breach timeline. MSSP Alert. Retrieved April 19, 2022, from https://www.msspalert.com/cybersecurity-breaches-and-attacks/t-mobile-investigation/ 
+Kirk, J. (2021, August 16). The person who claims to have compromised T-Mobile says the company misconfigured a gateway GPRS support node that was apparently used for testing. it was exposed to the internet. that allowed the person to eventually pivot to the lan. proof screenshot supplied. pic.twitter.com/tbmvrbmg0r. Twitter. Retrieved April 19, 2022, from https://twitter.com/jeremy_kirk/status/1427144723731402756?lang=en 
+Sievert, M. (2021, August 27). The cyberattack against t mobile and our customers: What happened, and what we are doing about it.   t mobile newsroom. T-Mobile. Retrieved April 19, 2022, from https://www.t-mobile.com/news/network/cyberattack-against-tmobile-and-our-customers 
+Tokens, C. (2021, December 8). Micro-segmentation: The first step to zero-trust security. ColorTokens. Retrieved April 19, 2022, from https://colortokens.com/blog/micro-segmentation-first-step-zero-trust-security/ 
+Comparing Security Frameworks
+1.	The 5 Cybersecurity Frameworks:
+a.	NIST CSF
+b.	ISO27002
+c.	CSC
+d.	COBIT
+e.	PCI-DSS
+2.	Comparing Security Frameworks:
+a.	NIST CSF:
+i.	Who puts it out there? NIST
+ii.	Basic use: Lifecycle of an organization’s cybersecurity strategy.
+iii.	Number of groups: 5 core functions: identify, protect, detect, respond, and recover.
+iv.	Number of controls: 23 categories and 105 subcategories (which looks like controls).
+v.	Reference Website: nist.gov/cyberframework
+b.	ISO27002:
+i.	Who puts it out there? International Standards Organization (ISO) comprises representatives from multiple national standard bodies from organizations around the world. 
+ii.	Basic use: Formal certification (often needed for vendor approval). 
+iii.	Number of groups: 14 control categories.
+iv.	Number of controls:  114 controls. 
+v.	Reference website: iso.org/iseoiec-27001-information-security.html
+c.	CSC:
+i.	Who puts it out there? Center for Information Security (CIS). 
+ii.	Basic use: Simple framework and often the starting point for many organizations.
+iii.	Number of groups: 3 groups
+iv.	Number of controls: 20 control groups
+v.	Reference website: cisecurity.org/controls/cis-controls-list
+d.	COBIT: Control Objectives for Information and Related Technologies
+i.	Who puts it out there? ISACA
+ii.	Basic use: It is mostly about IT governance and management and is used by IT organizations but has some security aspects. 
+iii.	Number of groups: 5 domains
+iv.	Number of controls: 40 (management objectives)
+v.	Reference website: isaca.org/resources/cobit
+e.	PCI-DSS: Payment Card Industry Data Security Standard
+i.	Who puts it out there? Payment Card Industry
+ii.	Basic use: Merchants use PCI standards while processing credit cards to reduce the risk of data loss. 
+iii.	Number of groups: 6 goals
+iv.	Number of controls: 12 requirements
+v.	Reference website: pcisecuritystandards.org
+3.	The 5 core functions considered together:
+a.	Provide a strategic view of the lifecycle of an organization’s cybersecurity strategy.
+b.	Are used by organization as a structure for assessing and improving their ability to prevent, detect, and respond to cyber incidences. 
+Selecting a Framework
+Being that the ACME group is a relatively new organization and is only just now looking at it’s cybersecurity position I would start off with recommending Critical Security Controls (CSC) to implement first. The Center for Internet Security has 18 CSC. Being that the company is just starting out and hasn’t globalized, yet an ISO framework would be a little daunting to look at first, so to get things started and to educate on the fundamentals is a good place to start, before getting too technical. Control  1 and 2 looks at inventory and control of enterprise/software assets. Every organization must know what they have, how to update it, and keep proper logs of systems in place. Control 3 looks into data protection, which will lead a company culture for data security. Control 4 looks at securing configuration of enterprise assets and software. In the future this will help with understanding principles of least privilege and zero trust . Controls 5 through 8 look at identity and access management. Account, access control, continuous vulnerability, and audit log management are all important concepts to understand in order to ensure the confidentiality of customer/enterprise data, integrity of that data/systems, and availability of systems/products are intact and are not able to be broken. Control 9 and 10 look at email web browser protections and malware defenses. This covers the protect part of the NIST framework if they choose to upgrade to that framework in the future. It’s important to understand that in this day and age phishing accounts for 90 percent of all breaches (2022, Jan. 18). So, it’s paramount that these applications are protected and scrutinized and a culture for cybersecurity is implemented within production. Malware defenses as well are another form of redundancy if in case someone does click that link on an email originating from an outside source. Malware defenses can also properly segment networks and even quarantine effected systems before they reach other critical systems. Control 11 looks into Data recovery. If in case a server goes down due to malware that could not have been stopped automatically, then proper steps in place to establish and maintain data recovery practices pre-incident are best practice to keep availability of systems intact. Controls 12 and 13 look at network infrastructure management, monitoring, and defense. Every organization must know what gateway is open to the internet, how many hops away it is from critical systems that contain customer records and proper segmentation of these networks and management of these networks must take place utilizing industry standard tools. Control 14 is security awareness and skills training. It is paramount that every employee understands that the security of the organization depends on all of us and thus it’s paramount to have this control to reiterate training biquarterly or at the bare minimum yearly within the organization. Control 15 looks at service provider management. Every organization must develop a process to evaluate any service providers who hold customer data, or are responsible for IT platforms or processes, to ensure these providers are protecting those platforms and data appropriately. Controls 16-18 deal with application software security, incident response management, and penetration testing. Every organization must understand the attack surface and how an attacker may think. All of these processes work hand in hand with each other. Penetration testers are able to inform incident response management that there is a bug in the wild that can compromise systems (Log4Shell for example) and thus it’s crucial to establish policies, plans, procedures, and communications on how to prepare, detect, and quickly respond to such an attack in order to mitigate risk and any possibly company fallout. 
+References:
+Cyberattacks 2021: Statistics from the last year. Spanning. (2022, January 18). Retrieved April 19, 2022, from https://spanning.com/blog/cyberattacks-2021-phishing-ransomware-data-breach-statistics/#:~:text=Phishing%20attacks%20are%20responsible%20for,breaches%20occur%20due%20to%20phishing. 
+The 18 CIS controls. CIS. (2021, October 28). Retrieved April 19, 2022, from https://www.cisecurity.org/controls/cis-controls-list 
+Third-Party Risk Management
+1.	Third-party risk is the risk organizations face because of things their vendors do that open up vulnerabilities for them. 
+a.	Target data breach was the result of air conditioning vendors who had controls to access and maintain systems within the store. Hackers stole credentials from the air conditioning vendor and used them to negotiate their way through the network to the point-of-sale system at Target. 
+b.	More recently hackers exploited a vulnerability found in the Microsoft Exchange Server that left thousands of businesses using that software vulnerable. 
+2.	Third-Party Risks: 
+a.	Security policies and standards: 
+i.	Do your vendors have security policies and follow standards that meet your policies and standards?
+b.	Control and control configurations: 
+i.	Do your vendors have the right controls in place?
+ii.	Are they configured to work up to your level of expectations?
+c.	Personnel:
+i.	Do your vendors conduct personnel background checks?
+ii.	What kind of training and supervision do they have in place to ensure their people do not introduce problems into your organization?
+iii.	What kind of physical security controls do they use?
+iv.	Do their personnel wear badges on your site so that you can identify they are from your vendor organization?
+v.	Do they ensure that only right employees have access to the systems that have access to your organization?
+3.	Consider geographical threats when you build your cybersecurity program, for example, ask:
+a.	What happens if there’s a weather-related disaster in their location?
+b.	Do they have the right controls in place to make sure your organization isn’t affected?
+4.	Third-party risk management components:
+a.	Clear understanding of your organization’s requirements.
+i.	Technical, legal, security, financial, and business requirements. 
+ii.	Directly driven by the business case and executive policies in your organization. 
+b.	Identify your organization’s policies about how a third-party vendor would have access to it. 
+c.	Assigning a relationship manager from the organization to manage third-party arrangements and vendors actively. 
+d.	Understanding business documents like contracts and service-level agreements that help specify and document the requirements. 
+i.	NDA (Access and rights information).
+ii.	Insurance requirements.
+iii.	Minimal acceptable security requirements.
+iv.	Notification requirements for security incidents. 
+v.	Right to audit. 
+5.	All aspects of your security program need to be reflected in some way. Everyone needs to be on the same page with respect to security requirements. 
+Cybersecurity Organizations
+1.	Chief Information Security Officer (CISO) Leads SOC.
+a.	Identifies and manages IAM
+b.	Manages security operations
+c.	Promotes cybersecurity culture
+d.	Identifies threats and vulnerabilities and finds ways to mitigate the impacts.
+e.	Implements security controls.
+f.	Supports cybersecurity auditors.
+g.	Supports security initiatives including secure development, supply chain cybersecurity, product life cycle security, and personnel management security. 
+A Deeper Look at Security Organizations
+Having an effective CISO organizational structure is important because business goals and security goals are misaligned in that business needs often prioritize revenue streaming in, whereas security is a negative goal and prioritizes the security of systems and data. Often times, having security programs in place over a CISO mean that security programs are powerless to drive change within an organization. Executives often lose sleep at night, knowing there isn’t any security program visibility within the organization and security often lacks insight into business priorities leading into team and interdepartmental conflict over the securitization of data and technologies within the organization. All of these reasons are why having an effective CISO organizational structure is paramount to having and maintaining an organization in the 21st century. 
+The Information Risk Council (IRC) has to be the most interesting functional pillar, because most organizations do not have one implemented from an org chart perspective. It must incorporate an executive sponsor, the CISO themselves, IT, Legal, Human Resources, Engineering, and Operations. Given the cross functionality of this pillar you can bring in a lot of different insight from a variety of perspectives. The IRC oversees governance, monitoring, and enforcement of security policies, approves of those policies after thorough review, approves security initiatives and prioritizes those initiatives with other initiatives the organization is undertaking, manages risk, the IRC reports to top level executives and must establish and report on program KPIs (crisp, concise, and on point). There must be no fluff or wasted time when it comes to these types of meetings. Given all of these attributes it’s clear that the IRC is a vital element of a security program’s organizational structure. 
+	A security program’s organizational structure varies between startups, small/medium businesses, and enterprises for various reasons. First start ups are often fast moving, have limited resources, customers demand proof of security (for example, certification), and security is likely a shared responsibility between the employees. However, an IRC should be relied upon for governance and report directly to the top-level leadership and incorporate engineering/dev ops, IT, and operations roles. Second, small/medium businesses (SMB) have to deal with complex organization and communication structures. The span of control is usually out of reach for individual leaders within the IRC. They often require a security program leader (CISO) that is directly under the IRC and reports to the IRC. There must also be a formal communication and “role-out” plans. Within a given organization within SMB is that there is your top-level leadership that is head of engineering/dev ops, IT, HR, and Finance. The Security organization that reports to the IRC must have a CISO, application/network security, and governance, risk, and compliance procedures to follow through on. Finally, at the Enterprise level, challenges that are common are that decisions are slower to come by. Business units or geographic locations may have unique sub-org structures, and they must have formalized budgets and resource planning. Nevertheless, the key to a successful enterprise is organizational change, communication, and roll out of these ideas. Typical organizational structure includes your top-level leadership that oversees U.S. business, the E.U. business, product line, and subsidiaries. Laterally speaking, the IRC is over the corporate security organization that is lead by a CISO, corporate governance, risk, and compliance (GRC) and corporate security. 
+	What surprised me the most is that an organizational structure from a functional standpoint is very simplistic, but when it comes to the implementation of GRC, top-level leadership, IRCs, and CISOs that in general must be the most complex parts of establishing an organizational security program or a security organization in general. 
+Create a Cybersecurity Organization
+	Biotechnica is a startup organization within the biotechnology field that looks into revitalizing the way cities and nature coexist. From genetically modified seeds that are drought resistant, creating bio solar cells powering cities, to medical biotechnology, Biotechnica has its hands in it. Biotechnica, is a fast-moving startup that is rapidly gaining more and more of a following on social media with art and proof of concepts ranging from a variety of America’s brightest biotechnology students gives investors a glimpse into the future and the way a self-sustainable city operates. Since this startup began it is clear Biotechnica has stepped on a lot of toes and is the target of cybersecurity attacks. The current state of the startup mainly has the CEO, their CFO, and a large engineering and developmental operations branch. Operations like human resources, finance, and middle management is still directly under the executive branch. Information Technology and support is a shared responsibility at start-up and most engineers and developmental operations specialists understand basic security principles. As a startup people is the main issue, do you have enough people on board at this current state or will we need more? Given, there is plenty of financial assistance coming in it also means there is also risk peering into the structure of the organization and its flaws. It’s clear the CEO and CFO have limited resources and they need to establish an IT and operations branch with a clearly defined idea of best cybersecurity practices as they grow and develop. 
+	Designing a cybersecurity organization within Biotechnica will require an inventory and control of all assets, both hardware and software first off. In order to accomplish this goal an information technology branch of operations must be created with one security champion from the group that will work with a security minded champion from the engineering/dev ops branch. As CEO, it is their duty to create an information risk council that has is comprised of cross-functional roles charged with security program initiatives such as best practices for daily security operations, managing IT assets, assessing threats and vulnerabilities, managing risk, establishing policies, setting up procedures, and providing training. Nevertheless, IT must also work with another branch, and this means the CEO and CFO must hire people directly under them. Roles like HR and Finance must be clearly defined in order to come up with a clear plan for continued growth and management of people within the organization in general. Another security champion will step forward and join the IRC; thus encompassing 5-6 people within the IRC. 
+	Departments at this stage in the startup are still going to work together. Finance is one department that is under operations and is in charge of PCI-DSS compliance. Some investors are going to want to try the products out, before they decide to invest and so our dev ops create a relationship with the investor to answer any questions they may have and support the use of any particular product the investor is particularly interested in. To ensure, the privacy of our investors we follow strict PCI-DSS standards to enhance payment account data security. Given this one department must also adhere to strict cybersecurity standards it is clear that a cybersecurity minded individual is required to manage that endeavor and be a part of the IRC. Human Resources is another department that must work with strict data protection policies to ensure the security of employee and company proprietary network data and system administration. Human resources are one short stop in the identity and access management lifecycle and so they must also have a security minded champion from this department as well to be a part of the IRC. Next, IT is mainly in charge at this point in the creation of critical security controls. The Center for Internet Security has 18 critical security controls to be met with and IT works with the other branches in developing insights in training material and again must also have a security champion to go up to bat in the IRC. Developmental operations is a far too general work area at this point in time, but still one security champion is also needed from this group to understand what resources are needed to fulfill their roles and thus given each role within this branch there must also be 1 security champion that goes to the IRC. 
+	Given with a strong IT and operations branch with the creation of an information risk council, it is clear that security is not only a shared responsibility within Biotechnica but is one that is going to continue to be a shared responsibility and has the chance to go further than any startup before it, because it has a culture for cybersecurity at this stage. Biotechnica’s security goals are ones to protect their investors and retain investors as they navigate the cybersecurity threat landscape. As they produce more and more wonders to beautify cities with their technology, so will the profits reign in and so will the cybersecurity budget as well. To understand this at startup is key to becoming a far-reaching enterprise of some magnitude. 
+References: 
+The 18 CIS controls. CIS. (2021, October 28). Retrieved April 19, 2022, from https://www.cisecurity.org/controls/cis-controls-list 
+Defense-In-Depth
+1.	Multi-Layer Defense:
+a.	IAM
+b.	Administrative controls
+i.	Provide management and organizational protection.
+c.	Technical controls
+i.	Provide digital and virtual layers of protection. 
+d.	Physical controls
+i.	Provide physical environmental layers of protection.
+2.	Defense-In-Depth Castle Analogy:
+a.	There are many barriers to be crossed, and with each barrier, the likelihood of a breach is reduced. 
+3.	Defense-In-Depth Layers for a Simple Architecture:
+a.	Firewalls
+b.	IAM
+c.	Encryption
+d.	Policies and Procedures
+e.	Security Operations Center (SOC)
+Identify the relationship between Zero Trust and IAM
+	Having robust identity and access management (IAM) helps with establishing and maintaining Zero Trust in a variety of ways. Considering identity as the new perimeter is the entire basis of zero trust, because security doesn’t just end at the firewall, instead assuming to never trust, and always verify. Zero Trust also helps with maintaining all parts of the IAM lifecycle management including segmenting networks. Keeping inventory on all of your technology and software and also defining roles and access controls are also parts of having robust IAM. 
+	Microsoft held an executive roundtable discussion “Examining Zero Trust” and published a report that offers the possibility of moving zero trust to full stack meaning it can be “extended throughout the entire digital estate, while also serving as an integrated security philosophy and end-to-end strategy” (2021). Nonetheless, IAM is an integral part of zero trust and on-premises is merely an extension of the digital estate; therefore, it’s clear that zero trust is a concept that can be extended to on-premises as an end-to-end strategy for cybersecurity. Nonetheless, zero trust also works well when there is very little complexity and proper segmentation of networks and ensuring the integrity of an audit and accountability log of user’s input could very well mean breaches occur less and when they do they violated one key concept within zero trust. Concepts within zero trust include: having strong authentication, policy-based adaptive access, micro-segmentation, automation, intelligence and AI, and data classification and protection. 
+	Password less authentication has a lot of advantages that can aid in zero trust, one of them being improved vendor and MSP experience when it comes to security. Given that passwords these days are found in a list and can be employed by hackers to automate malicious activity it is no wonder that keeping up with and changing passwords every year can get exhausting. Furthermore, Azure AD has achieved NIST assurance levels which also incorporates zero trust as an end-to-end strategy and provides for strong authentication that also has session risk detection as well as effectively eliminating the cost and time it takes to properly educate on proper password hygiene and password salting within the organization as a whole. 
+References:
+Microsoft. (2020, December 1). Examining Zero Trust. Redmond. 
+Use passwordless authentication to improve security - microsoft security. Use passwordless authentication to improve security - Microsoft Security. (n.d.). Retrieved April 20, 2022, from https://www.microsoft.com/en-us/security/business/identity-access-management/passwordless-authentication 
+
