@@ -1,0 +1,400 @@
+Module 20
+Module Introduction
+1.	On July 15, 2020, Twitter employees fell prey to the social engineering tactics of a 17-year old hacker and his cohorts, resulting in the successful breach of 45 celebrity and high-profile Twitter user accounts, such as Elon Musk and Jeff Bezos. Though the offers to “double your bitcoin” may not have seemed plausible to the average follower, these bad actors netted $118,000 in cryptocurrency. By using these compromised high-profile accounts, they published tweets that promised to double any amount followers contributed (New York State, 2020). 
+a.	Just how did these amateur hackers manage to trick Twitter employees? Their pretext, you will be surprised to learn, was almost too simple to believe. The criminals impersonated the Twitter IT help desk, purporting to be investigating a VPN issue. Quite plausible, considering that Twitter had become a remote workforce in March 2020 and had suffered degradation in VPN performance due to the rapid transition. In July of 2020, employee complaints regarding VPN issues were still quite common. By convincing the targeted employees to enter their usernames and passwords into a  fake VPN portal, the bad actors obtained the credentials they needed to access Twitter’s internal network (New York State, 2020). 
+b.	Social engineering is defined by the Oxford Dictionary as “the use of deception activities to manipulate individuals into divulging confidential or personal information that may be used for fraudulent purposes.” (Lexico, n.d.). By targeting employees or other entities with which an organization has a trust relationship, adversaries can successfully bypass security controls. 
+2.	“Probably one of the most important aspects of being a social engineer is being able to critically think. To adapt, flex, and change your methods on the fly. To be able to think outside the box, as if there is no box.” – Christopher Hadnagy, CEO at Social-Engineer, LLC. 
+3.	Module Overview:
+a.	Social engineering
+b.	Different kinds of phishing and email attacks
+c.	Controls and building a culture of cybersecurity
+d.	A case study of an organization with its innovative ideas about managing social engineering
+What is Social Engineering
+1.	Most people can point to specific occasions when they are on guard against manipulation and deceptive practices, where high-pressure sales tactics are expected, such as car shopping or cable television service fee negotiations. When people have an opportunity to prepare for such encounters, they can, for the most part, avoid being swindled. Unfortunately, most bad actors who seek to part you from your money or valuable assets, or even target your identity, enter your life/inbox under false pretenses – catching you off guard with your defenses down.
+2.	Kapersky, a global cybersecurity organization, defines social engineering as a range of manipulation techniques that exploit human error to gain private information, access, or valuables. The primary goal for adversaries in targeting humans is to influence their victims’ behavior, whether to entice them to divulge credentials or privileged information or unknowingly install a Trojan on their own system. Social engineering techniques can make use of various mediums to influence and impact victims.
+3.	Social Engineering:
+a.	In the context of information security, it is the use of deceptive activities or manipulation to get people to divulge secret information or access to systems and is also called “human hacking”.
+4.	Scams attract unsuspecting users into:
+a.	Exposing data
+b.	Spreading malware infections
+c.	Giving access to restricted systems
+5.	Attacks can happen through:
+a.	Online means
+b.	Cellphone
+c.	Social media
+d.	Email
+e.	Personal interaction
+f.	Other types of interactions
+6.	Verizon Data Breach Report (2021):
+a.	10% of data breaches involved ransomware.
+b.	61% of breaches additionally involved use of unauthorized credentials.
+c.	85% of breaches attributed to the human element. 
+7.	The goals of social engineering attacks include:
+a.	Sabotage: Disrupting or corrupting data and causing harm or inconvenience.
+b.	Theft: Obtaining valuables like information, access, or possibly money. 
+8.	Famous Social Engineering Attacks (Kevin Mitnick):
+a.	Target third-party breach (2013):
+i.	41 million Target credit card customers and 60 million other Target customers were affected when a third-party vendor was compromised by hackers. 
+b.	Twitter Bitcoin scam (2020):
+i.	Accounts of famous people were hacked into, where a “double your Bitcoin” offer was made by clicking on the link in the tweet where victims could double their donations. 
+ii.	Hackers got into Twitter by manipulating employees to gain access to verified users’ passwords.
+c.	Sony Pictures phishing attack (2014):
+i.	Became an alleged target of the North Korean government after making a movie about their leader Kim Jong-un.
+ii.	The hackers stole confidential documents, including financial information about recent films and private employee data. 
+d.	US Presidential election email leak (2016):
+i.	A phishing email was sent to individuals in the DNC network by bad actors from Russia, stating that there was suspicious activity on the targeted individuals’ Google accounts.
+ii.	Had a Bitly link (a tool that shortens long links to something easy to remember) that hid the name of the real link to the hackers’ new website. 
+e.	Yahoo customer account hacking (2013): 
+i.	Three billion users had their Yahoo credentials stolen.
+ii.	Started when a high privileged engineer clicked on a phishing email that gave the hackers access to sensitive parts of the system. 
+How Does Social Engineering Happen?
+1.	Social engineering techniques are highly effective because they exploit human traits and emotions, such as greed, curiosity, trust, fear, lust, shame, and benevolence. Through manipulative tactics, traits of human decency become weaknesses of opportunity, with bad actors using cognitive biases to their benefit. In Six Principles of Influence (1984), Robert Cialdini claims there are six key factors that shape human behavior: reciprocity, commitment, social proof, authority, liking, and scarcity. Robert Cialdini added a seventh principle, unity, to his list of influential factors. This principle encompasses the shared identity of the influencer and influence, such as familial ties or common country of origin. All of these principles of influence can be exploited by bad actors using various social engineering techniques. 
+2.	Social Engineering:
+a.	Hackers create a situation that triggers:
+i.	Heightened emotions:
+1.	Emotional manipulation gives the attackers the upper hand in any interaction.
+2.	Results in an irrational or risky action by the victim. 
+ii.	Urgency:
+1.	Time sensitive opportunity or request.
+2.	Serious problem that needs immediate attention.
+3.	Winning a prize or reward that may disappear if you do not act quickly. 
+iii.	Trust:
+1.	Hackers build confidence in what they say. 
+3.	The Six Principles of Social Engineering:
+a.	Reciprocity:
+i.	People tend to return a favor. 
+b.	Commitment or consistency:
+i.	When people commit, orally or in writing, to an idea or a goal, they are more likely to honor that commitment. 
+c.	Social proofing:
+i.	People do things that they see other people doing.
+d.	Authority: 
+i.	People tend to obey authority figures. 
+e.	Liking:
+i.	People are easily persuaded by other people whom they like.
+f.	Scarcity:
+i.	Perceived scarcity generates demand in the victim’s mind. 
+4.	The Social Engineering Attack Cycle:
+a.	Prepare:
+i.	The hackers gather background information on you or on a larger group that you are a part of; they may use social media or may link from one person to another. 
+b.	Infiltrate:
+i.	The hackers may use an established relationship or may initiate an interaction in order to build trust. 
+c.	Exploit:
+i.	Trust and weakness are established to advance the attack.
+ii.	Four different ways include:
+1.	Pretexting – Masquerading as somebody else. 
+2.	Baiting – Enticing the victim with promises of something valuable.
+3.	Blackmail – Threatening to reveal something that wishes to be kept secret.
+4.	Quid pro quo (a variant of baiting) – Promising something to the victim in exchange for something else. 
+d.	Disengage:
+i.	The attackers takes the desired action and disappears. 
+Identifying the reasons social engineering is successful
+•	Reciprocity: Bad actors will create a situation of inequality and imbalance by giving an object of perceived value, thereby incurring a sense of social obligation from their victim.
+•	Commitment: Social engineers will often secure an agreement from their victim without providing a clear picture of the “terms and conditions.” By giving an earlier confirmation, victims are less likely to bail out of an agreement, even as the circumstances mount against them. In addition, previously agreeing to a small request compels people to continue to be agreeable and fulfill larger requests.
+•	Social proof: This principle draws upon the human desire to belong and fit in with social norms. Social engineers achieve success here by creating the impression that other people you trust or relate to have complied with the same request they are making to you. After all, if everyone else is doing it, it must be a good idea.
+•	Authority: Social engineers will frequently impersonate officials or people of influence in order to persuade their targets more effectively into action.
+•	Liking: People are more strongly influenced by people that they like and feel commonalities with. Bad actors will ingratiate themselves with their potential targets, paying compliments and building a false pretext that incurs trust.
+•	Scarcity: People seeking to manipulate others may create a real or perceived demand and lack of availability for an object or service to generate the victim’s interest and compel them to act in a manner constructed by the bad actor.
+•	Unity: As described in an earlier section, this principle draws upon a target’s sense of identity, whether it is religion, geography, social circle, or political beliefs.
+Examples of emotional triggers often exploited by social engineers are detailed below:
+•	Greed:
+o	Scammers frequently lure their targets into action with promises of wealth, social status, or lofty job titles.
+o	Example: “You are one of just a few participants we have selected for this limited-time opportunity. Forget working when you should be enjoying retirement. Invest in this timeshare and watch the money come to you.”
+•	Curiosity:
+o	By creating an air of mystery around whatever is behind that link, social engineers can often entice even the most non-inquisitive into clicking and loading a webpage.
+o	Example: “You will never believe what I found online... link.”
+•	Trust:
+o	Coinciding with the principle of authority, social engineers often seek to ingratiate themselves with their victims by impersonating law enforcement or people in positions of public trust. In another technique that exploits trust, social engineers may share confidences or personal details to appear vulnerable and, therefore, trustworthy to their targets.
+o	Example: “You are studying cybersecurity, right? I am too. Same course, right? Listen, I am in a bit of trouble and am embarrassed to admit it. I lost my portal account ID and need to turn in my discussion notes. Mind if I use yours?”
+•	Fear:
+o	Social engineers will often describe dire consequences (job loss, pain and suffering, or financial loss) that will result should their target decide against performing the requested action.
+o	Example: “Wait until your boss hears about your inability to do your job and comply with my request. You will be looking for a new employer by tomorrow morning.”
+•	Benevolence:
+o	Most people are driven to offer a hand to people in need. Sadly, bad actors can exploit our desire to help for their own financial or strategic gain.
+o	Example: “My neighbors are without shelter tonight due to a house fire that destroyed all of their possessions. Wouldn’t ask you for help but they are in dire need. Will you donate to their GoFundMe page?”
+•	Urgency:
+o	This emotion is typically coupled with fear or greed, as bad actors construct a “limited-time only” pretext that motivates their targets to take action immediately.
+o	Example: “We have detected suspicious logins to your Apple account. Click here to confirm this is authorized activity.”
+•	Distraction:
+o	By introducing disruption and chaos, bad actors can overwhelm their targets’ ability to stay vigilant and focused on their surroundings.
+o	Example: “Please test your access to our portal while I have you on the phone. Are you able to launch the simulation? One more thing I will need from you before you go: I do require your credit card information for our files.”
+Read through the below scenarios and identify which principles of influence and emotional triggers are being targeted. In addition, provide some recommended controls or mitigations that may aid in protecting targets from these social engineering techniques.
+Scenario 1
+One evening, as the sun was setting, a young family enjoyed a stroll in the historic section of a foreign city. As the sky grew dark, they were approached by an older conservatively dressed man speaking their native language. He looked weary and sounded exasperated, as he recounted details of a crime his son fell victim to that very evening in a different part of town. This older man passed along a warning that the family should be careful walking around late at night and then proceeded to ask for financial assistance to help get his son back home.
+Principles of influence: Reciprocity (Gained social obligation from young family by informing the family to be safe in return for financial compensation to assist someone in need). Liking and unity (The older man spoke the same language as the family in a foreign city). 
+Emotional triggers: Trust is based on reciprocity and unity described before. The family’s emotional needs to be benevolent and assist those in need, urgency to help the son, and fear of potential attack heightened the emotional response and likelihood the family would pay out.
+Recommended controls: The family should realize that all of the compounding emotional triggers and principles of influence that are utilized are social engineering techniques and take the words of a stranger in public as not what it seems at face value. Although the man’s story is compelling, it is likely the individuals are the target of a financial scam.
+ 
+Scenario 2
+The line of customers at the Wok to Walk restaurant had swelled to over 20 people, more than Anne had ever seen. Though she had only been working there for five days, she had mastered all of the food preparation side jobs and cashier responsibilities. Her current customer at the register suddenly raises his voice and starts yelling about his fried rice having the wrong seasoning, drawing the manager’s attention away from the shipment of goods he was receiving in the backroom. During this chaotic moment, the delivery driver seizes an unsupervised moment in the rear of the restaurant to supplant a weaponized USB in the office computer. Upon insertion, it immediately spawns a remote shell, granting access to a cyber-criminal ring whose end goal is a well-orchestrated ransomware attack.
+Principles of influence: Commitment (It is the manager’s duty to respond to angry customers) and social proof (Drew upon the manager’s human desire to belong and fit inside of their role to responding to that customer). 
+Emotional triggers: The disruption caused by the customer alerted the manager and instilled a sense of urgency and fear of losing out on a customer due to an issue with their food. 
+Recommended controls: The restaurant manager should have physical security controls that protect their computer system. Most USBs that are weaponized can attack a computer while offline; therefore, there should be physical security controls that monitor the computer to ensure that perpetrators are caught or deter a bad actor. 
+ 
+Scenario 3
+Stephen works as a junior security analyst on the night shift in his organization’s security operations center. This evening, he has just logged in to start his shift when he gets a Skype message from Mr. Smith, a senior executive with a corner office. Mr. Smith is inquiring about an unblock request that was put in earlier that day. From what Stephen can gather, the website was approved for access by the proxy team earlier that day, but for some reason, according to Mr. Smith, Stephen’s coworkers from the day shift had neglected to complete the unblock. Stephen can tell this senior executive is fuming, as he has threatened to have him fired if he doesn’t complete this request in the next 60 seconds.
+Principles of influence: Commitment because the analyst feels compelled to complete the senior executive’s request. Furthermore, the fact he is speaking with a senior executive means he must be careful of his words to someone in a position of authority, and unity in regard to his coworkers keeps him from spilling too many details on the matter. 
+Emotional triggers: Fear and urgency are primary drivers because the senior executive is threatening to fire Stephen.  
+Recommended controls: Stephen needs to ensure the executive’s request is legitimate and must take it very seriously according to their standard protocol. Most unblock requests do contain protocols for disruptive behavior such as what the “senior executive” is employing in this case and as a security analyst Stephen should be suspicious of this. 
+Popular Types of Social Engineering
+1.	Social engineering has become a very common, and relatively successful, attack vector used by cyber criminals and potential attackers of various stripes. Within the social engineering arena, there are a number of different attack techniques and relevant approaches that an attacker may choose to employ against a target. Some of the more common types of social media that you’ll learn about in this section will fall under the categories of phishing, baiting, pretexting, and quid pro quo. 
+2.	Social engineering techniques:
+a.	Phishing is a very common technique that typically entails a messaging campaign designed to redirect the victim toward a specific form, site, or other exploit mechanism. Common examples may include sending links to malicious websites, redirects to attacker-controlled infrastructure, or other unsolicited messaging that may entice a user to provide sensitive personal information or confidential financial information. 
+b.	Baiting is a method that seeks to take advantage of a victim’s greed or curiosity. In essence, the attacker sets a trap designed to push someone to commit a specific action. An example of a physical bait would be a USB drive left unattended on someone’s desk or left in a public space with a note reading “bank account information” or “promiscuous photos.”
+c.	Catfishing is a deceptive activity based on creating a fictional persona that earns a victim’s trust. This specific approach can be common on dating apps, where an attacker pretends to be romantically interested in the victim in order to take advantage of them and extract financial resources or other material gains.
+d.	In pretexting, an attacker seeks to convince a victim that the perpetrator is a legitimate bank official, royal patron, or government agency. They seek to establish trust with the victim and convince them to answer security questions in order to confirm details about their identity or transfer financial resources in order to help the attacker or clear their own name.
+e.	Scareware includes fake or fraudulent software that a user may install unwittingly that creates false alerts in order to scare the victim and elicit improper information sharing or actions. For instance, several fake antivirus programs were designed by attackers in order to issue illegitimate alerts to unsuspecting users, requiring them to take immediate action to respond toa  purported malware instance or emergency. Often, these include a call to an offshore group alleging to be affiliated with a legitimate organization (e.g., Microsoft) or requiring users to enter credentials or financial information in order to address the matter. 
+f.	Tailgating, or piggybacking, generally refers to the specific technique where an unauthorized individual will attempt to follow an authorized person into a controlled facility or office space. Common examples may include following a legitimate office worker through a door after they badge in or running in quickly as someone is exiting a building. This can evade traditional facility access controls unless monitoring or additional enforcement techniques are used. 
+g.	In quid pro quo attack methods, an attacker will give you something of perceived value to elicit trust and create a feeling of obligation from the victim. 
+Research Paper: Social Engineering Threats and Defense
+	The primary types of social engineering that I would expect in an IT remote environment would include phishing, pretexting, scareware, and baiting. The most common successful techniques are obviously all types of phishing, followed by pretexting, scareware, and then baiting. Being a mostly remote company has seen an uptick in phishing campaigns from external sources; so, most of our staff needs to be conscientious of the fact IT will never send an email asking them to authenticate. If anything, we will follow company protocol and message the person directly using approved and confidential channels. However, phishing is still the largest risk for our environment based on the fact it could also utilize pretexting and fool people who are not security minded. According to TrendMicro in “What are the different types of phishing?” there are to name a few 6 other types of phishing that include (from order of most to least prevalence) spear phishing, whaling, smishing, vishing, email phishing, and search engine phishing. Phishing as a whole is the most common type of attack leveraging social engineering techniques and these sub-techniques essentially allow an attacker a wider surface area of attack when it comes to the human element of compromising user systems. Spear phishing, for example, allows the attacker a more personable surface area with their victim in mind and seeks to narrow down vulnerable people. Whaling is another targeted type of phishing that goes after whales like CEOs, CFOs, or any CXX within an industry. Smishing is utilized much less often after the FCC banned spoofed text messages and international robocalls in 2019 (Fisher, 2019), but it allows an attacker to use text messaging or SMS to execute an attack that may contain a clickable link or a return phone number. Vishing is a type of attack that utilizes a voice call, and an example would include a call from a Microsoft employee that informs you threat they’ve detected a virus on your computer and to provide credit card details so that the attacker can install an updated version of anti-virus software on your computer. Email phishing is much more prevalent these days and most often requires a user to click on a link to provide an attacker with a foothold within an organization. Search engine phishing, also known as SEO poisoning or SEO Trojans, is where hackers work to become the top hit on a search using a search engine and clicking on their link displayed within the search engine directs you to the hacker’s website and from there an attacker can steal information when you interact with the site and/or enter sensitive data. 
+In order to combat these social engineering attacks, critical thinking must be applied. For example, all of these examples require you the user to provide credentials and understanding the circumstances behind such an action and the consequences of those actions must mean you cannot allow anyone to emotionally trigger you into providing these credentials. Knowing that phishing emails are so prevalent these days users must be aware of the credibility of said email. If it comes from an external source, then never click on the link. Utilizing logical controls such as Azure Information Protection and Proofpoint will lead credibility to user’s communications and allow for most phishing campaigns to never get past the firewall to begin with and if they do, then is it coming from an external source (check the origin/sender’s email) or for any grammatical errors in the message itself. Just because a link is shown to be from a trusted source always hover over the link and ensure it is taking you to the proper link that is displayed. Finally, when in doubt report suspicious communications even if it is coming from a reputable source – we do not know if that source has been compromised. 
+References:
+Fisher, C. (2021, May 13). FCC bans spoofed text messages and international robocalls. Engadget. Retrieved July 23, 2022, from https://www.engadget.com/2019-08-02-fcc-bans-spoofed-text-messages-international-robocalls.html 
+What are the different types of phishing? Trend Micro. (n.d.). Retrieved July 23, 2022, from https://www.trendmicro.com/en_us/what-is/phishing/types-of-phishing.html 
+Phishing and its Variants
+1.	Email is by far the most effective and commonly used vehicle for successful social engineering attacks, as the 2021 Verizon Data Breach Investigations Report explains that 36% of critical breaches in the preceding year involved phishing. An interesting place to start to understand phishing is by looking at the term “phishing” itself. The word “phishing” is a spin on the word fishing. The logic behind this is that cybercriminals dangle a fake “lure”. The goal for the cybercriminal is that the target user will take the “bait” and obliviously provide information that the criminal is after, usually credit card numbers, passwords, etc. Despite being a well-known attack technique, phishing remains among the most common and dangerous types of attacks organizations face even today. Furthermore, over the years, phishing has grown into multiple highly specialized tactics. 
+2.	Types of Phishing:
+a.	Spam phishing or mass phishing: 
+i.	Widespread attack aimed at many users.
+ii.	Non-personalized attacks that try to catch any unsuspecting person.
+b.	Spear phishing or whaling:
+i.	Use personalized information to target particular users. 
+ii.	Aim at high value targets. 
+c.	Voice phishing or vishing:
+i.	Phone calls are used to impersonate somebody who one might trust and ask to do something.
+ii.	It is usually an automated message system, and it records all inputs. 
+iii.	A live person might speak just to increase the trust and the urgency. 
+d.	SMS phishing or smishing:
+i.	Text or mobile application messages with a web link or prompt are used for you to follow to fraudulent email or phone number. 
+e.	Email phishing:
+i.	Most traditional means of phishing as it uses email urging you to reply or follow up by other means. 
+ii.	Might include:
+1.	Web link
+2.	Phone number
+3.	Malware attachment
+f.	Angler phishing:
+i.	Takes place on social media and the attacker imitates a trusted company’s customer service team.
+ii.	Intercept communications with a brand and hijack or divert your conversation to a private message and then they advance their attack. 
+g.	Search engine phishing:
+i.	Attempt to place links to fake websites at the top of the results page. 
+ii.	Paid ads or legitimate optimization methods to manipulate search rankings. 
+h.	URL Phishing:
+i.	Attempt to get you to travel to a phishing website by delivering a URL in an email, a text, a social media message, or even in an online ad that goes directly to a malicious website, not the actual website. 
+ii.	Links are hidden in a hypertext link or in a button or they use a link shortening tool like Bitly or deceptively spell URLs. 
+i.	In-session phishing:
+i.	Appears as an interruption to your normal web page browsing. 
+3.	Anatomy of a Spear Phishing Attack:
+a.	The hacker targets a company, using social networks and finds employees that have access to the company data and systems. 
+b.	Follows the person through a social trail.
+c.	Makes a fake but recognizable email to address to that person, but to create it from somebody he impersonates. 
+d.	The personalized email is then sent to an employee from a fake address with a link or an attachment. 
+e.	The email passes through spam filters because it arrives from what looks like a trusted source. 
+f.	Victim opens the email because they think they know who the sender is.
+g.	Victim clicks on a link or opens an attachment.
+i.	Might cause credential stealing software to be installed or malware to infect computers or smartphones. 
+h.	The hacker then has a backdoor to steal information. 
+4.	Beware of phishing and ensure you know:
+a.	What information you are searching for.
+b.	What information you are clicking on. 
+c.	What the links that you click on are doing. 
+5.	In June 2021, a collection of 8.4 billion passwords, aptly named RockYou2021, was released on a hacker forum, ranking as the largest dump of passwords to date. Adversaries utilize compilations such as this to perform credential stuffing attacks against internet-facing single-factor services, yielding initial access to a victim organization’s network (Spadafora, 2021). Implementing MFA will dramatically reduce the success of credential stuffing attacks. Yet, some web services may not support MFA. How can you protect your single-factor accounts from compromise? 
+Email Hacks
+1.	According to research done by Paul Gillin at Verizon, “the first phishing attacks happened in the mid-1990s when a group of hackers posed as employees of AOL and used instant messaging and email to steal users’ passwords and hijack their accounts.” (Gillin, n.d.). From there, attackers’ focus shifted to digital currency sites, which evolved into attackers registering domain names that closely resembled legitimate commerce sites, such as PayPal and eBay. Email phishing is by far the most extensively utilized phishing method employed by attackers. Here attackers attempt to steal sensitive information through an email that looks to be from a genuine organization. These standard email phishing attacks are not targeted and are typically sent to many people in the hope of finding at least a few victims. The contrast of this is spear-phishing, where the victims are well researched before being targeted. 
+2.	Breaking into Email Accounts:
+a.	Brute-force method:
+i.	A script or bot guesses the password until the correct entry is confirmed. 
+ii.	Research has shown that an 8-character password can be cracked within a few seconds.
+iii.	A variation of this attack is called a “dictionary attack”, where a list of words from a dictionary is used to crack a password. 
+iv.	The bot or script keeps trying different combinations until it breaks through.
+v.	Canadian Revenue Agency August 2020 Example:
+1.	Used username and password pairs from a previous breach that had been found on the dark web to hack more than 11,000 accounts of government-related services. 
+2.	Tried every username and password until they got in. 
+3.	They then stole information from the Canadian Revenue Agency. 
+b.	Password hash:
+i.	Passwords are stored and transmitted in a cryptographic hash, but that can be cracked. 
+ii.	When someone clicks on a link in an email, the system attempts to open that email and the web server often requires some type of authentication. 
+iii.	Email attempts to provide authentication by sending an encrypted login and if that link pointed to a malicious actor’s site, then that’s where that information is going to go.
+iv.	Can be diverted to the hacker’s site, who can figure out one’s password hash.
+c.	Clickjacking:
+i.	Adware tries to get you to click on something, and the link you click on goes to a rogue website. 
+ii.	A new form of clickjacking uses touchscreens – a picture of a hair on a screen may have embedded code that when swiped away, you’re actually activating a link or embedded code. 
+d.	Password sprays:
+i.	Hackers want to guess passwords, but most accounts have a lock-out feature.
+ii.	After a few attempts, one gets locked out of their account for a few minutes or longer; they may have to reset the password, and hackers know this. 
+iii.	Hackers learn the number of attempts that it takes before the system locks out in an organization.
+iv.	Hackers learn the number of attempts that it takes before the system locks out in an organization.
+v.	Hackers send a few passwords to every account they know of on the system.
+vi.	They only need one password that matches in order to get into the system.
+e.	Recovery method hacking:
+i.	Every email system has a recovery method, in case one forgets their password. 
+ii.	Security on recovery method is less rigorous than on the actual system. 
+iii.	Designed to be easily accessible so that one can get in there if they need to recover their password. 
+f.	Fake relationships:
+i.	Trust can be gained by using fake emails or by building fake personas. 
+ii.	Many people have developed online relationships with people they have never met in person, and hackers know this. 
+iii.	The hacker may setup a personal website, steal relatable pictures that are part of their fake persona, and present them in a way that builds trust. 
+iv.	The hacker may use the information they have collected to hack into an email system. 
+Has your Email been Hacked?
+My email has been breached 5 different times. I was already aware of these breaches and each organization was very compliant in what was breached. Every time there was a breach I made sure to change my password even if they advised no passwords were stolen. I did this, because I know pass the hash attacks, password sprays, and recovery method hacking was a thing. Furthermore, all of these organizations that were breached utilize MFA; so, I utilize that authentication method as well to limit recovery method hacking. I utilize Dashlane as a password manager and generate passwords and make sure to update passwords that are at-risk according to Dashlane. Dashlane also has dark web monitoring and I make sure to monitor all of my email addresses from there as well. Furthermore, I have several email addresses for several different reasons. I have my professional email address that I keep private and only utilize for confidential work-related reasons, then I have a social media address that is only used for those reasons, I then have a financials email address that is under a pseudonym to make it difficult to do any type of open-source intelligence on. Finally, I have my streaming and entertainment email address that is the one that gets pwned most of the time. Out of all of my email addresses my financial, social media, and entertainment email addresses have all been pwned form order of least to most and overall, I’ve only been pwned 5 different times. Have I Been Pwned is a great resource for incident response, because it can allow IR handlers the ability to see if a user has been pwned in the past and can help them diagnose account lockout issues for example, if they are using a password that has been known to have been breached then they can be susceptible to targeted attacks and given some compromised data like geographic locations, IP addresses, and other social media profiles can assist proactive security analysts to defend those endpoints. 
+Controls, Culture, and Communication
+1.	Social Engineering Controls:
+a.	Training employees:
+i.	Train employees in security protocols:
+1.	Relative to their position. 
+2.	Should always be followed. 
+b.	Trust frameworks:
+i.	Establish frameworks of trust for employees at different levels in the organization.
+ii.	Specify and train personnel on when, where, why, how, and who sensitive information can be shared with. 
+iii.	Teach them how to build the trust with the information and people that they are interacting with. 
+c.	Scrutinizing information:
+i.	Identify which information is sensitive and evaluate its exposure to social engineering and breakdowns in security systems. 
+d.	Security protocols:
+i.	Protocols around policies.
+ii.	Procedures on how people should be handling sensitive information and who has access to that information. 
+e.	Event testing:
+i.	Perform unannounced periodic tests of your security framework so that one can identify where vulnerabilities are. 
+f.	Inoculation:
+i.	Prevent social engineering and other fraudulent tricks or traps by instilling a resistance to persuasive attempts through exposure to similar or related attempts, which are called phishing exercises. 
+g.	Reviewing:
+i.	Review the steps correctly; no solution is perfect. 
+h.	Waste management:
+i.	Use a waste management service that has dumpsters with locks on them and keys limited to only the waste management company and the cleaning staff. 
+i.	Red team:
+i.	Trusted team of cyber professionals inside or outside the company who manage and oversee the testing and the activities to help identify social engineering vulnerabilities and fix them.
+2.	MIT Cybersecurity Culture Model:
+a.	Behaviors:
+i.	Activities that you want to see in your organization.
+1.	People not clicking on phishing emails but reporting them.
+2.	Helping each other as part of a team. 
+b.	Values, attitudes, and beliefs:
+i.	See it through:
+1.	What executives do.
+2.	What leaders do.
+3.	How groups interact at the individual level.
+4.	Example:
+a.	If leaders become personally involved in cybersecurity projects, cybersecurity awareness, and communicating cybersecurity issues, then that will:
+i.	Send a message about the importance of cybersecurity. 
+ii.	Drive behavior around cybersecurity issues.
+5.	The more light you can shine what they are doing in your organization, the more likely you are to raise awareness and build values and attitudes around cybersecurity. 
+c.	External influences:
+i.	What industry are you in?
+ii.	What business do you do?
+iii.	What are the cybersecurity norms in the country in which you operate or the city or state in which you operate?
+iv.	What do your peer organizations do?
+v.	Example: Bank and Hospital
+1.	Nobody wants to do business with a bank they don’t trust.
+2.	Nobody wants to do business with a bank that is insecure. 
+3.	Regulations drive how banks are supposed to handle information. 
+4.	Hospitals have built-in regulations to keep patients’ personal information safe. 
+d.	Managerial mechanisms:
+i.	Training people on:
+1.	What the baseline is.
+2.	What behaviors you want to see. 
+3.	What policies are. 
+ii.	Awareness campaigns:
+1.	Posters on the walls.
+2.	Continually communicating what is it that you want them to do. 
+3.	Putting controls in place and building a culture of cybersecurity can help mitigate the social engineering attacks and bring everybody in the organization up to speed on what they can do to help keep the company safe. 
+Security Education, Training, and Awareness (SETA)
+1.	Three elements of SETA programs:
+a.	Security education:
+i.	Knowledge building piece of the program that helps organizations understand:
+1.	What they react the way they do?
+2.	What knowledge is required for people to tackle social engineering. 
+b.	Training – Skills:
+i.	How should users react and respond to a social cybersecurity incident. 
+c.	Awareness – Guidance: 
+i.	What is security?
+ii.	How are things changing?
+2.	Job Roles in SETA:
+a.	Build awareness campaigns of what behaviors the organization wants employees to display. 
+b.	Lead training classes to teach employees how to do what the organization wants. 
+c.	Find ways to share the message about the latest social engineering approaches. 
+d.	Show examples about phishing and its variants. 
+e.	Run phishing or other exercises to put simulated experiences in the hands of employees. 
+3.	Safe Computing Fundamentals:
+a.	Be aware of offers that seem too good to be true. 
+b.	Use multifactor authentication.
+i.	Important valuables
+ii.	Bank accounts
+c.	Avoid clicking on attachments from unknown sources.
+i.	Enter directly into the website rather than through email.
+d.	Avoid giving out personal information to anyone via email, phone, or text messages. 
+e.	Use spam filter software.
+i.	It filters fraudulent emails and adds them to the spam folder. 
+f.	Avoid befriending people who are strangers in real life. 
+i.	Verify people before starting to develop a deeper relationship and sharing information with them.
+g.	Teach kids to contact a trusted adult in case they are being bullied or feel threatened on the internet. 
+Security Awareness Plan
+"Amateurs hack systems. Professionals hack people." — Bruce Schneier
+Employees are the first line of defense against cyber-attacks in any organization. Unfortunately, attackers are increasingly advancing their relentless attempts to manipulate employees into compromising systems, gaining unauthorized entry, and exposing valuable information. Therefore, the strength of an organization's overall security posture depends heavily on the quality of its security awareness program, which aims to educate and prepare every person to quickly identify suspicious behavior and immediately report it to the appropriate people. 
+However, to have an effective and comprehensive cybersecurity awareness program, it must leverage multiple communication methods, including various topics, to train employees on the array of tactics most commonly observed in attacks today. 
+For this assignment, assume you are hired to develop a cybersecurity awareness plan for an education technology organization that provides an exceptional online learning environment for students worldwide to learn in-demand skills from the comfort of their homes and take their careers to the next level.
+The education technology organization is just getting started with its cybersecurity awareness program, which will provide training to all of its employees, students, contractors, and partners. Your task is to develop a proposal that lays out your best practices plan and strategy for building, measuring, and sustaining a cybersecurity awareness program.
+	Managing our human risk is essential to preventing data breaches in 2022. We’ve talked to all different parts of any organization including Human Resources, Incident Response Team and Security Operations Center (SOC), IT, management, individual contributors, students, and even vendors. To gain a better understanding of why managing human risk is important in 2022 Verizon’s Data Breach Investigations Report saw that system intrusion, social engineering, and basic web application attacks represent 90% of breaches. Although social engineering is declining in popularity for system intrusion, the human risk element still effects the entire human attack surface in an organization. Whether it be through phishing campaigns or pretexting to gain information from our employees that can later be used to intrude into systems the human risk element accounts for 90 percent of initial footholds that allow attackers to breach company systems. The average cost of a data breach in the United States saw that in 2022 it was 9.5 million USD (Tunggal, 2022). Not only that, but the loss in stakeholder and consumer trust can lead to millions more in losses. Therefore, it stands to reason that a security awareness plan can help mitigate that risk. 
+Peter Drucker once said that culture eats strategy for breakfast. Although, you can spend millions on a cybersecurity program if you don’t have a culture that propagates cybersecurity within your organization, then the human element will always pose a risk no matter how good your incident response team or artificial intelligence and automation tools are. Your organization is in education technology and provides an exceptional online learning environment for students worldwide to learn in-demand skills from the comfort of their homes – what an amazing time to be alive right? Therefore, all of you must understand that a cybersecurity awareness program is essential to the continuation of an everchanging landscape. You guys are already at the forefront or the trenches of cybersecurity and must understand that as the seasons change so do bad actors. It’s no secret that people also learn differently and is also the reason why our cybersecurity awareness program brings people together instead of remanding you a video that you watch at your desk with a checkbox at the end telling you that you agree you’ve learned and understood all of the content. Therefore, content needs to be provided in different versions and varieties that match diverse learning population styles. Your goal is to show that each group relates to the content and is specific to their roles and responsibilities. In order to achieve this, we shouldn’t just be looking at the goal of disseminating information but providing it in a manner that allows users to learn and be hooked. Our company is known for providing security awareness training content that includes interactive modules, videos, games, newsletters, posters, and a Netflix-like series that brings on-demand binge worthy cybersecurity series and those series only grow as we hold more and more meetings like this one. We want to be able to capture the day to day and take home the most fascinating stories so that others can learn as well. We employ all types of cybersecurity content and to name a few they include email phishing, vishing, smishing, password security, working remotely and securely, and a lot more. In order to measure the security topics that your organization is targeted by, we utilize interactive modules and games that prove user’s understanding of the content. In order to bridge this gap with employees we follow 10 steps to engage employees in security awareness training: 
+1.	Creation of custom training campaigns based on the risk profile and knowledge level of employees. 
+2.	Descriptions on how certain behaviors and best practices help them in both their personal and professional lives bridging the divide between “work” and a way of life. 
+3.	Delivery of accessible training campaigns that ensure everyone in the organization has the same access to detailed security awareness training. 
+4.	The use of eLearning, micro- and nanolearnings, and gamified training. 
+5.	Use of awareness campaigns (like this one) to stimulate conversation and get people thinking about what they have learned or experienced in the workplace and out. 
+6.	Collection of feedback from employees on the training and adjust accordingly to fit their needs or include concepts that are missed. 
+7.	Letting employees test their knowledge with simulations and gamified scenarios. 
+8.	Giving employees continuous feedback on what they have learned and continue to apply (Test phishing emails for example that reward employees for compliance). 
+9.	Empowering employees by making it clear that they have the power to stop cyber attacks and threats. 
+10.	Recognition of good and bad behaviors and provide feedback where necessary. 
+Finally, quantifying the success of a security awareness program is no easy task, but it is paramount to understanding and reinforcing secure behaviors. We don’t want to make it seem too much like a game, but at the same time we want to make it a priority to understand the organization’s top security concerns and then anchor those measurements to those concerns. Although, training completion rates and ongoing phishing click rates are important measures to track considering at a high-level system intrusion is also a risk then evaluating vulnerability assessments and or password resets are also integral metrics to consider. How many people are doing the bare minimum and only utilizing 8-character passwords? Is it time to introduce a single sign on option or password management option that also grades the user’s effectiveness at understanding password spraying attacks or recovery method and OSINT pathways? These are also metrics to consider and have also been gamified and put into our Netflix-like series that grip employees on the edge of their seats. 
+References:
+DBIR report 2022 - Intro to regions. Verizon Business. (n.d.). Retrieved July 25, 2022, from https://www.verizon.com/business/resources/reports/dbir/2022/intro-to-regions/ 
+How to build a strong security awareness program: Terranova security. Cyber Security Awareness. (2022, March 2). Retrieved July 25, 2022, from https://terranovasecurity.com/how-to-build-a-strong-security-awareness-program-in-2021/ 
+KnowBe4. (n.d.). Security Awareness Training Resources. KnowBe4. Retrieved July 25, 2022, from https://www.knowbe4.com/resources 
+Tunggal, A. T. (2022, July 24). What is the cost of a data breach in 2022?: Upguard. RSS. Retrieved July 25, 2022, from https://www.upguard.com/blog/cost-of-data-breach 
+Social Engineering Scenario
+Let's assume that you're an accounts payable employee for a multi-international organization. You're working at your desk on a quiet, typical Friday afternoon when you abruptly get a call from Chris Matthews, an executive at one of your organization's premium vendors. While you had seen many email correspondences between Mr. Matthews and your manager in your team's shared mailbox, receiving a call from him was a first. Mr. Matthews compellingly informs you that there's an issue with the last payment made, saying they never received it and your organization's account is being suspended. 
+You feel humiliated and distressed because it is your job to ensure all vendors are paid on time. You cannot imagine how you could put not only your career but the organization's relationship with such an essential vendor in jeopardy. 
+As you're apologizing and trying to find the last invoice, Mr. Matthews continues speaking, comforting you that it's okay, but that they need the payment to be made instantly if your organization wants to continue using their services. He further adds that this was probably due to a miscommunication about the recent change to their bank account. He thought he had sent the updated bank information to all of their customers; however, it seemed that the new information never made it to you and one other customer. 
+While you feel like you are in the middle of chaos, Mr. Matthews seemed friendly, pleasant, and understanding, despite being inconvenienced by your carelessness. Moreover, he reassures you and says that he does not want to create additional work for you this late on a Friday. So, to make it easier, instead of you having to hunt down the invoice and the paperwork for the new bank account, he will directly email you both and would appreciate it if you could submit the payment right away before everyone goes home for the weekend.
+When you check your email, there's a message from Mr. Matthews, just like he said. In it, there's an invoice attached along with the new bank information. So, without wasting any more of Mr. Matthews' time, you open it quickly, enable office macros, and use the information in the document to make the payment.
+Mr. Matthews graciously thanks you and informs you that he's received the payment. He smoothly winds down the conversation, telling you that he will send a receipt for the payment soon. You are relieved and exhilarated that you were able to work together with Mr. Matthews to correct the situation so quickly and without troubling your manager. You exchange pleasantries and hang up. 
+A couple of weeks later, your manager anxiously comes in to ask you about the payment to this unknown account. You inform her that you were being proactive and wanted to take care of the dire situation quickly and made the payment. However, your manager states that that particular vendor was already paid weeks ago, and no changes were made to their bank account.  
+At this point, it becomes clear to you that you were the victim of a social engineering attack. A person pretending to be Mr. Matthews created a false sense of urgency and authority to convince you to send a payment to a fraudulent account. Furthermore, by opening the attachment he sent, you also exposed your organization's network and systems to malware. 
+In the scenario the bad actor took advantage of the accounts payable employee’s heightened emotions and instilled a sense of urgency while also building rapport and trust with the employee to attain their desired outcome. The actor had done previous preparatory investigations into the specific vendor that communicates with the multi-national organization  and used that information to link the accounts payable employee to his assumed identity; thus, impersonated that authority figure. Furthermore, the bad actor ingratiated themselves with the victim employee paying compliments and building a false pretext that incurred trust in the employee. The bad actor more than like identified the employee by investigating Chris Matthews and was more than likely able to get a list of email addresses that the accounts payable employee was forwarded on. The more people that were involved in those communications the larger the attack surface; so, it’s unfathomable to understand how the bad actor got a hold of this information, but it could also more than likely be an insider that is already part of that ingroup. Usually, internal directories contain not only an employee’s work email address, but also their phone number as well, which also leads credence to the theory that the bad actor may very well be an insider. If this was an external group, then it could be likely that at least one of the people in the loop on emails from Chris Matthews may have been breached as well and their information could have been found on the dark web. 
+The likelihood the actor sent an attachment with malware is very likely, because the actor was aware this could have given them away, but to be practical redundancy is key to persistence and thus the actor used the opportunity given when emotions were high to build upon the trust and rapport they cultivated and cement their foothold within the organization. Furthermore, the scenario advised that the employee enabled office macros and usually there’s no reason to enable office macros, because Microsoft by default blocks macros from running, because the source of a file may be untrusted if it is coming from the internet. This was the key to heightening my suspicions that there was in fact malware laden inside of the attachment of the bank invoice sent to the employee. 
+In retrospect, the employee ought to have taken steps to verify the identity of Mr. Matthews. Being a slow Friday and the end of the day would also lead me to be suspicious of an account not being paid, because usually any accounts payable employee is working to ensure everyone is paid during the beginning of the week. Furthermore, an accounts payable employee more than likely has a spreadsheet with paid invoices and check numbers to verify what was being said was in fact true. Furthermore, the email was another key opportunity, wherein the employee could have called their IT about enabling office macros and why they are off by default (this happens way too often and usually is reconciled with education procedures about the reason why office macros are disabled by default) and they could have used their critical thinking skills to again verify the identity of Chris Matthews (does this email address received from outside the organization match the email from the numerous emails I have received in the past from Chris Matthews?).
+In order to create a security awareness training plan based on this experience, phishing modules and games that involve critical thinking skills such as sight-matching domain names with common vendors could be key to teaching employees what to look out for when it comes to these types of attacks. Furthermore, video examples of real-life attacks such as these can definitely help the employee feel as if they are not the only one to have been targeted by this type of scam and role playing from the perspective of the attacker can breed a culture of security awareness within the organization. 
+The Verizon Media Case Study
+The Verizon Media case study provides an in-depth and comprehensive look at how an organization can drive change to elicit a focused and embedded cybersecurity culture. The report highlights the key role that managers and relevant leaders play in setting the tone and building a strong culture of cybersecurity. 	
+a.	The Verizon Media case study clearly illustrates the importance of managerial mechanisms as well as the need for measuring effective practices associated with the Huang and Pearlson Culture Model. The study highlights  the importance of building a culture of cybersecurity by positively influencing the values, attitudes and beliefs of team members through a series of management mechanisms, reporting, and continuous measurement. The study reinforces the fundamental importance of management toward driving and enhancing positive cybersecurity behaviors, as it has a direct correlation with desired improvements and outcomes. 
+Verizon Media wants their employees to understand their values, attitudes, and beliefs as seen at the three levels of the organization: leadership, group, and individual. At the leadership level, the value placed on cybersecurity is evident by the priority placed on cybersecurity projects by top management, the participation in keeping the organization secure, and the knowledge top management seeks on cybersecurity. At the group level, beliefs are apparent by understanding community norms, seeing teams work together to keep the organization secure, and by non-technical staff enlisting technical staff’s support around security issues. Finally, at the individual level, attitudes about cybersecurity are observable in the employee’s self-efficacy or the belief the employee can take action to help keep the organization secure. Individuals also convey their attitudes by demonstrating their awareness of the cybersecurity policies of their organization and of the general cyber threat landscape. The Paranoids set out to realize a culture of cybersecurity to enable shared values, attitudes, and beliefs among employees by rewarding behaviors that improved that company’s security posture. The Paranoids’ Proactive Engagement group encompassed three teams that included a red team, who evaluated systems, services, processes, and people to discover systemic weakness. Second, a Security Education team institutionalized the lessons from the Red Team’s findings and scales those learnings to the entire population through mandated training. Finally, the Behavioral Engineering team took a data-driven approach to baseline and influence security behaviors with an emphasis in employee value adoption. Using the Model of Cybersecurity Culture, the Proactive Engagement group sought to answer how to use the listed managerial mechanisms to encourage cybersecurity culture adoption within employees. In order to drive these behaviors, The Paranoids used a three-step-process to drive experiments and make decisions aimed at improving the security behaviors of employees: Step 1, is to identify the desired behavioral goal and this goal avoids what the team called “impossible advice,” which is any security guidance that requires the end user to make a qualitative judgement about security. Step 2 is to find an appropriate measure and create a baseline. For example, reducing the success of phishing attacks, the behavioral goal should not focus on never clicking links (impossible advice), and instead the team measured the likelihood of employees to enter credentials into a fake SSO page once on that page. This baseline derived from HR data from individual employees set a clear measure and baseline to improve upon individual employees who may be at risk. Step 3, is to take actions to affect the measured behavior, adjust those actions over time, and repeat the process. In the case of phishing behaviors, the Proactive Engagement team used technology fixes, cascading communications, passive and active competition, communication nudges, and in-time training to push credential capture rate down and drive the increase of reporting rates. Some attitudes, values, and beliefs that The Paranoids changed in employees are overarching but are influenced by two sets of constructs: External influences and managerial mechanisms. External influences are mostly outside the general manager’s control but include things like data regulations operating on the organization. External regulations influence attitudes about data protection, as do geographical differences. Societal and peer institutions are also driving factors that can influence one’s need to be unified as well, which can be used to drive new cyber-aware behaviors. Managerial mechanisms weigh on employees, because they are the mechanism through which culture leadership, communications plan, performance evaluations, rewards and punishments, cybersecurity training, and organizational learning take place. For example, when a manager rewards an employee for cyber-secure behaviors, it sends the message that these behaviors are valued.
+References:
+Pearlson, K., Sposito, S., Arbisman, M., & Schwartz, J. (2021, February 28). Building a security propaganda machine: The Cybersecurity ... - MIT CAMS. Retrieved July 27, 2022, from https://cams.mit.edu/wp-content/uploads/Verizon-Media-CyberCulture-Paper.pdf 
+Module Summary
+1.	SETA is not enough – building a culture of cybersecurity is necessary so everyone in the organization feels that they can help keep it secure.
+a.	This means changing values, attitudes, and beliefs that drive cybersecure behaviors.
+2.	Cybersecurity provides jobs for people who want to help combat social engineering. 
+a.	Red teams or Offensive Security Certified Professionals run fake phishing email tests to train employees to spot real phishing emails. 
+Bibliography
+“2021 Data Breach Investigations Report.” PDF file. Verizon. 2021. https://enterprise.verizon.com/content/verizonenterprise/us/en/index/resources/reports/2021-dbir-executive-brief.pdf.
+“2021 Security Awareness Report.” SANS. n.d. https://www.sans.org/security-awareness-training/resources/reports/sareport-2021/?msc=ssa-homepage.
+“Cybersecurity Awareness Resource Library.” Educause. n.d. https://www.educause.edu/focus-areas-and-initiatives/policy-and-security/cybersecurity-program/resources/information-security-guide/toolkits/cybersecurity-awareness-resource-library.
+Dooley, Roger. “Surprise! Cialdini Adds 7th Principle, Unity.” Neuromarketing. n.d. https://www.neurosciencemarketing.com/blog/articles/cialdini-7th-unity.htm.
+Evans, Sarah. “6 Principles of Influence.” YouTube video, 3:10. 27 May. 2015. https://www.youtube.com/watch?v=p8aHW2gScxU.
+Gillin, Paul. “The History of Phishing.” Verizon. n.d. https://enterprise.verizon.com/resources/articles/s/the-history-of-phishing/.
+Have I Been Pwned? n.d. https://haveibeenpwned.com/.
+“How to Build a Strong Security Awareness Program in 2021.” Terranova Security. 28 Dec. 2021. https://terranovasecurity.com/how-to-build-a-strong-security-awareness-program-in-2021/.
+Huisman, Joanna. “Building an Effective and Comprehensive Security Awareness Program.” PDF file. KnowBe4. n.d. https://www.knowbe4.com/hubfs/BuildinganEffectiveandComprehensiveSecurityAwarenessProgram.pdf?hsCtaTracking=4fb472eb-259e-4758-807b-025eab4cbf26%7C4f58549f-9e6c-43a3-973f-a4298d9bdc70.
+Kelley, Diana. “The Psychology of Social Engineering — the “Soft” Side of Cybercrime.” Microsoft. 30 Jun. 2020. https://www.microsoft.com/security/blog/2020/06/30/psychology-social-engineering-soft-side-cybercrime/.
+Krebs, Brian. “The Value of a Hacked Email Account.” KerbsonSecurity. 10 Jun. 2013. https://krebsonsecurity.com/2013/06/the-value-of-a-hacked-email-account/.
+Paramount Movies. “Catch Me If You Can — Trailer.” YouTube video, 2:34. 29 Apr. 2013. https://www.youtube.com/watch?v=71rDQ7z4eFg.
+Pearlson, Keri Pearlson, Sean Sposito, Masha Arbisman, and Josh Schwartz. “Building a Security Propaganda Machine: The Cybersecurity Culture of Verizon Media.” PDF file. A CAMS MIT Whitepaper. 28 Feb. 2021. https://cams.mit.edu/wp-content/uploads/Verizon-Media-CyberCulture-Paper.pdf. 
+Phishing Quiz with Google. Jigsaw | Google. n.d. https://phishingquiz.withgoogle.com/. 
+“Resource Toolkit: Security Awareness Planning.” SANS. n.d. https://go.sans.org/lp-kit-security-awareness-planning.
+Roy, Mekhala. “5 Tips for Building a Cybersecurity Culture at Your Company.” TechTarget. n.d. https://searchsecurity.techtarget.com/tip/5-tips-for-building-a-cybersecurity-culture-at-your-company.
+Sicherheitsforschung. “Future of Social Engineering (DeepSec 2010).” YouTube video, 48:53. 6 Feb. 2012. https://www.youtube.com/watch?v=KoEGyXewLmY.
+“Social Engineering.” NYTE Center. n.d. https://www.ncyte.net/resources/cybersecurity-curriculum/interactive-lessons/cyber-attacks-and-vulnerabilities/social-engineering.
+“Social Engineering.” Oxford Lexico. n.d. https://www.lexico.com/en/definition/social_engineering.
+Spadafora, Anthony. “Largest Collection of Passwords Ever Has Been Leaked Online.” TechRadarPro. 8 Jun. 2021. https://www.techradar.com/news/largest-collection-of-passwords-ever-has-been-leaked-online.
+“Twitter Investigation Report.” New York State. 14 Oct. 2020. https://www.dfs.ny.gov/Twitter_Report.
+Vintage Files. “The Man Who Sold the Eiffel Tower.” YouTube video, 5:00. 27 Mar. 2019. https://www.youtube.com/watch?v=ZCicYiVJ3PI.
+“What Is Social Engineering?” Kapersky. n.d. https://usa.kaspersky.com/resource-center/definitions/what-is-social-engineering.
+
