@@ -1,0 +1,230 @@
+Threats and Vulnerabilities: What and How
+1.	What: Visible impact of the threat. 
+a.	Steal information
+b.	Disrupt access/availability
+c.	Disrupt operations
+d.	Steal computer capacity 
+e.	Destroy equipment/harm people
+2.	How: The vulnerability that made the threat possible. 
+a.	Technical:
+i.	DoS/Botnet/DDoS
+ii.	Man-in-middle/Sniff packets
+iii.	Buffer overflow
+iv.	SQL injection
+v.	Cross-site Scripting (CSS)
+vi.	Malware/Trojan
+b.	Technical-Human
+i.	Poor patching
+c.	Human/social engineering
+i.	Brute force/poor passwords
+ii.	Phishing/spear phishing/business email compromise (BEC)
+3.	Computers have all the information today personal or confidential company information. 
+4.	SWIFT: Society for Worldwide Interbank Financial Telecommunications.
+Threats: Disruption of Operations
+1.	Examples of Disruptions to Operations Due to Cyber Attacks:
+a.	Saudi Aramco experienced a company-wide network outage disrupting operations. 
+b.	Baltimore city government computers were infected, shutting down most of their network. 
+c.	Hospitals in Texas and the UK’s NHS faced cyber-attacks, forcing them to rely on paper backup systems that slowed them and to some extent, put patients at risk. 
+d.	In December 2015, hackers disrupted electricity distribution in Ukraine, affecting most of the country and becoming the first known successful cyber attack on a power grid. 
+2.	Ransomware Attack:
+a.	A hacker gets into your computer, stops it, and encrypts all of your data. 
+b.	You need to pay a ransom to get the key needed to unlock your data. 
+c.	Using that key, your files are unencrypted and available for use. 
+d.	The WannaCry ransomware attack: 
+i.	Affected Telefonica, a large Spanish telephone company.
+ii.	Sent out a message in Spanish – ‘Urgent! Turn off your laptop immediately’.
+iii.	Infected and locked 80% of all computers in the company. 
+iv.	Forced the company to send the employees home and shut down for the day.
+v.	Attacked over 300,000 computers in over 100 countries. 
+e.	The NotPetya attack affected hundreds of companies including Maersk, a global shipping company that: 
+i.	Handles approximately 20% of worlds freight. 
+ii.	Had operations disrupted for a period of time. 
+3.	Theft of computing capacity is referred to as cryptojacking.
+4.	Cryptomining: 
+a.	Process that verifies cryptocurrency transactions, such as Bitcoin. 
+b.	Uses a cryptocurrency miner, a computer system that authenticates and authorizes these Bitcoin transactions.
+c.	Pays a small number of Bitcoins to the cryptominer for this work.
+d.	Might consist of thousands of computers and cost millions of dollars. 
+5.	Cryptojacking is the unauthorized use of your computer to do the process of cryptocurrency and earn Bitcoins for the cryptojacker. 
+Experience with Threats and Vulnerabilities
+Working as Technical Support for Sprint now part of T-Mobile means you come across quite a few “hackers” and most of the time it ends up being user error; however, sometimes there are legitimate hacks. One for example used either some type of broken authentication and other advanced techniques to break PCI DSS standards on Sprint.com. The customer ended up receiving a credit of over 10,000 dollars on their account that was bogus of course, because it was paid using bogus payment information along with quite a few phones added to the account. I escalated the interaction up to management and advised them of the impact this can have on the company as a whole if this was not patched. First off the billing system needed to be updated against verified records of payment activities that were actually valid. There were many different types of payment information that they used (all being bogus of course) and eventually we verified what payments were valid and restored the customer’s account and quarantined their Sprint.com account (meaning the customer was unable to access their account until the issue was resolved). The impacts with which the customer was affected by this Cybersecurity attack was that they can no longer access their account online for the time being, while they closed the backdoor to Sprint.com. Not only is Sprint.com being deprecated due to the merger this has considerably slowed down progress in that area. I never was able to contact the customer again because I was their point of contact for this particular issue, but I never found out if Sprint.com worked for them ever again. It has now been over a year, and I’ve seen more attacks like this that are getting more and more sophisticated. It’s possible since Covid began the vulnerabilities associated with Sprint.com only grew larger and larger as we begin to migrate Sprint customers to the T-Mobile billing system, but all of this is merely conjecture. There was nothing to help remedy the situation and I’ve worked with management on this in the past to get better security guards for Sprint.com as I learn more and more about cyber security, but it seems this isn’t at the top of T-Mobile’s list to protect customer data as unfortunate as it is. 
+	I own three IoT devices in my home and they all have secure passwords and their own network that they work on. I make sure that my firewall settings are very strict for these IoT devices and only allow them to work on a VLAN that is segregated from my main network. I make sure that the attack surface for my IoT devices is logged and critical/warning level events are communicated immediately. By taking these preventative measures I make sure that any harm, if any could occur is something I would know about. If a hacker was to take control of the system I would be immediately notified, and the firewall would most likely boot the attacker off of the system once the warning or critical message displayed. All of this is automated. If for whatever reason the devices are not working as a result of a denial-of-service attack or are completely owned, I would simply reconfigure the VLAN to an endpoint the hacker does not have control over. 
+Resources: 
+Owasp top 10 security vulnerabilities in 2021. ImmuniWeb. (n.d.). Retrieved March 12, 2022, from https://www.immuniweb.com/resources/owasp-top-ten/ 
+Responding to Cyber Threats
+I currently work for Sprint now part of T-Mobile in a call center. The biggest cyber threats that pose a significant challenge to our environment is BYOD devices. People who bring infected computers to the call center and jack up to ports with their older devices (some still running Windows XP) is one of the most disheartening things I’ve seen. There has been Cybersecurity threats that have been publicized with regards to Sprint/T-Mobile, but all of those threats were earned, because preventative measures and company culture bog down security efforts. The types of malicious attacks that I’ve been privy to while working for Sprint/T-Mobile is denial of service attacks, ransomware, and even Sprint.com attacks that range from unauthorized add-a-lines to customer proprietary network information being leaked (what kind of towers they use, calls they’ve made, how long they are, and IMEI cloning). Being that I work on the call center floor I’m not privy to what kind of attackers these were whether they were script kiddies, cyber criminals, or nation states attacking critical infrastructure. In response to these leaks and hacks I would implement more strict BYOD controls and safeguard VLANs on-site to mitigate risk of lateral movement through guest networks designed for employees to work on schoolwork and their devices. Their devices would be restricted to be off of the call floor to ensure no one is hooking up their devices via ethernet to the switch and proper alarms would be set to ensure if this does happen IT would be notified immediately. Furthermore, to ensure customer data/accounts are safe deprecation of Sprint.com needs to be set as a priority. Maybe setting virtual Sprint.com accounts on T-Mobile.com with double authentication procedures requiring multi-factor authentication would ensure that hackers are not able to move laterally through the network as easily. Logging and  vulnerability analysis to systems we utilize would also be a great preventative measure to ensure guards are set on a reactive basis to the changing cybersecurity threat landscape. Qualys or even Carbon Black Endpoint could very well be tools to utilize to prevent these types of issues. 
+Threats: Destruction of Industrial Control Systems
+1.	Cyber-Physical Systems (CPS): They are physical systems under computer control and include:
+a.	Power plants
+b.	Factories
+c.	Refineries
+d.	Transportation system
+2.	Attacks on CPS can result in: 
+a.	Real physical damage
+b.	Challenges reverting back to manual control
+c.	Weaken the safety features included to allow automation, allowing hackers to turn these on and off
+3.	Attack on Mechanical Systems:
+a.	Power plant with 8 generators:
+i.	One generator might fail over time. 
+ii.	Odds of two generators failing are very small.
+iii.	Odds of three generators failing are almost impossible to imagine. 
+iv.	A cyber attack that destroys the first generator can easily damage the others at the same time, causing massive damage. 
+v.	Recovery takes weeks or months. 
+4.	According to Lights Out, a devastating cyber attack on America’s power grid is not only possible, but likely and the US is shockingly unprepared. 
+Cyber Attack Example and Analysis
+	The SolarWinds supply-chain attack is one that started with SolarWinds/ IT management software. From there hackers were able to create a backdoor that effected many different industries including Education, Government, Technology, Energy, and Healthcare. The adversary used SolarWinds IT management software that was installed across several different industries systems to distribute and install malicious code, aptly named, SUNBURST. The goals of the attacker were to simply distribute and install their malicious software across a plethora of different industries creating a supply chain of malware across industries. The exact scope of the adversary still remains unclear to this day. Public reports suggest that StellarParticle activity cluster to the Russian Foreign Intelligence Service of the Russian Federation (SVR), an organization associated by Crowdstrike Intelligence to COZY BEAR. This malware distribution of SUNBURST is likely state-sponsored for reconnaissance and first-stage loader malware. SUNSPOT is the monitoring tool that detects the beginning of an Orion package build and replaces one of the source codes files with a backdoored version allowing backdoor access to a number of industries’ systems. Security measures that would have been essential to safeguard against attacks like the SolarWinds supply-chain attack would lie in supply chain processes. After analyzing a virtual machine used in the software build, StellarParticle activity cluster installed a monitoring tool named SUNSPOT, which detects the beginning of the Orion packages build and replaces one of the source codes files with a backdoored version. To help in preventing this in the future data integrity must be verified prior to installation of any software. These types of preventative measures must now look at DLLs with a zero-trust paradigm to mitigate risk. With this type of hack, it turned out that most conventional Antivirus needed to become more aware more quickly in order to prevent it; thus, conventional AV was rendered useless for this type of targeted attack. Common measures to be considered as well is to ensure the infrastructure of the supply chain is not leaving any stone unturned and trust no domain until it is verified outside of what is essential for the person’s role in the organization. StellarParticle actors also demonstrated exception knowledge of Microsoft O365 show they had a detailed understanding of authentication and access controls with those platforms. Given this as well personnel training is essential to mitigating risk at this level as well. 
+Resources:
+Crowdstrike Global Threat Report 2021. Crowdstrike. (2021). Retrieved March 14, 2022, from https://go.crowdstrike.com/rs/281-OBQ-266/images/Report2021GTR.pdf 
+Hammond, J. (2020, December 15). Rapid response: Supply chain exploitation of solarwinds orion software. Medium. Retrieved March 14, 2022, from https://blog.huntresslabs.com/rapid-response-supply-chain-exploitation-of-solarwinds-orion-software-b8ee3c9283c3 
+Vulnerabilities: Basic Technical Attacks
+1.	Three ways these threats may manifest:
+a.	Technology
+b.	Human/social engineering
+c.	Combination of the two
+2.	The good guys tend not to share, because it reflects badly on the company, encourages copycats, and keeps you liable for lawsuits. The bad guys share information very aggressively using the dark web and can adapt much faster than the good guys can. 
+3.	You don’t need to be a techie hacker to do a cyber-attack – you can buy most of what you need from the dark web.
+4.	Technologies involved in Cyber-attacks:  
+a.	Denial-of-Service (DoS): A computer system could be for booking theater tickets or checking your bank balance, so trying up that number can deny some levels of service.
+b.	Botnets: A collection of IoT devices in which malware has been installed, and which are controlled by hackers who typically guess the default password and thereby gain access to your IoT device. Is also used to attack other bots in your house and around the neighborhood. Can grow into thousands of bots. 
+c.	Distributed Denial-of-Service (DDoS): Where many attackers deny service at once. 
+i.	Example: Mirai cyber attack used hundreds of thousands of compromised IoT devices. Controlled 600,000 devices at its peak. Targeted Dyn, which is a DNS provider used by major companies to map domain names to IP addresses, partially shutting out companies such as Amazon, CNN, HBO, Twitter, and The Wall Street Journal.
+ii.	Example: Dark web transactions can offer a DDoS for money.
+d.	Man-in-the-middle: You at your laptop are connected to a server over the internet. In the case of a man-in-the-middle attack means there is someone between capturing the packets you are sending and receiving. Sees everything that is communicated between you and the server, including passwords and account numbers. Can choose to change things like when you transfer money, it may change the account the money is transferred to. 
+e.	Packet Sniffing: You at your laptop connected to the server and there is a packet sniffer in the middle. Subtle and passive, like eavesdropping. Skims passwords, account numbers, and other information passed on to the server. Encrypted services can be used to defend against packet sniffing. 
+5.	Personal and public wifi networks are especially vulnerable to man-in-the-middle and sniffing-packet attacks. 
+Describe types of Vulnerabilities
+According to the Zero Day Initiative the fruit module that ships with Samba is designed to be integrated with Netatalk. Netatalk is an open-source implementation of the Apple Filing Protocol (AFP), which allows Unix-like systems to serve as file servers for Apple devices. Once a session is established, smbd allows unauthenticated users to set extended file attributes of a file via SMB2_SET_INFO. Samba versions prior to 4.13.17, 4.14.12, and 4.15.5 with vfs_fruit configured allows out-of-bounds heap to read and write via specially crafted extended file attributes. A remote hacker with write access to extended file attributes can execute arbitrary code with the privileges of smbd. This technically means they can leverage this vulnerability to execute code in the context of the smbd daemon, which is typically root privileged. 
+	Vendors that were known to be affected by this critical vulnerability included Red Hat, Samba, SUSE Linux, Synology, and Ubuntu. It is unclear how many other services that are affected by this critical vulnerability, but there are workarounds at this time if the impacted version any organization is utilizing has dependencies that need to be mapped out. 
+	The root cause in the vulnerability lies in the heap out-of-bounds read within the fruit_pread functions, which reads the metadata of a file. Since the file stream is named: AFP_afpInfo and the file type is ADOUBLE_META, the function chain fruit_pread_meta->fruit_pread_meta_adouble will be executed. Considering the source code in the zero-day initiative blog post ad_fget function creates an adouble structure containing attacker-controlled data. The call to ad_get_entry returns the pointer to the ADEID_FINDERI entry. Since this is controllable by the attacker they can make p point to the last byte of the ad->data buffer. This will cause the memcpy call to read past the end of the allocated buffer and dump up to thirty-one bytes of memory from the heap. 
+	Given how easily a remote hacker can abuse this flaw it was patched relatively quickly, and it is unknown how widespread this flaw is, although any systems using the samba service should definitely check for the versions that were effected by this critical vulnerability and patch their systems ASAP. 
+	An attacker can exploit this vulnerability by just as in the case of bugs used during Pwn2Own in Austin of 2021. An attacker can possibly leverage this vulnerability to execute code in the context of the smbd daemon, which is typically root privileged and thus an attacker can theoretically own any device that is running any version of samba that is affected by this vulnerability.
+Resources:
+CERT/CC Vulnerability Note vu#119678. VU#119678 - Samba vfs_fruit module insecurely handles extended file attributes. (2022, January 31). Retrieved March 15, 2022, from https://kb.cert.org/vuls/id/119678 
+CVE-2021-44142 Detail. NVD. (2022, February 21). Retrieved March 15, 2022, from https://nvd.nist.gov/vuln/detail/CVE-2021-44142 
+Team, T. Z. D. I. R. (2022, February 1). CVE-2021-44142: Details on a samba code execution bug demonstrated at pwn2own Austin. Zero Day Initiative. Retrieved March 15, 2022, from https://www.zerodayinitiative.com/blog/2022/2/1/cve-2021-44142-details-on-a-samba-code-execution-bug-demonstrated-at-pwn2own-austin 
+Vulnerabilities: Flaws in Software
+1.	Zero-day vulnerabilities are software flaws that are not yet recognized and fixed and, if discovered can be taken advantage of by hackers. 
+a.	A software flaw is usually a special situation that the software programmer has not considered. 
+b.	If set correctly, your program:
+i.	Should behave like a timer.
+ii.	Is set to go off after 5 minutes.
+iii.	Sets off an alarm after 5 minutes. 
+c.	If set incorrectly, the software program will do something, but it may be unpredictable. 
+d.	If a hacker figures out how to take advantage of that situation, they might cause damage or take control of the computer. 
+2.	Buffer Overflow:
+a.	A buffer is often used to describe an area of memory that is set aside till input. 
+b.	If more data are inputted than allowed for by the buffer space, the program may malfunction. 
+c.	Potentially allows a hacker to take control. 
+d.	One of the first classic examples with wide impact was the Morris Worm. 
+i.	Took place in 1988.
+ii.	Exploited vulnerability in a popular send mail program.
+iii.	Replicated itself and took over approximately 10% of the internet. 
+e.	Other examples include:
+i.	SQL Slammer in 2003
+ii.	The Heartbleed attack in 2004
+iii.	Adobe Flash attack in 2016
+iv.	WhatsApp attack in 2019
+3.	SQL Injection:
+a.	SQL or Structured Query Language is a popular language used for querying databases.
+b.	The nature of this attack is simpler than a buffer overflow but is also a subtle way to fool the software.
+c.	A typical SQL query used to retrieve data from a database might read: 
+i.	SELECT ItemName, ItemDescription FROM ItemTable WHERE ItemNumber = ItemNumber
+d.	What happens if you provide other text instead of providing ItemNumber:
+i.	SELECT ItemName, ItemDescription FROM ItemTable WHERE ItemID = ‘234’ UNION SELECT Username, Password FROM Users
+e.	This converts an SQL query into a compound two-part SQL query that:
+i.	Provides a description of item 234
+ii.	Provides the names and passwords of all users on that computer
+4.	Cross-Site Scripting (CSS): 
+a.	Web pages are not just static text but are often programs written in programming languages like JavaScript.
+b.	A CSS attack is similar to an SQL injection where the simple piece of text is inserted into a JavaScript program. 
+c.	A short JavaScript segment might be: 
+i.	<input type= “search” value= “product1234” />
+ii.	The value is input expected to be provided by the user. 
+d.	A JavaScript segment where more information has been added might look like this: 
+i.	<input type= “search” value= “product1234” />
+ii.	<script>StealCredentials ( ) </script>
+iii.	Here Steal Credentials program steals all user IDs and passwords in the computer. 
+5.	How to Manage Threats and Vulnerabilities:
+a.	Establish Baseline: 
+i.	Identify what needs to be monitored and defended. 
+ii.	Determine risk profile to detect abnormalities.
+iii.	What are attractive targets?
+iv.	What are the critical systems and applications?
+v.	What is the normal profile – users, assets, systems, application.
+b.	Sophisticated Attacks: 
+i.	Understand motivation for attackers.
+ii.	What assets are already compromised?
+iii.	What domain(s) may be the source of attacks?
+iv.	Is there low-profile network traffic that may indicate ongoing or imminent attack.
+c.	Quality Insider Threat Program:
+i.	Understand users who are inclined to perform detrimental actions against the organization.
+ii.	What data is leaked/lost and by whom?
+iii.	Who has the motivation to harm or compromise cyber operations?
+iv.	Who is exhibiting abnormal behavior?
+d.	Predict Hacktivism:
+i.	Alert to possible groups with contrary interests and motivation to cause harm.
+ii.	What controversial issues could trigger negative attitudes?
+iii.	How to monitor and identify intentions?
+iv.	How does publicity of the company in the media impact risk?
+e.	Counter Cyber Attacks:
+i.	Inform of an impending or ongoing attack by criminal groups.
+ii.	Geographic regions may be the origin of attacks
+iii.	What are the current and emerging hacking tolls being used?
+iv.	Are there indications of an attack ongoing or manifesting?
+v.	Unusual or abnormal support issues rising?
+f.	Mitigate Fraud: 
+i.	Understand new and existing fraud methods that may compromise or harm organization.
+ii.	How can the organization identify fraudulent activity? Users who have compromised identities and may be used for fraud?
+iii.	Are there patterns for detection of fraud methods that can be implemented?
+iv.	Are there patterns that can anticipate fraud?
+Vulnerability Management
+	Cross-Site scripting is a weakness that occurs when software does not perform or incorrectly performs the elimination of user input data before displaying it in the user’s browser. Therefore, an adversary is able to inject and execute arbitrary code in a user’s browser in context of a vulnerable website. Cross Site scripting is typically categorized into 5 different types. The first being Reflected XSS (Non-persistent XSS). This type is never stored within the application itself and can only be viewed when a user follows a specially crafted link. Stored XSS (persistent XSS) can run malicious code that is executed within a user’s browser when they visit a vulnerable page. DOM-based XSS is “an error within the DOM model of a user’s browser. That means that injection occurs inside the client script that accepts and returns back data from a user’s browser” (ImmuniWeb, 2012). uXSS (Universal XSS) leverages flaws in browsers and browser plugins, instead of within a web application. This can potentially lead to all current sessions within the web browser being affected, not just a single specific session. Self-XSS requires close user interaction. For example, the victim may insert a specially crafted input into HTML form in order to execute JavaScript code. The types of systems that are vulnerable are any systems connected to web applications and web application plugins in web browsers. Severity and CVSS scoring typically rate this as a medium severity when human interaction is required (such as following a malicious link in an email). If user interaction is not required in case of a software weakness within web applications, then it immediately becomes high severity due to the range of users that can be affected (2012). Potential impacts to the organization could mean cross site scripting can be used to facilitate phishing and credential theft within the organization. Hidden iFrames can also be used to load malicious JavaScript to attempt exploits on user machines. Injection of malicious JavaScript can also turn a compromised site into a drive-by download site for malicious software. 
+	Cross-site scripting occurs when untrusted data is inserted into HTTP responses; therefore, policies and procedures must be implemented when handling web applications. Untrusted input should never be inserted either in the script, in CSS, in tag name, in an attribute name/value, inside HTML comments, directly into HTML pages, and inside a JavaScript event. Developers must also perform sanitation of input data before inserting it into the page’s content. For example, any character that might be treated by the web browser as HTML content ought to be replaced with some type of URL-encoding on input inserted into URL tags. Third, using native API like PHP can help protect applications from XSS attacks. And finally, always use preset character encoding of the displayed page. Web applications must never rely on browser auto-select encoding functionality and must utilize preset encoding to ensure the application runs safely. 
+Resources: 
+Cross-site scripting - XSS vulnerability: CWE-79 weakness: Exploitation and remediation. ImmuniWeb. (2012, September 11). Retrieved March 16, 2022, from https://www.immuniweb.com/vulnerability/cross-site-scripting.html 
+Vulnerabilities: Technical-Human Attacks
+1.	Trojan Attack: Trojans can sometimes be hidden in automatic updates received for the OS or various applications.
+a.	Subtle Trojans: Backdoor Trojans or Trojan bankers surveil your activity to steal bank account information and passes this information to the hacker without you being aware. 
+b.	Explicit Trojans: Ransomware Trojan; once fully installed on your computer, it locks your computer which makes its presence obvious, by then it could be too late to do anything.
+c.	Remote Access or Controlled Trojans: Makes your computer part of a botnet. 
+2.	What is a patch? 
+a.	A patch is a repair to the software to make it do the correct thing, such as fix a buffer overflow that’s been discovered. 
+b.	WannaCry Attack Example:
+i.	Microsoft released a patch that prevented the bug used in the WannaCry attack, but after six months many organizations had not applied it. 
+ii.	Poor patching is one of the most common causes of a cyber-attack. 
+3.	Role of Humans in Social Engineering Attacks:
+a.	Between 70-80% of cyber attacks were aided or abetted by insiders, usually unintentionally. 
+b.	Cyber attacks due to human failure or social engineering can be caused by:
+i.	Downloading software that might have malware. 
+ii.	Having weak passwords or sharing of passwords. 
+iii.	Clicking on links in emails or websites.
+Vulnerabilities: Social Engineering Attacks
+1.	Studies say: 
+a.	About 10% of all people use 1 of 25 popular passwords.
+b.	The most popular password is 123456. 
+c.	Another popular 8-character password is iloveyou. 
+2.	Common password mistakes include:
+a.	Sharing your password with friends or co-workers. 
+b.	Writing your password on post-it notes and sticking them on your monitor. 
+3.	Social Engineering Attack Examples:
+a.	Phishing: 
+i.	Mass Phishing: Nigerian prince. 1-2% success rate. 
+ii.	Better-crafted phishing: 10-20% success rate. urgent email requiring input immediately
+iii.	Spear phishing: More directed at certain people. 70% success rate. 
+Vulnerabilities the Human Element
+	Humans are in fact the biggest cybersecurity vulnerability. In Social Engineering: The Science of Human Hacking Christopher Hadnagy states that 80 percent of all breaches had a social engineering element to them (2018). It is because of statistics like these that it is no wonder that humans are the largest attack vector. First propagated with mass phishing attempts like the Nigerian prince with a 1-2 percent success rate and now we’re making bank heists using spear phishing to target specific people with higher success rates than any other exploit can possibly get an adversary. It is not only human gullibility that keeps us vulnerable to social engineering, but also a vector that can attack human habit. 
+I’ve known people that have had poor password practices, such as utilizing the same password over and over again for every website despite the fact they know that that password has been seen in a data breach report. Despite attempts to address practices like these the common user does not care their information and data is vulnerable in the cyber landscape. In order to address matters such as poor password practices it’s best to show your friends a proof of concept with their permission on utilizing common OSINT technologies to narrow down a possible password to brute force. A culture for cybersecurity needs to be a focus nationwide in order to prevent poor password practices and too many people think that just because they live in a first world country cyber-attacks aren’t that big of a deal, because someone somewhere out there will protect their data. 
+Personally, I have received many phishing emails targeting my work email and personal email. It’s impossible to enumerate how often people get phishing emails, but I would say a good 90% are filtered automatically, since I hardly see them anymore. One such effective phishing attempt was on my workplace. It was an email from IT advising to upgrade Outlook. I had known we were doing updates to Outlook at the time, but software center ought to have done that automatically. Instead of clicking on the link to open a pdf with instructions on how to update the software I followed my gut and checked software center first, since this is a company policy to ensure it wasn’t a phishing attempt and surely enough there was no update in software center. I approached my peers and asked if they had received the same email and it seemed a majority of them did. I checked where the email came from and it seemed legitimate, except for a lowercase l being replaced for the number one in the email’s letterhead. This showed a sophisticated attempt to gain control of a call center’s computers and was sent up to IT and our global spam filter to ensure all instances of this email were removed to mitigate potential risk from employees who would not think twice to click on that link. 
+Spear phishing is a very personalized form of phishing. After deep OSINT into both the target, the organization, and the goal it is crucial to think steps ahead of the spear phisher. Before thinking on an urgent task that was emailed to you think about what tools a spear phisher uses and understand that if you’re getting information via email it stands to be a rule or policy that only certain people within the organization can reach that email. Furthermore, the higher up you go in the corporate ladders such as CTOs, CEOs, CFOs, and etc. it stands to reason that a policy is set in place that communications regarding urgent matters be done in person. Nothing is more urgent than the organization and if it requires sending any types of moneys it needs to be documented and educated to employees on staff to facilitate that process. 
+Resources:
+Hadnagy, C. (2018). Spear Phishing. In Social Engineering: The Science of Human Hacking (Second, pp. 231–233). essay, John Wiley & Sons, Inc. . 
+Social Engineering and Real-World Impacts
+	I work in Telecommunications, so it’s no wonder my organization falls prey to phishing attempts almost every other month. We have gotten better at filtering them without taking away too many privileges (for whatever reason we really like to have the ability to email outside of the organization). One such experience we had with a phishing attempt, was during a time of software updates for critical infrastructure like Slack, Outlook, and Citrix were all happening at the same time and there were memos and hard copy papers floating around on instructions on how to update software, before it became more of an automatic process. The adversary knew that this was going on and in the midst of all of this sent out a company wide email utilizing a legitimate sprint.com email that impersonated one of our IT persons that was regularly sending out emails. This adversary switched a lowercase l for the number one in his name and nearly fooled me when I received the email. I immediately was suspicious, because Outlook advised the email seemed to have been sent from outside the organization’s network and that may have helped mitigate many people from clicking on the link. It could very well have been a link to execute malicious code on our computers to intercept customer proprietary network information, credit card information, or even deny service. The adversaries are typically not advised upon unless you are an end user and are in the enterprise technology services department, but signs of attribution could very well have been from inside the organization, since it seemed all too convenient the attacker knew our IT by name and had access to creating @sprint.com emails and also had access outside the organization. It was actually a surprise that Outlook even detected or had a policy set for emails coming from outside of the organization’s network and goes to show how mitigation techniques for phishing attempts are getting savvier to the point where it might become a thing of the past. 
+Publicizing Threats
+	Project Zero’s policy for Responsible disclosure gives a disclosure deadline of 90 days and if an issue remains unpatched after 90 days technical details are published, but if they make it under those 90 days they are published 30 days after the fix to effectively mitigate all of the risk associated with a bug. If an issue is in-the-wild and is actively affecting users then the disclosure deadline is 7 days and after 7 days technical details are published. Patching before the 7th day would be published 30 days after the fix. And finally, if a grace period is granted, it uses up a portion of the 30-day patch adoption period. For example, if patched on day 100 in grace period, disclosure would end up being on Day 120 (Willis, 2021). 
+	This kind of policy is definitely one I can advocate for my organization in particular. Not only is it easy to get started, but Bugcrowd even advises you on best practices for free. Simply getting started with a security page that states what parts or sections of a site are within testing scope, the types of bugs and vulns that are valid for submission, and a dedicated security email address to report the issue. Based on these parameters for the organization it is clear that internal testing should also be a function as well within the organization to maintain confidentiality and not have bug bounty hunters the chance to find more critical system failings that can be tempting to keep for themselves. 
+	I do not believe there is any instance in which I can think of that it would be morally acceptable to dismiss notifying a vendor of a potential vulnerability in their applications within its systems. If companies do not treat vendors like partners, they risk becoming a part of the problem with in-the-wild attacks and any way you look at it from that standpoint it means customer data negligence. 
+Resources: 
+Willis, T. (2021, April 15). Policy and disclosure: 2021 edition. Policy and Disclosure: 2021 Edition. Retrieved March 16, 2022, from https://googleprojectzero.blogspot.com/2021/04/policy-and-disclosure-2021-edition.html 
+What is responsible disclosure? Bugcrowd. (n.d.). Retrieved March 16, 2022, from https://www.bugcrowd.com/resource/what-is-responsible-disclosure/#:~:text=A%20responsible%20disclosure%20policy%20is%20the%20initial%20first,of%20mind%20when%20a%20researcher%20discovers%20a%20vulnerability. 
+
