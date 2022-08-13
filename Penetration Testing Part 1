@@ -1,0 +1,492 @@
+Module 18
+Introduction to Penetration Testing
+1.	It comes as no surprise that because of the massive global surge in cyber-attacks, cybersecurity has become not only a daily struggle for organizations, but a common topic of discussion at the dinner table. Part of the reason behind this surge is that the level of skill and effort required to launch a cyber-attack against an organization has significantly reduced due to increased global access to the internet and the availability of quality free hacking resources online. Organizations can no longer afford to assume that their defense measures will successfully withhold a persistent and motivated adversary. Instead, they need a continuous evaluation of their defenses by investing in various types of penetration tests. 
+2.	Penetration testing simulates an authorized hack, which enables us to determine if our security controls are adequate or need particular improvement. 
+3.	Various consulting practices include:
+a.	Specification of penetration testing.
+b.	Identification of attack surface areas through threat modeling.
+c.	Types of penetration testing.
+d.	Analysis of penetration reports. 
+4.	“If you know the enemy and know yourself, you need not fear the results of a hundred battles.” – Sun Tzu, Art of War
+5.	Offense informs defense: use knowledge of actual attacks that have compromised systems to provide the foundation to continually learn from these events to build effective, practical defenses. 
+6.	A Brief History of Medical Implant Device Security: 
+a.	2007: Dr. Jonathan Reiner directed the manufacturer to disable the wireless feature of the vice president’s pacemaker defibrillator. 
+b.	2008: Medical Device Security Center researchers demonstrated a deadly WIFI pacemaker hack and took control of a pacemaker through its radio signal.
+c.	2017: US FDA recalled close to half a million pacemakers over hacking fears. 
+i.	St. Jude Medical Center and Abbott Laboratories issued patches for their implantable cardiac devices and associated transmitters. 
+d.	2018: Researchers at the Black Hat Cybersecurity Conference demonstrated flaws in Medtronic’s pacemaker.
+e.	2020: Security researcher Marie Moe hacked her own pacemaker to show its vulnerability to cyber-attack.
+f.	2021: Medigate and Rapid 7 worked together to secure real time health. 
+7.	Act like an offender to identify weaknesses and to improve your security program. 
+Module Overview
+1.	According to the NIST, penetration testing is “where testers target individual binary components or the application as a whole to determine whether intra or intercomponent vulnerabilities can be exploited to compromise the application, its data, or its environment resources” (NIST, n.d.). Essentially, it is a way to test your defenses and security talent’s resilience, depth, and ability. 
+2.	Penetration Testing:
+a.	Authorized, legal, ethical simulated attack.
+b.	Performed under specific conditions to detect and confirm vulnerabilities.
+c.	Provides documented findings for analysis to improve security.
+d.	One of many security assessments:
+i.	Documentation review
+ii.	Configuration review
+iii.	Vulnerability scanning
+iv.	Discovery of networks
+v.	Discovery of devices
+vi.	Discovery of software
+vii.	Wireless scanning
+3.	Common expressions related to pen tests include:
+a.	Ethical hacker
+b.	White hat
+c.	Offensive security tester
+4.	Red Team vs Blue Team Exercises:
+a.	Red Team Aggressor:
+i.	Demonstrates attacks and impacts from successful attacks.
+ii.	A group of authorized professionals.
+iii.	Organized with capabilities to emulate potential adversarial exploits. 
+b.	Blue team Defender:
+i.	Recognizes an attack and defends.
+ii.	Maintains security posture against the red team’s exploits. 
+c.	White team:
+i.	Monitors and referees’ exercises. 
+Types of Penetration Testing
+1.	“The hacker didn’t succeed through sophistication. Rather he poked at obvious places, trying to enter through unlocked doors. Persistence, not wizardry, let him through.” – Clifford Stoll, The Cuckoo’s Egg: Tracking a Spy through the Maze of Computer Espionage
+a.	It is common to think of attackers as highly sophisticated computer wizards who achieve the unthinkable by exploiting previously unknown vulnerabilities (also known as zero-day) to break into systems. And while there are such instances, they are few and far between. In fact, in volume 11 of the Microsoft Security Intelligence Report, they shared that less than 1 percent of attacks in 2011 leveraged previously unknown  vulnerabilities. Instead, 99% of all cyber-attacks during the same period exploited known vulnerabilities (Helpnet Security, 2011). The overarching concept of penetration testing is for highly skilled cybersecurity professionals to think like real attackers and, with proper authorization, evaluate the effectiveness of a given organization’s security measures. By doing so, they aim to detect security weaknesses and issues and proactively address them before an actual attack tries to leverage them. 
+2.	“The world needs more hackers, and the world definitely needs more car hackers. We’re all safer when the systems we depend upon are inspectable, auditable, and documented – and this definitely includes cars.” – Chris Evans, from the Foreword, Car Hacker’s Handbook: A Guide for the Penetration Tester, by Craig Smith
+a.	When you initially think about penetration testing, you may typically only think about computer systems, applications, and networks. And while those make up a majority of penetration tests, there are several subcategories and variations to penetration testing. Furthermore, these subcategories continue to grow with the advancements in technology and as more things come online and integrate. Some of the other exciting penetration testing types include:
+i.	Vehicle penetration testing
+ii.	Mobile devices penetration testing
+iii.	Industrial control systems penetration testing
+iv.	Embedded devices and Internet of Things (IoT) penetration testing
+v.	Social engineering penetration testing
+vi.	Physical penetration testing
+3.	Attack surface definition by NIST: 
+a.	The set of points on the boundary of a system; a system element; or an environment where an attacker can try to enter, cause an effect on, or extract data from that system (or the system element or environment). 
+4.	What is the Attack Surface Across the Ecosystem?
+a.	Ways attackers can gain access:
+i.	A wired or wireless connection
+ii.	Web applications
+iii.	Endpoints
+iv.	Operational technologies, such as:
+1.	ICS
+2.	Energy system
+3.	Manufacturing system
+v.	Corporate campus, branch offices, or remote workspaces.
+vi.	Back-end processes such as the supply chain or outsourcers
+vii.	Co-opted actions
+5.	Technology Attack Surfaces for Pen Tests:
+a.	Client-side desktops, laptops, and mobile phones.
+b.	Applications
+c.	Underlying servers
+d.	Operating systems, open ports, and services
+e.	Utilities and other applications running on those servers
+f.	Underlying networks, including wired and wireless
+g.	Network services
+h.	Network appliances (e.g., routers)
+i.	Security appliances
+j.	Internet service provider connections
+k.	Business partner connections
+l.	Organizational site connections
+m.	Remote user connections
+n.	Connections with industrial controls
+o.	ICS
+p.	Connections with facility technology (e.g., security, HVAC-R)
+q.	Facility technology
+r.	Phone modems, fax machines, and multi-function printers
+6.	Technical Attack Surface for Pen Tests for Weak Links:
+a.	Misconfigured firewall
+b.	Cloud outsourcer
+c.	Compact Windows operating system on a HVAC controller
+d.	Default password on a badge access system
+e.	Networked fax machines connected to modems
+7.	The History of Attacks:
+a.	2011, Security researchers Ang Cui and Jonathan Voris demonstrated that unsigned HP printer firmware updates can execute malware to include port scanning and exfiltration of data from print jobs. 
+b.	2019, NCC Group security researchers discovered 49 vulnerabilities in many popular network business printers, which could lead to:
+i.	Denial of service
+ii.	Buffer overflow attacks
+iii.	Cross-site scripting attacks
+iv.	Remote execute of code
+c.	2017, security organization Dark Trace revealed hackers stole data from a North American casino through a smart fish tank. 
+d.	2016, many users could not access PayPal, Netflix, Salesforce, LinkedIn, Amazon, GitHub, and Twitter because their DynDNS provider was under a DDoS attack. 
+8.	Mirai Botnet:
+a.	Baby monitors
+b.	Internet cameras
+c.	Printers
+9.	Physical targets for attacks to compromise environments include:
+a.	Telecommunications closets
+b.	Data centers
+c.	Communications lines
+d.	Endpoints
+10.	Keystroke Loggers:
+a.	Inconspicuous plug-in devices that intercept signals and send them over to the bad actor. 
+b.	Can be planted by bad actors as hardware like:
+i.	Network lines
+ii.	In line with keyboards
+iii.	Endpoint devices
+11.	Juice Jacking:
+a.	Involves a charging port that doubles as a data connection, typically over USB.
+b.	Involves installing malware or secretly copying sensitive data from a smart phone, tablet, or other computer device. 
+12.	Back-End Processes Examples:
+a.	Business partners
+b.	Software supply chain
+c.	Hardware supply chain
+d.	Software development lifecycle
+13.	Target’s Points of Sale:
+a.	Exfiltrated debit and credit card.
+b.	Tricked a heating, ventilation, and air conditioning contractor with a phishing email.
+c.	Spyware
+d.	Attackers received keystrokes from the spyware.
+e.	Software configuration-controlled library
+14.	Hackers in 2020 and 2021:
+a.	2020 SolarWinds:
+i.	Hackers compromised security tool vendor SolarWinds by: 
+1.	Breaking in.
+2.	Pivoting into their software configuration control library
+3.	Altering the code with malware.
+4.	Getting their customers to unwittingly install the malware.
+b.	2021 Passwordstate:
+i.	Hackers:
+1.	Compromised a security password management tool.
+2.	Compromised Passwordstate and its configuration-controlled library.
+3.	Altered the tool’s code with malware. 
+15.	Social engineering attacks include:
+a.	Phishing
+b.	Baiting 
+c.	SMSing
+d.	Pretexting
+16.	Examples of Social Engineering Attacks:
+a.	2015:
+i.	Ubiquiti Networks’ accounting department unwittingly transferred over $46.7 million to an attacker because of an email from its CEO. 
+b.	2021:
+i.	Russian national bribed a Tesla employee at a Gigafactory with a million dollars to introduce a malware-laden USB thumb drive to the Tesla network. 
+17.	An APT is a team of well-motivated, well-skilled, well-funded and resourced hackers, coders, social engineers, and physical break-in specialists. 
+18.	Be smart in your approach and consider the use of:
+a.	Technical and physical back-end processes.
+b.	Social engineering methods.
+Describe the Fundamental Concepts of Penetration Testing
+The attack surface at home has physical, technical, and human elements to them. Physical attack surfaces include my front door, router, modem, switches, desktop computers, laptops, tablets, mobile phones, TVs, USB ports, surveillance cameras and even heating, ventilation, and air conditioning (HVAC) technologies. Since I live in an apartment complex, I only have so much control over HVAC technologies; however, I am able to see data flowing in and out since it still utilizes my own internet. These physical attack surfaces now as I am looking at them also have technical aspects to them and could be exploited using the human element as well. I live with my best friend, and she may very well allow a potential bad actor in and suddenly our front door is an attack surface that can be social engineered to allow physical access to our devices. Using social engineering, a potential bad actor may wish to know our wifi password, but they don’t know that I am a cybersecurity enthusiast and that I have properly segmented our guest wifi from the main network, which incorporates content filtering to ensure that users on this wifi are not downloading anything from the internet that is under a blocked category. However, that doesn’t mean the human element is the biggest security vulnerability. Given an actor’s skill they can see that an apartment that utilizes so much technology is a large attack surface in and of itself. An internal pen test of my own apartment’s HVAC controls may very well lead to some juicy vulnerabilities. An attacker with their own command and control center and access to the internet can access the specific central A/C management unit that controls my end unit and target hosts on my network, provided they are able to get past YARA rulesets I have in place to mitigate such risk and be able to detect an attack if it ever does occur. I have tried in the past to properly segment the AC from my main network, but my apartment is stingy and won’t allow for such modifications to their systems they have invested in for our “leisure”. Another human element that can be exploited is both of us living here could be vulnerable to phishing, baiting, or pretexting social engineering attacks. It’s not likely I would fall victim to such attacks as I hardly ever communicate over email, and I always want to make sure by calling individuals about things discussed over email. Another point of compromise is juice jacking and is one of the reasons I have told my roommate to never accept a charger from someone they don’t know. I showed her this recently as I have acquired an OMG cable from Hak5 and demonstrated to her how easy a simple cable can allow an attacker access to her phone. 
+Why Penetration Testing is Conducted
+1.	With the growing number of organizations becoming victims of cyber attacks daily, it is more important than ever before for organizations to engage in regular penetration tests to identify vulnerabilities and ensure that they have proper security controls in place. In addition, many regulatory, legal, and compliance requirements mandate organizations to conduct various types of penetration tests. Furthermore, it is also common for organizations to include penetration tests as a requirement in their vendor risk management process. Consequently, organizations expect their vendors to provide results from penetration tests before engaging or continuing business relationships. 
+2.	Conducting Penetration Testing:
+a.	By the organization
+b.	By security researchers
+3.	Why do Organizations Conduct Penetration Testing?
+a.	Provide assurance or due diligence for the security program. 
+i.	Recommended by control frameworks such as ISO, NIST, and CIS. 
+1.	NIST SP 800-171 advises periodic assessment of security controls to check the efficacy of organizational systems. 
+ii.	Plans of action can be developed and implemented to correct deficiencies and reduce vulnerabilities. 
+iii.	Test results can be analyzed to improve the information system. 
+iv.	Vulnerabilities can be identified and corrected before a bad actor discovers and exploits them. 
+b.	Fulfill a legal requirement
+i.	Required or recommended by applicable laws and regulations in contracts. 
+ii.	For example: 
+1.	PCI-DSS
+2.	United States laws and regulations, such as: 
+a.	Health Insurance Portability and Accountability Act (HIPAA)
+b.	Gramm-Leach Bliley Act (GLBA)
+c.	Federal Information Systems Management Act (FISMA)
+d.	Financial Industry Regulatory Agency (FINRA)
+e.	American Institute of Certified Public Accountants (AICPA)
+f.	System and Organization Controls Supply Chain Report 2
+g.	European Union’s General Data Protection Regulation (EU GDPR)
+c.	Ensure security of the products that they sell
+i.	Examples:
+1.	US Food and Drug Administration (FDA) conducts pen tests to ensure reasonable assurance that medical devices marketed in the US are safe and effective for their intended uses. 
+2.	Manufacturer of connected cars that have built-in modems uses a pen test to remotely status and command the car from a mobile phone. 
+ii.	Pen testing may be used for due diligence to build confidence into an organization’s internet-connected products. 
+d.	Understand the:
+i.	Partners
+ii.	Back-end processes
+iii.	Hardware and software
+1.	Enables confidence:
+a.	In the security of a product or a partner you rely on.
+b.	In the integrity of the back-end process operations. 
+c.	That vendors, outsourcers, and cloud sources are free of vulnerabilities 
+Why Organizations and Security Researchers Conduct Penetration Testing
+1.	“The crowdsource security idea is that if you do a penetration test, you’d normally have one individual doing an assessment. If you have two people doing the assessment, you’re probably going to find more than the one person, and 500 people are going to find exponentially more than one or two individuals. So, it’s taking the power of the crowd and the extensibility of the gig economy to fill the need in cybersecurity.” – Grant McCracken, Director of Security Operations at Bugcrowd
+a.	Besides traditional penetration testers, organizations often also engage with security researchers (also known as bug bounty hunters) through bug bounty programs. These bug bounty programs attract individual security researchers and enthusiasts to find and responsibly disclose security vulnerabilities before the public, or actual attackers learn and abuse them. In return, researchers have the potential to receive not only lucrative monetary incentives but also coveted bragging rights, and therefore many choose to become full-time bug bounty security researchers. 
+2.	Security researchers often conduct pen testing as part of a vulnerability disclosure program or a bug bounty program. 
+3.	Penetration Testing Process:
+a.	Vulnerability disclosure program:
+i.	A security researcher finds and reports vulnerabilities to the organization’s vulnerability disclosure program authorized channel.
+ii.	The organization pledges to test and fix that vulnerability if confirmed. 
+iii.	Security researchers participate in a vulnerability disclosure program to:
+1.	Sharpen skills
+2.	Be a good citizen
+3.	Build their reputation
+4.	Receive non-monetary recognition
+b.	 Bug Bounty Program:
+i.	Private program between an organization and  security researcher. 
+ii.	Offers monetary compensation to the security researcher. 
+iii.	Security researchers participate in a bug bounty program to:
+1.	Hone their skills
+2.	Be a good citizen
+3.	Build their reputation
+4.	Receive monetary payment, often tied to the severity of the vulnerability
+4.	In the United States, one can:
+a.	Submit vulnerability reports and cybersecurity threat indicators to CISA.
+b.	Report to the Computer Emergency Response Team (CERT). 
+When is Penetration Testing Performed?
+1.	A critical mistake organizations sometimes make is that they believe penetration tests are a one-time task. This cannot be further from the truth. Networks, systems, and applications are dynamic and are constantly changing. And while these changes often improve performance and enhance features, they unfortunately also change the attack surface by introducing new vulnerabilities. For this reason, many compliances and regulatory standards require that organizations conduct penetration tests multiple times annually. Furthermore, besides external requirements, it is recommended that organizations develop internal policies that require penetration tests regularly and after notable events, such as significant change in the environment. 
+2.	Penetration testing is performed in accordance with: 
+a.	Legal requirements
+b.	Security policy requirements
+c.	Significant vulnerability reports
+3.	Performing Penetration Tests:
+a.	To meet external legal requirements.
+i.	Check with your audit department or your compliance department for the latest legal information, which might include:
+1.	The PCI DSS mandating an annual pen test.
+2.	Ongoing pen test after significant changes in the application or infrastructure layer. 
+3.	Quarterly vulnerability scans mandated by PCI DSS. 
+4.	Pen tests for significant changes, such as Sarbanes Oxley.
+ii.	Ensure the conduct of the required pen test and its findings are addressed in a timely manner. 
+iii.	When outsourcing or cloud sourcing, the contract must specify a particular pen test, the interval, and SLA for addressing findings.
+b.	To meet security assessment policies and associated standards.
+i.	Identify the minimum interval for pen testing.
+ii.	Discover the attack surface area when there is significant change.
+iii.	Discover other open attack vectors even after a significant security incident.
+iv.	Confirm security reports through a vulnerability disclosure or a bug bounty program performed as per policy.
+c.	To meet an organization’s pen testing requirements.
+i.	Standard tests you can perform include:
+1.	Tests on your endpoints to uncover the Open Web Application Security Project (OWASP) Top 10 vulnerabilities.
+2.	Fuzzy testing of your endpoints.
+3.	Port scanning of your endpoints. 
+4.	The Cloud Security Alliance has a “Cloud Penetration Testing Playbook” for testing applications and services hosted in the cloud environment. 
+5.	Performing Penetration Tests:
+a.	Microsoft’s Penetration Testing Rules of Engagement:
+i.	Articulates mandatory reporting of potential security flaws related to its cloud services and considered for the bug bounty program. 
+ii.	Prohibited activities, such as:
+1.	Scanning or testing assets belonging to any other Microsoft Cloud customers.
+2.	Gaining access to any data that is not wholly your own. 
+3.	Performing any kind of denial-of-service testing.
+4.	Performing network-intensive fuzzing against any asset except your Azure Virtual Machine. 
+5.	Performing automated testing of services that generates significant amounts of traffic. 
+6.	Deliberately accessing any other customer’s data. 
+7.	Moving beyond “PoC” repro steps for infrastructure execution issues. 
+8.	Using Microsoft’s services in a way that violates the Acceptable Use Policy as set forth in the Microsoft Online Service Terms.
+9.	Attempting phishing or other social engineering attacks against Microsoft’s employees. 
+6.	The obligations of penetration testing:
+a.	Outsourcing contracts must address pen testing requirements, security assessments, and authorization. 
+b.	Pen testers have to operate within the boundaries set by organizations. 
+Taking a Position
+	Demirkapi declined to share with Experian the name of the lender or the website where the API was exposed, because he suspected there may be hundreds or even thousands of companies using the same API, and that many of those lenders could be similarly leaking access to Experian’s consumer data. In my book Demirkapi did the right thing in withholding that information from the public; however, as a security researcher, I believe that he had an obligation to advise on the specific API to the organization in order to allow patch management processes to occur swiftly. On the other hand, Demirkapi advised “If we let them know about the specific endpoint, they can just ban/work with the loan vendor to block these requests on this one case, which doesn’t fix the systemic problem.” In this case Demirkapi has a duty as a security researcher to advise on mitigation and fixes to patch this vulnerability from the systemic point of view as well. If it is not satisfactory, then they go above Experian and report to CISA the systemic issues within Experian. Nonetheless, it was the job of the security researcher to explain the systemic issues occurring within Experian’s API and advise on possible mitigations to systemic issues or offer to audit the company and offer solutions in regard to their secure development lifecycle. Experian definitely had a responsibility to track all instances of the systemic vulnerability instead of going after the one company Demirkapi focused on. Experian did not do enough in saying that only one instance of an API that allows a user to lookup FICO scores from an address and their first and last name. Going after this one lending site and shutting down their API and calling it quits is definitely not enough and it’s shameful. The very fact an API is allowed to do this and that there is an open-source tool that allows for the use of this API is the real issue Experian should be focusing on. It leads no credence or credibility to Experian in safeguarding customer’s data and ought to be looked into at the systemic level within Experian themselves. 
+Resources:
+Jack Kendrick May. (2021, April 28). Experian API exposed credit scores of most Americans. Krebs on Security. Retrieved July 4, 2022, from https://krebsonsecurity.com/2021/04/experian-api-exposed-credit-scores-of-most-americans/ 
+Penetration Testing Resources Part 1
+1.	“Give me six hours to chop down a tree and I will spend the first four sharpening the axe.” – Abraham Lincoln
+a.	Regardless of what the job requires, having the appropriate tools is vital in getting it done successfully and efficiently. This statement applies to almost every industry and profession, but it is especially true in pen testing. As you will quickly realize in your cybersecurity journey, there is no shortage of commercial and open-source penetration testing tools in the market. This is mainly because the cybersecurity community is remarkably vibrant and constantly develops and advances tools. In the following sections, you will be exposed to some of the most commonly used tools, technologies, and resources by both novice and experienced penetration testers in the field. 
+2.	Like cybersecurity defense, there are also many standards, guidelines, and frameworks for offensive cybersecurity operations. Some of these you may already be familiar with. However, several frameworks and standards are specific to penetration testing, and you will explore them in this section. Additionally, these frameworks are frequently used and referenced in the industry, so becoming familiar with them will serve you well in your penetration testing and general cybersecurity career. 
+3.	Penetration Testing Resources: 
+a.	Global standards and guidelines
+b.	Tools
+c.	Vulnerability databases
+d.	Tactic and technique knowledge databases
+4.	Global Standards and Guidelines:
+a.	CIS controls
+b.	NIST SP800-115 Technical Guide to Information Security Testing and Assessment
+c.	PCI Security Standards Penetration Testing Guidance
+d.	OWASP Web Security Testing Guide and Pen testing methodology
+e.	The Cloud Penetration Testing Playbook
+f.	Open Source Security Testing Methodology Manual (OSSTMM)
+g.	The following frameworks are not currently maintained:
+i.	Penetration testing Execution Standard (PTES)
+ii.	The Information System Security Assessment Framework
+5.	CIS 7.1 Recommendations:
+a.	Control 20.4:
+i.	Include tests for the presence of unprotected system information and artifacts, such as:
+1.	Diagrams
+2.	Configuration files
+3.	Older pen test reports
+4.	Documents with passwords
+b.	Control 20.5:
+i.	Create test beds for elements not tested in production such as ICS and SCADA systems. 
+c.	Control 20.8:
+i.	Control and monitor accounts for legitimate purposes.
+ii.	Remove or restore accounts associated with pen testing to normal function once testing is over. 
+6.	Four-Stage Penetration Testing Methodology
+a.	NIST SP800-115:
+i.	Planning
+ii.	Discovery
+iii.	Attack
+iv.	Report
+7.	Standards for Reporting Vulnerabilities:
+a.	ISO 29147 provides guidelines for vendors on:
+i.	How to receive information about potential vulnerabilities in their products or online services.
+ii.	How to disseminate vulnerability resolution information.
+iii.	Examples of content that should be included in the information items. 
+b.	ISO 29147 in partnership with ISO 30111 provides requirements and recommendations on how vendors can process and remediate reported potential vulnerabilities in a product or service. 
+8.	Security Policy Framework (NIST SP800-115):
+a.	Legal requirements and best practices
+b.	Security assessment policy at level 1. 
+c.	At level 2 there are roles and responsibilities, and requirements for planning and approval execution and post execution. 
+d.	Level 3:
+i.	Security assessment review target:
+1.	Documentation Log
+2.	Rule set
+3.	Configuration
+4.	Network sniffing
+5.	File integrity checking
+ii.	Compliance testing:
+1.	Network discovery
+2.	Network port and service identification
+3.	Vulnerability scan
+4.	Wireless
+5.	Operating system scan
+6.	Application scan
+iii.	Pen testing
+1.	Physical
+2.	Social engineering
+3.	Technical
+4.	Consumer products
+5.	Hardware, software, vendor, outsourcer supply chain
+6.	Vulnerability disclosure and bug bounty program
+9.	There are two major approaches to conducting a penetration test: automated and manual. These methods have their unique advantages and disadvantages, and therefore neither is recommended to be used exclusively. Instead, combining both approaches offer the most comprehensive results and provides organizations with an accurate view of exposure and risk. 
+10.	Penetration testing can be performing the following ways:
+a.	Manual
+b.	Automated
+c.	Hybrid
+11.	Manual Penetration Testing:
+a.	Benefits:
+i.	Takes more skill
+ii.	Has fewer false positives
+iii.	Consumes fewer IT resources
+b.	Drawbacks:
+i.	Takes more time
+12.	Automated Penetration Testing:
+a.	Benefits:
+i.	Speed
+ii.	Repeatability
+iii.	Less skill
+b.	Drawbacks:
+i.	Consumes more IT resources
+ii.	Might get blocked by internal and external security controls
+iii.	Might interfere with operations
+iv.	Might accidentally damage assets
+v.	Has more false positives, such as misidentifying
+1.	Devices
+2.	Operating Systems
+13.	Free Tools:
+a.	Recon-ng
+b.	OSINT Framework
+c.	NMAP, Metasploit, Queso, Burp Suite
+d.	Hping, Fping
+e.	Wireshark, Net-stumbler, Kismet
+f.	Nessus, Retina, Nexpose
+g.	Kali Linux
+h.	Nikto
+i.	OWASP Zap
+j.	PowerShell, Bash
+k.	MIT Caldera
+14.	Other Resources:
+a.	Vulnerability databases:
+i.	Developed by hardware or software vendors like Dell or Microsoft
+b.	Centralized vulnerability databases:
+i.	Common Vulnerabilities and Exposures (CVE) database by MITRE. 
+ii.	National Vulnerability Database (NVD) by NIST.
+iii.	Common Weakness Enumeration (CWE) by MITRE.
+c.	Application security databases:
+i.	OWASP Top 10
+1.	Web Application security risks
+2.	API risks
+d.	Tactic and Technique Knowledge Bases:
+i.	Common Attack Pattern and Enumeration Classification (CAPEC).
+ii.	MITRE’s Enterprise ATT&CK Matrix.
+15.	NIST Pen Test Framework:
+a.	Pen testers might use tools in the discovery stage to: 
+i.	Learn information about the environment
+ii.	Pinpoint targets
+iii.	Identify vulnerabilities in those targets
+1.	Examples: Recon-ng Framework Tool and NMAP.
+16.	NMAP Pen Test Tool:
+a.	Footprinting capabilities:
+i.	Identify asset types and topology.
+1.	How those assets are laid out and connected to each other. 
+b.	Fingerprinting tools:
+i.	Identify an asset’s:
+1.	Operating system
+2.	Version
+3.	Open ports
+4.	Assigned services
+5.	Version of service
+17.	Types of Resources:
+a.	Different resources are available for an organization to:
+i.	Craft internal pen testing policy, standards, and guidelines.
+b.	Select:
+i.	Appropriate tools
+ii.	Relevant vulnerability databases
+iii.	Pertinent tactics and techniques knowledge bases
+Explore Penetration Testing Tools
+Kali Linux, formerly known as BackTrack Linux is an open-source, Debian-based Linux distribution aimed at advanced Penetration Testing and Security Auditing. It contains several hundred tools targeted towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering. Kali Linux boasts more than 600 penetration testing tools included, including NMAP, which is our second tool I decided to look into (more on that later). Kali Linux is an open-source Filesystem Hierarchy Standard (FHS) compliant Linux distribution, meaning standard Linux users can easily locate binaries, support files, libraries, etc. Along with that Kali is completely customizable all the way down to the kernel (What is Kali Linux?). It’s clear that Kali Linux is very important to penetration testers and information security professionals and is the reason why the OSCP is so coveted in the industry. With the OSCP you demonstrate a clear understanding of Kali Linux and its tools in order to provide ubiquitous information security audits and perform internal penetration tests to provide the highest quality security to any organization. Kali Linux also incorporates NMAP as a preinstalled tool and is also a free and open-source utility for network exploration and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and more (Lyon, 2008). To list a few capabilities of NMAP, you are essentially able to scan in verbose mode, enable OS detection, version detection, script scanning, and traceroute with version detection against the target IP and this generally looks like this: nmap -v -A -sV 192.168.1.1. Running such a command is very useful and recommended for every security enthusiast to have a clear understanding of what NMAP’s uses are for and to essentially start off the penetration testing process. Almost every professional first uses NMAP in order to discover vulnerable hosts and move laterally with the use of other tools in Kali Linux. 
+References: 
+Lyon, G. F. (2008). Introduction. In NMAP: Network Scanning (First, p. 1). Essay, Insecure.Com LLC. 
+What is Kali Linux?: Kali linux documentation. Kali Linux. (2022, May 20). Retrieved July 4, 2022, from https://www.kali.org/docs/introduction/what-is-kali-linux/ 
+Penetration Testers
+1.	According to SANS Institute’s 20 coolest Careers in Cybersecurity, at least three of 20 roles involve offensive operations. Specifically, these roles are Red Teamer, Vulnerability Researcher and Exploit Developer, and Application Pen Tester. The above comes as no surprise. Earning a comfortable living hacking and breaking into things while making the world more secure sounds like a dream career. However, many people turn this dream into a reality by obtaining appropriate skills, a lot of practice, and determination. Moreover, being a professional penetration tester requires more than just technical acumen. 
+2.	“I think researchers will play a crucial role in years to come. They will be able to identify and help us prepare for the vulnerability before it is exploited by the hacker so instead of responding to incidents we will then be able to proactively prepare ourselves for the future issues.” – Anita Ali
+a.	With the popularity of TV shows like Mr. Robot, the interest and coolness of becoming a penetration tester or a hacker-for-good have skyrocketed. The result has been a renewed interest and energy in people from diverse backgrounds and age groups in becoming cybersecurity professionals to find vulnerabilities and secure the world. However, one shortcoming in the mainstream depiction of hacking is that it can often give the impression that only technical superiority is required or enough to have a successful penetration testing or cybersecurity career. 
+3.	Penetration Testers:
+a.	Are you:
+i.	Detailed
+ii.	Determined
+iii.	Delighted by identifying and solving problems
+iv.	Devoted to staying up to date with the latest technology
+b.	Are you willing to:
+i.	Research
+ii.	Travel 25-50% of the time
+iii.	Work alone and in teams
+iv.	Work during odd hours
+v.	Take notes, document, write reports, and communicate findings with organizational stakeholders
+vi.	Use your powers for good
+4.	Travel may be required for: 
+a.	Physical penetration tests.
+b.	Wireless penetration tests. 
+c.	Social engineering penetration tests.
+5.	Who are Penetration Testers?
+a.	Pen testers have a technical foundation in: 
+i.	System administration and engineering (e.g., Windows, Linux, MacOS, iOS, and Android)
+ii.	Network administration and engineering.
+iii.	Network protocols
+iv.	Database administration and engineering.
+v.	Internet of Things (IoT).
+vi.	Business programming languages used to discover flaws (e.g., C++, C#, ASP, .NET, Java, and COBOL).
+vii.	Programming languages, such as Python, Ruby, and Perl
+viii.	Command line interfaces, such as CMD, PowerShell, Bash, chs, and ksh
+6.	Is Being a Penetration Tester Right for You?
+a.	Do you seek to discover more knowledge and correct weakness?
+b.	Do you follow the OWASP Top 10 application security risks or the application programming interface risks?
+c.	Do you follow vulnerability reports and databases?
+d.	Are you willing to develop a foundation in pen test tools?
+e.	Are you willing to team up with other pen testers that advance persistent threat?
+7.	Motivations of Security Researchers:
+a.	Do you have an interest in protecting information systems and making our world a safer place?
+b.	Are you good with your puzzle-solving skills?
+c.	Are you interested in prestige and taking pride in your work?
+d.	Do you want to make money from pen testing?
+e.	Do you want to enforce your principles?
+8.	Pen test career certifications:
+a.	EC-Certified Ethical Hacker (CEH)
+b.	Certified Professional Ethical Hacker (CPEH)
+c.	Licensed Penetration Tester (LPT)
+d.	GIAC Penetration Tester (GPEN)
+e.	GIAC Web Application Penetration Test (GWAPT)
+f.	Offensive Security Certified Professional (OSCP)
+Security Researcher and Penetration TESTER
+The difference between a security researcher and a penetration tester is that security researcher’s job is exclusive to finding vulnerabilities. The security researcher describes the vulnerability and exploitation possibilities and submits their disclosure to any organization and depending on the vulnerability and the scope of the organization’s disclosure/bounty program the security researcher will be paid depending on the severity. Penetration testing on the other hand can be performed annually or as frequently as every week depending on the environment and are a means of attaining compliance against PCI-DSS, SOC 2, ISO27001, and other security standards. Furthermore, penetration testing has more thorough coverage and documentation and are so in-depth and can start from inside or outside the network with various testing options. Security researchers mainly work in the domain of bug bounty programs and are more of a consultation to an organization than anything rigid like a penetration test; however, it has its own scope that security researchers must abide by as well. Being a security researcher means you are more likely to find general vulnerabilities that may lead to a compliance and regulatory issue that compliance and regulation testing doesn’t normally look into. One thing that should be clear is that a vulnerability disclosure program does not necessarily mean that is a bug bounty. Sometimes, Security Researchers do their work for free to keep the internet safe. Another thing is that an organization will sometimes host a bug bounty program alongside a vulnerability disclosure program as well. This does not necessarily mean an organization should go without penetration testing, because vulnerability disclosures simply help an organization when it comes to vulnerabilities that are not in scope for a bug bounty program and are an effective way for bug bounty hunters or security researchers to provide information on a vulnerability they found along the way that may not necessarily be in scope for that specific bug bounty program the organization is hosting. Again, penetration testing is a means of attaining compliance usually and are there to ensure stakeholders that their organization follows standard security frameworks. The advantages of having a bug bounty program are that they have flexible pricing that is adjusted to fit different budgets, they can find more vulnerabilities than a penetration test over time, they attract a wider audience with diverse expertise, and only pay once a vulnerability is disclosed (HackerOne Penetration Testing, n.d.). However, bounties also need to pay competitively to motivate hackers, bug bounties only find a vulnerability and do not test beyond that; they cannot be used to prove compliance like penetration tests do, bug bounty findings need to be validated and analyzed for accuracy, and bug bounties offer less complexity and lack internal testing provided by penetration testing. Vulnerability Disclosure programs are a little different in that it is report that outlines details that describe a vulnerability and its impact, screenshots, code-snippets, and additional evidence of the vulnerability, proof of concept details that allow the vendor to replicate the vulnerability, and any additional material that helps the organization understand the vulnerability. A vulnerability disclosure program is beneficial in that it doesn’t solely advise on the existence of a vulnerability, but essentially allows for safe harbor of security researchers that they won’t have legal action taken against them for the vulnerabilities they discover and usually this type of coordination between researchers and vendors gives vendors a chance to fix bugs without risking mass exploitation and vendors can inform the public and present steps for remediation once the vulnerability is patched. I believe that organizations should have both a vulnerability disclosure program and a bug bounty program, but at the very least have a vulnerability disclosure program. Bug bounty programs in their limited scope within organizations can be potentially dangerous in that bounty hunters are only paid upon successful disclosure within a certain time period; nonetheless, successful bug bounty hunters are able to free lance and earn side wages to their current occupation and a small minority choose to be bug bounty hunters’ full time. Depending on someone’s skill Bug bounty can definitely be a lucrative career and one that doesn’t require you to wake up and go to a normal 9-5 every day. In my opinion bug bounty and the advancements within the area recently, such as incorporating the vulnerability disclosure program within bug bounty to lower the criticism that bug bounty silences security issues, are a net benefit to society and the well-being of labor in general. It introduces something new to the economy and expands the capitalist class and that in general is a big win for Capitalism as not everyone wishes to be in the labor class. 
+References: 
+HackerOne Penetration Testing June 25th, & HackerOne. (n.d.). Bug Bounty vs. penetration testing: Differences explained. HackerOne. Retrieved July 5, 2022, from https://www.hackerone.com/penetration-testing/bug-bounty-vs-penetration-testing-differences-explained 
+Module Summary
+1.	The effectiveness of cybersecurity controls needs to be measured objectively and continuously. The understanding of this concept is rapidly growing among organizations’ senior leadership, stakeholders, and customers. As a result, Chief Information Security Officers (CISOs) increasingly have to prove the value and return on cybersecurity investments. One of the most satisfactory and proven ways to validate security controls and investments is by conducting an independent penetration test. Under this engagement, a professional and ethical penetration tester simulates the tactics, techniques, and procedures (TTPs) of real-world adversaries targeting the organization. In return, the organization receives detailed but practical findings report. This report includes where the defensive measures effectively hindered the penetration tester’s ability to continue compared to areas where they were successfully able to exploit the gaps and go undetected.
+2.	According to Rohit Sharma, the director of Global Marketing for EC-Council, the organization behind the Certified Ethical Hacker program (Links to an external site.), penetration testing “proactively identifies the threats and determines the probability of an attack on information assets. A comprehensive penetration test provides an assurance that the organization is operating within an acceptable limit of information security risks” (Hewlett Packard Enterprise, 2018). In this module, you learned the fundamental concepts of penetration testing. You began by exploring the importance of penetration testing and why organizations and security researchers employ it. Furthermore, you examined common penetration testing tools and how to use them during an assessment appropriately. Lastly, you gained an understanding of the roles and responsibilities of penetration testers and security researchers.
+Bibliography
+“20 Coolest Careers in Cybersecurity.” SANS. n.d. https://www.sans.org/cybersecurity-careers/20-coolest-cyber-security-careers/.
+“4th Annual Hacker Powered Security Report.” HackerOne. n.d. https://www.hackerone.com/hacker-powered-security-report. 
+“Apple Security Bounty.” Apple Developer. n.d. https://developer.apple.com/security-bounty/. 
+Bandini, Desdemona. “Unpacking 202’s Verizon DBIR — Human Error and Greed Collide.” Duo (blog). 20 May. 2020. https://duo.com/blog/unpacking-2020s-verizon-dbir-human-error-and-greed-collide. 
+Borges, Esteban. “Attack Surface: Concept, Types, Tools, and Reduction Strategies.” SecurityTrails (blog). 14 May. 2019. https://securitytrails.com/blog/attack-surface.
+“Don’t Worry About Zero-Days, Says Microsoft.” Help Net Security. 11 Oct. 2021. https://www.helpnetsecurity.com/2011/10/11/dont-worry-about-zero-days-says-microsoft/ (Links to an external site.).
+Esmail, Sam, dir. Mr. Robot. USA Network. 2015. 
+Krebs, Brian. “Experian API Exposed Credit Scores of Most Americans.” KerbsonSecurity. 28 Apr. 2021. https://krebsonsecurity.com/2021/04/experian-api-exposed-credit-scores-of-most-americans/.
+“Microsoft Bug Bounty Program.” Microsoft. n.d. https://www.microsoft.com/en-us/msrc/bounty. 
+Newman, Lily Hay. “How an Accidental 'Kill Switch' Slowed Friday's Massive Ransomware Attack.” Wired. 13 May. 2017. https://www.wired.com/2017/05/accidental-kill-switch-slowed-fridays-massive-ransomware-attack/. 
+“Penetration Testing.” NIST. n.d. https://csrc.nist.gov/glossary/term/penetration_testing.
+“Protecting Your Enterprise: Understanding Penetration Testing.” Hewlett Packard Enterprise. 5 Sept. 2018. https://www.hpe.com/us/en/insights/articles/protecting-your-enterprise-understanding-penetration-testing-1809.html. 
+“The Importance of Bug Bounty Programs.” Attila Security. n.d. https://www.attilasec.com/blog/importance-of-bug-bounty-programs.
+“What Is an Attack Surface?” Avast Business. n.d. https://www.avast.com/en-us/business/resources/what-is-attack-surface#pc.
+
