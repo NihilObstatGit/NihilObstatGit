@@ -1,0 +1,160 @@
+Security Goals Notes
+1.	Computer security practitioners/experts think of goals and threat modeling. 
+2.	Confidentiality keeps information private from an adversary. Ensures only authorized users can obtain passwords or other details. Ensures only the right user can read the messages and access documents. Keeps cryptographic keys secret or confidential. 
+3.	Integrity prevents adversaries from corrupting data. Blocks adversaries from modifying software during installation. Helps in configuration. Provides data protection policies. 
+4.	Availability keeps the system running and available. Prevents adversaries from monopolizing resources. 
+5.	Threat modeling helps us understand the capabilities of an adversary. Adversaries might be highly adaptive and/or study your design and system. 
+6.	In case of unbounded, unpredictable adversaries, the best thing you can do is formulate some assumptions that you think are reasonable to make for your system. Assumptions about adversaries can be does not know or cannot guess your password. Cannot break cryptographic schemes. Does not have physical control of servers that you use to store data. Is not a software developer or operator of the applications/services you use. 
+7.	Dealing with adversaries mean having fewer assumptions, iterating your model design. Build an explicit threat model with clear formulation of attacks that: you are trying to protect against, and you think are not worth protecting. 
+8.	Guard Model of Sharing
+a.	Subject  Request Guard (Which has policies and an audit log)  Resource 
+9.	Three Tasks of a Guard:
+a.	Authenticate: The guard should know who is giving the instruction: Another computer or component in the same OS OR human user who sends a request to their mobile phone or a desktop computer. The guard has two authentication options: Trusted path or credential. 
+b.	Authorize: The guard decides whether the request is okay. The guard checks the policy to determine whether the authenticated principal is allowed to perform that operation. 
+c.	Audit: The guard must maintain a record of the decisions made for different requests. An audit log should be kept in a separate box to backtrack any damages if the adversary breaks into the resource box. 
+10.	Principle of Least Privilege states that a subject should be given only those privileges needed for it to complete its task. -CISA, Cybersecurity & Infrastructure Security Agency
+a.	PeopleUser accountsRoles Permissions
+11.	Principle of Privilege Separation: The box can embody all software. The printer service can access all emails. The spam filter can look at all passwords. How do you partition your software? How do you decompose your system?
+12.	Zero Trust Architecture, threat models, and Defense-In-Depth. 
+13.	Entry-level roles: Security Specialist, incident Response Handler, IAM team. 
+14.	Mid-level roles: Policy positions, auditors, security engineers, asset managers.
+15.	Senior-level roles: CISO and Deputy CISO.
+Discuss a Security Goal and Identify a threat model
+ Functional goals are directly tied to the principle of least privilege, which requires policy and technical controls to only assign users, systems and processes access to resources that are essential to their assigned function. Google docs is one such application that is web-based and the usability and availability of which entirely depends on Google. In order to strike a balance between usability and security with a web-based application I would utilize the Guard model of sharing, in which, there would be three tasks of a Guard. First, it would authenticate the user utilizing a unique credential that identifies themselves as an employee with set roles and permissions within the organization. Second, it would authorize whether or not the user’s request is allowed to perform that operation by analyzing the user’s credentials. Third, an audit log will be kept in a separate box to backtrack any damages and ensure any adversary is unable to truly break anything within the resource box. Sharing documents with an untrusted email recipient will be flagged if it happens to go past whitelisting guards set within the employee’s role in the active directory. Otherwise, preventative guards will ensure the employee would not be able to send documents to an untrusted email recipient. 
+Security: A Negative Goal Notes
+1.	Security is a negative goal because you are trying to ensure that there’s no way for an adversary to violate your goal. 
+2.	It is almost impossible to enumerate and test for all the possible ways the adversary might try to get in and test vulnerabilities. 
+3.	Email serverSECRET EMAIL MESSAGERecipient laptop
+a.	Try to log in with a wrong password and see that it does not work. 
+b.	See if adversaries can issue the request to get your message when logging in with their own username.
+c.	Connect to the SQL database server running on the server machine.
+d.	Guess the SQL database server password.
+e.	Log-in to the backup server that keeps a copy of all messages. 
+f.	Find a way to change your password.
+g.	Log-in to the system with a changed password. 
+h.	Trick you into accidentally forwarding the secret email message. 
+i.	Trick the operator into installing a bad software update that includes a backdoor. 
+4.	The difficulty in testing a negative goal highlights the importance of secure defaults in a computer system design. 
+5.	Security defaults mean that if a system designer forgets about the existence of some component of your system, the default setting will prevent the adversary from taking advantage of that component. 
+Analyze why Security is a Negative Goal
+Cyber security will always be a negative goal, because any good cybersecurity professional knows they must ensure there is no way for an adversary to violate the goal. In order for us to ensure the security of our systems we must always think like the attacker; there will always be newer vulnerabilities or attack surfaces (software in this case) that ensures more productivity/availability of systems. Security can definitely be a positive goal in some cases if the organization is entirely centered around security for sure, but positive goals in organizations are designed for function, availability, and user experience first, while the goal of the security expert is to think of the CIA triad in general first, which will almost always counteract the positive goals in organizations. The inherent challenge with security that often creates this dynamic is in the fact that the most effective way to mitigate risk is to affect the availability and functionality of systems; thus, security affects user experience, which can lead to lost efficiency and user dissatisfaction. 100% security is difficult to obtain, because vulnerabilities grow in number every day and there will always be vulnerabilities that will affect productivity. For example, many organizations still utilize older software in the name of user satisfaction and productivity. Even though, their systems are vulnerable they trust other mitigating security controls to ensure their data is secure. This paradigm also employs methods to test the security of the system 
+Explain why Negative Goals are Difficult to Achieve
+Being tasked with ensuring that the new Microsoft Windows Server 2019 system that is being brought online for my organization means it must be tested, vetted, and secured appropriately. Using the Zero Trust Architecture employed by the National Institute of Standards and Technology (NIST) would be an effect paradigm for the implementation of Microsoft Windows Server 2019. Zero trust (ZT) moves defenses from static, network-based perimeters to focus on users, assets, and resources. This architecture assumes no implicit trust granted to assets or user accounts based solely on their physical or network location. Red teams in the organization are always a good way to test the security of the system as it will always bring attention to what needs to be defended the most within the realm of penetration testing. Furthermore, ZT also offers reports on computer systems technology through the Information Technology Laboratory (ITL), who develops tests, test methods, reference data, proof of concept implementations, and technical analyses to advance the development and productive use of information technology (Rose, et al, 2020). The types of attacks that would need to be modeled per ZT is listed as follows: Subversion of ZTA decision process, denial-of-service or network disruption, stolen credentials/insider threat, visibility on the network, storage of system and network information, reliance on proprietary data formats or solutions, and use of non-person entities (NPE) in ZTA administration. Furthermore, to go beyond even what ZT would recommend what types of attacks ought to be modeled red teams would offer their insight into what attack vectors are most popular day by day and what applications or attack surfaces can be used to gain access into the organization’s systems. It’s impossible to enumerate the countless ways an attacker could exploit any system; however, the most common ways lie in the users themselves, any bad network configurations, software vulnerabilities inherent in Windows Server 2019, access configuration, and ensuring firewall and NTP is consistently configured to ensure no vulnerabilities are present(UpGuard Team, 2022). All of these are the steps I would take personally to harden the Windows server. Consistent logging and monitoring are paramount to knowing what’s happening on the server. With logs and consistent monitoring blue team tools such as the MITRE ATT&CK framework, Regshot, and Wireshark would be essential to blue teams in the organization to ensure the security of our systems. Red teamers would use the latest in attack suites like burpsuite, vulnhub, exploit-db, Metasploit, and Kali Linux and to ensure they have the latest knowledge in cyber threat intelligence tools for hackers and security professionals to identify any openings that even blue teamers cannot find. 
+UpGuard Team. (2022, February 13). The windows server hardening checklist 2022: Upguard. RSS. Retrieved March 1, 2022, from https://www.upguard.com/blog/the-windows-server-hardening-checklist 
+Rose, S., Borchert, O., Mitchell, S., & Connelly, S. (2020, August). Scott Rose Oliver Borchert Stu Mitchell Sean … – nist. Retrieved March 1, 2022, from https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf 
+Sharing Access Control Model
+1.	Isolating everything inside of a box keeps everything perfectly secure, but it also means nothing is going to get done in the computer system. 
+2.	Guard Model of Sharing:
+a.	The guard must be the only entry point of requests into our isolated box that is protecting our resource. 
+3.	To preserve the boxes’ isolation property, ensure that: 
+a.	There is no way for the bad actor to access your resource. 
+b.	There is only a small hole in the box that goes to the guard. 
+4.	Credentials can be a secret or token, like a password or cryptographic key, that can be presented to a guard to confirm that this is an authenticated request. 
+5.	If an adversary can curb the policy, all other bets are probably off in your design. 
+6.	If something goes wrong, you should be able to look at this audit log and track down the damage caused by an adversary. 
+7.	These tasks depend on complete mediation, which ensures that an adversary has no way to bypass the guard. 
+8.	An OS kernel accepts a system call from a process and decides what to do with it. To authenticate a system, call the OS kernel looks at the user ID (UID) of the process issuing the call. The UID should be tracked by the guard itself. Once the kernel authenticates the call, it can authorize it by checking the access control list associated with the files. And finally, an audit log is maintained for historical reasons and not often kept in a file system. 
+Isolation Boundaries
+iCloud photo library. Every photo that you’ve ever taken intact with EXIF data showing where you’ve been, what places you like to frequent, what kinds of things you like, when, and wherever any photo is uploaded to the cloud a box somewhere invisible that no one ever wonders about. That is the good thing. Any bad actor would have to seriously do their research on where these photos are stored and how to access the facility’s systems. To ensure the boxes’ isolation property we would need to guarantee there is no way for a bad actor to access the data both physically and digital; so, there must be a level of separation that protects each perimeter. Nonetheless, you cannot perfectly secure the box, because nothing would ever get done in the computer system. Thus, a guard model of sharing is needed. Users need to be able to access the resource, request to be authenticated and the Guard, which has its own policies and permissions it must follow, must authorize that user access to their resources tucked away in a box. Some examples lie in the application resource itself, which is the Photos app on your iPhone. Every time you take a picture on your iPhone that data is stored on your iPhone and then backed up nightly to the cloud. Any hacker can get that information while being streamed to the cloud without ever having to hack the cloud; thus, comes Apple’s security updates that patched any security flaws any script kiddie can abuse, but what if it was a trained hacker and this hacker wanted to get your photos in particular? That’s where Apple’s encryption comes at the application layer to ensure no eavesdropper has the ability to decrypt that information that is being streamed to the cloud. 
+Policy Models: Access Control Lists Vs. Capabilities
+1.	The authorization step answers whether a particular subject, principal, or request can perform any operation on a resource being protected by the guard. 
+2.	Storing In a Matrix by Column
+a.	Store by column
+i.	Represents access control list for objects.
+ii.	Determines who has access to a particular object.
+iii.	By organizing the authorization policy table, you answer an important question on security: Who has access to a particular object?
+3.	For example, in a shared document system like Google Docs:
+a.	Every document shared by Google or shared by users through Google has a clear set of permissions associated with it that says which users can:
+i.	View
+ii.	Edit
+iii.	Administer a document
+4.	Storing in a Matrix by Row
+a.	Store by row
+i.	For every subject, you know the objects that the user can access.
+ii.	For example, you can create a random URL for a specific Google doc that gives anyone access to this link the ability to either read or write your shared document.
+iii.	Easy to delegate and share in a distributed system. 
+5.	Google Docs: Access Control View
+a.	To add another user to a document that is shared with you, you need to update the document’s access control list with certain rights. 
+b.	If you have only read or write access, you may need administrative access to change the policy. 
+6.	Google Docs: Capability Worldview
+a.	Anyone with the link to a document can share it with anyone else. 
+b.	For example, if you have access to a shared Google doc, you can email it to another user, and they will be able to access the document the same as you. 
+c.	From a security administrator perspective: 
+i.	You might answer the question of who has access, but this impedes delegation and sharing of objects. 
+ii.	You often see a mix of modes in large computer systems, where: 
+1.	In the long term, the access control view is the way security policy is specified. 
+2.	In the short term, capabilities allow more flexibility in how you implement and use a system. 
+Compare ways to store policy matrices in the access control model
+The most common way to access Google Docs is by URL. This URL can be on many of Google’s services. The author of any Google doc has the ability to allow other contributors read, write, edit, or administrative privileges-these are our security controls that the user uses to authorize others with specific policies in mind and control the permissions to which they have in relation to the document. Access controls and safeguards I would propose include a clear policy and training on the proper use of creating and sharing Google Docs in order to maintain organization security goals (i.e., flow of information and confidentiality policies).  Typically speaking the best security that can possibly be imposed in relation to URL sharing, which is the true attack vector that needs to be monitored is to only allow access to the URL via VPN if working from home. On-site authentication measures would need to take place prior to access of company systems, and authorization to access such documents would already be administrated at the access control view within Google docs. To ensure the security of work from home environments, users will be trained on proper fire walls, VPNs, and system access (preferably a hypervisor employed over VPN to ensure auditing of guards in place).
+Privilege Separation of Least Privilege
+1.	Security Risk Examples:
+a.	Imperfect isolation: Bugs in the OS kernel or misconfigured hypervisor. 
+b.	Imperfect guard: Incomplete mediation or a software bug that can allow an adversary to bypass the guard.
+c.	Incorrect authentication: Compromised password, policy misconfiguration, and authorization. 
+2.	Advice for Security Models:
+a.	Keep it simple: Appreciate the cost of a sophisticated and complicated security plan. 
+i.	Aim for a simpler plan that provides a more coarse-grained security property.
+ii.	Divide users into two broad classes instead of assigning users precise permissions.
+iii.	Assign users with elaborate and precise permissions.
+iv.	Ensure there are no oversights in the security plan to avoid bypassing. 
+v.	Avoid overly complicated plans as they might be cost-intensive and may not result in better outcomes. 
+b.	Expect problems: Have lower aspirations in terms of computer security for what you are trying to achieve. 
+i.	The computer system is not going to be a perfect match for: 
+1.	The clean model or goals
+2.	The threat model you have laid out for your adversary
+ii.	Find ways to limit damage to your computer system when inevitable problems arise. 
+3.	Principle of Least Privilege: Gives only the necessary privileges to each component in a computer system to fulfill its role. Limits damage as it leaves no extraneous possibility for a component to cause any damage beyond what is absolutely necessary for that component to do its job. 
+a.	Examples:
+i.	The printer service should only be able to print those documents that are sent to it by some user. 
+ii.	The spam filter should only look at the messages that are there and not be able to access other details. 
+4.	Principle of Privilege Separation: Includes the process by which you’ll look at your overall computer system design. Helps to break the design into smaller boxes and pieces so that you can profitably apply the principle of least privilege to all the components. 
+a.	Examples:
+i.	The box can embody all software.
+ii.	The printer service can access all emails.
+iii.	The spam filter can look at all passwords. 
+iv.	How do you partition your software?
+v.	How do you decompose your system?
+5.	Principle of Least Privilege and Privilege Separation Example:
+a.	Before architecting you have code for a web application that is surrounded by an isolation barrier called the web server that stores accounts profiles and logs. This web application manages accounts of various users in the system. It maintains user profiles, maintains a log of all the accesses, maintains user passwords, maintains a database of credit cards, and maintains and manages shipping data and other information. 
+b.	These web applications may have a lot of bugs, and the bugs are one way in which an adversary can effectively bypass a guard even if in your design, you’ve carefully tried to make sure the guard is looking at every request coming in. So, to anticipate and expect problems stemming from bugs and other issues that might crop up, you might re-architect your web application into many different components. 
+i.	The web app logic is only capable of accessing profiles. 
+ii.	User passwords and accounts are managed by a separate component in a different box called user login and only that code can actually access the accounts database. 
+iii.	The user can access the log-in component directly or via the front-end application that talks to the log-in component. 
+iv.	This log gives a sense of what the adversary might have done or who the adversary might have been, even if the other boxes are compromised. 
+v.	Credit card processing would actually be on a separate machine of its own, because you might not trust your operating system to be secure enough to protect credit card numbers against adversaries that break into other processes. 
+vi.	Creating a separate physical machine for these details gives a very strong  level of isolation between application code and the sensitive credit card numbers. 
+Trust
+1.	Security as a Negative Goal: Every component and step in your computer system is critical to its overall security. 
+2.	Reliability and Trust in Security: One component in a computer system trusts another component for its security.
+3.	Dimensions of Trust: Imagine an email server that is trying to protect a secret email message. A user types on a keyboard that speaks with a driver on an OS kernel that talks to the web browser. The user’s computer has access to a network that is able to send a message to an entirely different operating system. 
+a.	If an adversary impersonates a user’s message, then the network failed to be trustworthy enough to accurately relay your messages. 
+b.	Malware can also impersonate messages. 
+c.	Server software developers are responsible for handling and parsing messages and interacting with the network. Server software developers will also get their software from standard libraries, JavaScript libraries, or GitHub packages. They may also use development tools like GCC or some Java tools to write this code and so on. Finally, the OS itself also gets updates from the operating system vendor, from kernel developers, and so on. All of these components are trusted for the mail server to be secure. 
+d.	XcodeGhost issue in China: The download of Xcode tools from Apple servers was slow due to connectivity issues. The developers found copies of these Xcode tools on mirror servers inside of China. Some of these mirror servers had backdoor copies of these development tools. The development tools appeared to work perfectly well for application development. However, this process provided a backdoor entry for malware deployment on users’ iOS devices. 
+i.	This emphasizes the need to have a strong degree of trust in the source and security of development tools. 
+4.	Zero Trust: Refers to the idea that you should be very explicit about everything that you trust. Requires you to authenticate every: 
+a.	Piece of software that you install on a server. 
+b.	Request you get over a network. 
+c.	Computer that is connected.
+d.	User that starts using your system. 
+Privilege Separation
+My work system employs Windows Server 2019 and in order to access systems you must input a user ID and password that employs the rule of privileged access management, which helps to mitigate security concerns for Active Directory (AD) environments. Nonetheless, once we are logged into the system we utilize a VPN (when working from home) that allows us access to applications we utilize in our day to day, which also have their own authentication procedures in place that are also monitored and logged. Web applications are heavily defined with set permissions by specific user to ensure availability of systems. For my role I don’t need to be inspecting elements in web applications or editing internal documents in our knowledge base; therefore, logging in with my credentials will not afford that possibility. Some programs or system processes that need to be monitored are the applications we utilize everyday to communicate with customers about their account and data related to their devices on our network are some system processes that are heavily criticized for the availability of such services; however, being that these systems are going to retire soon anyway they are merely monitored constantly to the point where some services are unusable at times. In a Windows server environment that utilizes privileged access management as far as I can tell utilizes a zero-trust architecture that assumes the least privilege; thus, assigns several policies and permissions that allow users to fulfill their role. Privileges are auto deployed against groups and managed overtime by the domain administrators for the server. Relevant policies in place include BYOD devices. The call floor does not allow any outside devices to ensure customer data is secure and even the guest network is filtered for specific operating systems. Proper privilege separation embodies the thin clients that connect all of us with the applications we must be authenticated for to be able to utilize. Beyond that these applications have their own resource boxes that also contain images on a separate server for redundancy and even these applications have authentication policies in place for certain tasks each employee is required to take. Partitioning software is only necessary within hypervisor number 1. My organization utilizes another hypervisor to access even more applications, thus widening the level of separation between our immediate network and the organization as a whole. Applying privilege separation in this manner leaves much to be desired in terms of compromise, because the sheer amount of authentication procedures and policies set in place for certain applications we use day to day even requires a knowledge base of documents to be scanned through daily. This in and of itself is the way my organization institutionalizes privilege separation. 
+Defense in Depth
+1.	One of the big uncertainties in computer security is trying to figure out whether your threat model is reasonable. 
+a.	Threat models are never accurate as there might be wrong assumptions about: 
+i.	Adversary’s capabilities.
+ii.	Users not clicking on email attachments. 
+iii.	Software being correct. 
+iv.	OS kernel not having bugs. 
+b.	Defense in depth:
+i.	Offers more robust layers of security with stronger assumptions about the adversary.
+c.	Is your threat model reasonable?
+i.	Be progressively more elaborate. 
+ii.	Assume more things about the adversary.
+iii.	Offer higher degrees of security in return.
+iv.	Help achieve some degree of security in the overall system design in case of wrong assumptions about an adversary. 
+d.	Example Bank Network: Imagine a bank network that connects to bank servers, two teller machines, and a printer. Every bank must have some degree of security enforced by the bank server. The server must provide some degree of security in the network itself to ensure that there’s an audit log and some measure of protection provided by network level policies or firewalls. Installing software and controls on the tellers’ computers to help you achieve even stronger degrees of security. 
+e.	Defense in depth suggests you layer various degrees of security and different threat models to guard against the possibility that your assumptions about the adversary are too strong. 
+Identify Layers of Defense
+Deploying two new systems for the finance department  with one node being the Windows 2019 server and another being a workstation with the latest version of Windows into an organization is no small task when you’re in charge of ensuring the client that you are able to advise on security practices and guiding colleagues in securing and hardening their systems. First off layers of control in the Windows 2019 server would start with the configuration of set server. From this point forward you begin to draft your access control lists for personnel that will be utilizing the server to access multiple applications housed in the server to fulfill their role. First off the hardware itself will control network traffic through these access lists and even beneath that layer there is web application firewalls. Rules set within this firewall will include black or whitelisting IP addresses, MAC addresses, and ports. This is our first guard for the Windows server. Next the principle of least privilege is applied. In configuring domain admins for this Windows server, we begin to create the finance department’s forest, which will require policy and technical controls the access to resources that are necessary to perform their assigned role. In configuring the server, we must also apply updates to the operating system, software, and hardware inside of the server to ensure availability and the integrity of these systems. Once the server is configured flashing Windows to the desktop via an isolated image of a golden operating system with all the software necessary for the new employee’s workstation and to fulfill their role in the organization is best practice. Even an image doesn’t apply updates and thus, patch management comes in handy here. Application installation is also premeditated and applied almost clinically to ensure the integrity of the software to be utilized by our employee on their workstation. Going back to the Windows server the employee is assigned to a group that is administered by his direct management in which they are granted the least number of privileges required to fulfill their role. The employee would access their system that is connected to the finance department’s network as a whole via the Windows server privileged access management system already in place. Training for these systems go to each user and their assigned role. Managers are given permissions to create tickets that are monitored and logged in a separate file system from their immediate new windows server. The windows server only currently serves its immediate forest but can also be controlled by the domain administrator who oversees the different domains the organization is in charge of across that immediate role in finance. Regshot also comes in handy at this point, coming back down from the enterprise macro level. Regshot would be used to scan for any registry changes when flashing the windows server onto this new workstation. Nonetheless, even hardware comes with its own bugs; therefore, checking even the most minute things such as what devices they will be plugging into this workstation needs to be trained on and guarded against. 
+
