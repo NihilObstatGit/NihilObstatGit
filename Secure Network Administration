@@ -1,0 +1,522 @@
+Module 14
+Module Introduction
+1.	Hardly a day goes by without news about an organization, municipality, or nation affected by the latest cyber-attack. And while the current extent and severity of security challenges continue to rise, so does our dependence on the internet. Online banking, social media, online education, working from home, and on-demand entertainment would not exist without the internet. However, for many organizations, the responsibility of delivering a safe, reliable, and trusted internet service to employees, customers, and partners can be challenging. This challenge is primarily due to the multitude of technologies, devices, and processes the organization needs to consider, implement, and continuously evolve to deliver a secure network.
+2.	It would not be wrong to say that cyber criminals and cyber-attacks are evolving the internet as we know it and, along the way, changing our relationship with it as well, all of which makes right now an interesting and exciting time to be online. This module will explore the fundamentals of the internet, including various network topologies, protocols, and different devices and technologies that make up the backbone of the internet. You will then review the common security threats facing today’s networks, including ways to detect and protect against them. Finally, you will study the role of the secure network administrator, including their responsibilities, common areas of specialties, and typical team structure. 
+3.	A network administrator is someone who has a primary responsibility to manage and perform system administration duties on network devices and network technologies. 
+4.	Network Topologies:
+a.	Wired network
+b.	Wireless network
+c.	LAN
+d.	WAN
+e.	Residential network
+f.	Mobile network
+g.	CAN
+h.	DSL
+i.	Cable modem
+j.	Network devices including:
+i.	Switches
+ii.	Routers
+iii.	Modems
+iv.	Load balancers
+v.	Firewalls
+5.	Responsibilities of Network Administrators:
+a.	Administration of devices
+i.	IP subnetting
+b.	Management of:
+i.	Switches and routers
+ii.	Terminals and modem pools
+iii.	Client environments
+iv.	TCP/IP protocols
+v.	Non-TCP/IP protocols
+vi.	High-speed networking
+c.	Network file systems and network file synchronization schemes:
+i.	Storage auto mounters
+ii.	Licensed managers
+iii.	rsync and rdist
+iv.	LDAP, trusted host environment
+d.	Network security devices:
+i.	Firewalls, intrusion detection and prevention systems
+ii.	Spam gateways, antivirus systems, and email systems
+e.	Management of network enablement applications:
+i.	DNS Systems
+ii.	DHCP Systems
+iii.	IPS Systems
+6.	Various Types of Network Administrators:
+a.	LAN Administrators:
+i.	Focus on local area networking technologies
+b.	WAN Administrators:
+i.	Ensure internet connectivity, site-to-site connections, VPNs, etc. 
+c.	Wireless Administrators:
+i.	Manage wireless network hubs and access points. 
+7.	Network administration teams are separated into architecture and operations teams in order to manage operational work.
+Review of Networking Terminology and Technology
+1.	Nowadays, data is considered the lifeblood of any organization. It provides vital analytics and insights that allow the organization to make timely and calculated decisions based on evidence. However, if data is considered an organization’s blood, then the network is the steady and strong heart that pumps it. In addition to ensuring that data arrives reliably and the most efficiently at its intended destination, modern networks also have the critical responsibility of scrutinizing the connection for security and cyber threats. Therefore, modern networks depend on many different technologies, protocols, and human expertise to assure the connection’s confidentiality, integrity, and availability. 
+2.	With all of the advancements in applications and online services, it might be hard to believe, but the modern internet still largely depends on the network technologies, protocols, and architectures invented at the dawn of the internet. One such example is email. The fundamental protocols and standards that allowed emails in the early 1970s are very much the same today.
+3.	Terminology and Technology of Networking:
+a.	Communication on the internet is packet-based.
+i.	Applications or devices chunk messages into smaller packets and then the internet chunks up communication that is to be sent into small packets. 
+ii.	Packets are labelled with sender’s and receiver’s addresses. 
+iii.	Smaller chunks get recompiled into the original message at the receiver’s device. 
+b.	Data networking is a complex architecture with a variety of topologies and a lot of moving parts.
+4.	It is useful to describe the data network architecture in some kind of model that allows us to modularize the whole concept.
+5.	Five-Layer Architecture:
+a.	Called the hybrid TCP/IP-ISO model
+b.	Borrowed and compiled from both: 
+i.	ISO’s (International Standards Organization) own OSI 7-layer model. 
+ii.	TCP-IP and accompanying technologies from when the internet was developed. 
+6.	Five-Layer Architecture – TCP Model:
+a.	Application layer:
+i.	Supports network application and its ability to communicate with the other application on the other end. 
+ii.	Accepts messages sent by users and sends them through the transport layer into the rest of the network stack.
+b.	Transport layer:
+i.	Provides end-end application-to-application service using two service models:
+1.	TCP: reliable
+2.	UDP: unreliable, faster, simpler
+ii.	Allows communication between applications using the service models, with the services of the below layer – network/internet layer.
+c.	Network layer:
+i.	Communicates the packets from the sending host to the receiving host.
+ii.	Uses IP addressing to communicate the packets across a collection of networks. 
+d.	Data link layer:
+i.	Carries packets across specific network and hands it off to the next network to be carried through. 
+ii.	Carries the packets through a network using these devices:
+1.	Routers: Bridges one network to another.
+2.	Switches: Within the networks. 
+e.	Physical layer:
+i.	Converts the packets and bits into electric or light signals and carries them across links. 
+f.	Each layer provides a set of services to the layer above it and uses the services of the layer below it. 
+7.	Network Encapsulation:
+a.	Encapsulation: Each layer accepts data from the layer above it, adds some control information, and creates a new envelope containing the packet that it was given. 
+b.	Application layer (sending)DataApplication layer (receiving)
+c.	Transport layerSegment header/DataTransport layer
+d.	Network layerPacket header/Segment header/DataNetwork layer
+e.	Data link layerFrame header/packet header/Segment header/Data/Frame trailerData link layer
+f.	Physical layer1010101010010111110101011BitsPhysical layer
+g.	Encapsulation goes down, and decapsulation goes up the path.
+8.	To address applications, any internet-capable service has a specific address- a combination of the host address and the application’s address.
+9.	Applications and socket address: 
+a.	IP address: Address of the host on which the application is running on. 
+b.	Port number: distinguishes a specific application from the other applications within the host.
+c.	Socket: 
+i.	Combination of IP address and port number. 
+ii.	Makes communication possible within the computer itself.
+Software Defined Networking
+1.	In the year 2000, there were only 361 million internet users worldwide. However, by the end of the decade, this number grew more than 5 times to 1967 million users in 2010. This drastic growth in internet users is primarily due to the advancement and mainstream adoption of technologies and platforms that we are so accustomed to now. For example, the release of the first Apple iPhone and the mainstream traction of social media platforms like Facebook and Twitter all happened during this decade. Furthermore, this significant internet usage resulted in more data, video, and audio content than ever before and the need for a more robust, secure, and efficient network to transmit it.
+2.	Software-defined networking helps to choose which OS one wants to run on the same vendor chipset. 
+3.	Traditional stack:
+a.	Hardware
+b.	OS
+c.	APP/APP/APP
+4.	Virtualized stack:
+a.	Hardware
+b.	Hypervisor
+c.	OS/OS/OS
+d.	APP/APP/APP
+e.	Virtual servers1/2/3
+5.	SDN Architecture:
+a.	Application layer:
+i.	Load balancer
+ii.	Firewall
+b.	Northbound: APIs
+c.	Control layer:
+i.	SDN Controller
+d.	Southbound: APIs (Open Flow)
+e.	Infrastructure layer:
+i.	Switch devices
+6.	Traditional Network Architecture:
+a.	Distributed control plane:
+i.	Apps communicate with control plane above a data plane. 
+7.	SDN Architecture:
+a.	Centralized control plane:
+i.	Apps communicate with a single control plane with an open flow to the data plane. 
+8.	Virtualization:
+a.	Enables us to create network devices as virtual systems within a private or public cloud. 
+9.	Network Function Virtualization:
+a.	Classic network appliance approach:
+i.	Tester: Quiz monitor
+ii.	Firewall
+iii.	Radio network controller
+iv.	WAN accelerator
+v.	Carrier grade NAT
+vi.	IDS
+vii.	Session border controller
+viii.	DPI
+ix.	PE router
+x.	Fragmented, purpose-built hardware
+xi.	Physical installation per appliance per site
+xii.	Hardware development confronts large barrier, thus constraining innovation and competition
+b.	Network function virtualization approach:
+i.	Virtual appliance funnels down software-based network functions
+ii.	Orchestrated automated and remote installation
+iii.	Generic high volume standard server, switch, and storage.
+iv.	General purpose hardware and flexible installation
+v.	Competitive, innovative, and open system.
+c.	Network function visualization automates configuration management at scale, improving consistency and speed of changes, using tools like Puppet, Ansible, Terraform, Netmiko, Paramiko.
+i.	Automation is useful for the provisioning and non-provisioning of network elements. 
+Define the principles and fundamentals of secure network administration
+The internet is not only an assortment of physical connections spanning the globe and across the ocean. It also involves the dissemination of packets encapsulated with various data across several layers of several technologies. For example, the OSI model can be broken down into 7 layers. First off, the physical layer denotes the physical means of sending data over network devices and can be broken down to ethernet cords, fiber optics, and twisted pairs, which can make up metropolitan area networks and wide area networks as well. Local area networks bleed into the data link layer, which defines procedures for operating the communication link and provides framing and sequencing of packets. Next the network layer routes packets according to unique network addresses. Routers live in this layer and use routing/multicast protocols like TCP-based, IP based and even incorporate internet IP security. At layer 4 is the transport layer and it provides reliable and sequential end-to-end packet delivery, and it also provides connectionless oriented packet delivery. TCP and UDP live here along with the ISO developmental environment and Netbios DGM respectively. From TCP and UDP come several offshoots that extend into the session layer, which manages user sessions and dialogues and also controls establishment and termination of logical links between users. Every time you connect to a service you are establishing a session and for TCP you can use Net-BIOS, Net-BEUI, SMB, and ISO TP. UDP utilizes IPX, WINS, L2TP, and SMB as well and what these protocols essentially allow you to do is access resources under different operating systems. It brings together the internet across OSes. At layer 6 is the presentation layer and it specifies architecture-independent data transfer formats and encodes and decodes data; encrypts and decrypts data; and compresses and decompresses data. Remote procedure call (RPC) and lightweight presentation protocol (LPP) work hard to ensure the security of communications. Furthermore, Radius Remote Authentication Dial-in user, Kerberos Network Authentication Protocol, and Terminal Access Control Access, Control System (TACACS/TACACS+) also reside in this layer. At layer 7 or the application layer technologies define interface to user processes and provides standardized network services. Technologies like HTTPS, SMTP, IRC, and IMAP are pretty commonplace now alongside DNS and even more security standards like Advanced Encryption standards (AES), and Data Encryption standards (DES). All of the technical aside, the OSI model can be broken down into a simple metaphor. The physical layer is essentially the catalyst for which everything is transported, the data link layer tells the router in the next layer how to package the data and transport it. The router in layer 3 routes packets to the proper destination, the transport layer provides reliable or not-so-reliable, but fast packet delivery (TCP and UDP) and layers 5-7 work in-tandem to create the TCP/IP model and essentially ensures the security of your delivery and that there are no possible eavesdroppers. This model is not a complete one for sure and there are many more technologies that fit into each and every layer and the amount is growing every year; however, it stands to reason that the future of the internet and the capabilities of computers are gated by bandwidth availability and the costs associated with maintaining those networks. It’s essential that we work with communities to establish these networks and maintain them in a cost-effective manner. The path forward requires that the bandwidth our networks provides become smarter; essentially the networks themselves must become programmable platforms that are flexible and dynamic. For so long the answer to the problem of increased demand on the network is a challenge when we should be prioritizing network-on-demand. With the advent of software defined networks (SDN) and Network Function Virtualization (NFV), the network is no longer a balloon with some hardware attached; the software coming together now to enable programmable solutions are what will allow us to defeat Moore’s law. With the advent of 5G technology, it’s crucial that these technologies are invested upon in rural areas, because in the end that only means more people on the internet and more people can be reached via advertising. HNT is a decentralized wireless connectivity platform and mines the HNT blockchain while providing wireless network coverage for millions of devices around you are using Helium LongFi, and users are rewarded in HNT for doing this. Decentralized networks such as these are critical to bringing coverage to rural areas, but the infrastructure must be there for everyone to be able to take part and build a robust network; thus, communities must come together in public-private partnerships to expand infrastructure,  because everyone stands to benefit from a connected world. The most fascinating aspects in “How does the Internet Work?” by Vox is the simple fact that infrastructure that connects the world is so hard to damage, yet it’s man-made causes that cause people to lose connectivity such as fishing; furthermore, it’s not unlike rural communities do not wish to be connected; it’s quite the opposite, but the fact that there are already calls to action in communities around the globe that are looking to take part. In Life of an IP packet, the most fascinating part is the internet. The way the video describes the internet as a world-wide-web akin to the wild west is what drew me to other aspects of how the internet works and how much it costs to connect a user to the internet is surprising as well: the cost of a telephone call or less. 
+References:
+Haleem, A. (2022, May 31). Helium Chapter 2: A network of networks. Medium. Retrieved June 5, 2022, from https://blog.helium.com/helium-chapter-2-a-network-of-networks-7372262210bd 
+LogicX. (2010). Life of an Ip Packet. YouTube. Retrieved June 5, 2022, from https://www.youtube.com/watch?v=9BGWrLiT9qs. 
+Toh, M. (2021, January 22). Alphabet is shutting down Loon, its ambitious internet balloon venture. CNN. Retrieved June 5, 2022, from https://www.cnn.com/2021/01/22/tech/loon-project-alphabet-google-intl-hnk/index.html 
+TV, N. C. T. A.- I. &. (2019, August 8). 4 ways to bring broadband to rural communities. Medium. Retrieved June 5, 2022, from https://medium.com/@NCTAitv/4-ways-to-bring-broadband-to-rural-communities-38af9b4be338 
+Vox. (2020). How Does the Internet Work? - Glad You Asked S1. YouTube. Retrieved June 5, 2022, from https://www.youtube.com/watch?v=TNQsmPf24go. 
+The Importance of Secure Network Administration
+1.	“The Internet’s founders saw its promise but didn’t foresee users attacking one another.” – Craig Timberg
+2.	The main idea behind the internet was to find a way to break messages quickly and reliably into small pieces, transmit them through a network of geographically dispersed computers, and then reassemble them at the destination. While this idea seems simple now, it was unprecedented in the 1960s. However, due to the real threat of nuclear war looming, the need to find a solution was urgent. So, it began as a modest research project between the US Advanced Research Projects Agency (ARPA) and a small number of universities. At that time, everyone working on the project knew each other, and if someone abused the internet (ARPANET), they could be easily identified and excluded. Therefore, the team did not spend much effort on the security aspects of what they were building. And while they anticipated potential military threats, they didn’t foresee the internet users intentionally attacking each other (Timberg, 2015). 
+3.	Why is secure network administration important?
+a.	Networks are the conduits for:
+i.	Access and data transfer across the internet. 
+ii.	Interaction between systems.
+b.	New issues introduced by the routine updates to network devices, operating systems, and system software must be addressed. 
+c.	Network administrators work in areas and with a level of privileged access where they can do a lot of damage. 
+d.	Many of the security best practices related to system administration are equally applicable to secure network administration, including for:
+i.	Direct threats to user credentials and computers. 
+4.	What can Cyber Criminals do?
+a.	Cyber criminals can:
+i.	Use networking technologies to scan your environment and discover: 
+1.	What systems are running.
+2.	What applications or services are running on the system. 
+3.	Whether the systems are running patched or unpatched (exploitable) applications. 
+ii.	Monitor network packets to understand what is being communicated, particularly when the communication is clear text or unencrypted. 
+iii.	Intercept, read, and manipulate network packets as they travel from one application to another through intermediary devices. 
+iv.	Use vulnerabilities to gain access to exploitable systems or devices to hop from one system to another. 
+v.	Indulge in denial of service, such as: 
+1.	Flooding
+2.	Teardrop: A specialized attack where IP packets are broken into fragments. 
+a.	User datagram protocol (UDP) flooding
+b.	Synchronize (SYN) flooding
+vi.	Spoof the sender’s IP address while sending a packet to a destination and force the unwitting victim to respond to the spoofed IP address. 
+vii.	Attack network-enabling applications, which are an essential service for all computers, such as:
+1.	Domain Name System (DNS)
+2.	Domain Host Configuration Protocol (DHCP) servers. 
+5.	Cryptographic Techniques for Network Security:
+a.	Encryption ensures that communication is only understandable by the sender and the intended receiver. 
+b.	Authentication is making sure that the identity of the sender and the receiver are abundantly clear to one another. 
+c.	Message integrity ensures that data has not been modified in transit. 
+6.	SYN Flooding: 
+a.	Attacker starts the connection request and then doesn’t complete it. 
+b.	Server is left hanging. 
+c.	These repeated requests can bog down and exhaust the server’s ability to support additional connections. 
+7.	Amplification Attack: 
+a.	Attacker sends a small amount of data and the victim receivers a large amount of data using all of these different compromised devices (possibly a botnet). 
+8.	DNS and Network Time Protocol Systems:
+a.	Attacker sends a forged packet to the DNS server containing the IP address of the victim and the DNS servers replies back to the victim with an even bigger amount of data. 
+9.	Reflector Attack:
+a.	The attacker uses other devices to react in a manner they think is correct, but inadvertently targets the victim. Servers on the web can send “legitimate responses” to the victim.
+b.	For example, by using IP spoofing of the victim’s IP address when sending a ping request to many computers, and of course, the victim then tries to respond to those pings with the response that swamps the victim itself. 
+10.	Google was attacked in 2020 with UDP amplification attacks originating from several Chinese ISPs. 
+a.	These attacks lasted for six months, created high network traffic, and impacted 180,000 servers. 
+Secure Network Technologies and Concepts
+1.	Intrusion Detection/Prevention system (IDS/IPS):
+a.	Both of these systems can monitor traffic within parameters the user specifies, alert users to when a problem has been spotted, utilize machine learning to understand patterns and emerging threats and keep logs of attacks and responses, so you can adjust protections accordingly. However, IDS is passive meaning you can only act on an event after an IDS alerts you. IDS offers less help when you’re under threat; and IPS helps users figure out what to do, when to do it, and how to clean up after an event. If an IDS gives you an alert about a false positive, then it’s only the end Network administrator that would be inconvenienced; an IPS will shut down traffic if there is a false positive. Since this technology utilizes machine learning and a set of heuristics to detect or prevent known attacks it’s best to keep up to date as an attacker and formulate their own zero-days that have not been listed in MITRE, or Yara rulesets to name a few. If they do, then encoding is an option to up attacker chances that it bypasses IDS/IPS. Under the NIST Cybersecurity Framework IDS/IPS work under identify, protect, detect, and respond in some cases. IDS/IPS these days assist network administrators in identifying the assets they need to protect, and IPS will usually prevent attacks by responding for the end user in some cases (IDS vs. IPS).
+2.	Network Segregation/Segmentation:
+a.	Network segregation involves the isolation of crucial networks from external networks such as the internet, and network segmentation splits a larger network into subnets through switches and routers. Both Network Segregation/Segmentation helps Network administrators minimize the risks of ransomware attacks; the goal is to essentially restrict access to sensitive corporate resources while ensuring the company operates effectively. Network segregation can make it difficult for threat actors to work their way laterally through the network even if they were able to penetrate the system; in case they do, they can only access and attack the precise asset as opposed to resources within the entire network. Network segregation/segmentation falls under the identify and protect functions of the NIST Cybersecurity framework. An attacker can easily bypass network segregation/segmentation by abusing access control lists and resources on particular devices; however, this process is moreover a safeguard against distributed denial of service attacks and buys the organization more time to deny attackers their access. Network segregation forces Network administrators to identify processes and assets that need protection and also implements appropriate safeguards to ensure the protection of the enterprise’s assets (Hunter, 2022). 
+3.	VLAN (Virtual Local Area Network):
+a.	A VLAN is a collection of devices or network nodes that communicate with one another as if they made up a single LAN, when in reality they exist in one or several LAN segments. In Network security, VLANs allow for increased data security and logical partition. A VLAN is essentially a network segmentation technology; additionally, partitions do not have to be defined by the physical location of the network devices; can allow devices to be grouped instead by department, project team, or any other logical organizational principle. This technology itself can be incorporated with IPS/IDS and allow for detection of threats based on attack signature, Yara rules, or other IOC toolsets. However, attackers can bypass these same preventative technologies using techniques that are not commonly known. VLAN generally falls under identify and protect under the NIST cybersecurity framework since it allows users to identify assets by more segregating factors and protects organizations from widespread attacks in using VLANs as well (N-able, 2021). 
+4.	Software Defined Network (SDN):
+a.	An SDN architecture allows networks to be more flexible and easier to manage by centralizing management by abstracting the control plane from the data forwarding function in discrete networking devices. A programmable network consists of a controller that enables centralized management and control, automation, and policy enforcement across physical and virtual network environments. Second, southbound APIs that relay information between the controller and the individual network devices such as switches, access points, routers, and firewalls. Finally, Northbound APIs that relay information between the controller and the applications and policy engines, to which an SDN looks like a single logical network device. SDN allows the Network administrator to simplify operations, achieve faster time to market by leveraging open APIs, build programmable networks which eliminates the need for manual configuration. It also lays the foundation for centralized configuration, management, control, monitoring, service delivery, and cloud automation. SDN is incredibly vulnerable to reflected denial of service attacks because programming by nature can be discoverable and the usage of blind attacks by penetration testers are becoming more and more commonplace as more and more attackers understand what kind of responses they are looking for. Deep learning algorithms for detecting denial of service attacks in software-defined networks are becoming more and more commonplace as well to combat these types of attacks and are often integrated on top of SDN; cisco also adds that IBN architectures on top of SDN now adds translation and assurance so you can automate the complete network lifecycle. By solely looking at SDN it covers identify, protect, detect, and in some cases respond. SDN allows network administrators to identify their physical devices such as switches, access points, and routers, and allows for automated configuration of firewalls which protect these devices and since most firewalls incorporate IPS/IDS at the enterprise level, then it also goes to show that it will also be able to detect and even respond to threats (Beyond SDN, 2019). 
+5.	Wireless Security: 
+a.	Wireless network security is essentially a set of security protocols developed by the Wi-Fi alliance, an organization that promotes wireless technologies and interoperability. WPA3 is the newer generation of WPA; is designed to deliver simpler configuration and even stronger encryption and security than any of its predecessors. It is also meant to work across the latest Wi-Fi 6 networks. It also utilizes different security methods such as Media Access Control (MAC) addresses, encryption, virtual private networks (VPNs) and security software to add to the stack of network security technologies. Furthermore, wireless security devices can incorporate active devices that block adversarial attacks and unwanted network traffic. Passive devices can detect and report on unwanted network traffic. Preventative devices, like Wireless Intrusion Prevention System (WIPS), can scan networks to identify potential security issues. Finally Unified Threat Management (UTM) systems incorporate vital elements of wireless network security that adds even more technologies and protocols such as firewalls, content filtering, VPN, antivirus detection, and more. An attacker can bypass wireless security by understanding and testing APIs that work on specific nodes; most of the time these attempts will be blind as WIPS tries to not give attackers any information on how the network is configured. Attackers can still gain access, nevertheless, if wireless security devices are not properly configured or not patched for in-the-wild threats. Wireless security serves to protect, detect, and respond in some cases to threats. Wireless security can protect and respond to threats by using UTM systems and active devices. Passive devices can detect and report on events for analysis later (Cisco, 2021). 
+References: 
+Beyond Sdn: How Intent is Changing How We Network . (2019). Beyond SDN: How Intent is Changing How We Network – Video on Demand. Retrieved June 5, 2022, from https://engage2demand.cisco.com/lp_network_insider_series_18994. 
+Cisco. (2021, July 8). What is Wi-Fi Security? Cisco. Retrieved June 5, 2022, from https://www.cisco.com/c/en/us/products/wireless/what-is-wi-fi-security.html#~protocols 
+Cisco. (2022, May 24). Software-defined networking (SDN) definition. Cisco. Retrieved June 5, 2022, from https://www.cisco.com/c/en/us/solutions/software-defined-networking/overview.html 
+Hunter, A. (2022, February 17). A complete overview of network segregation and why it’s crucial for your organization. Parallels Remote Application Server Blog – Application virtualization, mobility and VDI. Retrieved June 5, 2022, from https://www.parallels.com/blogs/ras/network-segregation/ 
+IDs vs. IPS: Definitions, comparisons & why you need both. Okta. (n.d.). Retrieved June 5, 2022, from https://www.okta.com/identity-101/ids-vs-ips/#:~:text=An%20intrusion%20detection%20system%20(IDS,(IPS)%20also%20monitors%20traffic. 
+N-able. (2021, April 9). What is vlan? How VLAN works and common examples: N-able. N-able. Retrieved June 5, 2022, from https://www.n-able.com/blog/what-are-vlans 
+Protecting Against Security Issues
+1.	In today’s dynamic business and technology environment, organizations’ networks change frequently. These changes could be to satisfy regulatory or industry requirements, to meet growing customer demand, to embrace new technology, or due to acquisition or divestiture of a business. And while these changes sometimes require routine updates to the configurations, at other times, they can require a redesign of the network architecture. However, regardless of the impetus or extent of change, organizations must have a cybersecurity strategy that anticipates these changes and plans for them in advance. Furthermore, when it comes to strategy for network security, some critical steps include ensuring that you have constant visibility into the changes taking place in the environment and that all changes go through a proper review and approval process. Additionally, you want to confirm that the introduced changes do not circumvent your security controls or lessen the organization’s security posture. 
+2.	A key strategy in cybersecurity protection is defense-in-depth, also known as layered defenses. It is a highly effective strategy to implement multiple safeguards to protect an asset and the organization. This strategy is effective, because while any one security control may fail, by implementing various controls, you not only slow down the attacker, but in many cases deter them. An easy way to understand the defense-in-depth strategy is to think about how in classic “heist movies”, the burglars have to cross multiple obstacles before accessing the crown jewels. These obstacles usually include locked doors and windows, security alarms, physical guards, video cameras, motion detectors, etc. And while the burglars have to bypass all of these controls, the defense only needs just one of the controls to stop the burglars’ progress, or at least slow them down enough to catch them
+3.	Best Practices for Secure Network Administration:
+a.	Self-measures:
+i.	Network administrators should utilize all the measures similar to system administrator to work securely, including:
+1.	Use of training programs, processes, and structure.
+2.	Use of standardized policies and frameworks.
+3.	Use of hygiene practices and employed by system administrator. 
+b.	The Zero Trust security model:
+i.	Is a concept of “Trust nothing, verify everything.”
+ii.	Is also called perimeter-less security principle.
+iii.	Uses the concept that devices must:
+1.	Not be trusted by default even if they are in the trusted network.
+2.	Authenticate themselves. 
+c.	Filtering:
+i.	Ability to inspect each packet and decide whether to allow it through or block it using information like: 
+1.	Destination IP address
+2.	Source IP address
+3.	The port numbers
+4.	Data transport segment
+ii.	Rules-based management: The concept of default deny. 
+d.	Perimeter defense:
+i.	Network firewalls
+1.	Stand between the trusted network and internet.
+2.	Regulate what traffic can come in or out.
+3.	Have three types:
+a.	Application firewalls: Allow specific applications and those users trusted to use those applications access to the internet. 
+b.	Stateless firewalls: Network communication a packet at a time. 
+c.	Stateful firewalls: Does the packet belong to an ongoing session or not? 
+ii.	Intrusion detection system (IDS):
+1.	Monitors anomalies based on packets in the network and what is being reported. 
+iii.	Has a server that providers constant feedback which:
+1.	Helps correlate all the information to detect any port scanning, IP address scanning, or the extra usage of bandwidth. 
+2.	Reports anomalies immediately to network administrators.
+iv.	Intrusion Prevention system (IPS):
+1.	Detects the issue and then takes measures to protect against it right away. 
+e.	Network Segregation by VLANs:
+i.	Groups together devices with a common purpose or use and segregates them virtually using the same physical hardware from other devices in the logginetwork.
+ii.	Allow to build the concept of security zones and spaces between:
+1.	Different LANs
+2.	Trusted network and the internet
+f.	Harden Network Devices:
+i.	To reduce attack profiles by:
+1.	Removing unneeded and unused tools.
+2.	Disabling unneeded user accounts.
+3.	Employing strong password management.
+4.	Configuring all users to have least privilege. 
+g.	Network Device Authorization: 
+i.	Can authenticate a device and allow it to be part of the network using:
+1.	Port security
+2.	MAC address security
+3.	User-level security
+4.	802.1x authentication
+h.	Virtual private network (VPN):
+i.	Uses encryption technologies like IPSec or SSL.
+ii.	Encrypts communication from various sites or between the employee and the company’s network.
+iii.	Makes users appear inside the company’s protected network and grants them the ability to securely access sensitive resources of the company. 
+i.	New Technologies and Offerings:
+i.	Flood guards:
+1.	Preventative tools built specifically to prevent disruptive flooding attacks.
+2.	Can be obtained either as a part of an existing network firewall or as a standalone network appliance. 
+ii.	Unified Threat Management (UTM):
+1.	Email filtering and span gateways
+2.	VPNs
+3.	Network access control devices
+4.	Firewalls
+5.	IDS/IPS
+Ensuring Network Functionality
+1.	One of the most effective ways to detect a stealthy, advanced persistent threat (APT) on the network is to first establish your network’s normal behavior. Then, invest, closely monitor, and adequately investigate network logs for deviations from the normal baseline. Fortunately, almost all network and network security devices these days can generate various levels of logs. However, unfortunately, most organizations do not develop policies and processes early on that mandate the recommended log configuration and retention. Additionally, since these log sizes can become enormous, organizations need to invest in robust, purpose-built technologies to analyze logs efficiently and intelligently.
+2.	Ways to Ensure Secure Network Functionality:
+a.	Logging:
+i.	Network devices generate and store a track record or log on the system, which can be configured to generate varying levels of detail, ranging from emergency messages to alerts. 
+ii.	Choosing the level of logging involves balancing the need to capture useful data without collecting a great deal of irrelevant and unhelpful data. 
+iii.	Setting up a standalone and dedicated logger system to record and maintain logs for a longer period of time.
+iv.	Checking logs to detect anomalies on a daily basis. 
+v.	Setting up higher-severity issues to be sent directly via email or instant message to the network administrator for immediate review.
+vi.	Flagging the anomaly for immediate investigation further follow up, documentation, and resolution. 
+b.	Simple Network Management Protocol (SNMP):
+i.	Is a mechanism for networking devices to communicate their state with on another, regardless of hardware, vendor, or software. 
+ii.	Is used by network management tools to: 
+1.	Identify network devices. 
+2.	Monitor network performance.
+3.	Keep track of changes to the network.
+4.	Determine the status of network devices in real time. 
+iii.	Generate alerts in case of: 
+1.	Hardware failures
+2.	High traffic
+3.	Abnormal conditions
+c.	Security Incident and Event Management System (SIEM): 
+i.	Goes beyond a log aggregator to provide: 
+1.	Event correlation
+2.	Alerting
+3.	Incident management and tracking
+ii.	Provides tools and dashboards for reporting on incidents and compliance metrics. 
+iii.	Performs forensic analysis of security incidents.
+iv.	Helps to identify incidents and anomalies in the network. 
+d.	Track general network health, usage, and performance:
+i.	Make use of open-source and commercial tools to track the internet usage and performance of network devices. 
+Zenmap Network Discovery
+	Currently I have 6 running hosts on my network. Fortunately, I was able to recognize all of the discovered systems on my network; however, my phone proved a lot harder to scan for a specific for zenmap and this one in particular was dead wrong, because zenmap only was able to identify the firewall. Obviously this one was detected incorrectly, second, zenmap identified my kali linux virtual machine as OpenWrt 2.4.30. Running a ping scan only shows what hosts are up and the latency with which they answered the ping, whereas quick scan plus gives us OS and version detection of hosts that are up. Zenmap found that port 53, 80, 443, 8080, and 49152 were open. I didn’t feel much of any impact to performance. I believe a deeper scan on Nessus would have possibly caused some more latency, but Zenmap truly didn’t affect much. A ping scan is by far the quickest scan that can work on Zenmap, but that’s only because it only checks for the hosts on whether they are up or not. The slow comprehensive scan took around 10 minutes to complete given I have a pineapple router set to promiscuous mode this may be the one deciding factor as to why I don’t have any trouble running scans.  A slow scan in an enterprise environment is incredibly beneficial to internal pentesting because every TCP and UDP port is scanned and includes OS detection, version detection, script scanning, and traceroute. Along with increased verbosity, scripting has to be the highest value, because of its handy backdoor detection. Many attackers and some automated worms leave backdoors to enable later reentry into the network and more complex worms and backdoors necessitate the need for the scripting engine to reliably detect. NSE has been showed to detect Double Pulsar NSA backdoor in SMB and backdoored versions of UnrealIRCd, vsftpd, and ProFTPd (nmap). Plus, pentesters can often find public keys, which can help them enumerate unsecure shells if utilizing a vulnerable host. However, Zenmap as a tool in general is great for identification purposes. Clearly NMAP, Nessus, or even Splunk are more robust than Zenmap for sure as they are more reliable and commonplace in the security community, but generally speaking scanning toolsets are worthwhile to network administrators as they offer users the ability to identify hosts on their network, open ports, and possible vulnerabilities that attackers can then exploit and like any good Network administrator would do, is to secure those weak points and ensure the security of their network. 
+References:
+Chapter 9. nmap scripting engine. Chapter 9. Nmap Scripting Engine | Nmap Network Scanning. (n.d.). Retrieved June 6, 2022, from https://nmap.org/book/nse.html 
+Standardized Policies and Frameworks
+1.	One of the critical challenges a secure network administrator has is implementing and ensuring that all network hardware and software operating on the network runs the most accurate, standard, and secure configuration. And while the number of hardware and software elements supporting today’s complex networks has grown, unfortunately, configuring and managing them remains manual for the most part. In fact, according to a recent report from Cisco, “Up to 95% of network changes are performed manually, resulting in operational costs 2-3 times higher than the cost of the network.”
+2.	Network Automation:
+a.	Asset identification:	
+i.	Threat assessment
+ii.	Risk assessment
+b.	Security framework:
+i.	Network security policy is the official policy guidance that defines the company security expectations and outlines the processes and sanctions associated with failures to comply with these expectations.
+3.	Network policy measures may include:
+a.	Device security
+b.	Internet access
+c.	VPN usage
+d.	Wireless and wired network access
+e.	Firewall rules
+f.	Network intrusions
+g.	Encryption
+h.	Demilitarized zone policies
+4.	Importance of Network Security Policy:
+a.	It details the steps to follow in case of a security breach by:
+i.	Identifying what types of technologies to purchase and implement.
+ii.	Creating a basis for an enforceable legal course of action.
+iii.	Defining the responsibility of every level of organization to handle non-compliant employees for:
+1.	Sanctioning 
+2.	Implementing
+3.	Funding
+4.	Supporting 
+5.	Monitoring
+6.	Auditing
+5.	Testing Security Measures:
+a.	Vulnerability test:
+i.	Alerts you to pre-existing flaws in the network and where they’re located. 
+b.	Penetration test:
+i.	Attempts to explore the vulnerabilities in the network to determine possible malicious activity.
+ii.	Identifies what flaws pose actual threats.
+c.	Pen tests:
+i.	External pentests involve simulating attacks that originate in the public domain.
+ii.	Internal pentests involve simulating attacks by employees who have access to the network and identifying what flaws they might find and exploit. 
+6.	Conclusion: 
+a.	The CISO should document findings regarding flaws or issues and report them to the organization’s governing body. 
+Describe the Types of Network Filtering
+Organization: Darcred
+Industry: Manufacturing
+Blocked Palo Alto Categories Organization-Wide:
+•	Abortion
+•	Abused drugs
+•	Adult
+•	Alcohol and Tobacco
+•	Command and Control
+•	Content Delivery Networks
+•	Copyright Infringement
+•	Cryptocurrency
+•	Dating
+•	Dynamic DNS
+•	Extremism
+•	Gambling
+•	Games
+•	Grayware
+•	Hacking
+•	Insufficient Content
+•	Malware
+•	Newly Registered Domain
+•	Nudity
+•	Parked
+•	Phishing
+•	Private IP Addresses
+•	Proxy Avoidance and Anonymizers
+•	Questionable
+•	Religion
+•	Streaming Media
+•	Weapons
+•	Web advertisements
+Allowed Only to certain Divisions:
+•	Auctions
+•	Business and Economy
+•	Computer and Internet Info
+•	Government
+•	Online storage and backup
+•	Shareware and freeware
+•	Social Networking
+•	Web Hosting
+Justification: 
+All of the blocked categories that are organization wide are blocked due to the fact they are either not necessary to fulfill their job role, can cause workers to become distracted from their tasks they need to complete while at work, or present risk to the organization and its data. Auctions should only be allowed in certain divisions to procure material, business and economy websites are necessary for investors and on-site stakeholders. Computer and internet info, along with online storage and backup, shareware and freeware, and web hosting is necessary for IT work. Social Networking is also a must for our social media team who handles leads and questions for the organization as a whole. Government sites are necessary for legal as well. 
+Organization: Spring North Credit Union
+Industry: Financial Services
+Blocked Palo Alto Categories Organization-Wide:
+•	Abortion
+•	Abused drugs
+•	Adult
+•	Alcohol and Tobacco
+•	Command and Control
+•	Content Delivery Networks
+•	Copyright Infringement
+•	Dating
+•	Dynamic DNS
+•	Extremism
+•	Gambling
+•	Games
+•	Grayware
+•	Hacking
+•	Insufficient Content
+•	Malware
+•	Newly Registered Domain
+•	Nudity
+•	Parked
+•	Phishing
+•	Private IP Addresses
+•	Proxy Avoidance and Anonymizers
+•	Questionable
+•	Religion
+•	Streaming Media
+•	Weapons
+•	Web advertisements
+•	Social Networking
+Allowed only to certain divisions:
+•	Government
+•	Online storage and backup
+•	Shareware and freeware
+•	Web Hosting
+Justification:
+Not a whole lot is necessary for a user in a financial services organization, but anything to do with finance, economy, and IT work is necessary for a financial services organization to be able to fulfill their role. As a financial services organization it is prudent for the organization to be on task and ready to fulfill their role the entire workday, which, nonetheless given the expanding financial services automation campaign doesn’t add a whole lot of time in the day to produce more work. Nonetheless, automation still requires people to be on task and is the reason why most of the banned categories have nothing to do with financial organizations or present risk to the organization as a whole. Data security and integrity is a must for our stakeholders to take us seriously. 
+Organization: Hawclik
+Industry: Technology
+Blocked Palo Alto Categories Organization-Wide:
+•	Abortion
+•	Abused drugs
+•	Adult
+•	Alcohol and Tobacco
+•	Command and Control
+•	Copyright Infringement
+•	Dating
+•	Extremism
+•	Gambling
+•	Games
+•	Grayware
+•	Hacking
+•	Insufficient Content
+•	Malware
+•	Newly Registered Domain
+•	Not-resolved
+•	Nudity
+•	Parked
+•	Peer-to-peer
+•	Phishing
+•	Private IP Addresses
+•	Proxy Avoidance and Anonymizers
+•	Questionable
+•	Religion
+•	Streaming Media
+•	Weapons
+•	Web advertisements
+•	Shopping
+•	Social Networking
+•	Stock Advice and Tools
+•	Swimsuits and intimate apparel
+•	Unknown
+•	Web Hosting
+Allowed only to certain divisions:
+•	Government
+•	Legal
+•	Shareware and Freeware
+Justification:
+In Technology there isn’t much that is needed, aside from security. Our users depend on us to be safe when they use our services; therefore, security should be one of our top priorities in order to assure stakeholders that not only are our users protected, but also the things we create are protected. Therefore, most of the categories that are listed to ban either have no relevance to the role of our employees or present security risks to the organization as a whole. Government, legal, shareware and freeware are the only categories that are restricted to certain divisions as well in order to ensure cooperation between departments as well. 
+Secure Network Administration: Home Network
+My home network is my pride and joy and it’s what actually got me into IT in the first place. Securing my palace and creating a hacker’s home lab is a lifelong hobby for me and one I update every year or so and hopefully again pretty soon. Currently my home network has been revamped after taking this course and I just completed revamping my home network to drive more sense and simplicity. Everyone has to start somewhere and knowing what I know now I recently took inventory of my home network. I investigated all of the network components that enable these devices to operate and intercommunicate and access the internet. My home network begins with my ISP’s provided modem. Connected to that modem via hardwire ethernet is my pineapple router so I’m able to do internal pentests (never hack others) and assess the security of my home. Past that is my pc hardwired into my Pineapple router and the main server. I recently upgraded my PC, and I was left with several internals that I decided to create a home enterprise server to manage several VMs via Active Directory to simulate workstations. In total I have a Linux Desktop VM running Kali Linux, a Windows 10 Pro VM, and an RDP server/desktop VM tucked behind a Palo Alto firewall VM, for the added layer of security. As for servers that exist on the enterprise desktop, in a virtual machine that is, (see the theme I’m going with here?) I am currently in the process of building out a VPN server, I have built up a vulnerability scanner server hosted in a VM and a SIEM running Splunk. As for content filtering since I am planning on learning more about open-source firewall creations I am planning on creating a pfsense VM for content filtering and as my partner’s child grows I hope to be able to protect her from bad actors on the internet. Now connected to another home router is my main gaming PC. I created a VLAN in the first part and it is properly segmented from my gaming PC for added security. I utilize biometrics as MFA to enter my PC. Home network security practice translates well into enterprise networking, because it employs the bleeding edge ideas behind security best practices. Micro segmentation and the use of virtual machines has definitely changed how the home lab works. Instead of having a server rack taking up space in a room, nowadays having one PC with older generation parts makes good for virtual machines. Having the ability to have several machines and a decent amount of RAM (I just ordered more) means you can have multiple devices all running virtually and can be centrally managed via AD. If you have issues with a particular VM, then pull up event viewer, syslog, or even Splunk to help troubleshoot those issues. Is there content filtering that you want to employ? Create a PFsense VM with categories that you want to block for specific peoples on your network. Don’t want to share your home network details with other users? Create a guest virtual local area network that is segmented using another firewall in a virtual machine. When people come over and ask how are all of these things running with no machine attached? Simply tell them it’s magic because that’s literally what a virtual machine is. What a time to be alive. 
+Explore a tool commonly used by secure network administrators
+Prior to this activity I already had NetLimiter installed, which was a surprise to me, because I had already forgotten I even had it, since I had installed it from my early days of wanting to create a home hacking lab setup. One application that I almost never use was megasync.exe and I ended up uninstalling that application along with iTunes since I no longer store and save MP3s like I used to. I only knew to uninstall iTunes, because I see that Bonjour Service is always running and that in itself is an attack surface for a software I hardly use ever. Given the advent of Apple zero days that are coming about it’s possibly for the best that I do away with iTunes since it doesn’t get much use, nonetheless. One feature that I never knew of before when I first downloaded this (I initially wanted to use it as a means to understand more from the software I use aside from what Windows Task manager provides) is the blocker and rule list. Rule list allows specific applications and services within a specific zone (either on local network or internet) a limit or blocker. Limit and blocker are definitely going to be used going forward especially on my enterprise PC that runs all of my VMs and what is essentially my hacking lab, because it can set these limits in a GUI. Creating filters is something I’m definitely going to experiment with as I’m woefully uneducated in that area as of now, which is why I’m going to learn more about PFsense and creating firewalls soon; nonetheless, it seems rather intuitive, because there are three different types of filters: Zone, filter, and composite and you can add filter functions which can greatly increase my home network’s security by adding these in the first place and adding them to applications. The most I can understand currently is if brave web browser is open I can use a zone filter to add a layer of protection against the resource in general-almost like a DMZ for front-facing applications protecting the back end. Using this knowledge I would be able to explain to future employers that I’m not only capable of filtering traffic and identifying software assets and preventing them from attack, but I’m also capable of understanding critical attack surfaces and analyzing what is and isn’t needed on a case by case basis and for each user to fulfil their role; thus, demonstrating an ability to understand the principle of least privilege. 
+Bibliography
+“The 18 CIS Critical Security Controls.” CIS. n.d. https://www.cisecurity.org/controls/cis-controls-list/.
+Alpine Security. “How to Use Zenmap to Discover Your Network Devices.” YouTube video, 15:36. 17 Oct. 2019. https://www.youtube.com/watch?v=wt_xMols4Ww.
+Ferranti, Marc. “What Is Nmap? Why You Need This Network Mapper.” Networkworld. 17 Aug. 2018. https://www.networkworld.com/article/3296740/what-is-nmap-why-you-need-this-network-mapper.html.
+Fruehe, John. “The Evolution of SDN and Its Role in Networking.” TechTarget. n.d. https://www.techtarget.com/searchnetworking/opinion/The-evolution-of-SDN-and-its-role-in-networking.
+“The Incredible Growth of the Internet Since 2020.” Solarwinds Pingdom. 22 Oct. 2010. https://www.pingdom.com/blog/incredible-growth-of-the-internet-since-2000/.
+Internet Society. “Drivers of Change: Internet and the Economy.” YouTube video, 2:12. 28 Jul. 2017. https://www.youtube.com/watch?v=8IzeVcrzdsQ.
+Internet Society. “Drivers of Change: Networks, Standards and Interoperability.” YouTube video, 1:56. 28 Jul. 2017. https://www.youtube.com/watch?v=4Ki-gg_UsqA.
+LogicX. “Life of an IP Packet.” YouTube video, 12:56. n.d. https://www.youtube.com/watch?v=9BGWrLiT9qs.
+Muller, Zachary. “Understanding Email Protocols: POP3, IMAP, and SMTP.” Gigenet. 12 Feb. 2020. https://www.gigenet.com/blog/which-email-protocol-pop3-imap-and-smtp/.
+Ostler, Clayton. “Need for Content Filtering at Work?” Content Watch. 2 Dec. 2012. https://www.contentwatch.com/blog/need-for-content-filtering-at-work/.
+Petcu, Alina Georgiana. “How to Enhance Your Home Wireless Network Security.” Heimdal Security. 13 Aug. 2021. https://heimdalsecurity.com/blog/home-wireless-network-security/.
+Quidsup. “Zenmap Tutorial — Network Scanning Tool.” YouTube video, 7:47. 27 Apr. 2017. https://www.youtube.com/watch?v=wgNIva5nRjA.
+Refresh Your Cache. n.d. https://www.refreshyourcache.com/en/home/.
+“SANS Survey Explores Path to Closing the Critical Skills Gap for a Modern and Effective Security Operations Center (SOC).” SANS. n.d. https://www.sans.org/press/announcements/sans-survey-explores-path-to-closing-the-critical-skills-gap-for-a-modern-and-effective-security-operations-center/.
+Steve. “Basic Home Network Hardware Components, Devices and Services.” Steve’s Smart Home Networking Guide. 20 Sept. 2021. https://stevessmarthomeguide.com/networking-components/.
+Strawbridge, Geraldine. “Top 10 Tips to Protect Your Home Wi-Fi Network.” MetaCompliance. 13 Aug. 2019. https://www.metacompliance.com/blog/top-10-tips-to-protect-your-home-wi-fi-network/.
+“Surfing the Network Topology.” Nmap.org. n.d. https://nmap.org/book/zenmap-topology.html.
+“Test a Site.” Paloalto. n.d. https://urlfiltering.paloaltonetworks.com/.
+Timber, Craig. “A Flaw in the Design.” The Washington Post. 30 May 2015. https://www.washingtonpost.com/sf/business/2015/05/30/net-of-insecurity-part-1/.
+Toh, Michelle. “Alphabet Is Shutting Down Loon, Its Ambitious Internet Balloon Venture.” CNN Business. 22 Jan. 2021. https://www.cnn.com/2021/01/22/tech/loon-project-alphabet-google-intl-hnk/index.html.
+Vox. “How Does the Internet Work? — Glad You Asked S1.” YouTube video, 19:53. 8 Jan. 2020. https://www.youtube.com/watch?v=TNQsmPf24go.
+“What Is Network Automation?” CISCO. n.d. https://www.cisco.com/c/en/us/solutions/automation/network-automation.html. 
+“What Is Network Security?” Forcepoint. n.d. https://www.forcepoint.com/cyber-edu/network-security.
+What’s My Browser. n.d. https://www.whatsmybrowser.org/.
+“Where Can I Find a Complete List of PAN-DB URL Filtering Categories?” Paloalto. 8 June. 2021. https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000Cm5hCAC.
+
