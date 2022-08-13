@@ -1,0 +1,438 @@
+Module 15
+Introduction
+1.	“There was a time when every household, town, farm, or village had its own water well. Today, shared public utilities give us access to clean water by simply turning on the tap; cloud computing works in a similar fashion. Just like water from the tap in your kitchen, cloud computing services can be turned on or off quickly as needed. Like at the water company, there is a team of dedicated professionals making sure the service provided is safe, secure, and available on a 24/7 basis. When the tap isn’t on, not only are you saving water, but you aren’t paying for resources you don’t currently need.” – Vivek Kundra, Federal CIO, US Gov., 2010
+2.	Today, cloud computing enables almost everything we do in our personal and professional lives. For example, whether you use an online service to edit documents, attend classes, use social platforms, watch TV, or listen to music, cloud computing is likely behind the scenes, making it all possible. While cloud computing is a relatively new technology, it has quickly become the preferred choice for organizations of all sizes. As a result, a growing number of organizations have adopted a “cloud-first” strategy, where they first evaluate and exhaust cloud options before considering a traditional information technology (IT) infrastructure. Some of the key drivers behind that strategy are the flexibility, speed, and elasticity of the cloud. 
+3.	As the acceleration to adopt and expand cloud computing continues, cybersecurity professionals need to understand its key characteristics, service models, and deployment models to recommend and evaluate appropriate security controls. This module focuses on various characteristics and models of cloud computing technologies and compare them to the traditional IT infrastructure. Additionally, you will learn about Cloud Security Alliance (CSA) and the available resources it provides. Lastly, you will examine vulnerabilities and threats associated with the cloud and how to respond to them.
+4.	Goal: To understand how some cloud-specific features impose security considerations and processes specific to the cloud. 
+5.	At the end of this module, you will be able to describe:
+a.	Function and security considerations of the cloud management plane. 
+b.	Key cloud-specific security requirements of cloud compute, networks, data, and identity and authorization management. 
+c.	Cloud-specific aspects of an incident response management process. 
+d.	The zero-trust security model for the cloud.
+e.	Controls of the cloud control matrix. 
+Cloud Computing
+1.	According to the NIST, cloud computing is a “model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources that can be rapidly provisioned and released with minimal management effort or service provider interaction.” (n.d.). Some specific examples of a shared pool of computing resources include networks, servers, storage, application, and various services. In addition to the characteristics of cloud computing described by the NIST, a cloud is also composed of three service models and four deployment models. This section will provide additional details on the properties of cloud computing. Furthermore, you will learn, compare, and contrast the various cloud service and deployment models.
+2.	In today’s dynamic and global economy, organizations have a much greater need for their technology infrastructure to scale with their business while remaining economical and automated. For this reason, cloud computing has quickly become an essential part of organizations worldwide. Cloud computing has numerous characteristics that make it suitable to address the challenges and requirements of today’s agile business reality, which is the reason for its tremendous adoption across industries and regions. Some specific features of cloud computing that are enabling today’s business include resource pooling, on-demand service, elasticity, automation, and scalability.  In this video, you will explore these features in more detail. 
+3.	Basic Properties of Cloud:
+a.	Off-premise and broadly accessible through the internet.
+b.	Consists of computing resources ranging from: 
+i.	Processors including CPUs and GPUs. 
+ii.	Memory or storage such as disk drives.
+iii.	Networks that are highly flexible.
+iv.	Higher-level resources such as databases. 
+c.	Adopted widely by organizations through the cloud migration process. 
+d.	Assigns digital resources to clients who use these for very short periods or long periods. 
+e.	Convenient on-demand self-service environment. 
+f.	Offers elasticity.
+g.	Offers measured services such as response times and capacity, using a service-level agreement (SLA). 
+4.	How does the cloud help an enterprise?
+a.	Does not need to maintain secure on-premise equipment.
+b.	Can focus more on its business and less on its infrastructure. 
+5.	The enterprise can: 
+a.	Start small and grow large using only the resources it needs.
+b.	Adapt quickly to an unusually high demand. 
+6.	Cloud migration:
+a.	It is the process of moving an organization’s digital assets, services, databases, IT resources, and applications either partially or wholly into the cloud or from one cloud to another. 
+7.	The Four Models of Cloud Migration:
+a.	Public Cloud:
+i.	The infrastructure is made available to the general public or a large industry group.
+ii.	It is owned by an organization that sells cloud services. 
+b.	Private Cloud:
+i.	The infrastructure is operated solely for one organization. 
+ii.	It is managed by the organization, or a third party, and it may be located on-premises or off-premise. 
+c.	Community Cloud:
+i.	The infrastructure is shared by several organizations and supports a specific community that has shared concerns such as: 
+1.	A similar mission.
+2.	Similar security requirements.
+3.	Operates under similar policies and compliance consideration.
+ii.	It is managed by the organizations themselves or by a third-party.
+iii.	It is located on-premises or off-premise. 
+d.	Hybrid cloud: 
+i.	The infrastructure is a composition of two or more clouds from private or public communities that remain unique identities, enabling data and applications to be portable throughout them. 
+ii.	It is used to describe non-clouds that are connected to a cloud provider. 
+8.	How does a Cloud Provide Services?
+a.	Virtualization:
+i.	Abstracts resources. For example, you can install a second, different operating system, file system, and set of tools on your computer that will run on top of the native operating system. 
+b.	Orchestration:
+i.	Pools resources together and delivers them to enterprises on demand.
+c.	Multitenancy:
+i.	Enables customers to share the cloud’s physical resources through virtualization.
+ii.	Manages multitenancy by supporting two properties. 
+iii.	Segregation:
+1.	Allows the cloud provider to divide the resources into different groups.
+iv.	Isolation:
+1.	Ensures that the different groups cannot see each other or even modify or access each other’s assets. 
+9.	Implications of Cloud Computing from a Security Perspective:
+a.	Responsibility is split between the cloud provider and the enterpriser, also known as the cloud user. 
+b.	For hardware security this depends on:
+i.	Who is managing the infrastructure and taking care of the operations and compliance? 
+ii.	Who owns the hardware – the cloud provider or the enterprise?
+iii.	Where is  that equipment – off-premise or on-premises?
+c.	For software, the interface that mediates the provider and the user is called the management plane.
+d.	Providers devote effort to make the user’s responsibility clear, and the users have to be very attentive to what is expected of them. 
+Cloud Service Models and Deployment
+1.	The introduction of cloud computing also led to the development of new cloud service models and deployment architectures. Together, these have unique advantages and disadvantages and provide organizations and individual consumers with the option to choose a setup that is most suitable for them. The three most common cloud service models today are Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Likewise, the deployment architectures include the public cloud, private cloud, hybrid cloud, and community cloud. 
+2.	Sources for standards of cloud models are: 
+a.	NIST
+b.	ISO
+3.	Cloud Service Models:
+a.	Infrastructure-as-a-Service (IaaS):
+i.	Cloud user needs resources that provide:
+1.	Fundamental computing
+2.	Networking
+3.	Data storage
+ii.	A user wants complete control to deploy:
+1.	Operating system
+2.	Middleware
+3.	Data 
+4.	Applications
+iii.	A user wants:
+1.	An easy-to-automate deployment of the resources. 
+2.	To match the hardware to their consumption.
+3.	To purchase all resources as needed to make their products and services highly scalable. 
+iv.	Examples of providers include:
+1.	Digital Ocean
+2.	Rackspace
+3.	AWS
+4.	Cisco Metapod
+5.	Microsoft Azure
+6.	Google Compute Engine
+b.	Platform-as-a-Service (PaaS):
+i.	Let’s imagine that enterprises want to pass management of their servers, networks, and other infrastructure to some other party. They still want to design and create internet-based applications that use those resources with special software components. 
+1.	Examples of middleware include: 
+a.	Databases
+b.	Application platforms (Python, PHP, or other code). 
+c.	File storage
+d.	Facilitate collaboration
+e.	Conducting proprietary application processing, such as machine learning, big data processing, or direct application programming interface (API) access to features off a Software-as-a-Service (SaaS) application. 
+ii.	Examples of providers:
+1.	AWS Elastic Beanstalk
+2.	Windows Zure
+3.	Heroku
+4.	Force.com
+5.	Google App Engine
+6.	Apache Stratos
+7.	OpenShift
+iii.	Is built on virtualization technology.
+iv.	Supports scaling.
+v.	Includes a variety of services that assist with developing, testing, and deploying apps. 
+vi.	Enables accessible services to numerous users by the same development application.
+vii.	Integrates web services and databases together. 
+viii.	Delivered via the web.
+ix.	Gives the developers the freedom to concentrate on building the software without having to worry about operating systems, software updates, storage, and other infrastructure. 
+x.	Data security: Organizations can run their own apps and services using PaaS solutions. 
+xi.	Data residing in cloud provider pose security risks and concerns.
+xii.	Security options may be limited as customers may not be able to deploy services with specific hosting policies of the cloud provider. 
+c.	Software-as-a-Service (SaaS):
+i.	Enterprise wants to use the internet to deliver applications to users. 
+ii.	Company wishes to avoid potential technical issues such as:
+1.	Handling the data
+2.	Developing middleware
+3.	Allocating servers
+4.	Storage
+iii.	Reduce the time and money spent on:
+1.	Installing
+2.	Managing
+3.	Upgrading software
+iv.	Examples include:
+1.	Google Workspace
+2.	Dropbox
+3.	Salesforce
+4.	Cisco
+5.	Webex
+6.	Concur
+7.	GoToMeeting
+v.	Other typical uses of SaaS include:
+1.	Short-term projects.
+2.	Applications like tax software.
+3.	Applications that need both web and mobile access.
+4.	Security Threats in Cloud Computing:
+a.	In IaaS, even though the customer is in control of the apps, the security threats can be sourced from the host or other virtual machines.
+b.	Insider threats or system vulnerabilities that may expose data communication between host infrastructure and VMs or instances to unauthorized entities. 
+5.	Cloud Security: Data
+a.	Large volumes of data have to be exchanged to the backend data centers of SaaS apps in order to perform the necessary software functionality.
+b.	Transferring sensitive business information to public cloud-based SaaS service may result in compromised security and compliance in addition to significant cost for migrating large data workloads. 
+6.	Cloud Service Models: Summary
+a.	Cloud computing is like a stack where SaaS is built on PaaS, which is built on IaaS.
+b.	X-as-a-Service means Everything-as-a-Service and refers to highly individualized, responsive, data-driven products and offerings that are fully cloud-based and interconnected with data pipes or software pipes, or both.
+c.	For example:
+i.	Linking IoT-powered sources like cell phones and thermostats.
+ii.	AI-as-a-Service.
+iii.	Business process management. 
+iv.	Testing-as-a-Service
+v.	Cybercrime-as-a-Service
+Cloud Migration
+ThreatTerminus is a global leader in the cybersecurity industry, combining a powerful managed detection and response (MDR) platform with a team of human threat hunters-so organizations can protect their business from an evolving landscape of cybersecurity threats. Our current IT infrastructure is centered around a fully remote workforce that not only adds threat operations to organization’s arsenal, but also provides a human element requiring 24/7 support and expertise needed to stop advanced attacks. Not only that Cyber Templar deploys an underlying layer of managed detection and response that automatically defends against malicious footholds, ransomware, and a ubiquitous information sharing and analysis center. With one-click remediation, custom incident reports and powerful integrations, ThreatTerminus helps on-premise IT for any organization level-up their cybersecurity game and respond to security events attackers won’t know what hit them. Our future plans as an organization are to further our business model in providing on-demand cybersecurity services at an affordable rate. With the advent of cloud-computing and remote-work, ThreatTerminus is looking to lower overhead costs associated with the upkeep of bare metal servers for each of our organizations we protect. As we all understand running applications in a traditional data center is hardly the best way to save money and given the understanding of organization’s IT layout providing the infrastructure in order to protect organizations varies and that drives the cost of our services given a variety of variables for which the organization we are tasked to protect to foot the bill. Given these challenges we believe that cloud computing can provide more cost-effective backup and disaster recovery capabilities, high availability for geographically distributed enterprises, reduce operational costs and freeing up IT human resources to fuel business growth initiatives, and greater security than bare metal infrastructure. Cloud computing will be provided for both our internal users and customers to help manage and identify threats. The cloud will be accessed via multi-factor authentication for vpn access into SSO. Each day we will require users to reboot as the cloud will be configured to use built-in public/private key pairs managed and rotated daily by the cloud service. Since our services currently run bare metal, hybrid deployment will be the strategy of choice in order to mitigate migration risk. The business and user needs will always drive ThreatTerminus’ cloud needs; that is why, if a user is unable to quickly access the files they need in a time-sensitive situation our bare metal servers will come in hand to be our backup and is the reason why a timeline is necessary. All of what is being migrated to the cloud is business critical; therefore, for the time being bare metal will stay until cloud services are deployed and tested in phases for our newer customers. Another reason, the cloud migration will only be tested for newer customers is because downtime experienced in the cloud cannot be allowed to happen. Over time the cloud migration will not only affect the infrastructure of our services in general, because we hope to be a fully cloud-based company by 2025, but it will also affect us bring your own device policies and eventually move over all applications into the cloud as it becomes more ubiquitous and cost effective to do so. ThreatTerminus as a platform is a managed detection and response platform with a team of human threat hunters; therefore, migrating that platform to the cloud means our dashboard, along with its capabilities of detecting, analyzing, responding, and reporting threats must be migrated to the cloud including virtual workspaces for our employees that will be managed on a case-by-case basis. These platforms deal with sensitive customer proprietary network information and quarantined workstations that help us determine persistent threats to our organizations; therefore, compliance with regulatory practices with each of our customers is required of each of our threat hunters and services thereafter. Eventually we plan to move our servers to be fully functional via the cloud and provide bare metal services at a premium for users who require the utmost availability; therefore, our organization as a whole will be wholly trained in accepting full responsibility in managing, installing, and deploying our own virtual workspaces, but the platform itself. The ThreatTerminus platform will be considered platform-as-a-service which will pass management of our bare metal servers and networks to the cloud provider, which will enable ThreatTerminus to focus on designing and creating cloud-based applications that use those resources with special software components. 
+Cloud Building Blocks
+	Cloud computing has led to the development of new cloud service models and deployment architectures. With the advent of these cloud service models and deployment architectures, together, these have unique advantages and challenges that provide organizations and consumers with new options to choose a setup that is most suitable for them. The most common cloud service models today include Software-as-a-Service (SaaS), Platform-as-a-Service (PaaS), and Infrastructure-as-a-Service (IaaS). Likewise, deployment architectures include the public, private, hybrid, and community cloud architectures. 
+	IaaS involves a cloud user that needs resources that provide fundamental computing, networking, and data storage, while also maintaining complete control in deploying Operating systems, middleware, data, and applications. Essentially these users want an easy-to-automate deployment of their resources, they want to match the hardware to their expected consumption, and they want to purchase all the resources as needed to make their products and services highly scalable. The caveat to incorporating IaaS is that outsourced cloud deployments put sensitive company information in the hands of a third-party; as for on-premise cloud deployment IaaS is usually created with a limited amount of scalability and is usually preferred for small to medium enterprises (V K, 2019). 
+	PaaS allows the user to pass management of their servers, networks, and other infrastructure to a third-party. However, the user still wants to design and create internet-based applications that use those resources with special software components. Examples of middleware that the user may want to incorporate include databases, application platforms (Python, PHP, or other code), file storage, collaboration facilitation, and they may wish to conduct proprietary application processing, such as machine learning, big data processing, or direct application programming interface (API) access to features off a SaaS application. The advantages to this type of service model are that it is built on virtualization technology, it supports scaling, includes a variety of services that assist with developing, testing, and deploying apps, enables accessible services to numerous users by the same development application, integrates web services and databases together, and is fully deliverable via the web. Not only that, but it gives the developers the freedom to concentrate on building the software without having to worry about operating systems, software updates, storage, and other infrastructure. However, the caveat is that data residing in the cloud provider’s servers pose security risks and concerns; furthermore, security options may not be able to deploy services with specific hosting policies set by the cloud provider. 
+	SaaS allows an enterprise to use the internet to deliver applications to its users. Typically, companies who utilize SaaS want to avoid potential technical issues such as: handling data, developing middleware, allocating servers, and storage. They also may wish to reduce time and money spent on installing, managing, and upgrading software. Other typical uses include short-term projects, applications like tax software, and applications that need both web and mobile access. The caveat to SaaS is that it is built on PaaS, and PaaS is built on IaaS, so all of the caveats to the preceding stack apply at some level depending on where the software originates from. In IaaS, even though the customer is in control of the apps, the security threats can be sourced from the host or other virtual machines, which can later become an issue with end users; an example of a security threat like this is the SolarWinds breach. 
+	The division of responsibility between the cloud customer and the cloud service provider vary between the type of service. For example, in IaaS misconfigurations when it comes to the operating system, any middleware, data, or applications is solely the responsibility of the user, because the cloud service provider is only responsible for fundamental computing, networking, and data storage. In PaaS the user is solely responsible for all types of middleware and the cloud service provider is in charge of servers, networks, and other infrastructure to the user. In SaaS the handling of data, development of middleware, allocation of servers, installing, managing, and upgrading software is wholly the responsibility of the cloud service provider. The responsibility of the user is to utilize the software as it was intended to be utilized. 
+	For IaaS to work there needs to be a data center that provides fundamental computing, networking, and data storage of user resources. This type of service model includes big names such as AWS, Microsoft Azure, and Google Compute Engine. Essentially, IaaS is the back-end architecture to a fully realized cloud service model and incorporates storage and infrastructure. The infrastructure is the engine powering all cloud software services and includes the CPU, GPU, motherboard, all other components required for the system to function smoothly. Storage is where all the data required to operate the cloud software resides. Storage varies and depending on the price it includes hard drives, solid states drive, and more recently, Intel Optane DC Persistent storage. 
+	For PaaS to work there needs to be IaaS built upon to provide middleware that includes databases, application platforms, file storage, collaboration facilitation, and conducting proprietary application processing. For this to work, services, cloud runtime, application, management, and security are necessary. As for service, it is directly responsible for providing the utility in the architecture and this means that any task that is being run on the cloud computing system, is taken care of mainly by the service.  Cloud runtime is where the service runs, and these are created with the help of virtualization software. The application component of the back-end cloud software architecture refers to the interface being offered to the end user-except on the side of the server; this layer coordinates the various needs of the consumer with resources in the back end. Run times are generally on the same physical server, this means that the resources need to be managed according to the needs of the end user; that is where middleware comes in to play to incorporate management software to allocate specific resources for certain tasks on-demand. Security focuses on securing the server with virtual firewalls preventing data loss and redundancy mechanisms. These are ways to keep the system running even when it is under potential attack or experiencing system failure due to malfunctioning hardware (V K, 2019). 
+	SaaS is a front-end client infrastructure and incorporates software, the user interface (UI) itself, and the client device or network. Software allows cloud computing software to be run from the user’s side; in today’s web-powered world, the front-end software generally takes the form of a web browser or client-side application. The UI is what the end user directly interacts with in order to perform tasks on the cloud. The client-side device or network; generally speaking, incorporates the user’s device; in cloud computing, the user’s device does not require a lot of computing power (V K, 2019).
+	The cloud computer architecture in general requires a back end that is made up of IaaS and PaaS and generally incorporates the application itself, services, storage, management, and security that is later relayed through the internet and to the front end or client infrastructure giving us a complete SaaS model. Without an idea to create the front end, IaaS and PaaS are merely sitting servers waiting to be utilized for the next big technological advancement; so, software and user devices are more than likely the most important aspect to the full cloud computing stack, because it drives innovation on the back end. 
+References: 
+V K, A. (2019, June 17). What Is Cloud Computing Architecture: Front-End & Back-End Explained. Toolbox.com. Retrieved June 12, 2022, from https://www.toolbox.com/tech/cloud/articles/what-is-cloud-computing-architecture-front-end-back-end-explained/ 
+Management
+1.	“For the shared responsibility mode, pizza as a service is a way to think about. Okay, so you want pizza for dinner? How are you going to get pizza? You’ve got a lot of choices. You can make it yourself, you can do ‘take and bake’ from the grocery store, you can have pizza delivered, or you could go sit in a restaurant. This is what we face in the cloud today-you’ve got all of these choices. Make your own is like build your own data center, for example. And the trick is, from a security POV, you have to understand that the business out there is choosing how they want their pizza, and you have to know what kind of pizza they bought so they can properly secure it.” - Mike Lloyd, Chief Technology Officer, Red Seal, at a SecureWorld Virtual Conference
+a.	The demand for qualified cloud computing professionals continues to climb, with many jobs going unfilled. However, those willing to invest in learning cloud computing can choose to pursue various roles, including management, user support, infrastructure architecture, and maintenance. Cloud security is another notable area experiencing a shortage of qualified professionals. Organizations need security professionals to ensure that their confidentiality, integrity, and availability requirements extend to their cloud environments. This section will explain the critical role management plays in cloud computing adoption, operation, and overall success. Furthermore, you will understand what management plan security (MPS) is and how it is the single most significant differentiator between traditional infrastructure and cloud computing. 
+2.	Besides determining the technical process required for migration, an organization must conduct extensive due diligence on any applicable regulatory compliance, industry standards, or data and privacy protection laws that it would have to comply with within the cloud. Migrating the traditional on-premise IT infrastructure to the cloud does not alleviate the organization and its management from such compliance requirements. For this reason, management needs to recognize and prioritize and compliance requirements when evaluating cloud service providers (CSP), including in contracts and service-level agreements (SLAs). Furthermore, migrating to the cloud also increases an organization’s cyber risk, specifically around the administrative consoles and interfaces that connect the organization to their cloud instances, commonly known as the management plane. And while these management planes exist in the traditional infrastructure, they are limited to specific, purpose-built systems and physical cables. However, in the cloud, the management plane is accessed over the internet through web consoles. 
+a.	An example of an insecure cloud management plane leading to compromise was in 2014, when an organization named Code Spaces had its cloud instance shut down entirely after attackers gained unauthorized access to its management plane. This event was so devastating for the company that it could not recover and had to close down its business (Pariseau, 2014). 
+3.	Examples of Risk:
+a.	Data protection
+b.	Privacy protection
+c.	Outages
+d.	Service levels
+4.	Security Team and Cloud Computing: 
+a.	Management plane:
+i.	Refers to the interfaces for managing assets in the cloud.
+ii.	Includes interfaces for:
+1.	Building and managing the cloud.
+2.	Enterprises or cloud users to manage their own allocated resources from the cloud. 
+iii.	The management plane launches virtual machines and configures a virtual network.
+iv.	For SaaS, the management plane is the admin tab of the user interface and configure things. 
+v.	Single most significant security difference between traditional infrastructure and cloud computing.
+vi.	Management plane can be accessed by anyone unless you, the user, regulates proper security controls in place to limit accessibility. 
+5.	Guidelines to Ensure the Security of the Management Plane: 
+a.	Ensure that there is strong perimeter security for the API gateways and web consoles. 
+b.	Use strong multifactor authentication.
+c.	Maintain very tight control of the primary account holder or root account credentials and consider dual authority to access them. 
+d.	Establish multiple accounts with provider. 
+e.	Specific options and configurations.
+f.	Concepts of user accounts.
+g.	Designations of:
+i.	Who is the primary account holder?
+ii.	What it’s called differ very heavily between cloud providers and platforms. 
+6.	Securing the Management Plane:
+a.	Create super admin accounts to manage the whole configuration. The account should be: 
+i.	Owned by an enterprise rather than personal account. 
+ii.	Tightly locked down and should be rarely used. 
+iii.	Created for individual admin use and should be accessible only to smaller groups.
+b.	Create service admin or day-to-day admin accounts to manage the parts of the services as the account:
+i.	Does not necessarily expose the entire deployment if it is abused or compromised, and it is useful in common, daily tasks.
+ii.	Compartmentalizes individual sessions. 
+7.	Access to the Management Plane:
+a.	Separate super administrator and day-to-day administrator accounts.
+i.	Have complete access to all objects, folders, role templates, and groups in the system. 
+ii.	Can create users, groups, and other super administrators.
+b.	Have additional super administrators to ensure at least one of them remembers the password. 
+c.	Implement least privilege accounts consistently for all the access to the management plane. 
+i.	Separate development and test accounts with cloud provider.
+d.	Use multifactor authentication. 
+8.	Instead of controlling data center configuration with boxes and wires, the management plane is controlled by software such as: 
+a.	API calls
+b.	Web consoles
+9.	APIs and Web Consoles:
+a.	APIs:
+i.	Enable you to write programs to:
+1.	Automate settings
+2.	Setting changes
+3.	Accommodate changes in the resources
+ii.	Provides software development kits or command line interfaces that will make integrating APIs even better. 
+b.	Web consoles: 
+i.	Uses the same APIs that can be accessed directly
+10.	What is Involved in Administration?
+a.	Maintain tight control of primary account holder credentials and use dual authority to access them. 
+b.	Separate development and test accounts need to be allocated.
+c.	Limit who can do what with the APIs by establishing multiple accounts.
+d.	Use separate super administrator and day-to-day administrator accounts to isolate risk.
+e.	Segregate different users using multitenancy. 
+Infrastructure Security
+1.	Depending on the exact cloud service model that an organization chooses, it may be solely responsible for managing and operating specific cloud infrastructure components. The three major elements of a cloud infrastructure include computing, network, and data. When planning for cloud migration, organizations need to assess each of these components carefully and determine how they will manage, operate, update, and secure them in the cloud. 
+2.	Infrastructure Security:
+a.	Compute:
+i.	Close any possibility for an attacker to enter.
+ii.	This could happen when cloud user admins enter to perform updates and patches, when security testing, or when end users log in. 
+iii.	Immutable workload: Is inaccessible and allows user or enterprise to:
+1.	Disable remote access
+2.	Migrate security testing into image creation.
+3.	Set up file integrity monitoring alarms
+4.	Patch by updating images rather than running images.
+5.	Deploy cloud-aware security agents that minimize their performance impact.
+iv.	Logs stored externally
+v.	Pen testing and vulnerability assessments
+b.	Network:
+i.	Software-defined networking (SDN)
+1.	Appears like a regular network.
+2.	Offers software definition of arbitrary IP ranges. 
+3.	Allows user to extend existing networks into the cloud. 
+c.	Data:
+i.	Ensure that only approved data goes to the cloud.
+1.	Monitor transfer activity-database and file activity.
+2.	Use cloud security gateways to track internal cloud service usage. 
+3.	Monitor approved services through API connections or with inline interceptions.
+4.	Data loss prevention tool can be used. 
+ii.	Secure legitimate transfers to the cloud.
+1.	Uses transport layer security or client-side encryption rather than secure FTP. 
+iii.	Establish an isolation zone and scan process before integrating with public or untrusted data. 
+iv.	Enforce an information lifestyle management security process.
+1.	Manage data location.
+2.	Ensure audit compliance with logs and saved configurations.
+3.	Back up data on premises. 
+3.	Security Benefits of SDN:
+a.	Allows parties to configure multiple virtual networks, cloud accounts, and segments to increase network isolation. 
+b.	Accounts and virtual networks can be separated to shrink the blast radius compared to traditional data centers.
+c.	Allows parties to implement default deny policy with cloud firewalls. 
+d.	Allows traffic to be restricted between workloads in the same virtual subnet. 
+Personal Experience with the Cloud
+Cloud technology is the future of the workplace. Working for StateFarm we have tons of applications that work in the cloud and the experience is so much better. Problems with software before the cloud essentially leads to a land of dependencies and misconfigurations, but now troubleshooting applications is as easy as determining network or application issues and ticketing systems like ServiceNow have robust knowledgebases with worldwide input. Tech support and knowledge doesn’t need to be googled when you can simply search by configuration and have knowledge right at your fingertips. I’ve worked for a while in technical support, and I understand that software-based solutions that are on workstations that needed to be provisioned one by one led to misconfigurations or corrupt data and costly at the same time, because it takes away from more productive work. The only areas that were better pre-cloud is the fact that if something broke it wasn’t confined to a service level agreement that can lead to issues not being fixed right away; however, even those service level agreements have gotten better as management has grown accustomed to the cloud. I know some people that still work in the service industry that do not in fact utilize cloud technology even though they have a social media page or website that is at risk of all sorts of threats ranging from DDoS or other such vulnerabilities that can lead to a breach. I tell these people time and again it’s really rather simple to migrate their resources into the cloud, which can lead to improved customer relations and possibly lessen the strain on these resources that may end up putting them out of business in the future. Not only that, but their website asks for appointments, yet somehow someone still has to call in order to confirm that appointment and a customer service agent ends up calling the actual laborer to perform the work. Why not just cut the middleman, incorporate a cloud-based service that can save the company a ton of money and give everyone that does the actual work a raise? Obviously, cloud computing has yet to reach small to medium businesses such as these, but I’m hopeful for the future. 
+Cloud-Related Incidence Response
+1.	“If the fundamental of cyberspace is about connecting things, your cybersecurity strategy ought to be based on an integrated defense. With an integrated defense, you can enforce a zero-trust strategy: a little bit at the edge, a little bit further upstream inside the core, and in other places all the way up at the cloud. With a cybersecurity strategy that’s integrated, you can enforce zero trust across your entire network." – Phil Quaid, Global Chief Information Security Officer, Fortinet, during a Remote Session Fireside Chat: Cybersecurity for Proactive Defense in a Cy-Phy World, on demand
+a.	According to Gartner, identity, entitlement, and access management is the “discipline that enables the right individuals to access the right resources at the right times for the right reasons.” (n.d.). With the widespread adoption of cloud computing, organizations have to reevaluate their identity and access management strategy. Compared to traditional on-premise deployment, the fundamental difference in the cloud is that multiple organizations control the identity and access management, which significantly increases the complexity of the process. Furthermore, organizations have to efficiently identify and trust users, systems, and applications outside of their perimeter when participating in the cloud. As a result, a growing number of organizations are incorporating the zero-trust model into their cloud IAM strategy. 
+2.	As the number and intensity of cyber attacks grow, it is more important than ever that organizations of all sizes have a comprehensive incident response plan. Furthermore, as organizations embrace and migrate cloud computing, they must take appropriate measures to ensure their readiness to respond to cloud-related incidents. According to the 2020 Trustwave Global Security Report, the number of attacks on cloud services more than doubled in 2019. Additionally, the cloud is now the third most targeted environment for cyber attacks (2020). Despite the overwhelming advantages of cloud computing, incident response in the cloud has its challenges and requires close preparation, including training and process development. 
+3.	Lifecycle of Incident Response:
+a.	Preparation: 
+i.	Establish an instance response capability so that your organization is ready to respond to incidents.
+ii.	Have a service level agreement and procedure in place to be able to account for communications.
+b.	Detection and analysis:
+i.	Pay attention to alerts.
+ii.	Estimate the scope of an incursion.
+iii.	Timeline the incursion.
+iv.	Scan the management plane as well as its scope based on the service or cloud model being used. 
+v.	Monitor and alerts help kick off an automated IR workflow and speed up the response process. 
+vi.	Adapt forensics and investigation to automate tasks.
+1.	Snapshot the storage of the virtual machine.
+2.	Capture the metadata at the time of the alert to preserve what infrastructure was deployed at that time. 
+3.	Pause the virtual machine to save the volatile memory state. 
+4.	Snapshot the network and state of the virtual firewalls on your system. 
+c.	Containment, eradication, and recovery:
+i.	Take systems offline, clean up, and restore.
+ii.	Make sure that access to the management plane is secure. 
+d.	Post-mortem:
+i.	Examine how to do better next time. 
+4.	Third-party authorities work with workforce members and alerting/reporting analytics system and workforce members and alerting/reporting analytics system is built on an incident management plan.  
+5.	Attack on VMs may reveal management plane credentials, which could lead to a more serious attack.
+Cloud Vulnerabilities
+	One of the main vulnerabilities in the cloud is exploitation of known RCE vulnerabilities in server software. According to Crowdstrike known vulnerabilities, such as, CVE-2021-21972-a critical vulnerability impacting VMware ESXi, vCenter Server and Cloud foundation products is an example of a targeted vulnerability that provides a simple and reliable method for exploitation that threat actors can use across multiple host-operating systems, attack vectors, and intrusion stages. Remote code execution is the goal of attackers these days and provides full god-mode access in some cases to cloud resources. Big Game Hunters (BGH) adversaries such as Carbon Spider, Riddle Spider, Graceful Spider, and Pinchy Spider are known to use such techniques in order to enter their victim’s resources. Crowdstrike recommends that an organization understands their adversary, protect endpoints and cloud workloads, identity, and data. Furthermore, adopting a zero-trust model and eliminating misconfigurations including and up to patching software that has critical vulnerabilities such as CVE-2021-21972 that can allow an attacker remote code execution on their victim’s resource. 
+	Another more widespread exploitation vector used by eCrime and targeted intrusion adversaries such as Fancy Bear, an adversary associated with the 85th Main Center of the Special Services of Russia’s Main Intelligence Directorate (GRU), is credential theft. Credential-based intrusions against cloud environments are commonplace these days, because criminal actors are able to routinely automate fake authentication pages to harvest legitimate authentication credentials for cloud services such as Microsoft Office 365, Okta, or online webmail accounts. Not only Fancy Bear has used these tactics, but COSMIC WOLF, in April 2021 targeted victim data stored within the AWS cloud environment. COSMIC WOLF compromised the AWS environment via a stolen credential that allowed the operator to interact with AWS using the command line and while employing this technique, the adversary altered security group settings to allow direct SSH access from malicious infrastructure. Which brings us to the next vulnerability and an obfuscation tactic that allows attackers to leverage legitimate cloud services to deliver malware; targeted actors also use these services for command and control. Moreover, using cloud-hosting providers for C2 allows the adversary to switch or remove payloads from an affiliated C2 URL with ease. With tactics like these it’s crucial that the organization is one step ahead always. Since nearly 80% of cyberattacks leverage identity-based attacks to compromise legitimate credentials, it is crucial that the organization works to prevent these attacks and use techniques that block lateral movement that allows attackers to evade detection. CrowdStrike recommends Falcon Identity Threat Protection, because it enables hyper-accurate threat detection and real-time prevention of identity-based attacks, combining advanced AI, behavioral analytics, and a flexible policy engine to enforce risk-based conditional access. Nevertheless, AI is not enough and it’s clear an organization must adopt a Zero Trust model. Furthermore, investing in elite threat hunting and building a cybersecurity culture is crucial to mitigate these types of attacks.
+References: 
+Big game hunting TTPS continue to shift after Darkside pipeline attack. crowdstrike.com. (2022, March 18). Retrieved June 14, 2022, from https://www.crowdstrike.com/blog/how-big-game-hunting-ttps-shifted-after-darkside-pipeline-attack/ 
+Crowdstrike: Global Threat Report 2022. (n.d.). Retrieved June 14, 2022, from https://go.crowdstrike.com/rs/281-OBQ-266/images/Report2022GTR.pdf 
+Identity, Entitlement, and Access Management
+1.	IAM is essentially managing access for individuals, systems, software, etc., to resources they have the proper justification to access. The IAM model has been applied in internal systems for years and is usually implemented using Microsoft’s Active Directory. However, cloud computing has evolved from the traditional IAM model. Unlike the internal IAM deployment, two entities-cloud customer and cloud provider-have to now manage the IAM lifecycle in the cloud while ensuring continued security. Furthermore, Zero Trust is a model that requires all users and devices-those inside the organization or in the cloud-to be authenticated and authorized before being granted or maintaining access to resources. Some of the benefits of applying the Zero Trust model in the cloud include better access visibility, consistent security, enhanced performance, and reduced operational cost and complexity. 
+2.	IAM involves:
+a.	Mapping a person
+b.	System-verify identity
+c.	Deciding what they are entitled to do
+3.	IAM:
+a.	Needs to occur across many systems running different protocols and processes.
+b.	Needs to be end-to-end secure and verifiable from identity mapping to access granting. 
+c.	Needs to be managed by a trusted relationship between cloud provider and enterprise cloud. 
+4.	Cloud Security Alliance’s Security Guidance Report Example:
+a.	Starts with federated identity management. Federation involves an identity provider making assertions to a relying party after building a trust relationship build the trust relationship and exchange necessary credentials 
+b.	Process:
+i.	User logs in to the work network which hosts a directory server for accounts.
+ii.	User opens a browser connection to a SaaS application.
+iii.	Identity provider or the internal directory server asserts the identity of the user for authentication. 
+iv.	The relying party trusts the assertions and logs the user in without the user entering any credentials. 
+5.	Role of Cloud IAM in Zero Trust Model:
+a.	Assumes that every:
+i.	Network is breached
+ii.	Machine is compromised
+iii.	User is at risk.
+b.	Trusts nothing unless demonstrated.
+c.	Depends on IAM, cybersecurity policies and guidance, continuous monitoring, and best practices.
+i.	IAM helps zero trust by providing identity authentication and access control management.
+d.	Focuses on protecting resources.
+6.	Takeaway on cloud IAM:
+a.	It is critical to every facet of managing security on the cloud and due to its complexity, it is very different from smaller scale IAM. 
+Ransomware
+1.	“At the end of 2016, a business fell victim to a ransomware attack every 40 seconds. Cybersecurity ventures predicts that will rise to every 14 seconds by 2019-and every 11 seconds by 2021.”-2019 Official Annual Cybercrime Report, Herjavec Group
+a.	The threat of ransomware has become significantly critical to organizations, governments, and individuals worldwide in recent years. For example, in the first half of 2021 alone, brazen ransomware attacks targeted a major North American oil pipeline and the largest beef supplier in the world. Thousands of regular people and businesses were directly affected by these attacks, and the economy lost millions of dollars. Unfortunately, cloud computing is not immune to ransomware attacks; instead, it is a particular target due to its importance to an organization to function. In this video, you will learn about various available resources to help understand the threat of ransomware to the cloud in more detail, including examples of defending against it. 
+2.	Ransomware:
+a.	Encrypts files on a device and makes the files and systems unusable. 
+b.	Demands ransom in exchange for the decryption key. 
+c.	Often targets and threatens to sell/leak exfiltrated data or authentication information unless ransom is paid. 
+3.	Handling Ransomware Attacks:
+a.	Ransomware and other attacks are reported immediately to CISA/FBI.
+b.	Responses are coordinated by government bureaus, CISA, NIST, and National Cyber Investigative Joint Task Force. 
+c.	System administrators and technical staffs are alerted.
+d.	Alerts and follow up analysis are translated into permanent archives of ransomware threat types which reside in the MITRE ATT&CK matrix. 
+4.	Attack Cloud Matrix:
+a.	Is populated with entries whenever new cloud threats arise.
+b.	Has matrices for enterprise threats, industrial control settings, and mobile environments.
+c.	Provides behavioral threat information divided into columns and also lists the threat technique and procedure in use. 
+5.	Cloud Matrix:
+a.	Adversaries can:
+i.	Encrypt data on target systems or in large number of systems. 
+ii.	Render stored data inaccessible by encrypting files or data on local and remote drives and withholding access to a decryption key. 
+1.	Extract monetary compensation from a victim in exchange for decryption or a decryption key. 
+2.	Render data permanently inaccessible in cases where the key is not saved or transmitted. 
+b.	Malware:
+i.	Has worm-like features to propagate across a network by leveraging other attack techniques like valid accounts, OS Credential Dumping, etc. 
+c.	Cloud environments:
+i.	Storage objects within compromised accounts may also be encrypted. 
+d.	Procedural examples of ransomware:
+i.	SamSam:
+1.	Appeared in early 2016
+2.	Its variants have required operators to manually interact with the malware. 
+ii.	Associated software descriptions:
+1.	AA18-337A
+2.	Starts with the department of homeland security
+3.	Also known as MSIL
+4.	Shares analysis of vulnerabilities that cyber actors exploited to deploy this ransomware.
+5.	Provides recommendations for prevention and mitigation.
+6.	Describes targets and how the ransomware works. 
+iii.	AR18-337B
+1.	Uses windows shell command to execute custom batch scripts.
+2.	Encrypts victims’ files using a particular encryption. 
+3.	Demands a ransom to be paid in Bitcoin to decrypt those files. 
+4.	Deletes its own files and payloads to make analysis of the attack more difficult. 
+5.	Uses a particular scheme to encrypt the payloads and its own payload components. 
+6.	Ransomware precautions:
+a.	Update software and operating systems with the latest patches.
+b.	Do not click on links or open attachments in unsolicited emails.
+c.	Back up data on regular basis on a separate device and store it offline. 
+7.	Overcoming a Ransomware Attack:
+a.	Act fast and systematically.
+b.	Ensure that it is indeed a ransomware attack.
+c.	Disconnect the infected devices from the network to isolate the infection and stop it from spreading.
+d.	Notify staff and issue stationary for their use.
+e.	Photograph the ransom note.
+f.	Bring in professionals to determine the kind of ransomware and road to recovery. 
+Cloud Controls Matrix
+1.	One of the critical security compliance purposes is to address perceived threats or risk to industry, government, or community. These compliance requirements get drafted by government or industry consortiums and mandate everyone operating in that particular field, including periodic audits and fines for non-compliance. As cloud computing is maturing and becoming an integral part of industries, there is a need for compliance programs to address the risks associated with the cloud. In fact, according to Imperva’s 2020 Cyberthreat Defense Report, compliance violations are one of the top three most significant challenges organizations face regarding their cloud infrastructure (Imperva, 2020). CSA developed the CCM to address this need. The CCM comprises several different control objects structured in various domains incorporating all aspects of cloud computing. 
+a.	Resources:
+i.	https://cloudsecurityalliance.org/research/cloud-controls-matrix/
+ii.	https://www.imperva.com/resources/resource-library/reports/2020-cyberthreat-defense-report/
+2.	The CCM, developed by the CSA, is a framework that provides organizations with structure, details, and transparency related to security in the cloud. The CCM lists 16 domains covering different aspects of cloud technology, and each domain is broken down further into control objects. The CCM is developed alongside many other industry-accepted security standards, regulations, and controls, such as ISO27001/27002, ISACA COBIT, PCI, and NIST. Consequently, CCM’s extensive alignment with many commonly trusted frameworks across industries and governments has contributed to its wide adoption and made it a de facto standard for cloud security. 
+3.	Cloud Controls Matrix (CCM):
+a.	Cybersecurity control framework for cloud computing.
+b.	A spreadsheet in implemented form, which lists common frameworks and regulations for organizations to comply with. 
+c.	Composed of 197 different control objects, which are sub-divided into 17 domains. 
+d.	Each control indicates:
+i.	Who should fulfill control (cloud service provider/cloud customer). 
+ii.	Which cloud models and environments are relevant to it? 
+4.	Controls for IAM and IVS: 
+a.	An enterprise should document procedures for IAM and strong passwords. 
+Security Assurance in the Cloud
+	The Cloud Security Alliance (CSA) is the world’s leading organization dedicated to defining and raising awareness of best practices to help ensure a secure cloud computing environment. CSA currently comprises 33 active working groups and initiatives, 412 research publications, 57,000+ visitors view CSA research each month, 1260,000+ industry professionals are a part of CSA, and 1400+ cloud services are listed in the STAR registry. STAR stands for Security, Trust, Assurance and Risk and is the cloud industry’s most powerful program for security assurance in the cloud. STAR encompasses principles in transparency, rigorous auditing, and harmonization of standards outlined in the Cloud Controls Matrix (CCM). Publishing to the registry allows organizations to show current and potential customers their security and compliance posture, including the regulations, standards, and frameworks they adhere to. It reduces complexity and helps alleviate the need to fill out multiple customer questionnaires. CSA includes 16 categories of security domains covered by the CCM and they include: 
+Audit and Assurance	Identity & Access Management
+Application & Interface Security	Interoperability & Portability
+Business Continuity Mgmt & Op Resilience	Infrastructure & Virtualization Security
+Change Control and Configuration Mgmt	Logging and Monitoring
+Cryptography, Encryption and Key Mgmt	Sec. Incident Mgmt, E-Disc & Cloud Forensics
+Datacenter Security	Supply Chain Mgmt, Transparency & Accountability
+Data Security and Privacy	Threat & Vulnerability Mgmt
+Governance, Risk Management and Compliance	Universal EndPoint Management
+Human Resources Security	
+Avaya is an American multinational technology company headquartered in Durham, North Carolina, that specializes in cloud communications and workstream collaboration solutions. The company’s Avaya OneCloud experience platform includes unified communications, contact center, Communication Platform-as-a-Service (CPaaS), and services. Under the CCM control title for remediation in audit and assurance Avaya states they are more than capable of reporting relevant remediation status of audit findings reviewed to company stakeholders. Furthermore, under the CCM Domain Title for Business Continuity Management and Operational Resilience  Ava ensures that business continuity and resilience procedures establish communication with stakeholders and participants; this falls under the Documentation CCM Control Title and those documentations are reviewed periodically. Furthermore, Network Architecture Documentation mandates that Avaya identify and document high-risk environments. Avaya does not implement any type of security and is managed solely by Google as an outsourced third-party. Avaya states they not only utilize physical access control mechanisms to allow solely authorized personnel to access secure areas, data center environmental control systems designed to monitor, maintain, and test on-site temperature and humidity conditions fall within accepted industry standards are also implemented and outsourced by Google. Utility services are also secured, monitored, maintained, and tested at planned intervals for continual effectiveness and again outsourced by Google. Avaya monitors availability, quality, and capacity in a way that delivers required system performance, as determined by the business as well. Communications between environments are also monitored. Avaya also in charge of applications and infrastructures designed, developed, deployed, and configured such that Avaya and tenant user access and intra-tenant access is appropriately segmented segregated, monitored, and restricted from other tenants. Avaya also implements logging and monitoring policies and procedures, which are well established, documented, approved, communicated, applied, evaluated, and maintained by Avaya themselves. Security-related events and audit logs are also identified and monitored within applications and the underlying infrastructure. It seems Avaya utilizes Google for a lot of their domains which include: 
+Change Control and Configuration Management	Cryptography, Encryption & Key Management
+Datacenter Security	Security Incident Management, E-Discovery, & Cloud Forensics
+It seems the CSP outsources a lot of their security, which makes sense for a CPaaS, because they essentially create internet-based applications while passing their infrastructure through managing third parties. They don’t have to worry about security and can devote all of their time and energy into creating ubiquitous cloud-based communication technology. I would say that I am more than satisfied with the level of notes the CPS provided for the various control domains and it gives insight into not only the company as a whole, but their goals as a CPaaS in general. Even when things were not provided, they made a commitment to ensuring future plans, which also means they are not wholly diving into the cloud, but they also respect their stakeholders in developing safely. I would definitely recommend Avaya as a CPaaS to any company that wishes to enjoy an innovative experience that is backed by big names such as Google for their security. 
+References: 
+Star Registry listing for spaces. CSA. (n.d.). Retrieved June 15, 2022, from https://cloudsecurityalliance.org/star/registry/avaya/services/spaces/ 
+Azure vs AWS vs GCP
+Comparing a cloud service is a challenge, because with cloud vendors, users are always signing up for cloud services without bothering go through a contract review. As Chris Shull states, someone invariably plops down a credit card and signs up for the service; that is why a thorough review of the features, availability zones, services, market share, primary use cases, pricing models, security, compliance , user training and certification, and research and development of new advanced features and services are all essential in determining the right cloud service and this list is non-exhaustive. Depending on the organization it’s likely that quality of services and compliance are top priorities to gain stakeholder trust, or pricing may very well matter more to some customers. Although many cloud service providers are comparable in that features and services remain the same or differ in compliance and regulatory models or research and development, it’s clear that doing proper research and implementing the right solution may save an organization from headaches later on when expectations do not coincide with reality. 
+Cloud computing with AWS is “the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. Millions of customers-including the fastest-growing startups, largest enterprises, and leading government agencies-are using AWS to lower costs, become more agile, and innovate faster” (Amazon, n.d.). Amazon provides compute, storage, database, networking & content delivery, analytics, machine learning, and security, identity, & compliance services as their broad set of global cloud-based products that help organizations move faster, lower IT costs, and scale. AWS also boasts the largest community of customers and partners, along with the most flexible and secure cloud computing environment available today. To prove it AWS is backed by a deep set of cloud security tools, such as 230 security, compliance, and governance services and features. Support for 98 security standards and compliance certifications, and all 117 AWS services that store customer data offer the ability to encrypt that data. Not only that, AWS is also the fastest pace of innovation and is a leader for the past 16 years in delivering great operational experience, at greater scale, of any cloud provider. AWS also makes sure that stakeholders understand their global infrastructure and that is the reason why they have 26 launched regions spanning the globe, 84 availability zones, 17 local zones and 28 wavelength zones for ultralow latency applications and are announcing 8 new regions entering the fold with 32 announced local zones for even more ultralow latency applications. Furthermore, AWS powers customer innovation by having their hands in aerospace and satellite, agriculture, automotive, education, energy, government, healthcare & life sciences, manufacturing, and even nonprofit organizations. It’s clear that research and development when it comes to AWS is widely utilized across many different sectors of the economy. The pricing doesn’t come cheap however, since AWS offers a pay-as-you-go approach for pricing and this may differ between each service. However, you can save by committing to a specific amount per hour for a one- or three-year period, or you can pay less by using more, which sounds crazy, but services such as S3, pricing is tiered, meaning the more you use, the less you pay per GB and to find out more about this AWS also gives options to acquire services that help businesses address their needs. 
+Second, in global cloud service provider leaders is Microsoft Azure. Azure allows enterprises to build and deploy apps with serverless containers, create apps with managed, intelligent SQL in the cloud, make and scale apps with managed Kubernetes, boost agility and app security with Azure integrations on GitHub, Unify on-premises, hybrid, and cross-cloud infrastructure, share code, track work, and ship software with dev services. In a nutshell, Azure provides cloud services for Platform-as-a-Service (PaaS) enterprises who want to pass management of their servers, networks, and other infrastructure to Microsoft. They still want to design and create internet-based applications that use those resources with special software components like AI and machine learning, compute with virtual machines and industry-leading performance for SQL and allow for agile creation of powerful cloud apps for web and mobile. Furthermore, container services allow enterprises to build, deploy, and scale web apps on a fully managed platform such as Kubernetes, OpenShift clusters, or bring modern microservice patterns to Spring Boot apps. Not only that, but Azure provides features for hybrid and multicloud setups. Take an organization that wishes to deploy some of their resources into the cloud and they wish to “Unify” on-premises, hybrid, and cross-cloud infrastructure, then build apps across these domains all while ensuring that threats are stopped with intelligent security analytics, and extend threat protection to any infrastructure, or segment virtual machines by creating secure, private clouds, and even include identity and access management by enabling single sign-on and multifactor identification. These services are not exhaustive as Microsoft employs over 200 services in AI and machine learning, analytics, compute, containers, databases, developer tools, DevOps, Hybrid and multicloud, identity, integration, IoT, management and governance, media, migration, mixed reality, mobile, networking, security, storage, virtual desktop infrastructure, and the web. Now as for price, Azure allows enterprises to start for free for popular services for 12 months, 40+ other services free always and start with 200 dollars in Azure credit, which allows users 30 days to use it, but just being able to build scalable websites and workloads for the first 30 days and being able to try Azure functions, Azure logic apps, and Azure DevOps for your PaaS enterprise is all you need to test out the service (Cloud computing services, n.d.).
+Google Cloud Platform is a close third behind Microsoft and farther from AWS for sure in cloud leaders, but they are also a great challenger to Microsoft and AWS and are not to be overlooked. With GCP you can choose from over 150 cutting edge products separated into the compute, storage, databases, data analytics, AI and machine learning, Networking, and Developer tools categories. It’s clear that GCP is trying to give Microsoft a run for their money by adding more value to their “solutions”. They don’t just call it services and share the responsibility between the user. GCP wants to be the managed service provider when it comes to improving retail product discovery, to detecting bank fraud, GCP’s industry solutions tackle any business’s biggest challenges. These industries include retail, consumer packaged goods, financial services, healthcare and life sciences, media and entertainment, telecommunications, gaming, manufacturing, supply chain and logistics, government, and education. Google seems to target companies that need infrastructure. As the Infrastructure-as-a-Service provider GCP innovates by empowering companies like Goldman Sachs and its team to analyze data, and scale compute power confidently. Spotify powers the playlists of 381 million monthly listeners with Google Cloud, and Frontier Development Lab, in partnership with NASA, analyzed a 20-year data bottleneck in 20 minutes with Google Cloud AI. It’s clear that GCP is cloud computing, ready for businesses, and they essentially allow businesses to run and build their apps anywhere, because of Google’s commitment to open source, hybrid, and multicloud. Businesses can also make smarter decisions with their leading data platform allowing anyone on any team access to business insights with advanced machine learning and analytics. Businesses can protect and secure their data and apps against threats and fraudulent activity without the business ever having to worry about a thing. Google Cloud allows enterprises to try for free for 90 days plus 300 dollars in credits and the services that are included are the Google Compute engine, cloud storage, and BigQuery within specified monthly usage limits that is. 
+It’s clear that each cloud service provider provides essentially the same services, albeit with different flavors and how they manage or present their features, but in a world where well-established businesses still retain their servers, then multicloud is the selling point, alongside artificial intelligence, and analytics. Clearly, the more users you get, then the more analytics and data you can scrape to power AI and machine learning. If that is a priority for a business, then it’s clear that research into what those specific services provide and how they can be scaled to your specific enterprise is what needs to be looked into. If managed security is what you need, then all three of these cloud service providers have some form of it; nonetheless, this all varies depending on the industry the enterprise is in and I think Azure has got to be the most far-reaching as it not only peaks the interests of typical users, but also feeds more data into the analytics engine that is Microsoft themselves. If you are an enterprise and don’t want to worry about security, then allow Google to enter into the ring in your stead and provide the infrastructure you require. AWS is on a similar boat, but at the same time AWS and its ever expanding infrastructure is only just starting out and it’s too soon to say how far AWS will go as Amazon as a company and their market share envelops entire economies. 
+References: 
+Amazon. (n.d.). Retrieved June 15, 2022, from https://aws.amazon.com/what-is-aws/?tag=zd-buy-button-20&ascsubtag=852ac2917c0642578a5f7acfee841bc0%7C389b0fac-39df-4fc1-8578-df55fce99eed%7Cdtp-oo 
+Cloud computing services: Microsoft Azure. Cloud Computing Services | Microsoft Azure. (n.d.). Retrieved June 15, 2022, from https://azure.microsoft.com/en-us/ 
+Google. (n.d.). Google. Retrieved June 15, 2022, from https://cloud.google.com/ 
+
+
