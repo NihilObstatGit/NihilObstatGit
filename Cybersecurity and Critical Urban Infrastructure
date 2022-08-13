@@ -1,0 +1,262 @@
+Module 5 Introduction
+1.	Consequences of Successful Cyber Attacks:
+a.	Disrupt important public services.
+b.	Threaten lives.
+c.	Undermine public confidence in government.
+d.	Spend millions of dollars to restore the attacked systems of a city.
+2.	Ransomware Attack
+a.	Break in digitally. 
+b.	City’s information management systems.
+c.	Deploys malware.
+d.	Encrypts the city’s data.
+e.	Hands over the decryption key only if the city agrees to pay a ransom (cryptocurrency).
+f.	Run mostly on open information systems.
+g.	Are connected all the time to other units of government and various suppliers at multiple scales of operation.
+h.	Are not able to control many vulnerabilities because of the openness.
+3.	Cyber Attack Example: New York City Police Department
+a.	Spent a lot of time and money to enhance their cybersecurity.
+b.	Planned training for police officers in cybersecurity protection methods.
+c.	Hired a trainer outside the agency.
+d.	Face a cyber attack as the trainer’s computer was infected.
+What is a Vulnerability Assessment?
+1.	Vulnerability Assessment:
+a.	What is the goal of conducting a vulnerability assessment?
+b.	What standards, bodies, and guidelines exist to assess vulnerabilities?
+c.	What information does the clinic need to actually collect from infrastructure agencies to assess cybersecurity vulnerabilities?
+d.	What sources of information are crucial to get this information? Who are we talking to?
+2.	IT departments in most cities are not resourced to:
+a.	Fend off attacks.
+b.	Put emergency operating procedures in place.
+c.	Review lessons learned from previous attacks.
+3.	The NIST Framework:
+a.	Identify
+b.	Protect
+c.	Detect
+d.	Respond 
+e.	Recover
+4.	MIT’s Checklist of Priority Questions:
+a.	Preparations made by the city before an attack has occurred.
+b.	The emergency action plan that should be in place to guide the city during an attack.
+c.	Post-attack procedures the city is expected to use to ensure the same thing never happens again if they are attacked.
+5.	Domains of NIST:
+a.	Physical Domain: 
+i.	Hardware
+ii.	Software
+b.	Information Domain:
+i.	Confidentiality
+ii.	Integrity
+iii.	Availability
+c.	Cognitive Domain:
+i.	Perceptions about the importance of information.
+ii.	Best ways to analyze it.
+d.	Social Domain:
+i.	Ethics and norms on information collection, usage, storage, and protection.
+6.	Reverse social engineering focuses on:
+a.	Thinking like the attackers and anticipating what they are going to do.
+b.	Your energy, efforts, and resources on the things you can do to thwart what the attackers are likely to have in mind. 
+7.	To understand how well prepared a city is for an attack, focus should be both on its technology systems and management. 
+a.	Does your agency install all software updates, operating system updates, and patches in a timely manner?
+b.	Has your agency identified which systems are most critical to your agency’s operations?
+c.	Have you inventoried all your physical devices, systems, software platforms, and applications?
+d.	Are all agency data systems securely backed up?
+Complications
+1.	Are there key services and assets that depend on external entities?
+2.	Plan of Action:
+a.	Give each city you work with a status report indicating whether what they do is minimally satisfactory.
+i.	Use NIST standards
+ii.	Use other common standards that the cities are already trying to meet
+iii.	Give them a report that explains the dangers created by the current situation.
+iv.	Provide suggestions for possible sources of help that cities can use to get up to minimum standards.
+3.	Questions to Assess a City’s Cybersecurity:
+a.	Have you inventoried all your physical devices, systems, software platforms, and applications?
+4.	Obstacles in Generating an Assessment:
+a.	Obstacle 1: You need some information to answer the question:
+i.	You don’t know who knows it.
+ii.	Some set of people have incomplete information.
+b.	Obstacle 2: Some people know the information but are reluctant to share. They are people who:
+i.	Are told not to share information that could make them look bad.
+ii.	Have information but worry about being reprimanded.
+c.	Obstacle 3: Some people give contradictory answers.
+5.	Information Gathering Process for Assessment: 
+a.	Have you been attacked?
+i.	Yes: When? Do you have any documentation of what happened?
+ii.	No: Happened before my time. I heard about it.
+6.	As an assessor, you: 
+a.	Promise confidentiality.
+b.	Share the findings only with them.
+c.	Suggest recommendations.
+d.	Avoid talking to the press or other people in the city.
+e.	Share findings only with the people that you signed an agreement to work with. 
+7.	NIST standards are:
+a.	Voluntary
+b.	Not outcome-oriented
+c.	Process-oriented
+8.	Emergency Action Plan Assessment:
+a.	Do you have an emergency plan?
+b.	Yes: Can we see the plan? Is it written down?
+c.	Yes: We look at the plan.
+d.	Is it satisfactory?
+e.	Have you run a test? Have you imagined an attack?
+f.	No? It would be too disruptive.
+g.	Has anybody seen this document?
+h.	Yes. Our leadership has approved it. 
+i.	Have they met a basic standard of cybersecurity?
+9.	The state government or the cyber insurance companies do not specify the minimum standards, thereby making it difficult to judge. 
+10.	The cities: 
+a.	Do not have the budget for suggested improvements.
+b.	Need to ask the city council for more money to implement the improvements.
+c.	Cannot ask for too much money.
+d.	Need to know which of the many things need more work and need to be prioritized when asking for money.
+e.	Cities must be aware of all the interconnections they have with suppliers, partners, and state agencies to meet minimum standards.
+11.	A CISO:
+a.	Cannot call the chief elected official of another city and ask about their standards. 
+b.	Is not empowered to force everyone in their own agency to follow their own rules.
+c.	Does not have the authority to fire people.
+Recommendations
+1.	You will learn what it is like to work with a city that wants to:
+a.	Assess its vulnerabilities
+b.	Prepare for attacks
+c.	Be ready
+d.	Know what to do in the right way at the right time.
+2.	Preparing for Cyber Attacks:
+a.	Everyone to have rehearsed what they are supposed to do.
+b.	Someone higher up with the proper authority to shut everything down before the malware spreads through the whole system.
+c.	Someone to report to somebody who is supposed to get such a report that an attack is underway.
+3.	The consequences of a city shutdown:
+a.	Nobody can move around.
+b.	Nobody can call emergency services.
+c.	Nobody can access the services provided by public agencies.
+d.	Nobody can call City Hall to find out what’s going on. 
+4.	Existing plans are meaningless unless someone has the authority to shut things down and then start them up again when necessary.
+5.	Cities often don’t have comprehensive emergency action plans because they can’t bring themselves to designate someone with the proper authority to be able to act.
+6.	Contracting out Cybersecurity Tasks:
+a.	Because they don’t have the staff.
+b.	Because they don’t have the money to hire the staff. 
+c.	They hire a private company to carry out cybersecurity tasks.
+7.	A city is unlikely to produce the relationships and communications that cybersecurity needs without a CISO high enough up in the decision-making structure.
+8.	You will look at a sample of a vulnerability assessment checklist with some examples of findings and recommendations that will help you:
+a.	Identify the requirements of the assessment tasks.
+b.	Explain the reasons for the questions asked.
+Meeting 03/21/2022
+1.	Ransomware:
+a.	Cybersecurity Insurance: 
+i.	Read the fine print.
+ii.	What is covered vs what is not covered.
+b.	Should you pay the ransom if you are a victim of a ransomware attack?
+i.	Possible criminal charges if the bad actor is in a sanctioned nation.
+c.	Preventing ransomware attacks
+i.	Do you know what your inventory is?
+ii.	Regular backups-stored off site / off network.
+iii.	Security Awareness Training.
+Plan of Action
+As the first cybersecurity manager for this city, it is critical to employ a Chief Information Security Officer or CISO with a background in cybersecurity risk management. This is important, because what happens when a city is infected with malware or is attacked using a zero-day attack? Would the city itself be able to make the decision to shut things down to minimize the spread of a virus spreading to critical infrastructure such as emergency services and the city’s electrical power grid? What would be the course of action? This is why it’s important to have full-time Chief Information Security Officer overseeing the city’s systems, policy, and planning efforts on all things Cybersecurity. Second, it’s essential to inventory the city’s physical devices, systems, software platforms, and applications. All of these being inventoried it will be easier to undertake a vulnerability assessment of the existing systems using NIST standards. A city is essentially a large supply chain, so it must be highly process oriented and not necessarily drive towards a set goal. Things just need to be function; therefore, the city must have a process to identify, protect, detect, respond, and recover from cybersecurity attacks. Looking at domains of the NIST framework management is a key role in governing the city and its systems. First the physical domain, which contains all the hardware and software in the city must be managed by an Information Technology department. Second, the information domain, which concerns itself with the confidentiality, integrity, and availability of systems will also be managed by a level 2 information technology department. Third, the cognitive domain or our security operations analysts will handle perceptions about the importance of information and the best ways to analyze information. And finally, the social domain will work directly under the CISO to improve on ethics and norms on information collection, usage, storage, and protection. These will mainly be level 3 information technology specialists but can also include other levels on a reactive basis. 
+Who are the Attackers?
+1.	Why would these attackers want to go after critical urban infrastructure?
+2.	What are some cases of this occurring?
+a.	SamSam ransomware was created by Iranian operatives to target the City of Atlanta which targeted hospitals, city governments, and other organizations. 
+3.	What do we do once we get attacked?
+a.	Calling the FBI is to find the bad guy, but their objective is not to help you remediate your systems. 
+4.	How have attackers evolved over time and how have their methods evolved?
+a.	The scale has only gotten larger over time. 
+Baltimore Case Study
+1.	Was undergoing a mayoral transition at the time and occurred at 2 AM. 
+2.	A post-mortem analysis of the event illustrates the importance of preparing in advance for difficult circumstances and unanticipated events. It’s important that cities review their contingency and continuity plans related to communications systems, alternative operating locations/systems, and relevant policy frameworks, such as the ransomware negotiation policy.
+3.	It also reinforces the importance of conducting a risk assessment to identify vulnerabilities and address gap areas in advance. Furthermore, ensuring sound backup processes and procedures are in place can ensure the crucial data resources are available when needed. Policies should also mandate a post-attack assessment to ensure that critical lessons learned are implemented to improve the organizational security position and implement identified enhancements.
+4.	Important lessons from the Baltimore Attack:
+a.	A city should always be prepared for a ransomware attack.
+b.	A city should have both a fallback communications system and a communications backup plan in place.
+c.	A city should know what its ransomware negotiation policy is.
+d.	Baltimore refused to pay the 80k ransom. Instead, the city ended up spending more than 18 million to replace the lost data, which took considerable time. 
+e.	A risk assessment would identify the most vulnerable crucial information and the city should invest in backing up that information. 
+5.	A weekly backup should include: 
+a.	Taking a picture of all your data. 
+b.	Storing it on a hard disk. 
+c.	Storing it in another building, offsite from where the computers are connected to the City Hall. 
+6.	Baltimore City’s insurance:
+a.	Did not cover most of the costs.
+b.	Had all kinds of exclusions.
+c.	Covered only the primary expenses. 
+7.	Difficulties created by the attack:
+a.	Certain neighborhoods, specifically neighborhoods of color, felt they had been left adrift.
+b.	In some places, certain services were shut down for a period of time. However, that didn’t happen in neighborhoods of color, which made them feel they were targeted.
+c.	This undermined faith in the city government. There was a lot of finger-pointing, and nothing good came of all these recriminations. 
+8.	Baltimore City had:
+a.	No post-attack learning process in place.
+b.	No review to learn their vulnerability.
+c.	No idea of what not to do again in the future. 
+d.	Post-attack assessment became a huge focus within Baltimore. 
+Analyzing A Breach
+The city ought to immediately announce that the subway system is hacked. It’s necessary to do this immediately, because Operational Technology (OT) is entirely safety oriented. Knowing this traditional IT policies will not work here to keep things quiet until the issue is fixed before 90 days. Immediate transparency of systems that may risk the safety of others is the moral things to do and will inspire confidence in the railway system taking safety above other girls. 
+The city should never pay the ransom demanded by the attackers, because it will only serve to fuel this business and encourage them to attack more systems. Preventative measures and corrections must come first for OT systems, meaning as soon as a change in the system occurs all bars to the network must come off. That is the preventative measure for it getting out of hand. Second, a post-attack assessment must be at the top of the priority for an attack of this scale. However, the situation is difficult to determine being a cybersecurity expert and not the CISO of the subway system. It’s prudent to say though, that given the city’s haphazard attempts at regaining control of their systems they very well may be inclined to pay the ransom. Paying the ransom could lead to the restoral of systems, but it may also mean possible legal issues if the hack were to have come from a sanctioned nation. Taking on that risk may be too great for one city. My say is to revert Transportation systems to manual operational technology for the interim and then rely on donations from the people to restore subway systems, because people may very well want their subway to be on time. If I had to rely on the subway I would for sure put more than my fare in to make sure I get my money’s worth; therefore, it’s easier to inspire public confidence in the subway and its decisions to maintain availability and the security of its passengers. 
+Securing Critical Infrastructure: Applying your knowledge
+
+	It is important for vendors to practice good security, because the consequences of not securing critical infrastructure including IT vendors are huge. The dynamic nature of cybersecurity means that vendors and stakeholders must work together to counter adversaries and build trust. So, all of this includes vendors, regulators, and critical infrastructure providers to work together on creating new ways to instill trust. To instill trust in critical infrastructure you must have trustworthy IT vendors, secure solutions, and responsible operations. 
+The Chief Information Security Officer for Cisco, Anthony Grieco writes in Cisco Blogs that trust is not a light switch. He says: “You don’t decide overnight to be trustworthy, transparent, and accountable.” This perfectly encompasses the company goal, and it is to be a trustworthy vendor. However, security does not end at the point where a vendor places their solution on the market. You cannot simply buy security. Which is why Anthony Grieco is adamant that a Secure Development Lifecycle (SDL) is a must in any organization. That means documentation, repeatable, and measurable processes to ensure security is built into solutions by design and that security policies are implemented consistently, which guarantees end-to-end integrity across solutions. As adversaries grow and technologies continue to be adapted within Cisco as an organization itself he even advises that bugs inevitably happen and vulnerabilities will pop up, which is why the SDL can help the organizations they supply the peace of mind that the integrity of their hardware and software. 
+Using standards like common criteria can help measure or benchmark security solutions. For critical network infrastructure, comprehensive security assessments should be conducted by trusted experts. This may necessitate government agencies performing the testing themselves to ensure the quality of the results or could even utilize highly qualified testing labs. Certifying specific technologies and integrating supporting documents with these technologies is another way to benchmark security solutions, because it allows the definition of how the criteria and evaluation methods are applied to these technologies. These supporting documents must include assessment examples and updating them only when meaningful collective value can be added. Thus finally, these certificates are recognized by all the signatories of the CCRA building a mutual recognition of testing with a focus on mitigating cyber-risk rather than adhering to local business customs. 
+Critical infrastructure operators must keep pace with the latest threat modeling and detection technologies. There is no other way, because adversaries are growing grander in schema ever day and so we must be more prepared for the coming days. Therefore, the vendor has the role of helping critical infrastructure operators in deploying and operating their technology in an effective and secure way. It is also the vendor’s role to ensure that devices can be tested, provisioned, and updated securely. Inventorying, patching, and running vulnerability assessments are critical to the management of any security vulnerabilities within vendor solutions and networks. It is critical for the vendor to be forthright and honest about critical vulnerabilities with critical infrastructure operators because they must be prepared and prevent attacks. 
+ For these reasons patching and upgrading systems or third-party platforms on a regular routine basis is not just a hassle, but a preventative measure to mitigating risk in general. It is critical that vendors work with critical infrastructure operators to understand that dated or end-of-life software will no longer be upgraded to mitigate new threats and thus the torch for that piece of software must be deprecated in favor of newer software. It’s important to patch bugs in the software and to maintain supporting documents for critical software and to be scanned regularly for any open vulnerabilities. Following workarounds or updating software is essential to the lifecycle of software and keeping the integrity of critical infrastructure intact. 
+Resources:
+Common criteria. Common Criteria : CC Portal. (n.d.). Retrieved March 23, 2022, from https://www.commoncriteriaportal.org/ 
+Grieco, A. (2020, February 25). A three-step path to securing critical infrastructure. World Economic Forum. Retrieved March 23, 2022, from https://www.weforum.org/agenda/2020/02/a-3-step-path-to-securing-critical-infrastructure/ 
+Grieco, A. (2019, April 25). Security: Trust is Not a Light Switch. Retrieved March 3, 2023, from https://blogs.cisco.com/security/trust-is-not-a-light-switch. 
+
+The Keys to Enhance Cybersecurity in the Public Sector
+1.	Ways to Protect from Ransomware Attacks:
+a.	Assign responsibility for oversight and implementation of cybersecurity preparations to a sufficiently senior person with the authority they need to get people to follow directions.
+b.	Maintain inventory of all their hardware and software and build a data management awareness so that when patches and fixes are supplied by suppliers, they can immediately implement. 
+c.	Train and retrain all employees in cybersecurity awareness continuously and ensure every employee knows never to open an unfamiliar email attachment. 
+d.	Create an emergency action plan. Try out the plan on a demonstration basis to ensure everyone is aware of the actions required when there is an attack. Identify a senior enough person to prepare, distribute, and enforce the emergency action plan. 
+e.	Identify the most critical data and ensure it has a backup. Perform risk assessment and back up the most critical information periodically, if not continuously, to minimize impact. 
+f.	Open communication channels about cybersecurity with all partners, suppliers, and higher levels of government. Understand the measures taken by attached organizations to maintain and improve their cybersecurity.
+2.	Ask the following questions to identify the most critical data:
+a.	What are the greatest risks to data management in an agency?
+b.	What will cost you the most?
+c.	What will take the longest?
+d.	What will be the hardest to replace if a system is attacked by ransomware?
+3.	Complications with Cybersecurity Insurance:
+a.	The insurance industry hasn’t figured out how it wants to handle or sell cybersecurity insurance.
+b.	Cities can buy cybersecurity insurance. It’s not incredibly expensive, but it is an expense.
+c.	The insurance policies exclude certain costs, such as the cost of completely recreating lost data (such as the case with Baltimore). 
+d.	Attackers ask for more ransom if they think or know that a city has insurance. 
+e.	Getting cybersecurity insurance may increase the amount of ransom that attackers ask for. 
+f.	Cybersecurity insurance allows the mayor or the chief official to refuse to pay the ransom and save their public image. 
+g.	No law requires public agencies to submit cyber attack data to the relevant national agency, so there is not enough data to know the details of insurance companies’ ransom payments. 
+h.	As a part of its emergency planning, a city needs to decide whether it will pay the ransom or try to negotiate to reduce the ransom when it’s attacked. 
+4.	After paying ransoms:
+a.	More than 95% of the time, the cities get a decryption key to retrieve their data.
+b.	The attackers do not manipulate the data or pepper it with secret malware to attack again at a later time. 
+5.	If the ransom taker is asking for less money than the cost of data recovery and backups:
+a.	Consider paying the ransom.
+b.	Do not make a big deal out of it. 
+c.	Do not publicize it, although there is a chance that the ransom takers might make it public.
+6.	It’s crucial to review a cyber attack afterwards and ask questions, such as:
+a.	How did someone try to attack us?
+b.	How did our defenses work?
+c.	What are the learnings that you can take from an attack?
+7.	Places that are attacked should report quietly to a federal agency so that patterns can be identified. 
+a.	Healthcare facilities, schools, and other critical infrastructure are being targeted at a higher rate. 
+8.	MIT Cybersecurity Course Cybersecurity for critical urban infrastructure.
+a.	100-dollar course fee for exam. 
+Preparing and Delivering Training
+Working for a city housing agency we don’t necessarily punish people for being the cause of an incident and report on those mistakes, but we also look into opportunities that can be further looked at when it comes to monitoring and logging critical processes that require certain procedures to be followed through to the T. Authentication is a major player in this game and if a staff member decides to not follow procedure and authenticate a bad actor so they may be able to gain access to critical infrastructure then that is merely a policy violation. Thus, policy violations, must come with education first, remediation second, and finally termination if it becomes too bad of a habit for the organization to take on as a risk. Now if staff reports  a breach that they were partially involved in, whether it be through a link in an email or through a device they decided to bring into the office and charge via computers in the workspace, then reward may be necessary given the circumstances. If it is a complicated attack that required a point of contact with a vendor and no staff could see it coming (e.g., spear phishing) and someone decides to point it out, then yes reward is necessary, because that employee was critical in identifying the breach to begin with. Public displays of mistakes should not be allowed in the workplace, because it may drive intrigue away from cybersecurity. People must be excited to participate in cybersecurity and understand that their role in the company is critical to keeping city housing data secure. 
+Vulnerability Management Process, Challenges, and Opportunities
+	The most difficult challenge when it comes to vulnerability management has to be in proper scan configuration. It is no easy thing to involve network operations, device owners, and the patching team when scans are involved. Due to the strain, it can put on systems scans can impair services for a variety of reasons. First off, poorly designed services may behave improperly due to unexpected input (misconfiguration of scan) or inadvertently allow for a buffer overflow affecting the integrity of data, which is also another reason for having regular backups preferably before scans can help mitigate these types of risks. Also sending information to device owners, network operations, and the patching team on scan schedules will facilitate an easier and more fruitful scan. 
+	Kelly Hammons asks three questions “Vulnerability Management is not Simple, but it does not have to be Hard”. First off, “What is the time frame for the initial project, and when is it expected to be operational?” This question is important to ask, because establishing a set service level agreement with vendors, partners, device owners, network operations, and patching teams must know what their time frames are to prioritize vulnerabilities by order of most risk to the company to the least risk to the company. Second, “who will be involved in the project and in what capacity?” This is important to have in writing because any next gen firewalls that are utilized from third party vendors will also need to be notified of any potential scans on applications or other endpoints that are used in the day to day by device owners. Knowing who will be involved establishes a level of trust between vendor and organization and ensures proper procedures and cooperation is facilitated within the organization to keep downtime to a minimum. Finally, “Is there a buy-in from senior management? Who? Has this been communicated to the rest of the business?” This question is important because senior management must communicate to the rest of the business how long systems are going to be down for. They must also tap into the cost of downtime and has the company identified which systems are most critical to the company’s operations? Do they have backups? Are employees going to need new training for the updated software? Will they need to learn an entirely new piece of software, because the old software is being deprecated? These questions are important to ask, because it qualifies us to perform vulnerability management processes that may affect the availability of critical systems and ensure the company is on the same page with their employees when it comes to the security of their operations.
+	Under the CISO platform in an article posted by Pritha on the “Top 10 Metrics for your Vulnerability Management Program” would need to include a mean time to detect vulnerabilities, mean time to resolve, average window of exposure, scanner coverage, scan frequency by asset group, number of open critical/high vulnerabilities, average risk by business users/asset group, number of exceptions granted, vulnerability reopen rate (testing the effectiveness of past remediation processes), and percentage of systems with no open high/critical vulnerabilities are all metrics that should be looked into by the vulnerability management program utilized by the company. These metrics should coincide with a common vulnerability scoring system and should be archived in a database management system following NIST standards and tracked through the National Vulnerability Database to ensure mitigation of vulnerabilities and remediation of vulnerabilities are a priority. 
+Resources: 
+Hammons, K. (2014). Vulnerability Management is Not Simple But it Does Not Have to Be hard. Information Systems Security Association International , 12–17. 
+Pritha. (2019, November 28). Top 10 metrics for your vulnerability management program. CISO Platform. Retrieved March 23, 2022, from https://www.cisoplatform.com/profiles/blogs/top-10-metrics-for-your-vulnerability-management-program 
+Evaluating Managed Services for Vulnerability Management
+	Rapid7 Managed Vulnerability Management is a world-class vulnerability management program with complete coverage of your attack surface or so they say. Any CISO in charge of designing and implementing a vulnerability management program must ask certain questions in order to ascertain what is needing to be protected, how we prioritize vulnerabilities, how and what we choose to remediate, including asset management, patching, penetration testing, ticketing, and vector analysis. All of these are domains that fall under the vulnerability management program. 
+	So first off, two questions must be asked prior to utilizing Rapid7. This scope lies under documentation, and it concerns Rapid7’s change control process. How will the risk be calculated, and vulnerabilities prioritized? Rapid 7 thinks like an attacker and prioritizes like a business. Given that Rapid7 optimizes a holistic vulnerability management program that’s tailored to each and every business and their tolerance for risk it seems it is a more malleable vulnerability management program. Rapid7 prioritizes vulnerabilities based on risk exposure with prioritized recommendations for remediation. Rapid7’s proprietary threat intelligence also gets ahead of latest threats by proactively remediating such threats before impact as well satisfying the NIST standards for protecting systems. This program also adapts to the everchanging cybersecurity threat landscape with automatic logic and rule updates as well. Documentation must also include if there is a set of metrics that are agreed upon within the VM program. Rapid7 does in fact measure the program’s success, which also tracks the return of investment in your vulnerability management efforts. This allows the company to continually measure risk reduction and optimize the program how the company sees fit to strengthen overall security posture or dial back some rules that effect the availability of systems and reprioritize budgets to an ever-changing landscape. 
+	Next, we must ask who is in charge of patching the VM program, the firewalls, the IPS, the wireless environment, and the standardized workstation/server images? All of these points of contact need to be laid out to understand how the VM program works for us and what holes the organization needs to fill to ensure everything is working smoothly and Rapid7 is able to assist in all of these areas. Rapid7 states under their service overview that their people will manage, execute, and optimize processes across the business environment, including scan operations, vulnerability validation, and gathering threat intelligence. Keep in mind this program does not update firewalls, it is a customizable suite for IPS, it does scans of the wireless environment, but it does not set standards for workstation/server images. These things can be built in house following NIST protocols. 
+	Another question to ask falls under integrations. Is there a security information and event management system that ties into the program? Rapid7 does employ InsightVM technology, which is the industry-leading vulnerability management solution. It gives the company clarity into risk, extends security’s influence, and allows users to see shared progress with tracking and metrics. Given that it allows for tracking of vulnerabilities this answers another question: “is there a ticketing system to export vulnerabilities into?” But how is it used within Rapid7 software. Tracking is part of the vulnerability management process, and it allows tracking for the vulnerability itself, gives progress reports, and measures progress aligned to the goals of the VM program. Finally, within integration questions, how is Rapid7’s processes aligned to meet company goals? Rapid7’s process in discovering, reporting, remediating, tracking, and measure are all proven vulnerability management processes. Discover is their scan ops and allows for discovery of vulnerabilities, it includes assessments, scans, and tuning of scans as well to target critical infrastructure and leave other devices/technology with low CVSS scores. Reporting allows for vulnerability management validation. It validates the scan’s fidelity done in the discover process and prioritizes vulnerabilities to be worked on as they come in. Remediation allows for reports and readouts on vulnerabilities and even provides project workflow guidance. Their guidance recommendations are to patch and communicate. Tracking allows for the company to measure progress, report progress, and track open vulnerabilities. Finally measuring vulnerabilities within the company allows for optimization, measures exposure, and communicates risk impact so the company understands, and measures progress aligned to the program goals. A final question under integrations with InsightVM is there any level of automation for patching and containment of vulnerabilities? Approved by a sysadmin it is possible to automate patching with this program and it is in fact possible as well to automate containment to ensure availability of systems and remediate immediately for particularly nasty zero days. These days you can’t just be too careful. 
+	Finally, how does InsightVM manage goals  and SLAs? Time bound goals are set by specific standards outside of the vulnerability management program and it is essential that time bound goals can ensure that the company addresses all assets impacted by vulnerabilities within a two-week window. Service Level Agreement goals offer a dynamic time span that may resemble conditions like remediating 100% of critical vulnerabilities in production environments within three days of discovery or remediating 75% within Windows servers within 15 days of discovery date. These goals align with specific policies and procedures in place that are handed down under guidance of a cybersecurity framework like NIST standards. 
+Resources: 
+Goals and SLAS with insightvm. Rapid7. (n.d.). Retrieved March 23, 2022, from https://www.rapid7.com/products/insightvm/features/goals-slas/ 
+Hammons, K. (2014). Vulnerability Management is Not Simple But it Does Not Have to Be hard. Information Systems Security Association International , 12–17. 
+Rapid7 managed Vulnerability Management Services. Rapid7. (n.d.). Retrieved March 23, 2022, from https://www.rapid7.com/services/managed-services/vulnerability-management/overview/ 
+Managed VM service brief - rapid7. (n.d.). Retrieved March 23, 2022, from https://www.rapid7.com/globalassets/_pdfs/product-and-service-briefs/rapid7-managed-vm-service-brief.pdf/ 
+Rapid7 managed VM service benefits. Rapid7. (n.d.). Retrieved March 23, 2022, from https://www.rapid7.com/services/managed-services/vulnerability-management/benefits/ 
+Vulnerability assessment tool: INSIGHTVM features. Rapid7. (n.d.). Retrieved March 23, 2022, from https://www.rapid7.com/products/insightvm/features/ 
+
