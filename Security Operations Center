@@ -1,0 +1,647 @@
+Security Operations Center (SOC)
+Module 11
+An organization’s Security Operations Center (SOC) serves as a command post of defensive operations, often considered a centralized intelligence hub, responsible for continuous threat monitoring, detection, and response. Roles and responsibilities encompassed in an organization’s SOC are often a superset of multiple teams’ functions. For example, security operations analysts are considered the “front lines” of defensive operations in most environments. They serve as event arbitrators, resolving some issues and escalating others to incident response (IR) team analysts, such as suspicious host or network observations that require more detailed analysis or data correlation. Other teams that may reside within a SOC include SecOps engineering, threat intelligence, threat hunting, forensic investigations, data loss prevention, and red team operations.
+Security needs and priorities can be unique to an organization, yet the three key components of a SOC are universal: people, process, and technology. A mature, highly efficient SOC is adequately staffed with optimally trained personnel, well-defined and attentively curated processes, as well as baselined and highly integrated technologies that maximize efficiency gains through centralized orchestration and automation.
+Module Overview
+1.	This module’s content, security operations, is closely linked to concepts that will be expanded upon in the next module. Logically, successful detection of nefarious activity by SOC capabilities often spurs an organization’s IR team into action. IR analysts are likened to firefighters, as their core mission is to react to critical alerts and take actions to mitigate and remediate incidents — essentially putting out fires. As you focus on SOC functions in the upcoming sections, anticipate the intersection of workflows across each security team that supports the broader SOC mission. The next module takes a deeper dive into the role and life cycle of IR.
+2.	At the end of the module, you will be able to:
+a.	Explain how the Security Operations Center (SOC) operates, protect tools, such as the antivirus tool, to help prevent a security incident from a virus. 
+b.	Explain the SOC’s role in ensuring that the antivirus tool has a current engine with current definitions, runs properly, and is not disabled by a stealth virus.
+c.	Explain how the SOC detects viruses on inbound traffic, open files, and outbound traffic.
+d.	Explain how the Incident Response team jumps in with planned response actions. 
+3.	Planned Response Actions:
+a.	A spyware virus sends keystrokes out to an attacker:
+i.	Blocks transmission of the keystrokes to the attacker.
+ii.	Locates, eradicates, and clears out the virus-infected files.
+iii.	Sends directions to change compromised passwords.
+iv.	Corrects the defect that allowed the virus inside. 
+b.	The Incident Response team:
+i.	Analyzes the timeline of the virus entry and the compromised or encrypted files to report damage to management. 
+ii.	Helps in direct recovery and restoration of the compromised, tampered, or encrypted files from backup storage. 
+4.	Professional Background:
+a.	Identified security solutions such as:
+i.	Early generations of firewalls.
+ii.	Intrusion Prevention Systems (IPS) and Intrusion Detection Systems (IDS). 
+iii.	Log aggregators.
+iv.	Data loss protection tools for government encouragement, offered testbeds to help mature them. 
+b.	Helped design SOCs and operationalized their processes in the commercial sector. 
+c.	Received training from Eugene Schultz, a pioneer in incident response methodology. 
+d.	Tailored and implemented government and commercial incident response processes and teams. 
+e.	Provided inputs to the SANS Incident Handling Step-by-Step Guides.
+f.	Teach security operations and incident response in ISC^2 and ISACA certification classes.
+SOC Overview
+1.	What is a SOC?
+a.	SOC: command post or intelligence hub.
+i.	Operates 24/7
+ii.	Provides real-time monitoring and analysis:
+1.	Preventing threats
+2.	Detecting threats
+3.	Analyzing threats
+4.	Reporting threats
+5.	Reporting vulnerabilities
+iii.	Works with incident response to resolve security incidents in a physical or a virtual center. 
+2.	Components of a SOC:
+a.	People
+i.	Security analysts
+ii.	Threat-hunters
+iii.	Leaders
+b.	Processes
+i.	Vulnerability analysis
+ii.	Security events
+iii.	Configuration data – Analyze, react, and report potential security incidents
+c.	Technologies
+i.	Antivirus software 
+ii.	Security Information and Event Monitoring (SIEM) systems
+iii.	Security Orchestration and Response (SOAR) tools
+3.	Cliff Stoll and the Cuckoo’s Egg: First incident of advanced persistent threat in which West German hackers broke into US government and military systems. 
+4.	Morris Worm case: Caused DoS attack reflecting over 10% of the internet. 
+5.	Functions of a SOC:
+a.	Arranges for trained personnel and automation to:
+i.	Create risk awareness
+ii.	Prevent threats
+iii.	Identify more quickly
+iv.	Prioritize potential threats
+v.	Shortens the timeline between the first compromise and detection, reducing time to cause harm. 
+vi.	Decreases costs and impacts of security incidents involving data loss, privacy data breaches, lawsuits, reputation damage, and business disruption. 
+vii.	Promotes legal compliance with laws, regulations, and contracts, including EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and the Payment Card Industry (PCI), requiring us to detect and report privacy breaches and specify an action plan. 
+viii.	Improve business reputation and stakeholders’ trust by showing we take privacy very seriously. 
+How are SOCs Organized?
+1.	The structure and staffing model of a SOC will vary according to the organization’s needs. For example, a SOC can be centralized (one command and common security tools), decentralized (distributed command centers with the potential for multiple technologies and security tools), or hybrid (a combination of centralized and decentralized). In addition, some security operations teams are sourced with in-house staff, outsourced staff, or a mixture of the two. Such choices regarding structural implementation and staff sourcing can impact the overall security of a business.
+2.	SOC Models:
+a.	Centralized:
+i.	One SOC commands control over the security tools
+b.	Decentralized:
+i.	Each major line of business, major location, or subsidiary operates its security tools.
+c.	Hybrid:
+i.	A central authority coordinates with decentralized SOCs.
+ii.	Recognizes threats moving across the decentralized environment including fast-moving malware, ransomware, or advanced persistent threats (APTs).
+3.	Staffing:
+a.	Insource:
+i.	Have our own employees and include some contract or contingent labor. 
+b.	Outsource:
+i.	Have a vendor operate:
+1.	Managed security service provider (MSSP).
+2.	Cloud-based vendor with SOC-as-a-Service.
+ii.	Outsourcing SOC may affect security, therefore build a strong business case indicating:
+1.	Value
+2.	Criteria to select a good vendor.
+3.	Detailed contract and service-level agreement.
+4.	Direct staff member managing the relationship.
+iii.	Business value gained from outsourcing can include:
+1.	Experienced SOC service provider.
+2.	Sophisticated, inexpensive, and very modern SOC tools.
+3.	Round the clock coverage by knowledgeable security professionals.
+iv.	Points to consider when outsourcing SOC:
+1.	The need to change your infrastructure security tools to the ones preferred by the outsourcer. 
+2.	Agreement on whether your tools should be in prevent mode, active mode, or detect-passive mode.
+3.	Agreement on the threshold levels to trigger that prevent mode. 
+4.	Agreement on what constitutes a security alert. 
+5.	Alignment with the incident response team to get alerts from outsourced SOC. 
+c.	Hybrid:
+i.	Have a combination of insourced and outsourced staff. 
+4.	SOC Roles:
+a.	SOC Manager/Leader:
+i.	Recruits, manages, and trains staff.
+ii.	Requires budgets and reports.
+iii.	Directs technology.
+iv.	Approves procedures.
+v.	Monitors the quality of staff, tools, and processes.
+vi.	Creates security assessment reports.
+vii.	Supports the audit process.
+viii.	Reports on metrics.
+ix.	Reports to Security Director/Chief Information Security Officer (CISO).
+b.	SOC Engineer:
+i.	Designs, specifies, implements, maintains, and improves the SOC tools and solutions. 
+c.	SOC Shift Supervisor
+SOC Organization
+The Security Operations Center or SOC is an integral part of an organization because it centralizes all things security. Any organization these days needs to “mount a competent defense in the IT enterprise. This includes a vast array of sophisticated detection and prevention technologies, a virtual sea of cyber intelligence reporting, and access to a rapidly expanding workforce of talented IT professionals” (Zimmerman, 1). The SOC supports risk-based cybersecurity strategies by applying a principle of cyber situational awareness. The Committee on National Security Systems in “CNSS Instruction No. 4009” cites: “within a volume of time and space, the perception of an enterprise’s security posture and its threat environment, the comprehension/meaning of both taken together (risk), and the projection of their status into the near future” provides a level of ambiguity and uncertainty that attackers can utilize to present risk to the enterprise as a whole. It’s the job of the SOC to support risk-based cybersecurity strategies by understanding situational awareness in the cyberthreat landscape. The SOC supports situational awareness and risk-based strategies by gathering information, analyzing data, and visualizing the landscape. For the SOC, using situational awareness follows the observe, orient, decide, and act loop and this loop is divided into three related areas: network, mission, and threat. The SOC as a whole must maintain an awareness of all three areas to be effective and apply a risk-based cybersecurity strategy. The best staffing structure I would personally recommend is a Predominately internal operational model that hires quality employees over quantity. The predominately internal model has its own service and platform management, incorporates security incident response internally with a monitoring/investigation and remediation coordination team and service providers assisting this team in times of emergency (Always good to have the backup when you need it). Internal SOC would also incorporate cyber threat intelligence teams/technology. To avoid burnout internally switch out someone from either security incident response team or allow them to threat hunt for a little bit. Security analytics would also be hybrid infusing an internal SOC with managed service providers. In this case managed service providers are typically a better option outsourced, because forensics and malware are such a highly specific operation requiring many more tools than an internal SOC and enterprise may not want to shell the money for. Security data management/analytics teams work much better internally. The funding for SOC personnel, security tools and technologies are always going to vary from enterprise to enterprise; however, from a top-down perspective it’s necessary for us to understand and fund the SOC from that perspective. It’s necessary to see that in a rapidly growing industry and an ever-changing cyberthreat landscape that an organization looks at the possibility of insufficient skilled resources and poor fidelity of services. As an enterprise it’s important to manage expectations and deliver on a promise. SOAR is a good answer to those questions. SOAR stands for Security Orchestration, Automation and Response/Reporting. Orchestrate end-to-end workflows, automate tasks using integration with other tools, respond automatically to security incidents, and report key metrics and KPIs collected from the workflow. This model for security standardization lessens the amount of personnel and clearly defines the means to an SOC. The funding for tool and incident and handling training and developing a playbook and process development is now typically open source; however, standards for detecting, analyzing, responding to, reporting on, and preventing cybersecurity incidents in and of itself must be handled internally. Awareness training and assessing vulnerabilities to the SOC are the basis for creating a threat hunting ground for SOC analysts. It lays bare what can be a very difficult environment for someone to navigate around without a clear understanding of their environment. Therefore, establishing a full stack tool and incident handling playbook with a clearly defined procedure for improving processes within the organization is all any organization can ever ask for when it comes to creating an internal SOC. 
+References: 
+Discover the secrets of a Soc and how to build a Threat Hunting team. (2020). Youtube. Retrieved May 9, 2022, from https://www.youtube.com/watch?v=7S8V9LumQG0. 
+Zimmerman, C. (2014). Cybersecurtiy operatoi NS center if you manage ... - mitre corporation. MITRE. Retrieved May 10, 2022, from https://www.mitre.org/sites/default/files/publications/pr-13-1028-mitre-10-strategies-cyber-ops-center.pdf 
+Analysts
+Threat and Vulnerability Intelligence
+1.	Threat intelligence data describe threat actors’ motives, targets, and attack behaviors. These raw data, once collected, are contextualized with specific consideration to their relevance and potential impact on the organization. Security operations teams operationalize threat intelligence data to prioritize their efforts and achieve a deeper understanding of changing adversary tactics, techniques, and procedures. Security operations teams are frequently unable to process all of the alerts generated by their enterprise monitoring and detection systems. By integrating threat intelligence with SOC functions, analysts can prioritize, and action events deemed to have the potential for the most critical impact.
+2.	To be profitable, most organizations have critical business functions that rely on hardware and software platforms. These platforms are vulnerable to software bugs and flaws identified in the software’s dependencies, such as a library, package, or hardware components. The role of a vulnerability intelligence analyst is to inform, triage, and monitor emerging threats, newly identified firmware, and software vulnerabilities. Once identified, the analyst must drive patching efforts based on the criticality rating associated with the vulnerability and its potential impact on the organization.
+3.	Role of a Threat and Vulnerability Intelligence Analyst:
+a.	Seeks knowledge of new threats and vulnerabilities through:
+i.	IT venders who publish product vulnerabilities and patches.
+ii.	Government services who maintain databases of known vulnerabilities.
+iii.	Non-profit organization-MITRE with Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK) project.
+iv.	Specialty threat and vulnerability intelligence vendors who aggressively seek and provide knowledge about zero-day attacks, attack signatures, and indicators of compromise. 
+v.	Newsfeeds, incident reports, vulnerability alerts, and threat briefs.
+vi.	Internal resources that reveal concerns about insourced developed software.
+b.	Reviews vulnerability scans and other security assessments to identify known vulnerabilities, misconfigured systems, and other security concerns. 
+c.	Conducts an analysis determining relevance to the environment by:
+i.	Considering the effectiveness to strengthen defenses.
+ii.	Providing operational intelligence to strengthen defenses.
+iii.	Examining for indicators of compromise. 
+d.	Assess the risk related to a threat, vulnerability, or other security noncompliance and recommends a risk treatment and timeline. 
+4.	Risk Treatment Options:
+a.	Apply a patch, if available.
+b.	In the interim, recommend a compensating control such as adjusting firewall, proxy rules, IPS signatures, data loss patterns, or increase logging. 
+c.	Maybe take no action but monitor attacker’s exploits or watch for indicators of compromise and be ready with a quick response action. 
+d.	Temporarily disable the vulnerable software until a patch is available.
+5.	Common Vulnerability Scoring System (CVSS):
+a.	A vendor rates the risk of an identified vulnerability.
+b.	The analyst modifies this score with the organization’s unique environmental factors to determine a:
+i.	Vendor’s patch
+ii.	Risk score
+iii.	Priority level
+6.	Vulnerability assessment tools can provide information about:
+a.	Known vulnerabilities in the OSs, applications, databases, and cloud platforms.
+b.	Unpatched systems
+c.	Misconfigured systems.
+7.	Before conducting a vulnerability scan, determine:
+a.	A list of systems to scan.
+b.	A minimum patch level. 
+c.	Associated configuration baselines.
+d.	A strong, aggressive, database of known vulnerabilities. 
+8.	Threat Intelligence Platform:
+a.	Integrates with existing tools and products to address the growing amount of data generated by: 
+i.	Internal security events.
+ii.	External intelligence feeds.
+b.	Presents a threat intelligence management system that automates and simplifies threat and vulnerability management tasks.
+c.	Aggregates, correlates, and analyzes threat data from multiple sources in real-time to curate, normalize, and enrich a risk score. 
+Security Event Collection and Detection
+1.	SOC analysts use a variety of tools to collect security-related events and detect threats. For detection capabilities to be effective, audits must be appropriately configured to ensure specific activities are being recorded. These observations are sourced from endpoints, network devices, intrusion detection systems, applications, enterprise services, and more. These log and event data are aggregated to a central data repository to ensure the SOC has sufficient visibility across the environment. SIEM is often used to preserve, index, and correlate these data and supports threat detection through the use of signatures built to flag known malware variants and threat actor activity. SOC analysts receive and respond to alerts from various sources to include the SIEM.
+2.	Roles of a SOC analyst:
+a.	Operates tools to collect security events.
+b.	Organizes and interprets security data events. 
+c.	Detects potential threats and incidents.
+3.	Security Events:
+a.	Useful observable records of activity.
+b.	Not necessarily indicative of malicious activity.
+4.	Event Collection Guidance:
+a.	Threat intelligence analysts who inform on imminent and ongoing threats.
+b.	Log and monitoring policy and standard.
+c.	Security Event Sources:
+i.	Network appliances.
+ii.	Network traffic flow data
+iii.	Servers
+iv.	Endpoints
+v.	Applications
+vi.	Databases
+vii.	Identification
+viii.	Authentication
+ix.	Authorization
+x.	Remote access
+xi.	VPN
+xii.	Security tools
+xiii.	Quarantine zones
+xiv.	Cloud services
+xv.	Third-party operating systems
+5.	Critical success factors of collection service include:
+a.	Selected log event generation is enabled at the source to record security-relevant events.
+b.	Logs are protected.
+c.	System clocks are synchronized to the same reference time source.
+6.	Centralize collected events to:
+a.	Respond to legal and policy compliance initiatives.
+b.	Back up events for record retention and availability.
+c.	Use in correlation and threat detection.
+d.	Use in incident response and investigations.
+7.	Implement centralization by configuring:
+a.	Logging functions to forward events and data to a log aggregator or
+b.	Log aggregator to ingest and consume events and data from the source.
+8.	Threat Detection Service:
+a.	Aim:
+i.	Recognize threats as accurately and quickly as possible and examine all alerts.
+ii.	Detects all threats without generating too many false positives and avoid insensitivity to actual security incidents. 
+b.	Critical success factors:
+i.	A strong collection function.
+ii.	The quality of threat signatures and analytics produced by threat intelligence. 
+9.	Approaches for Threat Detection:
+a.	Reactive and automatic threat detection
+i.	Automated analysis:
+1.	Transmitting log events to the Security Information and Event Management System (SIEM) and its analytic engines.
+2.	Intrusion detection systems.
+3.	Endpoint sensors such as antivirus or Endpoint Detection and Response.
+ii.	Threat detection challenges:
+1.	Inconsistent log content
+2.	Inconsistent clocks
+3.	Inconsistent formats
+4.	Disabled log event generator
+5.	Compromised log entries
+b.	Proactive threat detection
+i.	Threat hunter:
+1.	Is a new SOC role.
+2.	We assume that the IT environment is compromised and seeks to discover it.
+3.	Discovers advanced threats and attacks that evade automated security solutions.
+4.	Correlates anomalies, threat intelligence information, and discovers indicators of compromise. 
+5.	Discovers past and current threats using penetration testing skills. 
+10.	Security Information and Event Management (SIEM):
+a.	Key tool for automated security event collection and threat detection.
+b.	Collects security events and security alerts from multiple systems and other security tools.
+c.	Normalizes and aggregates data.
+d.	Analyzes data.
+e.	Alerts about potential security incidents.
+f.	Automates threat discovery and response workflow.
+g.	Provides centralized storage for:
+i.	Legal compliance
+ii.	Historical comparison
+iii.	Security incident response and investigation
+11.	SIEM Limitations:
+a.	Lack of context about raw events leading to false positives.
+b.	Limited analysis of unstructured data.
+12.	Threat Hunting Process:
+a.	Formulate hypothesis
+b.	Define evidence
+c.	Identify data sources
+d.	Gather and examine data
+e.	Respond to findings
+f.	Recommend analytic and protection improvement
+Describe the functions and services of a SOC
+When considering the techniques attackers use to gain initial access to an environment, spear phishing is hands down the most critical data source for early detection. Security events that ought to be collected from spear phishing include application logs for communication infrastructure within the enterprise. Monitoring for third-party application logging, messaging, and or other artifacts are the basis for a robust application log. Other data sources could include monitoring of network traffic. Monitoring and analyzing SSL/TLS traffic patterns and packet inspection associated to protocol(s) that do not follow the expected protocol standards and traffic flows could mean data is being exfiltrated from the enterprise. Detecting supply chain compromises according to the Mitre ATT&CK framework means using verification of distributed binaries through hash checking or other integrity checking mechanisms, such as, scanning downloads for malicious signatures and attempt to test software and updates prior to deployment while taking note of potential suspicious activity. These detection mechanisms also apply to software vulnerabilities. Exposed credentials fall under gathering victim org information within the Mitre ATT&CK framework and they cite that attacker may gather victim-owned personal data in order to fulfill pre-attack activities. Much of these activities may have a very high occurrence and will produce an associated false positive rate; however, detection efforts may be focused on related stages of the adversary lifecycle, such as during initial access. That said, ensuring a culture for cybersecurity ensures that users who are security minded will also practice cybersecurity outside of the organization. Insider threats aren’t even really classified in the Mitre ATT&CK framework and possibly for good reason. User activity monitoring is probably the best relevant data source in regard to insider threats alongside DNS queries that logs major events on the DNS server such as zone transfers; DNS requests from internal servers can also reveal malware beaconing. Given these frameworks and their relevant data sources it’s clear that to prevent initial access and detect attacks, then the organization must prioritize identity and access management. Identify, authenticate, authorize, auditing, and accountability are all essential components to a robust identity and access management model, because it places a heavy emphasis on monitoring of systems and holding whoever caused a breach accountable. Investigation in the SOC in general must occur when a potential security violation occurs. 
+References: 
+ATT&CK® navigator. (n.d.). Retrieved May 9, 2022, from https://mitre-attack.github.io/attack-navigator/ 
+Data from information repositories: Code repositories. Data from Information Repositories: Code Repositories, Sub-technique T1213.003 - Enterprise | MITRE ATT&CK®. (2021, October 16). Retrieved May 9, 2022, from https://attack.mitre.org/techniques/T1213/003/ 
+Gather victim org information. Gather Victim Org Information, Technique T1591 - Enterprise | MITRE ATT&CK®. (2021, August 27). Retrieved May 9, 2022, from https://attack.mitre.org/techniques/T1591/ 
+Phishing: Spearphishing link. Phishing: Spearphishing Link, Sub-technique T1566.002 - Enterprise | MITRE ATT&CK®. (2020, March 2). Retrieved May 9, 2022, from https://attack.mitre.org/techniques/T1566/002/ 
+SUPPLY CHAIN COMPROMISE: Compromise software supply chain. Supply Chain Compromise: Compromise Software Supply Chain, Sub-technique T1195.002 - Enterprise | MITRE ATT&CK®. (2020, March 11). Retrieved May 9, 2022, from https://attack.mitre.org/techniques/T1195/002/ 
+Trusted relationship. Trusted Relationship, Technique T1199 - Enterprise | MITRE ATT&CK®. (2018, April 18). Retrieved May 9, 2022, from https://attack.mitre.org/techniques/T1199/ 
+Zimmerman, C. (2014). Cybersecurtiy operatoi NS center if you manage ... - mitre corporation. MITRE. Retrieved May 10, 2022, from https://www.mitre.org/sites/default/files/publications/pr-13-1028-mitre-10-strategies-cyber-ops-center.pdf 
+Reactive and Automatic Threat Detection
+1.	You specify configuration, oversee operation, review configuration, and collect events and information to detect threats. 
+2.	Threat Prevention and Detection Tools:
+a.	Separate the subject and the reviewer of the log.
+b.	Arrange appropriate security training for performers.
+c.	Have clear and documented roles and responsibilities.
+d.	Ensure updates of engines, signatures, definitions, and patterns.
+e.	Ensure proper tuning to minimize false positives and prevent an increase in false negatives.
+3.	A firewall is a classic prevent tool and produces events for review in the detect stage. 
+4.	Types of Firewalls:
+a.	Network-based Firewalls:
+i.	Control inbound and outbound traffic based on static, dynamic, or proxy rules.
+b.	Host-based firewalls:
+i.	Control inbound and outbound traffic on a single computer.
+c.	Application-based and database firewalls:
+i.	Permit or deny an action based on the particulars of application commands or data types. 
+5.	SOC Responsibilities with Firewalls:
+a.	Review the rules
+b.	Monitor file integrity with respect to configuration and rules.
+c.	Collect, aggregate, and analyze firewall events and alerts to monitor:
+i.	Administration access
+ii.	Changes to the firewall
+iii.	Patch levels
+iv.	Blocked events
+6.	Limitations of a Firewall:
+a.	Attackers target it.
+b.	Clever attackers try to bypass it.
+7.	Intrusion Prevention System or Intrusion Detection System (IPS/IDS):
+a.	Analyzes activity and recognizes threats.
+b.	Operates in two modes:
+i.	IPS-an active tool placed inline to block and prevent attacks.
+ii.	IDS-a passive tool placed as a sensor to recognize, detect, and alert on attacks. 
+c.	Works at various architectural layers:
+i.	Network
+ii.	Host
+iii.	Application
+iv.	Database
+d.	Needs access to plaintext and unencrypted data. 
+8.	According to the NIST, engines are categorized in 3 ways: 
+a.	Signatures/Patterns:
+i.	Features:
+1.	Contains a library of signatures or patterns of known threats and attacks.
+ii.	Limitations: 
+1.	Is vulnerable to new or variant attacks.
+2.	Needs an aggressive vendor to learn about new or variant attacks and provide updated signatures or patterns.
+3.	Might not recognize stateful activity across multiple events, such as a request and a response, if it is not a clear indicator of attack.
+b.	Anomaly Engine:
+i.	Features:
+1.	Recognizes unknown attacks, such as zero-day or variant attacks.
+2.	Takes a training period to create a profile or a baseline of normal behavior of users, hosts, networks, network connections, applications, and traffic.
+3.	Uses statistical methods to compare current activity to the baseline to discover anomalies.
+ii.	Limitations:
+1.	Is vulnerable to the attacker’s behavior adjustment over time and assumes those are normal. 
+2.	Generates false positives.
+3.	Fails to recognize an attack as it becomes less sensitive with wide threshold adjustment.
+c.	Protocol Analysis Engine:
+i.	Features:	
+1.	Recognizes unknown attacks that abuse or attack through a protocol.
+2.	Example: Hypertext Transfer Protocol (HTTP)
+a.	Compares the current protocol’s behavior to the behavior defined by the Internet Engineering Task Force (IETF) Request for Comment (RFC). 
+ii.	Limitations:
+1.	Is resource-intensive.
+2.	Misses attacks that do not violate the IETF RFC or that particular protocol’s behavior. 
+9.	Responsibilities of SOC Analyst with an IPS/IDS:
+a.	Administer the tool with the IT Department.
+b.	Ensure updates to the:
+i.	Tool
+ii.	Signatures and patterns of known attacks. 
+iii.	Baseline of normal activity for the discovered anomalies.
+c.	Receive and analyze alerts.
+d.	Tune to minimize false positives/negatives.
+e.	Secure the tool against attacks.
+10.	Additional responsibilities of a SOC analyst include operating, updating, and adjusting tools for threat prevention and detection. Preventative security tools such as firewalls and intrusion detection and prevention systems are monitored by SOC personnel, who also analyze aggregated logs and alerts resulting from identified indicators of compromise.
+Threat Detection Continued
+1.	In addition to continuous monitoring and alert investigations, SOC analysts also provide various additional services: file integrity monitoring (FIM), data loss protection (DLP), malware prevention and detection, and AV alert monitoring. These services are supported by technologies that can be run in various modes to alert or alert and take remedial actions to neutralize suspected malicious activity.
+2.	SOC Analysts provide File Integrity Monitoring (FIM) services for files in which:
+a.	Integrity, quality, accuracy, and completeness are quite critical.
+b.	Unauthorized changes through fraudulent tampering, accidental modifications, or corruption are of significant concern.
+3.	Examples of FIM:
+a.	Application source code:
+i.	When change control procedures are followed, integrity control works properly.
+ii.	When an internal/external bad actor evades the procedures they can tamper with the code and embed malicious intent.
+b.	Configurations
+c.	Key financial records
+d.	Account directories
+e.	Forensic images
+4.	How FIM Works:
+a.	Takes a cryptographic hash to fingerprint a subject file.
+b.	Stores the hash under a separation of environment.
+c.	Periodically rehashes the subject file.
+d.	Compares the current hash to the store baseline hash, alerting the file owner if it finds any differences. 
+e.	If differences appear:
+i.	The SOC: 
+1.	Notifies the file owner.
+2.	Provides contextual information-timestamp on changes and possible purported users who may have made the changes.
+ii.	The file owner:
+1.	Reviews and reconciles to determine if the change is authorized/unauthorized.
+2.	Suggests an investigation if the change is unauthorized. 
+5.	SOC Tool: Data Loss Protection (DLP)
+a.	It discovers and protects particular data from unauthorized use or movement. 
+b.	Example: DLP in the Payment Card Industry (PCI).
+i.	Blocks movement of data in Prevent mode.
+ii.	Alerts to movement of data in Detect mode. 
+c.	It is like a disallowed list. 
+d.	Fine-tuning characterizations of the subject data reduces:
+i.	False positives
+ii.	False negatives
+e.	It recognizes and prevents the unauthorized use or movement of the subject data in active mode. 
+f.	It recognizes, detects, and alerts to unauthorized use or movement in passive mode.
+g.	It lives as an agent on a device, with its controller in the SOC. 
+h.	DLP can prevent or alert to the movement of data to a printer or a thumb drive. 
+6.	SOC Service: Malware Prevention and Detection
+a.	Malware can be an advanced persistent threat.
+b.	Attacker tools delivered through malware payload:
+i.	Backdoors
+ii.	Bots
+iii.	Keystroke loggers
+iv.	Web browser plug-ins
+v.	Email or spam generators
+vi.	Rootkits and other attacker toolkits
+7.	The SOC Analyst:
+a.	Uses antivirus in conjunction with other security tools and tactics such as firewall, IPS, or IDS to address malware threat.
+b.	Can block the transfer of certain file types such as .exe files through email or File Transfer Protocol (FTP).
+c.	Can enforce application allowed/disallowed lists to prevent malware. 
+8.	SOC Tool: Antivirus
+a.	Addresses many types of malware:
+i.	Viruses
+ii.	Worms 
+iii.	Trojan horses
+iv.	Malicious mobile codes
+v.	Keystroke logging spyware
+b.	Works in various modes:
+i.	Prevents by blocking the malware from entry or execution.
+ii.	Detects and alerts to a malware attack.
+iii.	Responds by quarantining, eradicating, or erasing the malware.
+c.	Includes technologies such as:
+i.	Signature or pattern definition
+ii.	Heuristics tools
+iii.	Behavior analysis tools
+iv.	Artificial intelligence tools
+d.	Has limitations such as:
+i.	Vulnerable to polymorphic viruses
+ii.	Unable to inspect encrypted files and communications
+iii.	Vulnerable to stealth viruses that disable or delete antivirus tools.
+e.	Lives as an agent on the device and reports to a controller in the SOC. 
+Threat Detection
+Explain the Difference between Reactive and Proactive Threat Detection
+•	File type: Wind32 EXE
+•	Filename: J3Ags7wwshigXbt.exe
+•	Initial detection date (VirusTotal): 2021-05-25 06:51:24 UTC
+•	MD5 Hash: 217ecf83d89f2f33eec443c5c732b14c
+•	Compile Time: 2021-05-25 00:38:09 UTC
+•	Names of the 9 YARA Rules that detected this sample: 
+o	Email_stealer_bin_mem
+o	Fareit
+o	INDICATOR_SUSPICIOUS_EXE_Referenfces_File_Transfer_Clients
+o	pe_imphash
+o	pe_imphash
+o	pony
+o	Skystars_Malware_Imphash
+o	win_pony_auto
+o	with_sqlite
+•	VirusTotal detection ratio: 46/70
+Tactics
+The DeathStalker threat group is known to target law firms and companies in the financial sector. They use spear phishing techniques to gain initial access and then cover their steps by creating decoy documents to mask their intent. They utilize what is called the Powersing toolchain in order to achieve this which starts off from an LNK file that later creates a C&C (C2) server that has two main tasks: capture periodic screenshots from the victim’s machine and execute arbitrary Powershell scripts provided by the C2. 
+Techniques
+DeathStalker uses deceptive shortcut files that contain an LNK file that has a structure containing a decoy document that ensures users do not get suspicious. They also utilize dead drop resolvers, which utilize public services. These services provide a way for attackers to store data at a fixed URL through public posts, comments, user profiles, content descriptions, etc. IP addresses use the same technique and are obtained in the form of integers that are then divided by a hardcoded constant before being converted. 
+Procedure
+DeathStalker has a simple procedure when it comes to gaining initial access, but it is when they have information and utilize dead drop resolvers that things get a little bit more complicated. First they craft their spear phishing email and they craft it so people think it’s coming from a legitimate source with an attachment that doesn’t look suspicious, because they utilize a shortcut image instead of what the file actually contains. The file they actually email contains an LNK file encoded into a decoy document that looks legit. This LNK file then opens a short PowerShell script passed through cmd.exe’s arguments. At Stage 0 or the VBE stage the decoy document is created giving the illusion of having clicked on a real document and ensures the victim doesn’t get suspicious. Stage 1 is a PowerShell script containing C# assembly designed to connect to a dead drop resolver and obtain cryptographic material used to decode the last stage of the chain by extracting a  DLL file from the shortcut and locating a BASE64-encoded list of URLs at a fixed offset; thus, establishing persistence by creating a shortcut in the Windows startup folder pointing to the VBE startup script. Finally at stage 2, two more processes occur. The actual malware implant is used to take control of the victim’s machine. It connects to one of the dead drop resolvers to get the address of the real C2 server and enters a loop that looks for orders every few seconds. As long as the VBE startup script remains on the host’s machine and even through restart DeathStalker is able to automatically start the process over from step 1 to step 2. 
+Hunt Hypothesis
+Given DeathStalker’s proclivity to target private entities in the financial sector, including law offices, wealth consultancy firms, financial technology companies, and has also been observed to attack diplomatic entities, it seems as if DeathStalker may in fact be a cyberthreat group for hire. Their tactics, techniques, and procedures are known to the cybersecurity realm, then it should be easy to automate security against this group. Signature pattern engines should be able to prevent and alert users to possible malicious files within the preferred communication method alerting users that attachments may not seem as what they are. The signature pattern engine ought to be able to disclose that shortcuts can be spoofed, and hovering may be a good way to denote the actual contents of the attachment in the email. Furthermore, an anomaly engine may very well catch users who disregard the first control and quarantine files immediately. No user who opens an attachment from their organization’s preferred communication method should be running PowerShell scripts immediately following that event. Finally, securing the data if all else fails matters most. A Protocol analysis engine would stop DeathStalker’s dead drop resolver technique and could possibly be utilized to salt data that is being exfiltrated out, meaning DeathStalker would run into even more issues in tracking down the data they thought would go to one place may end up right back in the organization’s hands. Given DeathStalker’s tactics, techniques, and procedures it becomes known to threat hunters that communications are the hunting ground and monitoring of this hunting ground must be taken very seriously as they will surely evolve with time as their techniques become more known to the financial sector; thus, its best to work with incident handlers and investigate issues arising from communication methods in general. 
+References: 
+Hunt evil practical guide - threathunting. (n.d.). Retrieved May 11, 2022, from https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf 
+Yamout, A. I. K. P. D. M., Yamout, I. K. P. D. M., *, N., Legezo, B. L. D., John Hultquist Brian Bartholomew Suguru Ishimaru Vitaly Kamluk Seongsu Park Yusuke Niwa Motohiko Sato, Marco Preuss Denis Legezo Costin Raiu Kurt Baumgartner Dan Demeter Yaroslav Shmelev, Ivan Kwiatkowski Maher Yamout Noushin Shabab Pierre Delcher Félix Aime Giampaolo Dedola Santiago Pontiroli, Dmitry Bestuzhev Costin Raiu Pierre Delcher Brian Bartholomew Boris Larin Ariel Jungheit Fabio Assolini, Shmelev, A. G. O. K. Y., Zinchenko, M. R. Y., Amr, Kaspersky, Chebyshev, V., Costin Raiu Marco Preuss Kurt Baumgartner Dan Demeter Ivan Kwiatkowski, Neis, C. R. M., & Park, S. (2021, May 13). Lifting the veil on Deathstalker, a mercenary triumvirate. Securelist English Global securelistcom. Retrieved May 10, 2022, from https://securelist.com/deathstalker-mercenary-triumvirate/98177/ 
+Services and Tools for Threat Detection
+SOC Services
+1.	Depending on the charter and defined services catalog for a SOC, an organization’s SOC may provide additional security services. For example, maintaining allowed and disallowed lists, security assessments, cryptographic key management, consulting services, and analyzing metrics are possible SOC services. These services support a SOC analyst in threat detection.
+2.	SOC Analyst Services and Tools:
+a.	Allowed and Disallowed lists
+b.	The allowed list might also be called a permitted list, a whitelist, or a positive list. 
+c.	The disallowed list might be called a prohibited list, a blacklist, or a negative list. 
+3.	Allowed/Disallowed Lists for Email:
+a.	Protect emails with:
+i.	Listed email domains
+ii.	Listed file types
+iii.	SPAM filters
+b.	Use these lists with inbound and outbounds emails to reduce:
+i.	SPAM emails
+ii.	Offensive emails
+iii.	Social engineering phishing attacks
+iv.	Malware
+v.	The loss of valuable organizational or personally identifiable information.
+c.	Fine-tune commercial lists for: 
+i.	Risky file types
+ii.	Email domains of competitors
+iii.	Permitted exceptions to commercial tools for business reasons
+4.	Websites and Internet Protocol (IP) Allowed/Disallowed Tools:
+a.	Use these tools on inbound and outbound web proxy and firewall traffic to:
+i.	Reduce the incidence of communications with an attacker’s website.
+ii.	Prevent users from accidentally visiting a known hijacked website.
+iii.	Block communications with known attacker command and control sites.
+iv.	Permit specific authorized cloud services.
+v.	Block unauthorized cloud services. 
+5.	SOC can: 
+a.	Subscribe to website domain and IP address domain reputation monitoring services to create a basic list. 
+b.	Supplement that risk with the domains that are riskier to the business.
+6.	Application Allowed List Tools can:
+a.	Stop the execution of malware and other unauthorized software.
+b.	Be set active enforcement mode to prevent the execution of unauthorized applications. 
+c.	Be set in passive detect and alert mode.
+d.	Set in hybrid mode to prompt a user to decide to accept or reject the execution of applications. 
+7.	Application-Allowed Implementations:
+a.	Detective compliance scans.
+b.	Folder or file attributes configured into the approved device baselines and monitored through baseline and vulnerability compliance scans.
+c.	Application verification against its cryptographic hash.
+i.	An attempt to change this application generates an alert in real time. 
+d.	Mobile Device Management (MDM) Technology. 
+e.	Enterprise Application Store from which users download and install authorized applications.
+f.	Configure the computer settings to prohibit users from downloading or installing new applications.
+8.	The Security Assessor Role: 
+a.	Tests security controls and processes to:
+i.	Determine if these conform to policies, standards, laws, regulations, or contract requirements. 
+ii.	Discover any non-conformities or gaps that make us non-compliant with policy standards, external laws, regulations, or contracts.
+b.	Monitors controls continuously to ensure they are:
+i.	Situated correctly
+ii.	Configured correctly
+iii.	Operating in the correct mode (active/passive)
+iv.	Free of known vulnerabilities
+9.	Security Assessment Examples:
+a.	Confirm that selected alerts are forwarding to, or consumed by, the log aggregator or SIEM.
+b.	Software scans
+c.	Network and asset scans
+d.	Wireless communications, device, and rogue wireless access point scans
+e.	Business partner site-to-site connections scans
+f.	Firewall rules scans
+g.	Password strength and other password parameter settings
+h.	Privilege accounts
+i.	Patch management and the correct set of in-scope subject systems and networks.
+j.	File integrity monitoring and the correct set of in-scope subject files
+k.	Application vulnerability scans and the correct set of in-scope subject applications
+l.	Infrastructure vulnerability scans and the correct set of in-scope subject systems and networks
+m.	Penetration tests
+10.	SOC Analyst Services and Tools:
+a.	Cryptographic key management services:
+i.	Obtain or renew cryptographic public key digital certificates
+ii.	Operate an authorized cryptographic key recovery system
+b.	Policy or architecture consulting services:
+i.	Change control risk advice
+ii.	Threat modeling advice
+c.	Analyze and report on security metrics:
+i.	Key Performance Indicators (KPIs)-providing feedback on process performance and ensuring tools operate in the right range of attack discovery with the help of false positives/negatives.
+ii.	Key Risk Indicators (KRIs)-providing an early warning about risk or quick notice that a risk has occurred.
+SOC Tool Trends
+1.	Advanced tools allow a SOC analyst to focus on response in addition to detection. For example, some advanced tools automatically trigger an action or alert the SOC analyst to a manual response action.
+2.	SOC Tool Trends:
+a.	Increase use of analytics, artificial intelligence, and machine learning to:
+i.	Recognize attacks
+ii.	Pull together concise, digestible narratives
+iii.	Reduce time to activate incident response
+b.	Perform response work:
+i.	Notify SOC analysts to take manual response actions
+ii.	Take automatic, preapproved response actions.
+c.	Shorten the critical time window between the first threat infection and the threat movement to other parts of the network.
+3.	User and Entity Behavior Analytics (UEBA):
+a.	Pinpoints threats and correlates behavior of entities more accurately with user behavior.
+b.	Baselines normal behavior of users and the various entities.
+c.	Tracks analytics and combines this with peer group analysis.
+d.	Searches, analyzes, and models anomalous activity to detect potential or actual threat activity.
+e.	Advances beyond signatures, patterns of known attacks and simple correlation rules.
+i.	Identifies and responds to attacks
+ii.	Shrinks false positives and alarms
+iii.	Lessens alert fatigue
+4.	Endpoint Detection and Response (EDR) or Endpoint Threat Detection and Response (ETDR):
+a.	Organizations need automation to:
+i.	Monitor and collect activity event data from endpoints indicating a threat.
+ii.	Detect threats by analyzing data to detect patterns.
+iii.	Evaluate and correlate the data, searching for patterns and trends.
+iv.	Respond automatically to identified, known threats.
+1.	Remove threat
+2.	Contain threat
+3.	Log off a user
+4.	Disconnect session
+5.	Notify SOC
+v.	Research and investigate suspicious activity with analysis and evidence tools.
+5.	Security Orchestration and Response (SOAR):
+a.	Collects threat and event data and alerts from:
+i.	SIEM
+ii.	EDR
+iii.	IPS/IDS
+iv.	Firewall
+v.	Antivirus
+vi.	Threat intelligence platform
+vii.	Vulnerabilities
+b.	Analyzes disparate data with human and artificial intelligence and machine learning to understand, recognize, and prioritize security incidents.
+c.	Directs automated response to low-level security incidents through:
+i.	Automation 
+ii.	Decision-making workflow
+iii.	Enforcement actions
+iv.	Status tracking
+6.	Spear Phishing Whaling Attack Example:
+a.	Attacker adjusted the email content, making it hard for the filter to identify it as SPAM.
+b.	When organization would block the attacker’s email domain attacker would shift to a new email domain. 
+c.	When organization blocked embedded link destination website and destination IP address the attacker adjusted the emails and the embedded links to new hijacked website domains and IP addresses. 
+d.	Blocked switch ports of infected user devices, IP addresses, websites, and email domains. 
+e.	A programmer used a search and destroy script to locate and purge any email accidentally downloaded onto user laptops and phones.
+f.	Sent voice messages to users via the HR team, describing the email and directing them to avoid opening it.
+7.	Automated actions using SOAR:
+a.	Quarantine/delete the email
+b.	Search and delete other instances in user accounts
+c.	Block IP addresses and URLs
+d.	Ban executables from running in quarantine-infected user workstations
+Jigsaw Technique: Tools
+Explain the purpose or function, strengths and weaknesses, placement, and administration of SOC Tools
+Security Orchestration, Automation and Response (SOAR) provides a central location to integrate not only your security tools, but all of an organization’s security processes. Through automation and orchestration efficiency is the goal. Time gained from the decrease in manual labor required for certain workflows like validating phishing emails or identifying false positives, can be redistributed for tasks that require more critical thinking skills better suited for the humans on an organization’s security team. With SOAR you can decrease time to response and remediation. Given the ever-increasing amount of zero-days and the sheer volume of aggressive threats targeting companies today, organizations need to decrease the time it takes to validate potential threats and allow for faster response times. By tracking and analyzing data from mean time to respond (MTTR) to mean time to detect (MTTD), false positive ratios, open cases, and more, SOC leaders can improve their team’s efficiency and effectiveness over time. 
+SOAR supports the mission of the SOC by gathering MTTR, MTTD, false positive ratios, open cases, and more. Along with adding a robust threat intelligence platform and orchestration good security practices and automation, SOAR is all about efficiency. There’s no amount of time these days that aren’t better spent learning about our adversaries when an organization is inundated with phishing emails and open cases that need to manually be parsed through. SOAR doesn’t necessarily take jobs away; in fact, it helps create them by automating processes that used to be handled by a small team of overly qualified SOC analysts. In addition, SOAR as a platform connects various groups like the legal department, HR, and other teams so they can receive the information that SOAR gathers and alert them to tasks that need to be completed. No longer will an organization and analysts have to fight over where a ticket goes, when it can simply be automated. 
+With such a huge endeavor and the training, it takes to start with SOAR there is some drawbacks to using SOAR. One of the biggest problems with SOAR is that its complexity can lead to funding being routed to the platform itself, the education and training to advise employees on the platform and in and of itself from that perspective can lead to challenging integrations within the organization. SOAR requires technical expertise to implement which can lead to stakeholders confusing and often misaligning their goals, because technical and nontechnical peoples don’t necessarily share the same language or priorities. This can also lead to an inability to define security strategy and thereby lead to a lack of support for a security-centric culture and an over-reliance on software. The core mission of SOAR is to automate complex tasks; however, it’s true that not every task can possibly be automated (Tozzi, 2022). 
+SOAR is an amazing tool that can support the security of many technological infrastructures; however, its limitations must be addressed in order to properly implement SOAR. First off SOAR must have seamless integration and fulfill the roles of many different departments within the organization. Legal, HR, IT, and the SOC must all be in line and what ought to be recommended is an Information Risk Council from each of these departments and these people must have a good understanding of the systems they utilize day to day and what needs to be safeguarded. This lends to lessening the complexity of the task and sharing the task of creating and implementing SOAR. A lack of support for a security-centric culture is also a limitation that is solved by an IRC since it doesn’t create the illusion for outside SOC departments that a far-reaching hand is messing with their tools they use day to day. SOAR as a tool is meant to assist the SOC in identifying and responding to threats; without a proper data source to train this tool in lessening the amount of false positives, then obviously SOAR is going to take a while to adjust and properly do it’s task; until then, it’s the job of the SOC to develop and train SOAR based on advice from the IRC. 
+References: 
+Soar platform (security orchestration, automation and response). ThreatConnect. (2022, March 23). Retrieved May 10, 2022, from https://threatconnect.com/solution/threatconnect-soar/#resolve-alerts-faster 
+Tozzi, C. (2022, January 19). Automating security: 7 major benefits of a soar. The New Stack. Retrieved May 10, 2022, from https://thenewstack.io/automating-security-7-major-benefits-of-a-soar/ 
+Tozzi, C. (2022, January 19). The drawbacks of a soar. The New Stack. Retrieved May 10, 2022, from https://thenewstack.io/the-drawbacks-of-a-soar/ 
+SOC Analyst Roles and Skills
+1.	Shift Supervisor:
+a.	Tier 3/Senior SOC Analyst:
+i.	Designs the SOC processes to integrate various technical and human components.
+ii.	Reviews alerts, threat intelligence, and security data.
+iii.	Helps identify critical security threat events, security gaps, and vulnerabilities. 
+iv.	Communicates with and supports IR. 
+b.	Tier 2/SOC Analyst:
+i.	Uses many SOC tools and works on more challenging and acute issues.
+ii.	Evaluates potential security threat events identified by Tier 1 SOC Analysts.
+iii.	Uses threat intelligence, such as updated rules and indicators of compromise (IOC) to pinpoint affected systems and the extent of an attack.
+iv.	Analyzes running processes and configurations on affected systems.
+v.	Communicates with and supports IR. 
+c.	Tier 1/SOC Analyst:
+i.	Monitors the assigned security tool.
+ii.	Receives and looks into alerts.
+iii.	Provides useful interpretations and context based on those alerts.
+iv.	Oversees and configures the assigned security tool.
+2.	SOC Analyst Skills:
+a.	Analytical
+b.	Disciplined
+c.	Documenter
+d.	Desire to know more
+e.	Sleuth and puzzle solver
+f.	Communicator and collaborator
+g.	Knowledgeable about assigned SOC tools or processes.
+h.	Knowledgeable about security concepts:
+i.	Networks, systems, application threats, vulnerabilities, and attacks.
+ii.	Malware and hackers.
+i.	Knowledgeable about IT:
+i.	Networking concepts such as TCP/IP, IP routing, IP addresses, ports and protocols.
+ii.	Operating systems, such as Linux, Windows, and MacOS.
+iii.	Comprehension of database queries and structures.
+iv.	SSL, VPN, and other encryption technology. 
+CVSS
+Assess a Security Vulnerability using the CVSS
+Overview
+CVE-2021-26855 is a server-side request forgery (SSRF) vulnerability that exists on specific versions of on-prem Exchange servers that provide an unauthenticated, remote actor sending crafted HTTP requests admin access to our systems. Given that our servers have not been updated yet to ensure availability to our end users we are nonetheless at risk of completely going down if this vulnerability were to be exploited. Since our systems now utilize an anomaly engine that checks for these types of attacks and immediately quarantines said machines that are affected, if our servers were to be attacked, then we would be completely down. 
+CVSS Scores
+•	Base Score: 9.8
+•	Temporal Score: 8.8
+•	Environmental Score: 8.8
+Criticality in Context
+This vulnerability is part of an exploit chain and can only be exploited when the following conditions are present: The Exchange on-prem server must accept untrusted connections over port 443 for the vulnerability to be exploited. Port 443 is a virtual port that allows computers to diver network traffic over HTTPS and is necessary for the daily functions of our users and protection of our data. The HTTP request the attacker utilizes contains an XML SOAP payload directed at the Exchange Web Services (EWS) Application Programming Interface (API) endpoint to exploit this vulnerability. This XML SOAP payload requests to bypass authentication using specially crafted cookies and allows the remote attacker to execute EWS requests encoded in XML and ultimately perform operations on users’ mailboxes. This vulnerability affects our on-prem Microsoft Exchange 2019 servers using cumulative update 1. 
+Recommendations for Mitigations/Remediation
+This vulnerability is part of an attack chain. The initial attack requires the ability to make an untrusted connection to Exchange server port 443. This can be protected against by restricting untrusted connections, which our anomaly engine will do, but it will also affect the availability of our systems. By setting up a VPN to separate the Exchange server from external access then can we mitigate risk; however, using this mitigation technique will only protect against the initial portion of the attack. Other portions of the attack chain can be triggered if an attacker already has access or can convince an administrator to open a malicious file. Microsoft recommends prioritizing installing updates on Exchange servers that are externally facing. 
+References: 
+Microsoft Exchange Server Remote Code Execution Vulnerability. Security Update Guide - Microsoft Security Response Center. (2021, March 2). Retrieved May 11, 2022, from https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26855 
+Bibliography
+Bradley, Jaron. “Jamf Blog.” Jamf. 24 May. 2021. https://www.jamf.com/blog/zero-day-tcc-bypass-discovered-in-xcsset-malware/.
+Cisco. “Discover the Secrets of a SOC and How to Build a Threat Hunting Team.” YouTube video, 1:20:37. 10 Mar. 2020. https://www.youtube.com/watch?v=7S8V9LumQG0.
+“Common Vulnerability Scoring System Version 3.1 Calculator.” First. n.d. https://www.first.org/cvss/calculator/3.1.
+“Common Vulnerability Scoring System Version 3.1: User Guide.” First. n.d. https://www.first.org/cvss/user-guide.
+“Cortex XDR.” PDF file. Cortex XDR | Paloalto. n.d. https://www.paloaltonetworks.com/apps/pan/public/downloadResource?pagePath=/content/pan/en_US/resources/datasheets/cortex-xdr.
+“Enterprise Security Capabilities.” PDF file. Accenture. 2020. https://acn-marketing-blog.accenture.com/wp-content/uploads/2020/07/SOC-progression-chart.png?_ga=2.130622409.798003649.1621862827-1741687223.1621862827.
+“Hunt Evil: Your Practical Guide to Threat Hunting.” PDF file. Sqrrl. n.d. https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf.
+Kwiatkowski, Ivan, Pierre Delcher, and Maher Yamout. “Lifting the Veil on DeathStalker, a Mercenary Triumvirate.” SecureList by Kapersky. 24 Aug. 2020. https://securelist.com/deathstalker-mercenary-triumvirate/98177/.
+“MalwareBazaar Database.” Malware Bazaar. n.d. https://bazaar.abuse.ch/sample/79f7d2df7cec7c1811a9b06e7bdb7662b384c3acba8cf669151206eba7e8f5ed/.
+“Mastering CVSS version 3.1, Elearning Course Transcript.” First. n.d. https://www.first.org/cvss/v3.1/mastering-cvss-3.1-transcript.
+MITRE ATT&CK® Navigator. n.d. https://mitre-attack.github.io/attack-navigator/.
+The Recorded Future Team. “CVSS Scores: A Useful Guide.” Recorded Future. 24 Apr. 2018. https://www.recordedfuture.com/cvss-scores-guide/.
+Sumo Logic. “New Research from Sumo Logic Reveals Growing Security Alerts Driving Demand for Cloud SIEM Solutions in the SOC.” GlobeNewswire. 9 Jul. 2020. https://www.globenewswire.com/en/news-release/2020/07/09/2060017/0/en/New-Research-from-Sumo-Logic-Reveals-Growing-Security-Alerts-Driving-Demand-for-Cloud-SIEM-Solutions-in-the-SOC.html.
+Zimmerman, Carson. “Ten Strategies of a World-Class Cybersecurity Operations Center.” PDF file. MITRE. 2014. https://www.mitre.org/sites/default/files/publications/pr-13-1028-mitre-10-strategies-cyber-ops-center.pdf.
+“Zscaler Cloud Firewall.” PDF file. Zscaler. n.d. https://www.zscaler.com/resources/data-sheets/next-generation-cloud-firewall.pdf?utm_source=google&utm_medium=cpc&utm_campaign=dynamic-search-na.
+
