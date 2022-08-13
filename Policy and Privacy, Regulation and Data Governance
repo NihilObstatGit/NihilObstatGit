@@ -1,0 +1,391 @@
+Module 22
+Introduction
+1.	Delving into the world of privacy and its increasing importance within the realm of cybersecurity you will learn what privacy is and what privacy responsibilities are. Not only this, but you’ll also gain a firm understanding of how privacy is applied within an organization, and how to implement privacy within systems to effectively secure and safeguard data. Furthermore, you will learn about the relevant laws and regulations associated with privacy in the modern environment and understand how to apply these principles within the system environment. Next, you’ll learn how to apply these principles using the privacy impact assessment framework. Some of the innate trade-offs that exist and must be weighted between privacy and security will also be discussed. 
+2.	Module Overview:
+a.	Identify the principles and laws of privacy and privacy responsibilities.
+b.	Explain the organizational privacy roles and ensure everyone understands them. 
+c.	Identify how to build privacy in systems by specific design approach.
+d.	Implement inputs using the Privacy Impact Assessment framework tool. 
+e.	Describe the challenges and trade-offs in privacy and cybersecurity. 
+Privacy Principles, Process, and Laws
+1.	Taking a closer look at the principles and laws associated with privacy in the modern environment will allow you to include examining the relationship between privacy and cybersecurity and looking at the impact of privacy breaches you’ll also become familiar with some of the key terminology and definitions associated with privacy, such as personal data and personally identifiable information (PII). PII is information that can be used to identify an individual and this may include unique identifiers, such as passport information, or other identifying information (e.g., date of birth) that can be linked to successfully identify a specific individual. 
+2.	You will learn about:
+a.	The relationship between privacy and cybersecurity.
+b.	How cybersecurity breaches have harmed privacy interests.
+c.	Key terminology involved in privacy laws and principles:
+i.	Personal data.
+ii.	Personally identifiable information (PII).
+d.	Fair information Practice Principles
+e.	Two key privacy laws:
+i.	The European General Data Protection Regulation (GDPR)
+ii.	California Consumer Privacy Act
+3.	Division of Privacy:
+a.	Substantive principles and rights
+i.	Right to be let alone.
+ii.	Right to control personal data.
+iii.	Right to be forgotten. 
+b.	Procedural rules
+i.	Collection limitations.
+ii.	Purpose specifications.
+iii.	Privacy notice principles.
+iv.	Ideas of accountability. 
+4.	Fair Information Practice Principles (FIPPs)
+a.	Collection limitation:
+i.	There should be limits on the collection of personal data, and any data should be obtained in a lawful and fair way. 
+b.	Data quality:
+i.	Personal data should be relevant to the purposes for which it is going to be used and should be accurate, complete, and kept up to date. 
+c.	Purpose specification:
+i.	The purposes for which personal data is collected should be specified upon data collection, and any subsequent use of that data should be limited and in line with those original sets of purposes. 
+ii.	Example: Logging into or registering a new account with MFA on a social media website. Respecting the purpose specification principle would indicate here that you are collecting that individual’s contact number only for security verification purposes, not for any other purpose. 
+d.	Use limitation:
+i.	Personal data should not be disclosed, made available, or otherwise used for purposes beyond which it was originally collected. 
+e.	Security standards:
+i.	Anyone who collects and maintains personal data should practice reasonable cybersecurity safeguards to safeguard that information. 
+f.	Openness:
+i.	Organizations should be open about their personal data practices. 
+ii.	Organizations should have a privacy policy that is publicly visible so that anyone whose personal data is held by the organization can find out the personal data and what policies govern its use. 
+g.	Individual participation:
+i.	If an organization holds personal data, then the data subjects have the:
+1.	Right to access that data. 
+2.	Right to be informed and should be able to easily correct or access their data if necessary. 
+h.	Accountability:
+i.	An organization has to have a way of being concretely responsible and accountable for adhering to the privacy practices that it commits to and for adhering to broad fair information practice principles. 
+ii.	Organizations should have a way of being visibly responsible and accountable to the fair informational practice principle rather than just following it. 
+5.	Organization for Economic Co-operation and Development (OECD):
+a.	Cooperate on lots of different social and economic policy issues among 35 countries around the world. 
+b.	Agree on a common set of privacy principles/FIPPs.
+6.	In summary, the FIPPs are a guide for people who design and operate information systems that hold personal data, which helps in managing systems and operating them with respect to privacy rights. 
+Intersection of Privacy and Security on the National Level
+The Cybersecurity and Privacy Factsheet released by the US Department of Homeland Security highlights the combined and overlapping nature of privacy and cybersecurity by incorporating the Fair Information Practice Principles (FIPPs) to guide and inform the design, deployment, compliance, and oversight of all its programs and technologies. For example, DHS incorporates 8 different concepts of privacy, security, and civil liberties and they include: Transparency, individual participation, purpose specification, data minimization, use limitation, data quality and integrity, security, and accountability and auditing. Transparency guides DHS to provide notice to any individual regarding its collection, use, dissemination, and maintenance of PII. Individual participation means that DHS must involve the individual in the process of using PII and, to the extent practicable, seek individual consent for the collection, use, dissemination, and maintenance of PII. DHS should also provide mechanisms for appropriate access correction, and redress regarding DHS’s use of PII. Purpose specification means DHS should specifically articulate the authority that permits the collection of PII and specifically articulate the purpose or purposes for which the PII is intended to be used. Data minimization means DHS should only collect PII that is directly relevant and necessary to accomplish the specified purpose(s) and only retain PII for as long as is necessary to fulfill the specified purpose(s). Use limitation means DHS should use PII solely for the purpose(s) specified in the notice. Sharing PII outside the Department should be for a purpose compatible with the purpose for which the PII was collected. Data quality and integrity means DHS should, to the extent practicable, ensure that PII is accurate, relevant, timely, and complete. Security means DHS should protect PII (in all media) through appropriate security safeguards against risks such as loss, unauthorized access or use, destruction, modification, or unintended or inappropriate disclosure. Accountability and auditing means DHS should be accountable for complying with these principles, providing training to all employees and contractors who use PII, and auditing the actual use of PII to demonstrate compliance with these principles and all applicable privacy protection requirements. My first impression of all of the principles and the balance that comes between all of these principles is that DHS mainly looks to be transparent. There is no substantive principles and rights for their subjects that allow them the right to be let alone, right to control personal data, or be forgotten for that matter and for good reason since this is the Department of Homeland Security. Furthermore, FIPPs definitely shows there are procedural rules such as collection limitations, purpose specifications, privacy notice principles, and ideas of accountability within FIPPs; so, security and privacy are definitely the goal of their privacy policy. 
+It is my personal opinion that the importance of privacy is tantamount to a cybersecure world. Limitations and procedures with an audit and accountability record for access of materials also leads credence to the idea that my personal information is safe and cannot be used for nefarious reasons. However, some tech companies have overstepped their bounds when it comes to data collection, and it seems there needs to be more regulations in place to control or limit the amount of data that can possibly be extracted from users. I personally have aided in support of privacy initiatives at T-Mobile as they needed employees to provide feedback on their privacy policy. Personally, I found the use of CPNI across all domains in customer service, to management, to operations management to be in violation of our privacy policy and it definitely needed more training on that front in regard to the collection of data along with formal and transparent notices to customers about their privacy when they choose to call in. I can’t exactly expound upon the type of data as they had us sign an NDA prior to this discussion (and for good reason too), but many companies these days don’t exactly follow their privacy policy and are farming user data wherever they can get it, because that is a separate cash cow that can reap benefits later on. On August 17, 2021, T-Mobile suffered a data breach that effected millions of their customers, former customers, and prospective customers. Some SSN, name, address, date of birth, and driver’s license/ID information was compromised, because their collection of information was not properly secured, and it was clear then that T-Mobile’s privacy policy needed to be updated and the organization as a whole needed to be trained to secure PII. Since I left I hope they have gotten everything to be better, but it’s definitely a process rather than an overnight change when it comes to securing PII. 
+References:
+Sievert, M. (2021, August 27). The cyberattack against t mobile and our customers: What happened, and what we are doing about it.   t mobile newsroom. T-Mobile. Retrieved August 6, 2022, from https://www.t-mobile.com/news/network/cyberattack-against-tmobile-and-our-customers 
+The Department of Homeland Security - DHS. (n.d.). Retrieved August 6, 2022, from https://www.dhs.gov/sites/default/files/publications/Privacy%20at%20DHS%20Fact%20Sheet_Clean.pdf 
+Data Breaches
+1.	Data Breaches:
+a.	Target retail stores – 2013
+i.	Number of financial records lost: 110M
+ii.	Attacker: Nation-state sponsored (China or Russia)
+iii.	Attack vector: Sign-in credentials from a service vendor
+1.	HVAC system  Main network
+2.	Data stolen: Personal information and credit card numbers
+3.	Redemption costs: $200M, resignation of the CEO
+4.	Fines: $18M (multi-state investigation)
+5.	Civil litigation: $40M (Banks and credit card companies)
+iv.	The hundreds of millions of people who shopped at Target had very significant costs unaccounted for, such as they had:
+1.	Their personal data taken.
+2.	To worry about their bank accounts being compromised.
+3.	To get new credit card numbers.
+4.	To repair their credit because of some of the charges put on their accounts through the authorized access. 
+b.	Anthem – 2015
+i.	Sector: Health insurance
+ii.	Number of people affected: 80M
+iii.	Attacker: Nation-state sponsored
+iv.	Attack vector: Phishing email
+v.	Data stolen: Personally identifiable information (PII)
+vi.	Remediation costs: $250M
+vii.	Civil litigation: $100M
+c.	US Government Office of Personnel Management – 2015
+i.	Sector: Government
+ii.	Number of people affected: 4-20M federal employees
+iii.	Attacker: Nation-state (China)
+iv.	Attack vector: Failure to keep software up to date
+v.	Data stolen: Social Security Numbers (SSN), fingerprints of over 5M people, and security clearance forms with a lot of personal information
+vi.	Remediation costs: $300M, resignation of CIO
+vii.	James Clapper, Director of National Intelligence: “You have to salute the Chinese for what they did. If we, meaning the United States, had the opportunity to do the same, I don’t think we would have hesitated for a minute.”
+d.	British Airways – 2018
+i.	Sector: Transport
+ii.	Attack vector: Lack of multi-factor authentication (MFA) and other measures
+iii.	Data stolen: Personal data and credit card records
+iv.	Civil litigation: £2B GBP
+v.	Fine: £180M GBP
+2.	It’s impossible to protect privacy without good cybersecurity practices. In all of these cases, however, basic, simple, and careful cybersecurity practices could have stopped most of the attacks. 
+Understanding the Legal and Regulatory Frameworks Governing Data Privacy and Protection
+Data privacy is essential for any organization today. Customers expect organizations to collect, process, and transfer their data in a secure and seamless fashion, and organizations are often required to comply with various privacy laws. Understanding and navigating the legal landscape can be challenging. However, as a cybersecurity professional you will need to ensure that you have a basic understanding of the relevant laws and their implications with respect to cybersecurity. As the legal and regulatory regimes governing data privacy continue to grow in size and importance, it is essential to understand which legal or regulatory frameworks are applicable to which data and at which time. As such, examining the various aspects of these legal requirements and mapping them to their appropriate attributes, such as organization, region, data, or other key data points is crucial. 
+•	Federal Trade Commission (FTC) Act of 1914
+•	Cybersecurity Law of the People's Republic of China (commonly referred to as the Chinese Cybersecurity Law)
+•	Health Insurance Portability and Accountability Act (HIPAA)
+•	California Consumer Protection Act (CCPA)
+•	New York State Personal Privacy Protection Law (PPPL)
+•	General Data Protection Regulation (GDPR)
+Scenario 1
+You recently joined a global multinational corporation based in the European Union (EU). You’re in the Information Security department working with several other departments to implement a new enterprise data warehouse solution to store and transmit internal data for the organization and its clients. The organization has clients throughout different countries in Europe and will need to update the data regularly.
+Which type of privacy regulation would principally govern this at an EU level?
+Scenario 2
+You were recently hired as a consultant to help a bank based in California assess their privacy program and to make recommendations based on privacy obligations and state-wide requirements. Currently, the organization is doing very little with regard to giving consumers the right to know about their personal information, delete their information, opt-out, or recognize their right to non-discrimination for exercising their rights.
+Based on what you know, what state legislation is the organization potentially not in compliance with?
+Scenario 3
+You have been going to the same doctor for several years and have been very happy with their service. Despite the doctor’s office being part of a large hospital chain, you are always seen quickly for appointments. Due to the nature of their business and the data they store and transmit, they are considered a “covered entity.”
+
+Interestingly, you started receiving several solicitations for unrelated businesses and services. Some even referenced that you are a member of the medical office and can get a discount off of the published price. You called the office and they said that they are sharing some of your information and record data with outside entities for sponsored marketing campaigns.
+
+Which legislation regulates health insurance data and prohibits this type of information sharing (or selling of data for commercial gain)?
+
+Scenario 4
+
+You are an employee for a financial services organization headquartered in New York state. You’ve been working in the information technology (IT) group and are familiar with many of their data protection standards and IT practices. They’ve recently asked you to start helping the client services group with data record corrections, as your manager stated that is considered a data fiduciary it is now a state requirement to correct inaccurate information for consumers.
+
+Based on your knowledge of the situation and the requirements being levied on the firm, which legislation would include this requirement?
+
+Scenario 5
+Your friends introduced you to a new social media platform, and you’ve been using it extensively to share videos, swap pictures, and keep up with friends. Recently, you read a news headline that said the platform is being sued by the Federal Trade Commission (FTC) for “unfair or deceptive acts or practices.” You are surprised and feel nervous about all the data and information you’ve uploaded within their system.
+Based on your understanding of the situation, how can the US government penalize the organization for “unfair or deceptive acts or practices”?
+Scenario 6
+An organization you're working with recently set up a new office in Beijing, China. They are working with a local network service provider to collect user information. The user information and customer data are collected, stored, and processed in accordance with state legal requirements. Furthermore, they ensure that they inform and obtain consent from users for information collection activities.
+Which Chinese law addresses this directly from a privacy and cyberprivacy perspective?
+1.	Scenario 1: 
+a.	At an EU level the General Data Protection Regulation or GDPR would principally govern internal storage of data pertaining to their clients. GDPR contains principles relating to the processing of personal data, lawfulness of processing, conditions for consent, conditions applicable to children’s consent in relation to information society services, processing of special categories of personal data, processing of personal data relating to criminal convictions and offences, and processing which does not require identification within the EU that the organization must be compliant for (Art. 9, 2016).
+2.	Scenario 2: 
+a.	This scenario is specifically in California and since the organization is doing very little with regard to giving consumers the right to know about their personal information, delete their information, opt-out, or recognize their right to non-discrimination for exercising their rights this organization would be in violation of the California Consumer Privacy Act or CCPA. This act gives consumers more control over the personal information that businesses collect about them and the CCPA regulations provide guidance on how to implement the law (CCPA, 2022).
+3.	Scenario 3:
+a.	The fact that this is part of a large hospital chain and is considered a “covered entity” – within the Health Insurance Portability and Accountability Act (HIPAA), covered entities in an organized health care arrangement can share protected health information with each other for the arrangement’s joint health care operations and under 45 CFR § 164.506 a covered entity may use or disclose protected health information for its own treatment, payment, or health care operations, for treatment activities of a health care provider, or for payment activities. Since the insured is being solicited by unrelated businesses and services mentioning that they are member of a medical office and they themselves advised they were sharing the insured’s information they would be in violation of HIPAA regulations (OCR, 2021). 
+4.	Scenario 4:
+a.	In order to assist the client services group with data record corrections, which are considered data fiduciary requirements to correct inaccurate information for consumers in the state of New York, the New York State Personal Privacy Protection Law (PPPL) would be the applicable legislation to guide what personal records can possibly be accessed or corrected (PPPL, n.d.). 
+5.	Scenario 5:
+a.	In this scenario the social media platform in question is being sued by the Federal Trade Commission (FTC) for “unfair or deceptive acts or practices” and based on this understanding the US government can penalize the organization under the Federal Trade Commission Act of 1914, which empowers the Commission to prevent unfair methods of competition and unfair or deceptive acts or practices in affecting commerce (Staff, 2022). 
+6.	Scenario 6:
+a.	In this scenario the organization has set up a new office in Beijing, China and they are working with a local network service provider to collect user information. The user information and customer data are collected, stored, and processed in accordance with state legal requirements, and they ensure that they inform and obtain consent from users for information collection activities. The Cybersecurity Law of the People’s Republic of China (commonly referred to as the Chinese Cybersecurity Law) addresses this specific scenario under Article 41, wherein, Network operators collecting and using personal information shall abide by the principles of legality, propriety, and necessity; they shall publish rules for collection and use, explicitly stating the purposes, means, and scope for collecting or using information, and obtain the consent of the persons whose data is gathered (Translation: Cybersecurity law of the People’s Republic of China, 2021). 
+References:
+Art. 9 GDPR – processing of special categories of Personal Data. General Data Protection Regulation (GDPR). (2016, August 30). Retrieved August 6, 2022, from https://gdpr-info.eu/art-9-gdpr/ 
+California Consumer Privacy Act (CCPA). State of California - Department of Justice - Office of the Attorney General. (2022, March 28). Retrieved August 6, 2022, from https://oag.ca.gov/privacy/ccpa 
+(OCR), O. for C. R. (2021, July 27). Summary of the HIPAA privacy rule. HHS.gov. Retrieved August 6, 2022, from https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html 
+Personal Privacy Protection Law. Open Government. (n.d.). Retrieved August 6, 2022, from https://opengovernment.ny.gov/personal-privacy-protection-law 
+Staff, the P. N. O., & Staff, D. P. I. P. and C. T. O. (2022, March 11). Federal Trade Commission act. Federal Trade Commission. Retrieved August 6, 2022, from https://www.ftc.gov/legal-library/browse/statutes/federal-trade-commission-act 
+Translation: Cybersecurity law of the People's Republic of China (effective June 1, 2017). DigiChina. (2021, November 5). Retrieved August 6, 2022, from https://digichina.stanford.edu/work/translation-cybersecurity-law-of-the-peoples-republic-of-china-effective-june-1-2017/ 
+Terms
+1.	Legislative privacy regimes are significant because they have resounding effects on privacy guidelines for organizations that help reshape privacy protections globally and illustrate the shifting landscape and emerging guidelines governing data protection in the modern environment. 
+2.	GDPR Definitions:
+a.	Personal Data
+i.	Any information related to an identified or identifiable “natural person” (sometimes referred to as a “data subject”).
+1.	If there is information in a database that could be used to identify a data subject, such as the data subject’s name or IP address, that information is personal data. 
+b.	Personally identifiable information (PII)
+i.	Is a term that was used in older privacy laws and regulations.
+ii.	Does not take context into account.
+1.	When in doubt, examine the context of the data being used to determine whether it is personal data or PII. 
+c.	Data controllers
+i.	Controls how personal data is processed.
+ii.	Is responsible for all actions taken with that personal data. 
+d.	Data processors
+i.	Acts on behalf of the data controller.
+ii.	Acts as an agent for data controller with less significant privacy obligations than that of the data controller. 
+3.	GDPR and many modern privacy laws are based on a definition of personal data, which means that: 
+a.	These laws apply to personal data but do not apply if the information in question is not personal data. 
+b.	The first question you should ask yourself is whether the data you are processing is personal or not. 
+4.	Personal Data VS. Non-Personal Data
+a.	Personal data:
+i.	Name
+ii.	Street address
+iii.	IP address
+iv.	Email address
+v.	Twitter handle
+vi.	Facebook ID
+vii.	Instagram ID
+viii.	Picture
+ix.	Characterization of genome
+x.	Fingerprint
+xi.	Cookies
+b.	Non-personal data:
+i.	Date of birth
+ii.	Street address of a large apartment building
+iii.	Hair color
+c.	If the data can be used to identify or contact an individual person, then it is personal data; if it cannot be, then it is not. 
+Implementing Privacy
+1.	The design approaches for implementing privacy requirements, as well as defining the requisite roles and responsibilities is crucial to evaluating the many rules and requirements that organizations must adhere to, as well as the fundamental concepts they must comply with in order to meet both national privacy rules and global standards. 
+a.	Many organizations have chosen to map GDPR as their global standard. There are important concepts such as lawful obligation, right to erasure, right to portability, right to be notified of a breach, and right to accountability. Interestingly, in its current state, privacy laws appear to be quite progressive when contrasted with the data-processing technologies underpinning many of the compliance processes. For example, the complex databases, systems, and repositories inherent in many organizations do not make it easy for organizations to comply with relevant rights to erasure rules. Privacy law appears to be a unique case where the law is actually more progressive than the underlying technology requisite for organizational compliance. 
+2.	General Data Protection Regulation (GDPR): A law that was enacted in 2016 and came into effect in May 2018. 
+a.	Even though the GDPR only applies to personal data of European citizens, many companies set the GDPR as their baseline when they offer services in a global context. 
+3.	Preconceptions around GDPR:
+a.	Fines up to 4% of annual revenue
+i.	Right to fine companies up to 4% of their gross and annual turnover if they fail to comply with the GDPR obligations. 
+b.	Lawful basis
+i.	Every single computational step taken with personal data has to have some identifiable legal permission associated with it. 
+ii.	Anything that you do with personal data actually has to be attached to some specific legal permission.
+iii.	Consent: If an agreement is received from the data subject that it can be collected and used for certain purposes, then that can be the legal basis. 
+iv.	Lawful obligation: If you are an employer, you are obliged to tell a governing body (government) who you’re paying salaries to and that’s the only legal basis you need for processing personal information. 
+v.	No data can be processed without some stated purpose. 
+c.	Legitimate interest
+d.	Right to be informed
+i.	Right to be informed about what data is collected and how is it going to be used.
+e.	Right of access
+i.	Right to access your personal data. This means you can have a copy of your personal data that’s with an organization on request. 
+f.	Right to rectification
+g.	Right to erasure
+i.	If an individual under certain circumstances doesn’t want an organization to hold his/her personal information, you can ask the organization to delete it. 
+h.	Right to restrict processing
+i.	Right to restrict the processing of data to do certain things. 
+i.	Right to portability
+i.	A right to take your data from one system, get a copy of it, and move it somewhere else or to another company. 
+j.	Right to object
+k.	Right to avoid automated decision-making and explanation
+i.	If a decision is made on an automated basis without human intervention, an individual can actually object to it and demand an explanation for the basis of the decision. 
+l.	Data breach notification
+m.	Accountability
+i.	Organizations have to appoint an individual who will be accountable for compliance with GDPR obligations.
+4.	Challenges in Complying with GDPR:
+a.	Many of the current database systems that store personal data don’t have the ability to do most of what is required by the GDPR. 
+b.	Right to erasure:
+i.	Organizations find it difficult to guarantee that they can delete all personal data of an individual. 
+c.	Purpose limitation:
+i.	Current database systems do not make it easy to respect the purpose limitations of personal data. 
+5.	Summary:
+a.	GDPR is a complex law.
+i.	Not been in effect for very long.
+ii.	Still in the process of being interpreted.
+iii.	A global gold standard for privacy. 
+Organizational Roles
+1.	Organizations must understand what privacy rules require, and what they should be applied in an effective manner. There are different roles that play an important part in creating, implementing, and managing privacy policies within an organization and this discussion will discuss those roles. 
+2.	Privacy is about how organizations:
+a.	Actually, behave with respect to rules written down in laws. 
+b.	Make sure that they are taking the rules seriously.
+c.	Ensure internally that they understand and follow the relevant rules when designing new products and services and when operating new businesses. 
+3.	Organizational Roles:
+a.	Chief Privacy Officer (CPO)
+i.	CPO is responsible for:
+1.	Creating, evolving, and managing an organization’s privacy policy.
+2.	Translates the laws into detailed set of operational policies about how individual products and services work with respect to personal data.
+3.	Ensuring organization-wide privacy awareness.
+ii.	Individuals in the CPO’s office have a variety of specialized roles, including:
+1.	Training individuals in the organization on best privacy practices. 
+2.	External communication to customers or the press or regulators.
+3.	Product and service design.
+4.	Privacy impact assessments (PIAs).
+5.	Making sure the organization is accountable.
+iii.	CPO: Role and History
+1.	1991: Jennifer Barrett, Acxiom
+2.	2000: Harriet Pearson, IBM, Richard Purcell, Microsoft
+a.	These roles were launched because these organizations recognized that there was a growing demand to address privacy questions. 
+iv.	Key functions of CPOs:
+1.	Participating in broader discussions about:
+a.	What privacy means.
+b.	How to express core values that may be relatively constant in the context of new and ever-changing business and technology models. 
+b.	Product Counsel
+i.	Individuals who are hired and trained as lawyers but are embedded in product development or service development teams. 
+ii.	Specialists who provide design guidance, business ethics guidance, and legal guidance as new products and services are developed.
+iii.	The goal is to make sure that questions about privacy are considered as products are designed. 
+c.	General Counsel
+i.	Responsible for:
+1.	Assessing and managing the overall legal risk.
+2.	Handling privacy questions. 
+3.	Dealing with the specifics of legal compliance. 
+d.	Chief Information Security Officer (CISO)
+i.	Makes sure that good cybersecurity practices are being followed in the technology and organizational behavior of the enterprise. 
+4.	Privacy on the Books and Privacy on the Ground by Deirdre Mulligan and Kenneth Bamberger
+5.	Challenging Questions to consider in Privacy:
+a.	How do you feel about services that track your location and rate your driving patterns?
+b.	How do you feel about video doorbells that record passersby on the street and allow data sharing with neighbors?
+c.	How do you feel about sharing fitness data with your friends and with people who are not that close to you?
+6.	The CPO has a horizontal role across the organization – often playing a catalytic function rather than having direct authority over decisions about using personal data. 
+Design Principles
+1.	Privacy is not just about the laws or what people enforce or adhere to in an organization, but also a set of design principles that enable you to stay ahead of legal rules and match society’s expectations. 
+2.	History of Privacy by Design Principles:
+a.	Developed initially by Ann Cavoukian, a privacy leader at the Ontario Privacy Commission, Canada
+b.	2010: 35 OECD Countries adopted the privacy by design principles
+c.	2012: The United States Federal Trade Commission announced general support for the idea of privacy by design
+d.	2015: GDPR incorporated the idea of privacy by design as a key part of complying with the GDPR privacy law. 
+3.	Privacy by Design: The Seven Foundational Principles
+a.	Be proactive, not reactive
+i.	Think about privacy considerations upfront rather than realizing after designing the service.
+b.	Privacy should be the default setting
+i.	The way the system functions out of the box should respect privacy.
+ii.	Server register subscription  user launch subscription
+iii.	User permission is required to access personal data. 
+iv.	Privacy should be a default setting in which the user does not have to take extra steps for privacy protection. This should be the way the system works from the beginning. 
+c.	Privacy should be embedded in the design
+d.	Find positive-sum approaches, not zero-sum approaches
+i.	Avoid requiring less privacy in exchange for the service. 
+e.	Offer end-to-end security
+i.	Security is a precondition of being able to protect privacy.
+f.	Offer visibility and transparency
+i.	Be as open as possible about the privacy terms of any given service. 
+g.	Respect user privacy
+Privacy Impact Assessments
+1.	PIAs:
+a.	Management tools that are used to guide the analysis of new or updated systems to make sure that critical privacy questions have been carefully considered. 
+b.	Done by government and private sector organizations
+c.	Working example:
+i.	Created by the Department of Homeland Security (DHS), Cybersecurity and Infrastructure Security Agency (CISA), which is responsible for private security.
+d.	Allows DHS to contact the Internet Service Provider (ISP) that serves the IP address and serve them a subpoena, an official legal request for the identifying information and contact information of the organization that is running the computer. 
+2.	Components of PIA under US Law:
+a.	Authorities and other legal requirements
+i.	The DHS explains that there are laws that provide it authority to investigate and reveal vulnerabilities, and they are obligated to notify the individual. 
+b.	Characterization of information
+i.	Characterizes the information and risks associated with collecting that information and their plans for mitigating those risks. 
+1.	Data quality questions may exist, but DHS CISA explains that the ISPs probably have enough information about their customers and considering risks:
+a.	They are managed well, partly because they get the data from a reliable source. 
+b.	The data will be deleted within seven days if they are unable to use the data to notify the organization.
+2.	There is also a risk of over-reporting that DHS manages by a manual review of data. 
+c.	Uses of information
+i.	Information is used to contact the owners of the vulnerable systems.
+1.	Ensures that the information is not used for any other purpose unless they get affirmative consent from the data owner. 
+d.	Notification/notice of the system to the public
+i.	Checks the means of providing notice to public the owner of the system. 
+e.	Data retention plan
+i.	Implements through some of the database systems that have automated deletion put in place once a retention limit is established. 
+f.	Information sharing
+g.	Redress
+h.	Auditing and accountability
+i.	Ensures that there is someone assigned to ensure everything is done properly. 
+3.	Requirements of the GDPR for PIAs:
+a.	General description of the project.
+b.	Description of the data being processed:
+i.	Scope
+ii.	Context
+iii.	Purpose
+iv.	Consultation with the stakeholders
+v.	Proportionality assessment
+vi.	Risk identification
+vii.	Risk reduction measures
+viii.	Organizational sign-off or accountability mechanism
+Developing a Privacy Plan
+BioTechnica is a biotechnology organization founded in the state of California inside of the United States and there are certain national, regional, state, and municipal guidelines when it comes to cybersecurity and privacy laws that we must uphold. There are relevant cybersecurity and privacy laws that need to be considered on the national, regional, and state level. First and foremost, our organization must be aware of the Federal Trade Commission Act of 1914, then followed by the California Consumer Protection Act (CCPA), and at a regional level we must also concern ourselves with the New York State Personal Privacy Protection Law (PPPL). 
+All of these relevant cybersecurity and privacy laws all hold fair information practice principles in common and these principles will guide us to proper data governance and privacy requirements.  First and foremost, we must be aware of collection limitations – personal data should be relevant to the purposes for which it is going to be used and should be accurate, complete, and kept up to date. Second, purpose specification – the purposes for which personal data is collected should be specified upon data collection, and any subsequent use of that data should be limited and in line with those original sets of purposes. For example, logging into or registering a new account with multi-factor authentication for our employees, means we must respect the purpose specification principle and indicate here that we are collecting that employee’s contact number only for security verification purposes and not for any other purpose. Third, use limitation – personal data should not be disclosed, made available, or otherwise used for purposes beyond which it was originally collected. Fourth, security standards – anyone who collects and maintains personal data should practice reasonable cybersecurity safeguards to safeguard that information. Fifth, openness – our organization ought to be open about our personal data practices and incorporate a privacy policy that is publicly visible so that anyone whose personal data is held by the organization can find out the personal data and what policies govern its use. Sixth, individual participation – everyone who’s information we store has a right to access their data and everyone has a right to be informed and should be able to easily correct or move their data if necessary. Finally, audit and accountability – we must have a way of being concretely responsible and accountable for adhering to the privacy practices that we commit ourselves to and for adhering to broad fair information practice principles. We must also ensure that with these governing principles on data and privacy requirements that we uphold ourselves to that we also practice data security and governance strategy.
+BioTechnica ensures compliance with all applicable statutory, regulatory, and policy requirements. This will be our data security and governance strategy. BioTechnica implements the NIST SP 800-53, Rev. 5 baseline of security and privacy controls, including privacy overlays. BioTechnica will also implement Privacy Impact Assessments (PIAs) for electronic information systems and collections. In utilization of NIST’s SP 800-53, BioTechnica will prepare for security and privacy control assessments, develop security and privacy assessment plans, conduct security and privacy control assessments, analyze assessment report results, and assess security and privacy capabilities – this is all listed under NIS SP 800-53 Rev. 5 as The Process. In the same publication there are security and privacy assessment procedures BioTechnica must abide by and they include: Access control, awareness and training, audit and accountability, assessment, authorization, and monitoring, configuration management, contingency planning, identification and authentication, incident response, maintenance, media protection, physical and environmental protection, planning, program management, personnel security, personal identifiable information processing and transparency, risk assessment, system and services acquisition, system and communications protection, system and information integrity, and supply chain risk management. 
+Now, the most appropriate framework to encapsulate data governance and privacy requirements and data security and governance strategy is Privacy by Design by Ann Cavoukian, Ph.D. This framework establishes 7 foundational principles that go back to the fair information practice principles but allow an organization to bake-in privacy into their strategy and privacy requirements they must meet at a national, state, regional, and sometimes even international level. First, our organization must be proactive not reactive, preventative not remedial. Second, privacy should be the default setting – this goes back to purpose specification, collection limitation, use limitation, and includes data minimization techniques. Third, privacy ought to be embedded into the design – meaning wherever possible, detailed privacy impact and risk assessments should be carried out and published, clearly documenting the privacy risks and all measures taken to mitigate those risk, including consideration of alternatives and selection of metrics. Fourth, we must find positive-sum, not zero-sum approaches – meaning privacy should be a “win-win” for the organization and the consumer and in any case that the consumer is losing then we risk a whole lot more if a case were to go up to the federal trade commission. Fifth, BioTechnica will offer end-to-end security meaning our standards must assure the confidentiality, integrity, and availability of personal data throughout its lifecycle including, inter alia, methods of secure destruction, appropriate encryption, and strong access control and logging methods. Sixth, BioTechnica will offer visibility and transparency – this goes back to our principles in accountability, openness, and compliance for all regulatory and statutory laws that govern this framework. Finally, BioTechnica will have respect for user privacy and keep it user centric. BioTechnica will ensure that we have consent for the data we store, that all of our data is accurate, our customers have the right to access their information and amend it when appropriate, and our organization will remain in compliance with privacy and security controls for data governance and strategy. 
+BioTechnica is a company above all else and we will do what we can to maximize profit and mitigate the risk that comes with cybersecurity breaches. Privacy implications not only incorporate cybersecurity breaches but are the costliest and can range in hundreds of millions of dollars in remediation costs alone, but they also include any legislative proposals, congressional testimony that can influence public opinion, and any program evaluations that are currently underway. In a fast-moving environment it’s hard to keep up, which is why I was appointed Chief Privacy Officer, but we must remain focused on privacy issues and be amiable to a temperature check if needed. For example, a congressman or woman brings up the vast storages of data we collect, and it effects public opinion and for the rest of that quarter we are a pariah in the market barely making ends meet. How do we respond to those implications? It’s clear that organizational roles surrounding privacy are required in order to mitigate these kinds of risks that can damage trust in our company and nevertheless effect our bottom line. Privacy is not some abstract idea, but more about how BioTechnica behaves with respect to rules written down in laws, how we make sure that we are taking the rules seriously, and how we ensure internally that we understand and follow the relevant rules when designing new products and services. As Chief Privacy Officer (CPO) I am responsible for creating, evolving, and managing an organization’s privacy policy. I translate the laws into detailed set of operational policies about how individual products and services work with respect to personal data, and I ensure organization-wide privacy awareness. My office is in charge of training individuals in the organization on best privacy practices, external communication to customers, the press, or regulators, product and service design, privacy impact assessments, and making sure the organization is accountable. Product counsel are individuals who are hired and trained as lawyers but are embedded in product development or service development teams. They are specialists who provide design guidance, business ethics guidance, and legal guidance as new products and services are deployed. Under Product counsel there is the general counsel who is responsible for assessing and managing the overall legal risk, handling privacy questions, and dealing with the specifics of legal compliance. Finally, our Chief Information Security Officer or CISO for short makes sure that good cybersecurity practices are being followed in the technology and organizational behavior of the enterprise. All of us together, make privacy work for the organization and for our consumers. For us to address policy and regulatory implications we must all work together in order to navigate this changing landscape. 
+References: 
+Assessing security and privacy controls in information systems ... - NIST. (n.d.). Retrieved August 9, 2022, from https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53Ar5.pdf 
+Cavoukian, A. (2011, January). Privacy by design - the 7 foundational principles. Privacy by Design - The 7 Foundational Principles. Retrieved August 9, 2022, from https://iapp.org/resources/article/privacy-by-design-the-7-foundational-principles/ 
+Privacy Impact Assessment in Practice
+Abstract
+BioTechnica is developing an AI that scrapes personally identifiable information from ad clicks. The AI achieves its function by collecting IP address, pictures (from social media website clicks), and cookies which are all personal data. The reason for the AI being developed is to better understand marketing demographics and to fine-tune marketing to reach a broader base and because of this the AI itself and its collection algorithm is classified as a privacy sensitive system which requires a privacy impact assessment. 
+Overview
+The purpose of the AI is to collect personal data for marketing research; hereinafter, will be referred to as the “project”. BioTechnica’s privacy department will be in charge of overseeing the privacy impact assessment. As for funding the project the treasury office will be looking into discretionary funds that can be diverted into the creation of the project. The ROI for such a project is at minimum 10% originally invested back each year. The authorizing legislation for the development of the project will follow at a national level the: Federal Trade Commission Act of 1914. At a state level authorizing legislation will also include the: California Consumer Protection Act and the New York State Personal Privacy Protection Law as well. The project collects PII to be reviewed by a data controller. No one will have access to the data, unless mandated by the data controller and with proper consent from the user. As with any AI the risk of disinformation and bad data is a risk every organization must contend with. However, with the inclusion of fair information practice principles, which includes collection limitations, data quality, purpose specification, use limitation, robust security standards, openness, individual participation, and accountability. The funding for the project currently is by contract with the agency for an agreement no less than 5 years along with discretionary funds from our very own treasury. There will be no external sharing of personally identifiable information for the purpose of commercialization and will only operate under purpose specification guidelines. The overall privacy impact when it comes to a breach of privacy will nevertheless be minimal as personal data will not point to legal names without undue research either open source or automated. 
+Challenges and Trade-Offs
+1.	Here, you will learn about general trade-offs that should be considered when contemplating strategies, policies, and approaches for implementing data-privacy controls within an environment. You will look at interventions taken by organizations to identify and minimize risks affecting information resources and systems. You will also be made aware of the care needed to ensure privacy-protection controls protect internally and secure the organization at large. 
+2.	Privacy:
+a.	Is defined by many different laws and values.
+b.	Depends on good technical design and an organization’s functioning with care and attention.
+c.	Taking privacy seriously means respecting the fact that there’s an actual person behind personal data. 
+i.	Think about what’s lawful.
+ii.	Do what you do in a transparent way.
+iii.	Adhere to norms that you have a basic sense of. 
+3.	Cybersecurity raises a challenging set of privacy questions because protecting security in complex computing systems and networks requires an aggressive intrusion on the operation of those networks to find malicious behavior and correct flaws and vulnerabilities that create risk. 
+a.	Over 30,000 organizational installations of exchange were affected by this vulnerability that gave more or less carte blanche access to anyone who had this exploit. 
+4.	The U.S. Department of Justice:
+a.	Went to court to get legal authority to enter into private organizations’ systems and delete malicious pieces of code – web shells that had been placed by attackers to exploit this exchange vulnerability. 
+5.	Organizations must accept aggressive uses of personal information to protect their broader interest in security. 
+6.	Set Rules in Privacy:
+a.	Privacy is rarely reducible to a simple set of rules. You are going to be in situations where you need to:
+i.	Have extensive access.
+ii.	Reveal access to personal data to find malicious behavior and root it out.
+iii.	Correct errors in systems that leave you vulnerable. 
+b.	You will have:
+i.	A more sophisticated understanding of privacy. 
+ii.	The confidence that organizations can handle personal data in a way that is within legal bounds and is respectful of privacy. 
+7.	Think of privacy as trust and respect for personal data. 
+The Negative Impacts of a Data Breach
+According to IBM in their report: “Cost of a Data Breach Hits Record High During Pandemic” customer personally identifiable information (PII) and the loss of was the most expensive compared to other types of data ($180 per lost or stolen record vs $161 for overall per record average) and the most common attack method to gain PII was compromised user credentials, representing 20% of breaches studied. These breaches were also longer to detect and contain resulting in millions in losses for some companies. For example, one case study involves a Chinese startup called SocialArks, headquartered in both Shenzhen and Xiamen and are regarded as an “efficient foreign trade transaction solution” through Shenzhen Benniao Social Technology Co., Lmt. According to SocialArks, the company is a “cross-border social media management company dedicated to solving the current problems of brand building, marketing, social customer management in China’s foreign trade industry”. The company uses a data management platform (DMP) to carry out automated and precise marketing for various enterprises across China and have deployed both iOS and Android applications in recent years. SocialArk’s DMP server contained scrapped profiles of more than 214 million social media users, obtained from Facebook, Instagram, and LinkedIn. The database contained more than 408GB of data and more than 318 million records without any security standards in place – these records included 11,651,162 Instagram user profiles, 66,117,839 LinkedIn user profiles, 81,551,567 Facebook user profiles, and a further 55,300,000 Facebook profiles which were summarily deleted within a few hours after safety detectives discovered the server and its vulnerability. The impact of this breach comes from the method SocialArks obtained their data. Data scraping is a means of extracting private personally identifiable information from a website. Even though data scraping is perfectly legal and handled in an ethical manner- in SocialArks’ case, private information was obtained from multiple sources and supplemented with scraped data in order to build entire profiles of personally identifiable information in their stores. When private information including phone numbers, email addresses, and birth information is extracted and/or leaked, criminals are empowered to commit identity theft and financial fraud. Furthermore, considering data scrapes are conducted by automated bots, it can mean millions of innocent users can have their information collected, stored, and potentially leaked within a short period, without even being aware of it. This is not only the beginning hackers can utilize these bots as well to conduct social engineering attacks on high profile targets or extract information from breaches to do so anonymously and with little effort. Users can also be targeted with clickthroughs that lead to the installation of harmful phishing and malware software. Sharing personal information such as first and last name, physical and email address and mobile phone number can be weaponized by hackers to launch mass attacks and finally large branches of data such as the ones leaked by SocialArks can then be sold or provided to other malicious parties, thereby making the potential ramifications of data scraping even more wide-ranging and severe (Team, 2021). 
+References:
+IBM report: Cost of a data breach hits record high during pandemic. IBM Newsroom. (2021, July 28). Retrieved August 9, 2022, from https://newsroom.ibm.com/2021-07-28-IBM-Report-Cost-of-a-Data-Breach-Hits-Record-High-During-Pandemic 
+Team, S. D. C. (2021, January 11). Chinese start-up leaked 400GB of scraped data exposing 200+ million facebook, Instagram and linkedin users. SafetyDetectives. Retrieved August 9, 2022, from https://www.safetydetectives.com/blog/socialarks-leak-report/ 
+
+Bibliography
+Bekker, Eugene. “2021 Data Breaches — Learn How They Impact Your Information.” IdentityForce. 11 Jan. 2021. https://www.identityforce.com/blog/2021-data-breaches. 
+“Cybersecurity & Privacy.” PDF file. Homeland Security. Sept. 2018. https://www.dhs.gov/sites/default/files/publications/Privacy%20at%20DHS%20Fact%20Sheet_Clean.pdf.
+“IBM Report: Cost of a Data Breach Hits Record High During Pandemic.” IBM. 28 Jul. 2021. https://newsroom.ibm.com/2021-07-28-IBM-Report-Cost-of-a-Data-Breach-Hits-Record-High-During-Pandemic. 
+“Privacy Impact Assessments.” Homeland Security. n.d. https://www.dhs.gov/privacy-impact-assessments. 
+“Privacy Plan.” NIST. n.d. https://csrc.nist.gov/glossary/term/privacy_plan.
+“Privacy Program Plan.” PDF file. Department of Commerce. Sept. 2017. https://osec.doc.gov/opog/privacy/memorandums/privacy_program_plan_2017.pdf.
+Stanganelli, Joe. “4 Critical Tips for Creating and Implementing a Privacy Plan.” Hewlett Packard Enterprise. 8 Nov. 2018. https://www.hpe.com/us/en/insights/articles/4-critical-tips-for-creating-and-implementing-a-privacy-plan-1811.html. 
+Tunggal, Abi Tyas. “The 57 Biggest Data Breaches in History.” UpGuard. 9 Sept. 2021. https://www.upguard.com/blog/biggest-data-breaches.
+
