@@ -1,0 +1,337 @@
+Module 13 Notes
+Module Introduction
+1.	A modern enterprise consists of physical hardware devices, software applications, network infrastructure, and data. For most organization, the last decade has brough technological solutions that support increased data availability for employees, customers, and suppliers. With the implementation of these solutions, enterprises have become a complex web of cloud-based functions, on-premises legacy technologies, and third-party dependent services. To ensure the health, security, and recoverability of this expansive deployment footprint, organizations rely on system administrators to maintain smooth operations. 
+a.	Sys admins develop and implement policies and standards for the use of computing resources. Additionally, they implement best practices for identity and access management (IAM) and business continuity and disaster recovery (BCDR). Additional duties for this role vary across organizations. They may include maintaining system documentation, tuning system performance, installing and patching system-wide software, and allocating mass data storage solutions. The profession requires a breadth of expertise and specializations in areas strongly influenced by industry, business functions, and technologies. 
+b.	Sys admins play an integral role in an enterprise’s ability to integrate and leverage newer enterprise solutions. Today’s technological challenges require information technology (IT) professionals to be well-versed in O365, MS Azure, Powershell, and Active Directory Services. The duties of a sys admin include installation, configuration, and maintenance of workstations, servers, and related hardware and software in a LAN, WAN, and stand-alone environments. A sys admin must respond to inquiries from staff, admins, service providers, site personnel, and outside vendors to provide technical assistance and support. In addition, sys admins are often called upon to develop and maintain complex infrastructure and contribute to specific engineering programs and projects. 
+2.	A sys admin performs system administration duties as their primary responsibility on behalf of an employer or a client. 
+3.	System Administration: The set of activities that directly support the operations and integrity of computing systems and their use. 
+a.	System installation
+b.	Configuration
+c.	Integration
+d.	Maintenance
+e.	Performance management
+f.	Data management
+g.	Security management
+h.	Failure analysis and recovery
+i.	Support for users
+4.	Secure system administration involves:
+a.	Practices
+b.	Processes
+c.	Policies
+d.	Technologies
+5.	The Role of Security System Administrators:
+a.	Are in charge of the daily operation of a security system
+b.	Monitor the security of systems
+c.	Checking whether the system activities are progressing normally.
+d.	Checking for anomalous activity and acting when this is detected. 
+e.	Provide expert advice regarding internal security procedures
+f.	Detect weaknesses in an organization’s computer network that make them vulnerable to cyber-attacks.
+6.	Security Operations Center:
+a.	A dedicated team of security system administrators responsible for monitoring and analyzing an organization’s security posture on an ongoing basis in formalized structure and facility.
+b.	Monitors for security incidents and focuses on correctly identifying, analyzing, defending, investigating, and reporting incidents. 
+System Components
+1.	The role of the system administrator has experienced some major shifts over the last decade and is expected to evolve dramatically in upcoming years. Information technology is increasingly focused on software with decisive pivots from on-premises-only infrastructure to distributed and cloud-controlled models. Twenty years ago, a system administrator may have spent most of their time on hardware and infrastructure-based tasks. Today’s system administrator must focus on software and service performance and delivery. 
+2.	According to the National initiative for Cybersecurity Careers and Studies (NICCS), system administrators are responsible for setting up and maintaining a system or specific components of a system. A system is defined by Merriam-Webster dictionary as a “regularly interacting or interdependent group of items forming a unified whole. When applied to the realm of IT, a system is any internet device on which you run services or applications. 
+3.	What is a system?
+a.	Hard to define, but easy to identify when you see it. 
+b.	Any internet-enabled device on which you run applications, such as a server, a client device- a thin client and network sensor, or IoT device, even a network-enabled digital picture frame, or toaster oven. 
+4.	Tiers of a Computer System:
+a.	User
+b.	Application tier
+i.	Websites
+ii.	Databases
+iii.	Computer-aided design applications
+iv.	Enterprise Resource planning
+v.	E-commerce
+c.	Operating system
+i.	Executes applications
+ii.	Supports the system’s basic functions
+iii.	Manages resources
+iv.	Manages computing processes
+v.	Controls peripheral devices
+d.	Hardware
+i.	CPU
+ii.	Memory
+iii.	Network interfaces
+iv.	Storage devices
+v.	Power supply
+5.	Microservices application architectures involve multiple components running on multiple systems, working in collaboration and communication with one another. 
+6.	Cloud Native Microservices Application Architecture:
+a.	Developers and system administrators work together as DevOps teams. 
+Explain the Role and Responsibilities of a Systems Administrator
+	According to the NICE Framework a System Administrator is responsible for creating and maintaining a system or specific components of a system. In IT anything connected to the internet is considered a system and a systems administrator may be responsible for installing, configuring, and updating hardware and software, establishing, and managing user accounts, overseeing, or conducting backup and recovery tasks, implementing operational and technical security controls, and adhering to organizational security policies and procedures. In the last decade and as more and more users request performance and redundancy of applications to ensure its operational capacity, the role of the system administrator has also changed. A system administrator now has to think about applications that are changing in e-commerce, enterprise resource planning (ERP), websites, virtualization of operating systems and recently have begun moving away from managing hardware itself. The Microservices application architectures involve multiple components running on multiple systems, working in collaboration and communication with one another; for example, a cloud native microservices application architecture sees a blend of system administrators working with developers in DevOps teams towards a common goal of secure system administration. A system administrator is critically important, because they must have the ability to apply an organization’s goals and objectives to develop and maintain an architecture like cloud native microservices application architectures. A system administrator must be able to develop, update, and/or maintain standard operating procedures (SOPs) and establish and maintain automated security control assessments. Given the previous architecture involves developers as well it’s no wonder in this day and age that developers need system administrators just as system administrators need developers to ensure their common goal in developing and maintaining an organizations systems architecture. 
+	Systems administrators mitigate and/or prevent security issues by gaining trust in managed devices, protecting administration interfaces, and using privileged access management. These three core security principles are the answer to security issues that can inevitably cause a breach. First, if your managed devices are not properly secured, an attacker could use them to gain access to your systems, leveraging legitimate administration functionality. Second, by design protecting administration interfaces is critical, because only legitimate and authorized users should be able to access them, which leads us to using privileged access management. Control over who, where, when, why, and how people perform system administration must utilize the principle of least privilege and take away access when it is not needed. All of these core security issues lead precedence to straightforward principles that every systems administrator must abide by, for example an attacker can gain access to an administration interface that has access to the internet could lead to a loss of service to that administration interface and invariably effect the users it is there to protect or serve. Some possible detection strategies to protect such interfaces can include Crowdstrike Falcon, which not only detects possible intruders, but also quarantine the effected access technique and procedure until a systems administrator removes them from the system and patches said bug that allowed the attacker in, in the first place. 
+Resources: 
+Paul.hernandez@nist.gov. (2022, April 19). Nice Framework Resource Center. NIST. Retrieved May 25, 2022, from https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center 
+Secure System Administration. NCSC. (2020, September 15). Retrieved May 25, 2022, from https://www.ncsc.gov.uk/collection/secure-system-administration 
+The Importance of Secure Administration
+1.	The ecosystem of a modern enterprise consists of a collection of digital assets that support an organization’s critical business functions within the constraints imposed by network bandwidth, hardware, and software limitations. System administrators must be cognizant of how their actions can have cascading consequences resulting in network, system, and service outages that may significantly impact a business’s bottom line.
+2.	In the 2021 Verizon Data Breach Investigations Report (DBIR), errors were the root cause of 17% of reported critical breaches in the preceding year. The most common type of unintentional action that resulted in compromise was misconfiguration, making up 52% of the error-sourced incidents. This data emphasizes the importance of continued security awareness and technical training, even for well-seasoned IT professions (DBIR, 2020). 
+3.	In the 2017 Equifax breach, a critical vulnerability shows that a breach can happen in less than 72 hours of the patch release. This is an important lesson for security teams because the consequences can be devastating. System administrators, in coordination with system owners and the vulnerability management team, must execute patching swiftly to protect an organization’s assets from threat actors seeking to exploit recently discovered vulnerabilities (Frulinger, 2020). 
+4.	Importance of Security in System Administration:
+a.	Hackers constantly find new ways to attack existing system components, operating systems, software, processes, and other parts of a computer.
+b.	External attackers:
+i.	System-level access is privileged access and allows measures that defeat security protections.
+ii.	With system-level access, attackers can:
+1.	Gain entry to and access critical systems, data, and resources. 
+iii.	Various ways that can compromise a system administrator’s access include:
+1.	Keylogging malware
+2.	Watering hole
+3.	Infected USB devices
+4.	Trojan horses or other malware programs.
+5.	Access system administrator passwords from hacked databases.
+6.	Use phishing campaigns and other sophisticated measures.
+iv.	Compromise system administrator access:
+1.	Additionally, attackers may also use attack techniques such as:
+a.	Man-in-the-middle attack
+b.	Pass the hash attack
+c.	Password spraying attacks
+d.	Credential stuffing
+2.	Access can occur because of careless employees or non-compliance to rules and/or policies. 
+a.	By clicking phishing links or sharing sensitive information with others.
+c.	Insider threats can occur when employees with authorized access intentionally or unintentionally misuses it to negatively affect critical data or systems.
+i.	Malicious insiders elude security protocols to:
+1.	Delete or steal data
+2.	Alter the function of a system
+3.	Create backdoor accounts with elevated rights
+4.	Use the accounts of users
+5.	Install malware
+6.	Disrupt operations or harm the business
+d.	Unintended errors:
+i.	Security issues can occur because of unintended errors by system administrators. 
+ii.	These could include:
+1.	Wrongly typed commands
+2.	Issuing the wrong command
+3.	Potential work conflicts
+5.	Patch Management:
+a.	Vendors constantly update their OS components and applications and release new software patches that fix these exploits.
+i.	New features and enhancements also result in software updates.
+b.	Updates to the OS and system software could introduce new issues.
+c.	Not making these updates is also not a good option.
+d.	Patches must be implemented and tested in a timely manner. 
+6.	Equifax Data Breach:
+a.	Apache Struts, an open-source tool, was used on Equifax systems that handled credit card disputes from customers.
+b.	It had a security exploit for which a patch was released and well-advertised in March 2017.
+c.	Within three days, hackers were trying to find systems that had this exploit in them and had not been patched until the breach was discovered by Equifax administrators in July 2017. 
+d.	The problem could have been avoided had the system administrators utilized best practices in this case by mitigating the vulnerability with the patch that was widely available for use. 
+7.	System administrators have the ability to do immense harm unless there are regular checks and balances.
+Systems Administrator Challenges
+Some security challenges that Systems Administrators face today include the prevalence of cloud infrastructure; moreso, around the vendor software as a service (SaaS) area. With the Kaseya attacks administered by REvil, a Russia-based ransomware-as-a-service (RaaS) operation, Systems Administrators have had to deal with a completely new area of security and it’s one that is not in-house generally. The new reality of the cloud presents a new attack surface for Systems Administrators to learn and adapt to. Some contributing factors to security vulnerabilities in cloud-based services include the fact that some organizations lag behind updates in favor of availability of their systems. Some of these updates patch critical security vulnerabilities that can allow an attacker to move laterally through company networks and exfiltrate information with known information via exploit databases that disclose these vulnerabilities. Another contributing factor to security challenges that System administrators face is the growing human factor to data breaches. According to Verizon’s Data Breach Investigative Report (DBIR 2022) errors in misconfiguration are a dominant trend and is heavily influenced by misconfigured cloud storage. Furthermore, the use of stolen credentials and phishing continue to play a large part in incidents and breaches alike. So given all of these contributing factors it is clear credentials, phishing, and the exploitation of open vulnerabilities are the driving challenges that Systems Administrators must contend with day to day in 2022. Some mitigations or corrective actions as outlined by Verizon’s DBIR, to reduce an organization’s risk include security awareness training for employees, utilizing single sign-on and protection of employee’s credentials and notifying them of their credentials being spotted in the dark web is a good way to mitigate that risk. Technical skills training in an increasingly-cloud based workforce is also a must so misconfiguration of cloud-based storage is not as large an error as they currently are at 13 percent. The use of vulnerability assessments and pentesting prior to production rollout of software is another way to mitigate vulnerability exploitations. The amount of zero-days increasing day to day means the average system administrator is not taking this part seriously; thus, the systems administrator must be adaptable to these changes and welcome these challenges. This also means the systems administrator must be proactive and learn on the fly about new technologies that are coming out that can assist and automate visibility to host and increase visibility of network activity. Scripting and the use of a DevOps team is beneficial in this area, because it brings together Developers and Systems Administrators (albeit under a different name more than likely) to address key areas of opportunity. 
+References: 
+DBIR report 2022 - summary of findings. Verizon Business. (n.d.). Retrieved May 30, 2022, from https://www.verizon.com/business/resources/reports/dbir/2022/summary-of-findings/ 
+Evans, C. (2021, July 6). As ransomware attacks increase in sophistication, we need to appreciate system administration. Architecting IT. Retrieved May 30, 2022, from https://www.architecting.it/blog/love-your-admin/ 
+Henry-Stocker, S. (2020, July 29). Sysadmin Survival Guide. HPE. Retrieved May 30, 2022, from https://www.hpe.com/us/en/insights/articles/sysadmin-survival-guide-1707.html 
+Sim HobsonSim is head of account management at Steamhaus, Hobson, S., Sim is head of account management at Steamhaus, -, P. M. K., -, M. S., -, M. B., -, S. M., & -, D. S. (2017, September 9). Is the job of a sysadmin dead? or just moving with times? Compare the Cloud. Retrieved May 30, 2022, from https://www.comparethecloud.net/articles/is-the-job-of-a-sysadmin-dead-or-just-moving-with-times/ 
+Combating Threats
+1.	In a survey, conducted by Beyond Identity, more than 1,000 professionals revealed that 25% of the respondents still have access to accounts from previous jobs. This data doesn’t only point to a significant security gap. The consequences for organizations failing to implement best practices for terminated employee access can be catastrophic. System administrators are often charged with developing and implementing account provisioning and off-boarding procedures. Departing employees must be off-boarded in accordance with the account management policy for the organization. 
+2.	Key mitigations that system administrators implement to combat both internal and external threats include system hardening, account management, and software patching. The process of system hardening begins by identifying the  business requirements for installed software and services. Each open port and associated service on a system is like an unsecured door or window of your home through intruders may enter. Therefore, software and services on servers and workstations not deemed to have a business use case should be eliminated to greatly reduce an organization’s attack surface. 
+3.	Combating Security Threats to System Administrators:
+a.	Remove unneeded and unused programs. 
+b.	Example:
+i.	Remove the telnet application which uses unencrypted communication. 
+ii.	The Telnet application is disabled by default, but there are many other tools that, depending on the intended purpose of the system, might not be required on the system at all. 
+iii.	On a Linux server Bluetooth and multicast DNS (mDNS) may be installed, but Bluetooth is not needed on a server unless it is an IoT device. mDNS is a client-level application that is not needed on the server as well. 
+c.	Benefits of removing unneeded programs:
+i.	Reduce clutter
+ii.	Decrease the amount of space required to store the OS and the time required for backups.
+iii.	Reduce wastage of CPU and memory resources.
+iv.	Decrease the changes of anything being exposed or exploited in the system. 
+v.	Reduce the number of programs that need to be patched, updated, managed, configured, and monitored. 
+d.	Protect user access:
+i.	Remove/disable unneeded user accounts. 
+ii.	Lock all service accounts.
+iii.	Avoid the use of shared accounts.
+iv.	Avoid storing passwords on the system, particularly in an unencrypted manner. 
+v.	Use two-factor or MFA. 
+e.	Keep systems updated and patched
+i.	Stay informed about new updates and patches and test and install them in a secure, correct, and timely manner. 
+ii.	Test the new updates and patches in a test environment that mirrors the production environment to ensure that the updates will have the desired results and no unexpected consequences. 
+iii.	Confirm that the system is up to date and performing correctly. 
+4.	Two-Factor Authentication:
+a.	Who you are? 
+b.	What you have. 
+i.	A hardware token or a software token on the mobile device that only the designated owner of the account would have in their possession.
+c.	You could also add third and fourth factors of authentication, such as:
+i.	Time and date of access
+ii.	Location
+iii.	Device ID (IP address or computer name)
+iv.	Answers to a security question
+v.	Biometrics
+5.	Large organizations have many specialized privileged accounts called service or process accounts that are difficult to find and track, so their passwords often remain unchanged. 
+Proactivity
+1.	Most ransomware attacks target victim organizations’ data backups, both local and network storage. Thus, they destroy the victim’s ability to recover their encrypted data through their own means. This tactic and the recent trend of stealing copies of sensitive data from victim networks further entice victims to negotiate and pay the cybercriminals. System administrators are often critical to the design and implementation of a secure BCDR plan. In this role, system administrators monitor backup jobs, troubleshooting, and remediating failures to ensure efficient data captures. In many BCDR programs, full server backups are performed at regular intervals with incremental backups scheduled throughout the day. Like the validation of auditing, data recovery tests should be performed to ensure that the jobs are running, and data can be restored successfully. The criticality of up-to-date backups has never been more apparent than in today’s threat landscape with the heightened risk of ransomware attack. Backups need to be protected, and data stored on backup storage media must be encrypted. Other measures taken by sysadmins to protect against threats include endpoint security protections such as anti-virus and anti-malware software. They also include both network and host firewalls that block malicious traffic. With diligent firewall configurations, system administrators can ensure access to systems only to those with a business use case. 
+2.	Combating Security Threats to System Administrators:
+a.	Backup and restore all computing devices regularly:
+i.	Maintain a secure backup system or environment.
+ii.	Setup a computing system backup.
+iii.	Setup a combination of full backups at regular intervals. 
+iv.	Weekly backups are interspersed with more incremental daily backups to backup items that are changed. 
+v.	Test backups should be tested regularly to ensure they are comprehensive and can be restored correctly. 
+vi.	Maintain multiple versions of backups.
+vii.	Clean and comprehensive backups are the primary solution to ransomware incidents. 
+b.	Install antivirus and antimalware tools
+c.	Install computer firewalls:
+i.	Protects against brute force attacks.
+ii.	Configures to only allow applications and systems that should have access and the ability to communicate in and out. 
+iii.	Protect internal computer networks against external threats. 
+d.	Limit employees’ access to specific resources. 
+e.	Avoid giving direct administrative privileges. 
+i.	Use privilege-escalation tools, such as SUDO on Linux, to allow auditable and specific privileged access. 
+f.	Ensure departing employees are offboarded correctly:
+i.	Setup contractors and freelancers with temporary accounts that expire on specific dates that match their contract end dates. 
+g.	Install employee-monitoring software to help reduce the risk of data breaches. 
+3.	Risks involved in restoring files after a ransomware attack:
+a.	The reliability of the decrypted data could be compromised when using the decryption key provided by the ransomware attackers.
+b.	The decryption could take longer than the data restoration.
+c.	There could be additional costs associated with hiring third-party organizations to check the results of the restored data. 
+d.	A current, comprehensive, and trusted backup is critical to mitigate the consequences of a ransomware attack.
+4.	Only allow what is absolutely required and by default deny everything else getting in and out. 
+Corrective Courses of Action
+Identify how systems administrators protect against internal and external security issues
+Scenario 1:
+	An American global entertainment company has a venue with a typical capacity for 1,000 to 6.500 people and the challenge here is to provide internet access for a maximum of 6,500 people who could own multiple devices. The challenges that may interfere with our ability to provide internet access that is safe and reliable could involve failure to secure our wireless network which could lead to piggybacking, wardriving, evil twin attacks, wireless sniffing, and even unauthorized computer access. Recommended avenues to minimize risk on the network could involve network data encryption utilizing up to date standards such as WPA3, protecting our Service Set Identifier (SSID) to protect from evil-twin attacks, installing a firewall and even recommended third-party applications such as lookout or MacAfee to eventgoers to protect their data. Also ensuring that access point software is patched and up to date with a vulnerability assessment prior to engagement of consumers would be ideal. The system administrator must also enable either SSHv3 or TLS to securely communicate with network devices and disable any protocols or services that are not necessary such as the echo, chargen, discard, daytime, FTP, Telnet, SNMP, and discovery protocols. Services such as BootP, IP Unreachable, IP Mask Reply, and Zero Touch Provisioning should all be disabled as well. The system administrator should also be aware of the NSA’s secure access recommendations and allow for their use within the network they are setting up for their consumers. Use of multi-factor authentication and out-of-band management to separate network administration traffic from normal user traffic is recommended, alongside limiting the number of simultaneous management connections, and reducing the risk of exposing administrative interfaces to user traffic by applying IP address access control lists and ensuring those in control do not have “god mode” access and are using the principle of least privilege. Furthermore, monitoring and logging all attempts to access network devices is crucial to ensuring detection algorithms have a baseline to work with. 
+Scenario 2: 
+	As a system administrator, your threat intel team has informed you of a vulnerability on Windows systems that allow unprivileged users to access and extract data from protected registry hives. Any attacker that successfully exploits this vulnerability can run arbitrary code with SYSTEM privileges. An attacker could then install programs; view, change, or delete data; or create new accounts with full user rights. Our team of system engineers have developed a patch to mitigate this vulnerability, but they require assistance in automating this patch to implement it across all impacted systems rapidly. Analyzing the workarounds within CVE-2021-36934 for HiveNightmare it seems as if our system engineers have created a script that runs a Powershell command that restricts access to the contents of %windir%\system32\config and then deletes all Volume Shadow Copy Service (VSS) shadow copies. Challenges that we face here include the fact that deleting shadow copies could impact restore operations, including the ability to restore data with third-party backup applications. Working with our third-party vendor we can devise a plan to ensure the integrity of our backups. Furthermore, the scope widens as restoring our system from a backup could also restore the overly permissive ACLs, and therefore, revert our system to a vulnerable state. The script ought to be containerized and distributed via docker to workstations. All of this must be done promptly and vendor communications in regard to our backups ought to be a priority at this point in time. 
+Scenario 3: 
+	In any merger or acquisition, Active Directory (AD) is the most complicated component to migrate, because it manages an organization’s entire IT infrastructure, including applications, servers, and data. Since work morale is booming within our company, it’s still prudent to devise a plan to effectively merge the acquired company’s AD into our own; thus, it’s essential that this plan is foolproof and tested thoroughly to ensure a secure migration. Due to the central role that AD plays, any compromise or downtime can stop the service across the organization’s entire IT infrastructure. If AD is unavailable to authenticate users, then they lose access to resources and effect the company as a whole. Federation is the most secure way to provide access to another AD domain, and it works well when you need to give a business partner access to internal resources. Nevertheless, the migration process is complex and should be executed in stages to ensure that users retain access to resources as objects are migrated. Standard practice in migrating AD is to establish a cross-forest trust between the two infrastructures so that users retain access to resources in the source domain when their accounts are migrated to the target domain. Microsoft’s Active Directory Migration Tool (ADMT) requires a forest trust and is best handled as a one-way trust between source and target domains. This is our link to the acquired company’s forest and requires the addition of the migration group to the local administrator’s group on every workstation within the acquired company. This also establishes the primary AD for our organization as a security boundary, providing data and service isolation, even when a standard trust is created between the two forests. Essentially administrators in the acquired company’s forest cannot get privileged access to the primary forest if there is a security boundary. There are further risks associated with merging AD forests, such as inheriting poor security hygiene, badly thought-out trust relationships, and active exploits in the source domain. The recommended approach to mitigating AD merger risks starts before the migration project. It is prudent to conduct a vulnerability assessment to understand the security posture of each environment and evaluate whether changes should be made, because moving objects that are insecurely configured can introduce vulnerabilities into the target domain and its best practice to make sure that the source domain adheres to the same best practices as the target domain. Because of AD’s complexity it is best to use a tool to automate ongoing risk assessments of the environment before, during, and after migration. Automating this process is the only way to thoroughly understand security posture and some settings that the system administrator should look over include: 
+•	Accounts assigned privileged access to AD, not limited to Domain Admins.
+•	Root and domain controller object access permissions
+•	adminSDHolder permissions
+•	Kerberos delegation
+•	KRBTGT account last password change
+•	Accounts with weak or never-expiring passwords
+•	Misconfigured trust relationships
+•	Local administrator accounts configured with a common password
+Bringing the security posture of each AD environment into line with a set of best practices significantly reduces the risk of compromise during a migration project; it’s best to not disable SID filtering on the trust to ensure greater levels of isolation between the two environments. Segmentation of Ads until they are merged is the best practice to ensure the utmost security possible. With SID filtering enabled on the trust, users can still be migrated to the target domain and retain access to resources in the source domain. A simplified overview of the steps required include:
+•	Migrate user accounts, but do not enable them in the target domain. 
+•	Run security translation in add mode on all resources that users access in the source domain, including files, shares, printers, local groups, and domain local groups.
+•	Migrate local user profiles and then workstations in batches.
+•	Re-migrate user accounts and all attributes in batches. Set them to enabled in the target domain.
+•	Re-migrate all global groups
+•	Run security translation again in remove mode. 
+This process still migrates users’ SID histories to the target domain to ensure that processes like Offline files continue to work correctly. Since SID filtering is enabled on the forest trust, migrating SID history does not pose a security risk. Furthermore, a reliable tool to surface configuration settings and compare them to the latest threat information is necessary to ensure good security hygiene in source and target domains. 
+Resources:
+Alsid Academy. (2019, October 3). M&A - The Merger That Can Fracture Your Active Directory... And Your Business. Hubspot.net. Retrieved May 30, 2022, from https://cdn2.hubspot.net/hubfs/5536214/Content%20-%20Guides/M&A%20The%20Merger%20That%20Can%20Fracture%20Your%20Active%20Directory%20and%20Your%20Business%20%5BAlsid%20Guide%5D.pdf 
+Arntz, P. (2021, July 21). Hivenightmare Zero-day lets anyone be system on Windows 10 and 11. Malwarebytes Labs. Retrieved May 30, 2022, from https://blog.malwarebytes.com/exploits-and-vulnerabilities/2021/07/hivenightmare-zero-day-lets-anyone-be-system-on-windows-10-and-11/ 
+Hardening network devices - U.S. department of defense. (n.d.). Retrieved May 31, 2022, from https://media.defense.gov/2020/Aug/18/2002479461/-1/-1/0/HARDENING_NETWORK_DEVICES.PDF 
+Security tip (ST05-003). CISA. (2010, March 11). Retrieved May 30, 2022, from https://www.cisa.gov/uscert/ncas/tips/ST05-003 
+Windows Elevation of Privilege Vulnerability. Security Update Guide - Microsoft Security Response Center. (2021, July 20). Retrieved May 30, 2022, from https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36934 
+
+ 
+Consistent Changes
+1.	The important work of system administrators impacts multiple facets of an enterprise. Often this team is inundated with requests for action from various internal and external customers. These professionals manage to prioritize requests to ensure limited resources are allocated to address the most impactful and critical projects. Implementing a consistent process for work intake and defined timelines as service-level agreements can not only aid in effectively prioritizing system administrator work; they help manage customer expectations. In addition, defined processes that utilize extensive automation should be developed to ensure consistent system configuration and maintenance windows. 
+2.	Manual Changes:
+a.	Vulnerable to user errors, whether they are typos, incorrectly typed commands, or other issues.
+b.	Prone to not being able to apply consistently across multiple systems.
+c.	Can be overwhelming to a system administrator team, resulting in delays, inconsistencies, or systems being overlooked completely. 
+3.	Consistency in Secure Administration Practices:
+a.	Use standard processes and policies based on a governance structure and a chosen security framework, such as NIST, COBIT, SOC 2, ISO27001/27002, CIS, FISMA, or HITECH.
+b.	Establish secure system administration practices that are documented, communicated regularly, and made accessible to employees.
+c.	Reinforce the standard processes and policies by training new and existing employees and contractors on secure system administration practices before allowing them access to these systems. 
+d.	Perform a risk analysis, and identify and prioritize critical assets using the access, authorization, and audit (AAA) concept to define the security controls around each asset based on its risk level. 
+i.	Identify the level of protection that should be accorded to these critical systems.
+e.	To standardize configurations, system administration best practices usually include the creation of a:
+i.	Baseline environment – gold image.
+ii.	Standard configuration process – runbook.
+f.	Use various tools and frameworks to automate changes related to configuration management and system provisioning and deprovisioning. 
+4.	Infrastructure as Code Automation Tools:
+a.	Ansible
+b.	Terraform
+c.	Packer
+d.	Chef
+e.	CFEngine
+f.	Puppet
+5.	Consistency in Secure Administration Practices:
+a.	Use an identity and access management (IAM) system that makes on- and offboarding, including the termination of accounts, much more effective and efficient. 
+b.	Install standardized system tools, such as NIS, NIS+, or LDAP, to create a domain of trusted computers authenticated to a domain controller system via secure protocols.
+c.	Use encrypted communication protocols and authentication: 
+i.	Using encrypted protocols and cryptography with strong encryption and key certificates adds an extra layer of difficulty for malicious attackers. 
+ii.	Senderplain textEncryption serverciphertextDecryption serverplain textReceiver
+d.	Dedicate some trusted devices, such as client workstations or mobile devices, to the secure system administration work. 
+i.	System administrators keep these workstations separate from the systems they use for daily productivity:
+1.	These devices should be hardened, updated, secure, and free of non-system administration-related use.
+ii.	These trusted devices can then be recognized by the domain environment as having trusted access while connecting to the systems under a system administrator’s management. 
+e.	Consider using privileged access workstations (PAWs). 
+Principles of Security Administration
+Identify how systems administrators protect against internal and external security issues
+	System configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product’s performance, functional, and physical attributes with its requirements, design, and operational information throughout its life (UpGuard Team, May 2022). One such example of a failed implementation of CM is when a software glitch prevented the NYSE from processing stock trades for almost 90 minutes. The financial markets felt the impact even beyond the NYSE trading floor; since investors couldn’t calculate market indexes without NYSE data, trading also stopped at the American Stock Exchange and some futures and options markets. This also caused the NASDAQ to slow down, due to investor reluctance to do business without information on NYSE trading. The cause of all of this was a new software installation. The NYSE had installed the software on 8 of its 20 trading terminals, and the system was tested the night before go-live. However, on the morning of June 8th, a total of 8 installations failed to operate correctly. The NYSE tried to revert back to its old software but was unable to do so before the opening of the trading session. Proper best practices for configuration management varies across environments; however, it’s clear that testing software in a baseline image (gold image) and ensuring recovery plans in place are effective is the reason why the NYSE was able to recover so quickly. It’s because these systems were in place that they were effectively able to bring their systems back online; however, it’s clear that some errors occurred when distributing the software to its trading terminals; whether, it was man-made or an error on part of the terminal’s not exactly coinciding with the baseline image is a mystery it’s clear that configuration management is varied across environments and is not always a 100 percent guarantee things will not go wrong. ITIL defines CM as a form of IT service management (ITSM); ensures the configuration of system resources, computer systems, servers, and other assets are known, good and trusted. Guidance from Control Objectives for Information and Related Technologies (COBIT) requires the system administrator to ensure the integrity of hardware and software configuration, which requires the establishment and maintenance of an accurate and complete configuration repository. This process includes collecting initial configuration information, establishing baselines, verifying, and auditing configuration information, and updating the configuration repository as needed. Effective configuration management facilitates greater system availability, minimizes production issues, and resolves issues more quickly. COBIT also sets guidelines for setting testing procedures, establishing fail conditions, result details, and suggestions for mitigations of possible risks in configuring devices (COBIT DS9). 
+References: 
+COBIT DS9 - Manage the Configuration. Cobit DS9 - manage the configuration. (n.d.). Retrieved May 31, 2022, from https://forum.tufin.com/support/kc/latest/Content/Suite/6552.htm?TocPath=SecureTrack+User+Guide%7CAuditing+and+Compliance%7CRegulations+Audit+Browser%7CSOX+Tests%7CCOSO+Control+Activities+Component%7C_____7 
+UpGuard Team. (2022, May 11). What is Configuration Management and why is it important?: Upguard. RSS. Retrieved May 31, 2022, from https://www.upguard.com/blog/5-configuration-management-boss 
+Validating
+1.	Updates to infrastructure and device configuration as well as software installation and patching must be verified to ensure success. System administrators rely on application and audit logs to monitor and confirm enterprise changes. The crux of audit configuration is achieving the correct balance between capturing all data and minimizing collections to what is the most important and impactful. Log aggregation is imperative, as adversaries will often perform clean-up routines after their attack. System administrators should ensure that logs are aggregated to a central storage location accessible only via read-only queries performed by authorized personnel. Typically, security information and event management (SIEM) technology are utilized to make this data accessible and easily searchable by sysadmins and security analysts. 
+2.	To ensure that things are working properly, constant checking and testing are needed, which can be done through regular logging and monitoring. 
+a.	Linux Example:
+i.	Debug level (1): Generates extreme detail for someone to see how a system component works. 
+ii.	Level 2-6: Generates alerts when system component issues need to be addressed urgently.
+iii.	Emergency messages (level 7): Generates emergency messages when the system is unusable.
+iv.	The level of logging can be configured for the system as a whole and by each individual system component. Choosing the level of logging involves balancing the need to capture all data that could potentially be useful while also avoiding collecting irrelevant or unhelpful information, which could make finding entropic events much more difficult. 
+3.	If a system is compromised, hackers immediately wipe out all evidence of their presence by deleting or changing the logs. 
+4.	Ways to Know What Measures are Effective: 
+a.	Balance the level of detail against the necessary and useful information and against the need to transfer data to a secure location. 
+b.	Setup a standalone, dedicated logger system to ensure there’s a secure, unchangeable record of all events. 
+c.	Print all logs to hard copy as they come in or write them to write once read many (WORM) times unchangeable media periodically. 
+d.	Regularly check system logs to detect anomalies.
+e.	Set up higher severity levels to be sent via email or instant message to the system administrator for immediate review. 
+f.	Flag potential anomalies for immediate investigation.
+g.	Use SIEM tools as they are automated and provide fast results. 
+5.	Testing security measures involve:
+a.	Frequently and proactively testing the system to ensure no vulnerabilities.
+b.	Find misconfigurations before an attacker finds them.
+6.	Types of Testing:
+a.	Vulnerability assessments:
+i.	Alert us to pre-existing flaws in the system and their location.
+ii.	Are usually conducted by system administrators using their privileged access.
+b.	Penetration tests:
+i.	Attempt to exploit vulnerabilities in the system to determine the possibility of malicious activities.
+ii.	Identify the threatening exploits or flaws. 
+iii.	External Penetration: Involves simulating an attacker in the public domain.
+iv.	Internal Penetration: Involves simulating an employee with access who could exploit the system.
+c.	Audits:
+i.	Both internal and external audits are conducted as part of best practices to ensure that the policies and procedures are satisfactorily followed. 
+d.	Findings of all these efforts should be documented and reported to the governance body of the company and followed up to resolution. 
+Power in the Wrong Hands
+Explain how systems administrators can confirm protection measures are successful
+Joe Vito Venzor was a former IT administrator working for a cowboy boot manufacturer, who, after getting fired an hour later logged into an elphaser administrator account, disguised as a service account, decided to shut down the corporate email server, followed by its application server, which ran among other things-the main production line. Joe deleted files on the servers to block any attempts to restore services and then started work on the firm’s cloud accounts, shutting them down or changing the passwords. Since this had all begun an hour after Joe got fired, the IT director investigated Joe’s work email and found he had emailed a document to his private email address which listed network access codes and passwords for various IT subsystems; listed in the exact order that the firm’s accounts were in the process of being hacked. Using this list, the director got ahead of Joe and began changing passwords himself to mitigate some of the damage and lock out illegitimate access after 45 minutes. Unfortunately, the application server was rendered unusable, and the company ended up having to buy a new one and reinstall all the software on it. The after-action investigation found that Joe had set up the elphaser account from his work computer, which no one else had access to; the account was designed to look like a service account but had full admin privileges where none were needed. 
+	All in all, this organization should have seen this coming and seized all assets Joe had access to and lock his accounts prior to firing him. Because of Joe’s actions the organization learned a valuable lesson that system administrators can manipulate files and data, modify corporate systems and networks, create backdoor accounts, install malware, or shadow IT, and exploit vulnerabilities in the corporate network. The most unpleasant thing about insider threats is the fact that you can’t really mitigate them 100 percent, but some best practices such as assessing and managing the risk an employee has on the organization as a whole, creating extensive security policies, strictly managing passwords; especially for employees that may become volatile, securing access to critical systems before off boarding, separating duties, securing hardware, and of course monitoring admin activity. All of these best practices were left to the wind in the case of this organization. Some further, best practices to ensure the securitization of access to critical systems may be establishing multi-factor authentication to minimize the chances of Joe being able to access these systems using his account if it takes time to off board employees. Furthermore, this could have been prevented had there been a reliable monitoring solution that could have caught critical systems confidential proprietary information from being extracted from the organization in the first place. Furthermore, no default service accounts ought to have God mode access to systems and should always utilize the principle of least privilege-these accounts should also be heavily monitored and flagged if accessed. 
+ Resources:
+How to secure system administrator's privileged accounts: 7 best practices. 7 Best Practices for Securing System Administrator Privileged Account | Ekran System. (2022, April 27). Retrieved May 31, 2022, from https://www.ekransystem.com/en/blog/system-server-administrators 
+Thomson, I. (2017, April 14). Yee-hacked! fired Texan sysadmin goes rogue, trashes boot business. The Register® - Biting the hand that feeds IT. Retrieved May 31, 2022, from https://www.theregister.com/2017/03/31/it_admin_pleads_guilty_to_hacking_bosses/ 
+
+Bibliography
+“The 18 CIS Critical Security Controls.” CIS. n.d. https://www.cisecurity.org/controls/cis-controls-list/.
+“2021 Data Breach Investigations Report.” PDF file. Verizon. n.d. https://enterprise.verizon.com/content/verizonenterprise/us/en/index/resources/reports/2021-dbir-executive-brief.pdf.
+Arntz, Pieter. “HiveNightmare Zero-Day Lets Anyone Be SYSTEM on Windows 10 and 11.” Malwarebytes Labs. 21 Jul. 2021. https://blog.malwarebytes.com/exploits-and-vulnerabilities/2021/07/hivenightmare-zero-day-lets-anyone-be-system-on-windows-10-and-11/.
+“Century.” Under The Wire. n.d. https://underthewire.tech/century.
+“Cloud Controls Matrix (CCM).” CSA. n.d. https://cloudsecurityalliance.org/research/cloud-controls-matrix/. 
+“Cobit: An ISACA Framework.” ISACA. n.d. https://www.isaca.org/resources/cobit.
+Community Inviter. n.d. https://communityinviter.com/.
+Culp, Scott. “10 Immutable Laws of Security Administration.” Microsoft. 20 Feb. 2014. https://docs.microsoft.com/en-us/previous-versions/cc722488(v=technet.10).
+“The Cyber Risk Index (CRI).” Trend Micro. n.d. https://www.trendmicro.com/en_us/security-intelligence/breaking-news/cyber-risk-index.html.
+Evans, Chris. “As Ransomware Attacks Increase in Sophistication, We Need to Appreciate System Administration.” architectingit. 6 Jul. 2021. https://www.architecting.it/blog/love-your-admin/.
+“Foreword.” ISO. n.d. https://www.iso.org/obp/ui/#iso:std:iso:55000:ed-1:v2:en.
+“Former El Paso-Based Production Company Employee Sentenced to Federal Prison for Computer Intrusion.” United States Department of Justice. 19 Jul. 2017. https://www.justice.gov/usao-wdtx/pr/former-el-paso-based-production-company-employee-sentenced-federal-prison-computer.
+Fruhlinger, Josh. “Equifax Data Breach FAQ: What Happened, Who Was Affected, What Was the Impact?” CSO. 12 Feb. 2020. https://www.csoonline.com/article/3444488/equifax-data-breach-faq-what-happened-who-was-affected-what-was-the-impact.html.
+“Hardening Network Devices.” PDF file. NSA. Aug. 2020. https://media.defense.gov/2020/Aug/18/2002479461/-1/-1/0/HARDENING_NETWORK_DEVICES.PDF.
+Henry-Stocker. “11 Tips for Keeping Your Sysadmin Career on Track.” Hewlett Packard Enterprise. 29 Jul. 2020. https://www.hpe.com/us/en/insights/articles/sysadmin-survival-guide-1707.html.
+“History.” ISACA. n.d. https://www.isaca.org/why-isaca/about-us/history.
+“Hitrust CSF.” Histrust. n.d. https://hitrustalliance.net/product-tool/hitrust-csf/.
+“How to Secure System Administrator’s Privileged Accounts: 7 Best Practices.” Ekra. 4 Nov. 2020. https://www.ekransystem.com/en/blog/system-server-administrators.
+“Is the Job of a SysAdmin Dead? Or Just Moving with Times?” Compare the Cloud. n.d. https://www.comparethecloud.net/articles/is-the-job-of-a-sysadmin-dead-or-just-moving-with-times/.
+Kovac, Roman. “ESET Threat Report Q4 2020.” Welivesecurity. 8 Feb. 2021. https://www.welivesecurity.com/2021/02/08/eset-threat-report-q42020/.
+Lewis, Barnaby. “ISO/IEC 27000 – Key International Standard for Information Security Revised.” ISO. 1 Mar. 2018. https://www.iso.org/news/ref2266.html.
+“M & A — The Merger That Can Fracture Your Active Directory...and Your Business.” PDF file. ALSID Academy. n.d. http://alsid.disko.love/wp-content/uploads/2020/05/MA-The-Merger-That-Can-Fracture-Your-Active-Directory-and-Your-Business-Alsid-Guide.pdf.
+“NIST Cybersecurity Framework.” NIST. n.d. https://www.nist.gov/cyberframework. 
+“Password Sharing at Work: Exploring Employees’ Habits around Passwords in the Workplace.” Beyond Identity. 11 June 2021. https://www.beyondidentity.com/blog/password-sharing-work.
+“S5E1: "The High Costs of Technical Debt." Sysadministrivia. 29 Feb. 2020. https://sysadministrivia.com/episodes/S5E1#justthetip.
+“Secure System Administration.” National Cyber Security Centre. 15 Sept. 2020. https://www.ncsc.gov.uk/collection/secure-system-administration.
+“Security Tip (ST05-003).” CISA. 8 May. 2020. https://us-cert.cisa.gov/ncas/tips/ST05-003.
+S.P. “UnderTheWire: Century Level 1.” Medium. 19 Mar. 2019. https://medium.com/secttp/underthewire-century-level-1-d8ac51d40f0.
+“System.” Merriam-Webster. n.d. https://www.merriam-webster.com/dictionary/system.
+“Systems Administration.” NICCS. n.d. https://niccs.cisa.gov/workforce-development/cyber-security-workforce-framework/systems-administration.
+Thompson, Iain. “Yee-Hacked! Fired Texan Sysadmin Goes Rogue, Trashes Boot Business.” The Register. 31 Mar. 2017. https://www.theregister.com/2017/03/31/it_admin_pleads_guilty_to_hacking_bosses/.
+TutoriaLinux. “What Every Sysadmin Needs to Know about Tech Debt.” YouTube video, 13:35. 16 Nov. 2016. https://www.youtube.com/watch?v=WqirNEFPh5Y.
+Under The Wire. n.d. https://underthewire.tech/.
+Wheeler, Sean. “A Closer Look at the Crescendo Configuration.” Microsoft. 14 Oct 2021. https://devblogs.microsoft.com/powershell-community/.
+“Windows Elevation of Privilege Vulnerability.” Microsoft. n.d. https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36934.
+
