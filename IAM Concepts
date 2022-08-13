@@ -1,0 +1,584 @@
+How IAM Supports Foundational Security Principles
+1.	Foundational Security Principles:
+a.	IAM supports confidentiality by:
+i.	Preventing unauthorized entity read access to organizational proprietary information. 
+ii.	Personally identifiable information.
+b.	A robust IAM design helps in:
+i.	Preventing unauthorized disruption.
+ii.	Addresses redundancy and backup.
+c.	IAM supports integrity by: 
+i.	Preventing unauthorized entity access like write, create, update, and delete.
+d.	IAM supports authenticity by: 
+i.	Preventing untrustworthy entities that masquerade or impersonate as a genuine user. 
+ii.	Spoofs a genuine device. 
+e.	IAM supports non-repudiation by: 
+i.	Holding entities accountable for preventing denial or refutation of action. 
+2.	IAM and Fraud Control:
+a.	Separation of duty:
+i.	No entity should be given enough privileges to misuse the system. 
+ii.	Within IAM, a requestor is separate from an IAM approver and from an IAM provisioner.
+iii.	Subject of an audit log is separate from the log reviewer.
+b.	Need to know:
+i.	Entity determination is made in accordance with policy and legal requirements. 
+ii.	Prospective entity requires access to specific, sensitive information to perform/assist authorized duties/functions. 
+iii.	An entity is not granted access to all organization information – only a subset of department/project information necessary to support authorized tasks. 
+c.	Least privilege:
+i.	User/device should only have access necessary to minimum resources, permissions required to perform authorized functions.
+ii.	IAM can restrict access/permission to have the right amount of access. Therefore, an entity has to be authorized to read or write, update, or delete. 
+IAM Terms
+1.	Entity: Also known as principle/subject. 
+2.	Target object: Also known as a resource.
+3.	Between these two are the Access control service and it makes permit or deny decision to the target object. 
+4.	Access Control System Decisions:
+a.	Identification: Who is the entity?
+b.	Authentication: Can the entity prove it is who it claims to be?
+c.	Authorization: Is the entity permitted to reach a resource?
+i.	What privileges or permissions that entity have with regard to the resource?
+5.	IAAA = Identification, authentication, authorization, and audit/accountability. 
+March 6th Notes
+Roadmap for Information Security: 
+CCNACompTIA Security+CompTIA Server+CompTIA Pentest+CompTIA CySA+CCNPCompTIA CASP+CISSPOSCP
+April 1st Notes
+1.	Novell Netware had a copy inhibit access control service. 
+2.	Identification Methods:
+a.	Employee
+i.	Employee identification number
+b.	Third party
+i.	Non-employee identification number
+c.	Customer
+i.	Customer identification number
+ii.	Email address
+d.	Unique identification methods
+i.	Firstname.lastname
+ii.	Firstinitial.middleinitial.lastname
+e.	Hierarchical naming convention
+i.	Resource type
+ii.	Location
+iii.	Unique identifier
+1.	Logical internet protocol (IP) address
+2.	Media access control (MAC) address
+3.	Authentication Methods:
+a.	Knowledge: Something you know.
+b.	Possession: Something you have.
+c.	Biometrics: Something you are.
+d.	Location.
+e.	Device details. 
+f.	Access Control List (ACL): List of people who can use the application.
+g.	Menu: Application that the customer can use.
+h.	Constrained User Interface (UI): Specific functions assigned to the buttons on the ATM.
+i.	Role-based access control (RBAC): Specific roles with defined access to applications.
+j.	Rule-based access control (RuBAC): Specific roles with fixed criteria.
+k.	Attribute-based access control (ABAC): Modular approach
+4.	Granularity of Authorization:
+a.	Application feature, record, or field
+b.	File
+c.	Directory
+d.	System
+e.	Network
+5.	Attribute-Based Access Control: 
+a.	Doctor’s attributes:
+i.	Department
+ii.	Certifications
+iii.	Training
+iv.	Privileges
+b.	Environment’s attributes:
+i.	Patient ward area
+ii.	Office area
+c.	Patient’s attributes:
+i.	Department
+ii.	Department’s condition
+iii.	Medical history
+iv.	Marked as very important person
+6.	IAM Lifecycle Procedures:
+a.	Request approval for account provisioning.
+b.	Account authentication and issue of initial password credentials.
+c.	Routine account attribute management, routine authentication management, periodic recertification of account and authorization.
+d.	Request and approval for deprovisioning account.
+e.	IAM procedures performed – identity proofing.
+f.	Password changed to one known only by the entity. 
+g.	Request and approval for temporarily disabling an account. 
+7.	Access Control System Decisions:
+a.	Identification: Who is the entity?
+b.	Authentication: Can the entity prove it is who it claims to be?
+c.	Authorization: Is the entity permitted to reach a resource?
+8.	Identity and Access Management Jobs:
+a.	IAM System Architect
+b.	IAM System Engineer
+c.	IAM Access Control Specialist
+d.	IAM Administrator
+e.	Identitymanagementinstitute.org/identity-and-access-management-jobs
+Authentication
+1.	Authentication Methods:
+a.	Knowledge: Something you know.
+i.	Password/passphrase
+ii.	Static
+iii.	Vulnerable to replay attacks
+b.	Possession: Something you have.
+i.	Item in possession generates a one-time password (OTP).
+ii.	Can defeat replay attacks but can still be vulnerable.
+iii.	Little window of time in which the attacker can replay the OTP. 
+iv.	OTPs can be generated via: 
+1.	Hardware or soft tokens on your computer or phone. 
+2.	Call on your landline or mobile phone.
+3.	Text messages.
+v.	OTP generators could be:
+1.	Time synchronized.
+2.	Challenge response. 
+3.	Company sends a random number to be keyed in for the token to calculate an OTP. 
+c.	Biometrics: Something you are. 
+i.	Retina
+ii.	Vascular pattern in the palm of your hand.
+iii.	Hand geometry
+iv.	Fingerprint
+v.	80 different facial characteristics.
+vi.	Something that you do: 
+1.	Voice recognition
+2.	Signature dynamics
+3.	Keystroke dynamics
+d.	Location:
+i.	Geofence
+ii.	Remote
+e.	Device details:
+i.	MAC address
+ii.	Mobile equipment identifier (MEID)
+iii.	Device fingerprint
+2.	Access privileges can be classified:
+a.	System administration
+b.	Network administration
+c.	Database administration
+3.	Risk-based authentication includes a scoring system that takes different dimensions into context, like:
+a.	Nature of IP address
+b.	Time of access
+c.	Device used
+US CBP Biometric Recognition Program
+Address the need for additional IAM controls and safeguards for privileged account users such as security team members
+As of 2002, US legislation has required the Department of State and Department of Homeland Security to issue visas and screen non-US citizens traveling into and out of the United States using biometric technology. Various biometric technologies were considered, with the most important factors being efficient processing and accuracy. In June 2016, the US Customs and Border Protection began testing biometric facial recognition technology—the program that is currently in use today.  
+The collection of biometrics data and the security controls in place to protect this data are of grave concern to groups like the Electronic Privacy Information Center (EPIC). These concerns are well-founded as, in 2019, travelers’ biometric data was compromised through the breach of a contracting company that had copied biometrics data during an early pilot of biometrics identification for entry/exit processing from August 2018 to April 2019.
+For this assignment, read the US Customs and Border Protection overview (Links to an external site.) of the facial recognition entry/exit processing program and watch the accompanying video. Use insights provided in the additional resources to construct responses to this assignment’s prompts below.
+Additional Resources
+•	Say Hello to the New Face of Speed, Security and Safety (Links to an external site.)
+•	"Biometric Breakthrough: CBP’s Innovative Approach to Keeping America Safe (Links to an external site.)" (2019) by Marcy Mason
+•	"Review of CBP's Major Cybersecurity Incident During a 2019 Biometric Pilot (Links to an external site.)" (2020)
+•	"OPINION | Facial Recognition Surveillance is Here—But Privacy Protections are Not (Links to an external site.)" (2017) by Jeramie D. Scott
+For your assignment:
+•	Provide an overview of CBP current collection of biometric data for US entry/exit processing.
+•	What other types of biometric data did CBP consider prior to its selection of facial recognition? Why were they ruled out?
+•	The DHS report included three recommendations for enhanced security controls of the CBP biometrics data. Give a summary of each recommendation and detail how IAM controls can be used to support their implementations.
+U.S. Customs and Border Protection’s (CBP) collection of biometric data for US entry/exit processing is designed to be a more seamless, secure, and safer travel experience. Since the collection of biometric data is a hands-free process it also helps prevent the spread of germs. It was established from the 9/11 commission report which instructed CBP to use biometric access controls for entry and exit of the United States. Biometric data collection starts off with boarding, wherein, a traveler’s photo is taken where you would normally present passports for inspection. Then the photo is compared against an existing passport or visa photo. Third, a CBP officer interviews the traveler to validate results and establish the traveler’s purpose and intent of travel to determine admissibility into the United States or exit of the United States. Finally, all traveler photos of US citizens are deleted, and no photos are shared with industry partners. 
+	There are other types of biometric data that CBP considered prior to using facial recognition and it included the Biometric Exit Mobile tool. CBP’s Biometric Exit mobile device allowed officers on the jetway to run traveler’s fingerprints through law enforcement databases. This system was ruled out, because it didn’t reliably identify people who are exiting the United States. The problem with the Biometric Exit Mobile tool was the fact that people could use different identities with the same fingerprint; thus, it weakened the process’s ability to identify those with a criminal history or identify people that are supposed to be on a particular flight causing delays for some travelers. It also didn’t work for people who had already come into the United States illegally. 
+	The Department of Homeland Security conducted a review of CBP’s Major Cybersecurity Incident during a 2019 Biometric pilot and was published September 21st 2020; in this report there were three recommendations given to remediate the breach. Recommendation number 1 states that the CBP’s Assistant Commissioner for the Office of Information and Technology implement all mitigation and policy recommendations to resolve the 2019 data breach identified in CBP’s Security Threat Assessments, including implementing USB device restrictions, and applying enhanced encryption methods. Recommendation number 2 recommended the Deputy Executive Assistant Commissioner, Office of Field Operations coordinate with the CBP Office of Information and Technology to ensure that all additional security controls are implemented on relevant devices at all existing Biometric Entry-Exit program pilot locations. Recommendation 3 recommended the Deputy Executive Assistant Commissioner; Office of Field Operations establish a plan for the Biometric Entry-Exit Program to routinely assess third-party equipment supporting biometric data collection to ensure partners’ compliance with Department security and privacy standards. The implementation of IAM controls can greatly enhance CBP’s ability to implement these recommendations. For example, recommendation number 1 can utilize the rule of least privilege along with restricting copy access of data. Recommendation number 2 can implement OTP to ensure authentication of individuals are logged and secure against replay attacks; these security controls would exist at all existing Biometric Entry-Exit program pilot locations. Finally, recommendation number 3 would require a routine assessment of third-party equipment supporting biometric data to ensure partners’ compliance with Department security and privacy standards would be greatly aided by routine auditing. 
+Resources: 
+Mason, M. (n.d.). Biometric breakthrough: CBP's innovative approach to keeping America safe. WCO News. Retrieved April 2, 2022, from https://mag.wcoomd.org/magazine/wco-news-89/biometric-breakthrough-cbps-innovative-approach-to-keeping-america-safe/ 
+Office of Inspector General, Review of CBP’s major cybersecurity incident during a 2019 biometric pilot15–15 (2020). DC, Washington. 
+Say hello to the new face of speed, security and safety. Home | CBP Biometrics. (n.d.). Retrieved April 2, 2022, from https://biometrics.cbp.gov/ 
+Authorization to Access Resources
+1.	All access requests from entities to resources must be considered and compared to authorization or entitlement for a permit to proceed. 
+2.	The types of assets referred to as resources are network, systems, applications, files, and databases.
+3.	Authorization is the: 
+a.	Right or a permission to access a resource.
+b.	Process of verifying that a request is approved for a specific entity. 
+4.	Granularity of Authorization:
+a.	Application feature, record, or field
+b.	File
+c.	Directory
+d.	System
+e.	Network
+5.	Define the rights, the entity will have permission to do on the resource:
+a.	Create
+b.	Read
+c.	Update
+d.	Delete
+e.	Execute
+6.	Authentication Methods:
+a.	Access Control List: 
+i.	List of people who can use the application.
+b.	Menu:
+i.	Application features that the customer can use.
+c.	Constrained User Interface (UI): 
+i.	Specific functions assigned to the buttons on the ATM.
+d.	Role-based access control (RBAC):
+i.	Specific roles with defined access to applications.
+e.	Rule-based access control (RuBAC):
+i.	Specific roles with fixed criteria.
+f.	Attribute-based access control (ABAC):
+i.	Modular approach.
+ii.	User requests access to a resource, then a policy enforcement point converts the user request into an authorization request for the policy decision point. The policy decision point then evaluates request against policies and these policy requests are stored in the policy administration point. Then the policy decision point retrieves attribute values from the policy information point. Then the policy decision point must either permit or deny access to the resource. Only when permitted, can you send access request to resource and provide access for user and when permitted the policy enforcement point provides the resource to the user. Audit event records are stored at each step. 
+iii.	Doctor’s attributes:
+1.	Department
+2.	Certifications
+3.	Training
+4.	Privileges
+iv.	Environment’s attributes: 
+1.	Patient ward area
+2.	Office area
+v.	Patient’s attributes:
+1.	Department
+2.	Department’s condition
+3.	Medical history
+4.	Marked as very important person
+Audit and Accountability
+1.	Forms of Audit and Accountability:
+a.	Audit log:
+i.	Chronological record of information system activities, accesses and various operations for a given period.
+b.	Security Audit Trail:
+i.	Documentary evidence of processing and tracing transactions forwards (through related records) and backwards (to the source of the transaction).
+ii.	Mandatory support to accountability-users should be prevented from modifying audit information. 
+c.	Accountability:
+i.	Generates requirements for actions of an entity to be traced uniquely to that entity.
+ii.	Supports non-repudiation.
+d.	Auditing and accountability discourage and dissuades violations. 
+2.	Security Event Record Attributes:
+a.	User identification
+b.	Type of event
+c.	Target resource
+d.	Date and time of the event (with time zone)
+e.	Source of the event
+f.	Event location
+g.	Outcome
+h.	Object name of the affected data system, component, or resource
+3.	Importance of Logging and Regular Log Reviews:
+a.	Determines who/what is responsible for an action and holds the entity accountable. 
+b.	Provides assurance to management that only authorized entities are using the system in authorized ways. 
+c.	It’s supported through unique identification, strong authentication, and authorization to least privilege. 
+4.	Tools for Log Analysis:
+a.	Log aggregators
+b.	Security information and event management tools
+c.	Intrusion detection and intrusion prevention tools
+d.	Artificial intelligence and machine learning tools
+Analyze Audit and Accountability Principles and Practices
+3.11
+Some of the aspects in the readings that were relevant 25 years ago still ring true today. Most identification and authentication methods from then, such as the use of passwords with specific required attributes are still in use today; however, the use of minimum length of six has since gone up to 8 to provide more security against botnet attacks that can utilize dictionary brute-force attacks to gain unauthorized entry into a resource. Furthermore, changing passwords frequently and training users on strong password upkeep still remains a challenge to this day and still can be improved utilizing IAM controls like biometrics or 2FA. The use of audit logs and key stroke monitoring when it comes to identification and authentication of users into the resource is also something that is touched upon in this section since administering data properly looks into stolen or shared account interactions. 
+3.12
+Logical Access Control within the reading went through a lot of the concepts that are still in use today such as User IDs, roles, location, time, and access modes. To add onto this and to serve against today threats used IP/MAC addressing should also be listed in here; however, Access control lists may have incorporated those processes as well in access control mechanisms. Marrying the mechanisms and criteria may very well add more to the security of the criteria that is needed for entities to gain unauthorized entry. Audit logs and monitoring are all incorporated within the access control mechanisms. ACLs, encryption, security gateways/firewalls, and host-based authentication should all have audits regularly in order to ensure the integrity and confidentiality of user data. 
+3.13
+Audit Trails still utilize processes such as holding individuals accountable for their actions, reconstructing events, intrusion detection in real time, and problem identification are all concepts integrated into Intrusion Prevention systems and are still highly regarded and transformed as the cybersecurity landscape changes as well. One thing that needed to be improved upon was adding integrity to the security of audit logs. The integrity of your audits means everything, because if there is no integrity then the logs themselves could be thrown out the window, because it’s credibility to do its role is compromised. Keystroke monitoring is very beneficial when it comes to audit trails because it ensures no one is using that information with which an employee may type against them and prevent unfair practice. Knowing this, the publication even states that keylogging might as well be equivalent to wiretapping and is still unclear, but it is best to have a written policy and notify users of this policy. 
+IAM Attacks
+1.	Spoofing: The attacker impersonates the account user once they know the account password. 
+2.	Static Replayable Password Attacks:
+a.	Spoofing
+b.	Brute force attack
+c.	Keystroke logger spyware attack: Used to capture vendor’s account and password. 
+d.	Dictionary attack
+e.	Rainbow table attack
+f.	Nikulin, a Russian hacker, used a dictionary attack to expose 117 million LinkedIn, 68 million DropBox, and 30 million Formspring accounts and passwords. 
+3.	Avoid static replayable password attacks by:
+a.	Using complex passwords.
+b.	Changing passwords periodically.
+c.	Storing passwords in salted or peppered hash format. 
+d.	Strengthen static passwords with one-time passwords (OTPs).
+4.	Attacks on OTPs:
+a.	Short message service vulnerable to:
+i.	Interception
+ii.	Eavesdropping
+b.	Hardware tokens are vulnerable to key cloning attacks:
+i.	Gets possessionDepackages the device physicallyReconstructs the encryption key. 
+5.	Other IAM Attacks:
+a.	Solarwinds attack:
+i.	Opens a backdoor to bypass IAM.
+b.	Interception attacks:
+i.	Intercepts sessions
+ii.	Intercepts transmission of plain text passwords
+iii.	Impersonates websites/applications
+c.	Attacks on privileged accounts
+i.	System admin
+ii.	Network admin
+iii.	Database admin
+iv.	Gives itself top administrative privileges to spy on targets or access important files.
+IAM in a Business Context
+1.	IAAA In Sequence:
+a.	Populate a database of known identities.
+b.	Approve authentication and authorization rules.
+c.	Identification: User to provide identification.
+d.	Authentication: Verification of authenticity.
+e.	Authorization: Comparison of request to authorization rules and permission/denial of request. User can access resource when permitted. 
+f.	Audit: Activity audit record of each step. IdentificationAuthenticationAuthorization. 
+2.	Avoiding IAM Attacks:
+a.	Account lockout technique.
+b.	Captcha – Slows down a brute force or a bot-type attack.
+c.	Periodic reconfirmation of identity and authentication: Asks to re-key identity and authentication credentials. 
+d.	Sanitized error messages. 
+3.	IAM in Business Context:
+a.	Identification:
+i.	Companies take measures to guarantee user identification is unique.
+ii.	IAM procedures search for a duplicate identification (initially and periodically). 
+b.	Authentication:
+i.	Proves genuineness of identity by verifying the claims. 
+ii.	Something you know – knowledge
+iii.	Something you have – possession
+iv.	Something you are – biometrics
+v.	Location
+vi.	Device details
+vii.	Reconfirms identity prior to allowing sensitive functions.
+c.	Authorization:
+i.	Uses a deny-by-default template. 
+ii.	Follows need-to-know and least privilege principles.
+iii.	Uses access control list and/or role-based access control.
+iv.	Maintains access to least privilege through-out the account lifecycle. 
+d.	Audit:
+i.	Maintains a chronological record of access requests.
+ii.	Supports non-repudiation.
+iii.	Reviews for violations.
+iv.	Is protected against change.
+4.	Ways in which attackers imitate websites:
+a.	Typographical errors
+b.	Phishing email attacks
+c.	DNS attacks – Pharming
+5.	Identifying a website:
+a.	Companies use personal images to ensure that you reach their genuine website.
+b.	To log into the Benefits program online, you must verify your personal image and personal caption, and enter your passwords. 
+6.	Common IAM Needs and Goals:
+a.	Reduce IAM costs.
+b.	Effectively manage risk and legal compliance. 
+c.	Identify roles with responsibilities.
+d.	Use automation to grant or revoke access.
+e.	Secure remote users.
+f.	Enforce real-time decisions based on different key factors.
+g.	Compete with a better user experience. 
+i.	Avoid password fatigue.
+ii.	Use single sign-on and federated identity management. 
+h.	Record security details
+i.	Deliver centralized reporting and security intelligence to recognize non-compliance. 
+Establish IAM Governance
+1.	IAM Policies, Standards, and Procedures:
+a.	IAM Policy: Provides high-level control objectives and technology-neutral requirements to address business, legal, and cybersecurity risks.
+b.	IAM Standards: Provide more detailed risk-based requirements and boundaries, and parameter values.
+i.	Used by IAM designers for design requirements.
+ii.	Used by IAM managers to write step-by-step procedures to be followed by the IAM team. 
+c.	IAM Procedures: As an IAM analyst:
+i.	Account provisioning procedure.
+ii.	Initial credentials procedure.
+iii.	Credentials maintenance.
+iv.	Reset procedure.
+v.	Account maintenance procedure.
+vi.	Account disablement or deprovisioning feature.
+2.	Risk-Based Requirements for Accounts:
+a.	Questions to consider: Identity and access provisioning standards provide risk-based requirements for accounts.
+i.	How do you register account or deregister an account?
+ii.	What types of entities need accounts?
+1.	Who may sanction the account?
+2.	When does the account expire?
+3.	What level of identity proofing is necessary?
+4.	What attributes do we need to collect about the entity? Why and how?
+iii.	Who selects the unique identity?
+1.	Prohibition of duplicate entities.
+iv.	Are there any unsponsored or unsanctioned accounts?
+1.	Every account in the system must have a justification.
+v.	What access rights and assignments does the user have?
+1.	Requirements for managing privilege and service user accounts.
+vi.	How do you issue an entity an account with a temporary authentication credential?
+vii.	How do you maintain account attributes?
+viii.	What should the requirements be for the security question function?
+ix.	What should be the requirements for the secure profile update function?
+x.	What should be the requirements for the secure account lockout function?
+3.	Privilege Account Management: Best Practices
+a.	Grant privilege for authorized systems.
+b.	Grant access when needed and revoke when the need expires.
+c.	Grant access through an intermediary tool.
+i.	Password vaults
+ii.	Privilege access management tool.
+d.	Other security techniques:
+i.	Use a session manager.
+ii.	Maintain audit trails and examine them for potential misuse or intrusion. 
+4.	Privileged accounts are powerful accounts that often have the power to read, modify, and delete almost anything, and may lead to data compromise. 
+IAM Standards
+1.	IAM Standards:
+a.	Authentication Credential Standard: This standard provides risk-based requirements for identification and access. 
+i.	User responsibilities.
+ii.	Change of default passwords.
+iii.	Establish the level of confidence needed to establish authenticity of a request.
+1.	Examples:
+a.	Single factor authentication
+b.	Multiple factor authentication
+c.	Device identification and authentication
+d.	Risk-based authentication
+iv.	Requirements vary based on the type of user:
+1.	Regular users
+2.	Privileged users
+3.	Service accounts
+4.	Suppliers
+5.	Customers
+v.	Password requirements:
+1.	Minimum length
+2.	Complexity – case sensitivity and character requirements. 
+3.	Force change from default to temporary password.
+4.	Secure distribution of temporary password.
+5.	Force change on initial use.
+6.	Change or expiration intervals.
+7.	History level to limit reselection of passwords.
+8.	Failed login attempt account lockout threshold.
+9.	Encryption of authentication credential during transmission or hashing with salt or pepper. 
+10.	Password reset requirements.
+vi.	One-time password (OTP) requirements to defeat replay attacks.
+1.	Time-to-live for OTP.
+2.	Source of random number that seeds the OTP.
+a.	Hard or soft token.
+3.	User to key in a PIN to activate OTP token.
+4.	Prohibition of exporting cryptographic keys. 
+5.	Secure distribution of OTP tokens.
+vii.	Biometric requirements.
+1.	Unique
+2.	Difficult to counterfeit
+a.	Appropriate processing speed to permit/deny access.
+3.	Secure registration
+4.	Secure capture of the biometric template of transmission and storage.
+5.	PIN
+6.	Adjustable sensitivity levels
+b.	Authorization/Entitlement Standard: This standard provides risk-based requirements for specific roles.
+i.	Manager requests least privilege access for a team member and then the owner describes authorization rules and sanctions least privilege access to the resource. IAM provisioning team programs least privilege access for the resource. The manager can request access revocation when not needed. As well as a periodic review of authorization which may require recertification. Manager then can update or modify access back to the IAM provisioning team. 
+c.	Audit and Accountability Logging Standard Requirements: This standard provides risk-based requirements for minimum number of events.
+i.	Log supplemental events.
+ii.	Incorporate logging requirements into devices, appliances, and applications.
+iii.	Synchronize clocks to a reference time source.
+iv.	Classify events as sensitive.
+v.	Enable log generation and secure transmission.
+vi.	Protect log data.
+vii.	Restrict access to log data.
+viii.	Assign performance of log review.
+ix.	Seek approval to disable logging.
+x.	Set a timeline for log retention.
+xi.	Prevent modification to the logging function and logs.
+xii.	Establish supplemental requirements.
+xiii.	Use automated analytical tools.
+2.	IAM Guidelines: Example
+a.	IAM guidelines offer suggestions or coaching tips.
+b.	Raise security alert using auditing guidelines for the following events:
+i.	Provisioning of administrative privileged accounts.
+ii.	Attempt to access deactivated accounts.
+iii.	Deviation from normal user behavior.
+iv.	Excessive period of inactivity.
+v.	Exceeding threshold for failed login or number of accounts locked.
+vi.	User changes password too often.
+vii.	Disabling audit of security events.
+viii.	Failure to forward security events to the log aggregator.
+ix.	Modification of the log.
+x.	Disabling of security tool.
+IAM Lifecycle Procedures
+1.	IAM Lifecycle Procedures:
+a.	Request approval for account provisioning.
+b.	IAM procedures performed – identity proofing.
+c.	Account authentication and issue of initial password credentials. 
+d.	Password changed to one known only by the entity.
+e.	Routine account attribute management, routine authentication management, and periodic recertification of account and authorization.
+f.	Request and approval for temporarily disabling an account.
+g.	Request an approval for deprovisioning account. 
+2.	Steps for Account Provisioning Procedures:
+a.	HR:
+i.	Makes an offer for a new hire.
+1.	New hire accepts the offer.
+ii.	Notifies the manager of the new hire. 
+b.	Manager of new hire:
+i.	Places an account request.
+ii.	Chooses least privilege entitlement and permissions to resources. 
+c.	Resource owner(s):
+i.	Approve/modify/reject the request.
+ii.	Approved requests are sent to the IAM team. 
+d.	IAM team:
+i.	Double checks request form for proper authorization.
+ii.	Selects a unique user ID by searching for duplicates. 
+iii.	Creates an account using the default deny template.
+iv.	Adds only authorized resources with authorized permissions.
+v.	Sets initial password to one meeting the Password Authentication Credential Standards. 
+vi.	Sets the account in an open or a disabled state, as directed.
+e.	HR: Onboards new hire.
+i.	Performs identity proofing.
+ii.	Provides and records acknowledgement of Security Policy and Acceptable Use Policy.
+iii.	Provides and records acknowledgement of security training.
+iv.	Issues an account with a temporary password.
+v.	Notifies the IAM team to enable the account if it is set disabled.
+vi.	Notifies the IAM team to disable and close the account if it is set disabled and the new hire does not appear. 
+f.	New hire: 
+i.	Logs in and is forced to change the initial password to one that meets the password authentication credential standard. 
+g.	IAM team:
+i.	Reviews the logs to ensure the new account is used; if not, contacts HR.
+ii.	Periodically searches for duplicate IDs. 
+3.	Default account open state:
+a.	Open the account.
+b.	Wait for the new hire to onboard.
+4.	Default account disabled state:
+a.	Wait for the new hire to show up to onboard.
+b.	Open and hand over the account. 
+PAM Tools
+	There are key differences to identity and access management (IAM) and privileged access management (PAM). Generally, privileged access management is accepted as part of the broader scope of identity and access management. However, just as in reality privilege and identity are irrevocably linked and, as technology and solutions become more sophisticated these lines continue to blur. IAM typically refers to people in general. You, your boss, the IT admin, the HR person who recruited you, and now includes things like location and device details as well. See where the lines begin to blur between technology and identity? Privileged access management is simply a part of IAM, and it helps in managing entitlements, who gets to see this information can it go up or down the chain of command/organization? Entitlements are also bestowed upon not only individual users, but also shared accounts such as super users, administrative, and service accounts. 
+	A common challenge in privileged access management experienced by organizations is the people themselves. Sometimes, all it takes is an employee clicking on a link from outside of the organization to be able to deny all privileged access management procedures. A hacker is able to laterally move the network utilizing buffer overflows or escalate their privileges as they go through the organization’s network. Or sometimes it can be ransomware or malware designed to do damage to the organization. Nonetheless, that is also why privileged access management also needs to have security controls to mitigate that risk.
+	Basic PAM security controls can be to increase awareness and empower employees with the training needed to mitigate the risk that comes with social engineering to gain access proprietary resources. Another way to mitigate risk in the weakest link is to steer clear of manual methods for PAM. There are far too many organizations that rely on spreadsheets to keep track of privileged account passwords and knowing the many vulnerabilities that come with such a surface it not only increases your risk but is also inefficient and impossible to scale. 
+Resources: 
+Privileged access management. Thycotic. (2021, May 4). Retrieved April 6, 2022, from https://thycotic.com/resources/privileged-access-management/#section5 
+IAM Training
+1.	IAM Education, Training, and Awareness:
+a.	Education: Taking a class to learn about IAM.
+b.	IAM Training: Role-based training to perform company-approved IAM procedures.
+c.	IAM Awareness: To send motivational reminders to users to protect their passwords. To also notify the security department for password issues. 
+2.	IAM General Training for Users:
+a.	Train and make the users agree to abide by the acceptable use policy.
+b.	Protect authentication credentials.
+i.	Do not share/write your password.
+c.	Protect sessions
+i.	Lock your screens while away.
+ii.	Log out from applications when not in need.
+3.	Role-based Training for the Provisioning Team:
+a.	Detailed provisioning procedures.
+b.	IAM Controls self-assessment
+i.	Learn about the IAM risk control objectives.
+ii.	Understand how the IAM controls work.
+iii.	Offer improvements to meet risk-control objectives.
+4.	Role-based Training for IAM Performers:
+a.	Owners:
+i.	Describe the business rules for granting access to their resources.
+ii.	Understand the IAM control structure.
+b.	Managers:
+i.	Place requests to least privilege.
+ii.	Request modification to access permissions for job function changes.
+iii.	Review access permissions, request revocations, add new resources (if needed) in case of any transfers.
+iv.	Request account revocation in case of termination.
+c.	Human Resources:
+i.	Request to disable accounts.
+ii.	Trigger account adjustments and authorizations (in case of transfers or job retitling).
+iii.	Assess access risks (in case of friendly terminations).
+iv.	End access for unfriendly terminations.
+Types of IAM Training
+	The organization benefits of IAM training are that it is the only tool that can fix the weakest link when it comes to identity and access management and that’s us, the people in the organization. In order to improve and adapt in a changing cybersecurity landscape and to mitigate risk the organization must be aware at some level the goals of risk management and that is keep proprietary data confidential, keep the integrity of our technology and software we utilize at optimal levels and ensure misuse is clearly advised upon in the terms of employment, and also ensure the availability of our systems to keep the organization running. Given these vast reaching concepts in the CIA triad every employee must be trained to foster a culture for cybersecurity. 
+	There are also important aspects for stakeholder roles as well when it comes to IAM training. Owners must be able to describe their business rules for granting access to their resources and must understand the IAM control structure. Second, managers must be trained on placing requests to the least privileges needed for an employee to fulfill their role, they must be able to request modification to access permissions for job function changes, they need to be able to review access permissions, request revocations, add new resources (if needed) in case of any transfers, and request account revocation in case of termination. Third, human resources, must be able to request to disable accounts, trigger account adjustments and authorizations (in case of transfers or job retitling), assess access risks (in case of friendly terminations), and end access for unfriendly terminations. 
+IAM Compliance Testing
+1.	Compliance Testing:
+a.	People:
+i.	Observe them
+ii.	Interview them
+iii.	Send them a questionnaire
+b.	Process:
+i.	Inspect process documentation
+ii.	Perform the process
+iii.	Examine process artifacts
+c.	Technology:
+i.	Test access controls
+ii.	Attempt access requests that are not authorized - rejection or denial
+1.	Trace the error messages
+2.	Trace the logs
+2.	Some examples of IAM compliance tests:
+a.	Confirm that default deny is in the default template.
+b.	Flag duplicate accounts.
+c.	Identify accounts not tied to an active HR record or a customer.
+d.	Flag accounts tied to personnel on long-term leave.
+e.	Flag terminated personnel’s accounts.
+f.	Flag accounts that have not been certified by a people manager after a specific period.
+g.	Flag privileged accounts that have not been justified or recertified.
+h.	Authentication
+i.	Passwords
+1.	Flag accounts with default or guessable passwords.
+2.	Flag passwords changed multiple times in a short time span.
+ii.	One-time passwords (OTPs)
+1.	Examine the secure distribution process.
+2.	Examine the time-to-live window.
+3.	Flag unused tokens.
+4.	Flag tokens not tied to an active HR record.
+iii.	Biometrics
+1.	Observe secure transmission and secure storage tactics.
+2.	Flag any not tied to an active HR record.
+iv.	Authorizations
+1.	Flag accounts where there is a mismatch between roles and the person’s current title.
+v.	Audit logs
+1.	Flag accounts not used in a specified period.
+3.	Goals of IAM compliance testing:
+a.	Discover non-conformities.
+b.	Fix non-conformities (bad actor possibly).
+Identify IAM lifecycle best practices
+	Ticketmaster employees use of former employee credentials to gain business intelligence could have easily been prevented utilizing basic IAM security principles. In identity and access management the goals are to discover non-conformities and fix non-conformities. These goals were not met, because CrowdSurge, unfortunately did not implement IAM best practices. One way was to disable the former employee’s access to their resources, but instead that former employee continued to have access after termination. Furthermore, it would have been up to human resources for closing Stephen Mead’s access to the resource and also for a manager to ensure account revocation of any shared accounts that Stephen had access to. IAM compliance tests could have limited the duration and scope of this activity by identifying accounts not tied to an active HR record or a user, flagging terminated personnel's accounts, both shared and personal, flagging accounts that have not been certified by a people manager after a specific period (immediately in almost any scenario), flagging of authorizations to resources from terminated employees, and maintaining an audit log of accounts in general. Ticketmaster management also stands to learn from IAM compliance testing, because they ought to have been able to detect the illegal access of competitors’ networks by conducting an audit on the systems that were utilized to access another company’s resource on their network. Auditing the network and ensuring a log of keystrokes and flagging any potential conflicts within the misuse of company systems policy is an essential IAM principle to ensure the integrity of the organization’s systems. Not only that, but this culture of Ticketmaster’s also proves that the owner did not set a good enough company standard for misuse and essentially allowed the culture to go on uninhibited by a policy for compliance and accountability of company systems. 
