@@ -1,0 +1,644 @@
+Module 19
+Introduction
+1.	Conducting a penetration test against external-facing services, internal systems, and infrastructure is an excellent way to gauge an organization’s overall security posture and effectiveness. By doing so, penetration testers can emulate attacker activities (e.g., attacking systems, phishing staff, deploying various attack techniques, etc.) to discern which systems or applications may be vulnerable to specific techniques or exploits. This measure helps management and network defenders identify and prioritize gaps in security controls and bolster defenses in a meaningful way. Security professionals such as pen testers and red teamers, who are responsible for conducting offensive operations, must be cognizant of the scope of each engagement, as you’ll learn in the next sections of this course. Proper planning and preparations are critical and must be completed in advance of initiating any offensive penetration-testing activity. 
+2.	The core phases of the penetration-testing process include planning, discovery, exploitation (also known as attack), and reporting. A penetration testing team must receive positive confirmation from an authorized member of an organization’s executive management prior to starting an engagement. In addition, all IP addresses and physical locations must be verified as belonging to the requesting party and not to an unsuspecting third party. We will be leveraging both the NIST SP 800-115 and MITRE’s ATT&CK framework to dive more deeply into the following phases of a penetration test.
+a.	Planning: In order to mitigate any potential disruptions or fallout from a penetration test, it’s imperative that proper planning and protocols be followed. In the planning phase, a pen-testing team works with the customer to define rules of engagement, which are the boundaries and constraints within which the testers must work. 
+b.	Discovery: Just as real-world attackers conduct open-source reconnaissance and scanning to map their victims’ environments, pen testers will perform similar information gathering. During this phase, viable target systems are identified, and their associated ports and services are enumerated. 
+c.	Exploitation: During the exploitation phase of a pen test, the team confirms that the vulnerabilities identified in the organization’s systems and services can be exploited. Constant communication with the requesting party is imperative, and any critical in-progress findings should be reported immediately.
+d.	Reporting: The final penetration test report will include any findings discovered during the engagement. Risks associated with exploitable vulnerabilities should be contextualized in accordance with the potential impact on the business. The final report should also include recommendations for remediations and improvements to the organization’s security controls. 
+3.	Module Objectives:
+a.	Organize and execute a pen test.
+b.	Think like a bad actor to break into a cyber environment. 
+c.	Prepare pen test reports for analysis so that you can resist or detect attacks.
+4.	In the 1992 movie, “Sneakers,” the pen test team:
+a.	Consisted of cybersecurity and physical security experts.
+b.	Were tricked into running an unauthorized pen test. 
+c.	Best practices include:
+i.	Positively confirming that the pen test contract is authorized by a genuine official of the organization and that the organization genuinely owns or leases the stated IP and physical addresses. 
+ii.	Conducting due diligence to ensure the legitimacy of a pen tester when engaging independent third-party pen testers. 
+5.	Pen Testing – A License to Hack?
+a.	In September 2019, Iowa’s State Court Administration hired Coalfire, a security organization, to pen test some of its municipal buildings. 
+b.	The pen test contract included both physical and cybersecurity assessments.
+c.	Security alarms triggered when the Coalfire pen testers broke into a courthouse in the middle of the night. 
+d.	The Coalfire pen testers presented their contract as a “Get out of Jail Free” card, but they were arrested on felony burglary charges.
+e.	They spent 24 hours in jail and were released on a $100,000 bail.
+f.	The charges were dropped in February 2020.
+6.	Any form of pen test must be explicitly approved by authorized executive management with clear terms, conditions, and limitations for executing the pen test. 
+7.	Stages of Pen Test Planning:
+a.	Planning:
+i.	Its various options.
+ii.	Obtaining clear definitive authorization.
+b.	Discovery:
+i.	Gather information about the pen test targets.
+ii.	Identify targets for the pen test.
+c.	Exploitation: 
+i.	Gain access.
+ii.	Escalate privileges so that you can browse the system vertically to see if that meets your objective or use that system to pivot laterally across the environment.
+iii.	Install extra tools. 
+d.	Reporting:
+i.	This is vital for communicating with the organization’s point of contact during the pen test.
+ii.	Final report should include:
+1.	Inform the organization’s business case. 
+2.	Give the organization the details it needs to be able to strengthen its defenses and detection capabilities by communicating the risks regarding its exploitable vulnerabilities. 
+3.	Provide recommendations for improvement. 
+Pen Testing Planning Goals, Objectives, and Scope
+1.	Prior to conducting offensive penetration-testing activity, it is crucial that all plans be finalized, and Rules of Engagement be approved by the organization’s key stakeholders. Detailed planning and open communication are paramount for ensuring that the appropriate approvals and protocols are in place prior to initiating testing activities against any system. Without proper planning, documentation, or approvals, a penetration tester may be unwittingly at risk of undue scrutiny, and even legal action, by the target organization.
+2.	Planning and preparations are key for any pen-testing engagement or assessment activities. As such, it’s essential that you take the appropriate measures to ensure that both offensive and defensive “in-scope” activities are defined prior to initiating a pen test. In certain engagements, some initial access, exploitation, lateral movement, and post-exploitation techniques may be barred from use based on the customer’s goals and requirements. For example, a customer may require that the red team conducting the exercise not tip off the organization’s blue team to any impending or ongoing offensive activity. Red team exercises can be effective in testing defensive infrastructure and processes to see if network defense professionals are able to adequately detect the attack and take protective measures. Some trusted members on the blue team, however, may need to be made aware in order to ensure that any identified activities are addressed in the appropriate manner. Key objectives and the test scope should be defined in advance and agreed to by the primary stakeholders. 
+a.	The Rules of Engagement can be used to clearly delineate the testing parameters and operational scope of the engagement and typically include the following:
+i.	Customer point of contact for engagement (primary and backup).
+ii.	Communication cadence (frequency of status calls).
+iii.	Type of test (black, white, gray, external, internal, physical, web, IoT).
+iv.	Level of blue team awareness.
+v.	Level of network, service, and system access granted (if any).
+vi.	Duration of test.
+vii.	Start and end dates of test. 
+viii.	Approved time windows for offensive activity (blackout periods).
+ix.	IP addresses and domains in scope.
+x.	External-facing services in scope.
+xi.	Approved attack vectors (phishing, physical, social engineering, drive-by download).
+xii.	Approved exfiltration methods (if any).
+xiii.	Sensitive data-handling protocols.
+xiv.	Expected deliverables (outbrief, draft, and final reports).
+xv.	Formal approval and written agreement. 
+3.	An advanced persistent threat (APT):
+a.	A team of well-skilled, well-resourced, and extremely motivated attackers.
+4.	A red team:
+a.	Authorized, but aggressive pen testers trying to find ways to break in repeatedly, thereby simulating a hack.
+5.	A blue team:
+a.	Security operations center and incident response defenders. 
+6.	The red team-blue team exercise is used to assess red team’s control strengths and weaknesses and blue team’s defenses.
+7.	APT Detection:
+a.	Use an external penetration test that originates from outside our security perimeter.
+b.	Provide no information to the red team about our IT or security controls. 
+c.	Warn the blue (SOC/IR) team about the test and its time. 
+d.	Direct the pen testers to use a high degree of stealth tactics to mimic an APT.
+e.	Require the red team pen testers to document every step of its tactics. 
+f.	Designate prohibited techniques, such as the exfiltration of data. 
+g.	Prohibit the denial-of-service tactics to avoid interfering with operations. 
+h.	Permit:
+i.	Spear phishing: Targeting organizations using publicly available information. 
+ii.	Whale phishing: Targets executives or people in the financial or privacy sector using publicly available information. 
+iii.	Driving downloads from popular websites
+iv.	Injection attacks
+v.	Spoofing
+vi.	Masquerading
+vii.	Session hijacking
+viii.	Hash attacks
+ix.	Password cracking attacks
+x.	Account modification in the domain controller
+xi.	Installation of executables
+8.	The Planning Stage of Penetration Testing:
+a.	The planning stage:
+i.	Involves no testing.
+ii.	Is about clarifying details.
+iii.	Is about denoting terms and conditions and seeking approval for the pen test.
+iv.	Is often nicknamed as “rules of engagement”.
+b.	Goal(s):
+i.	To assess people, processes, and technology:
+1.	Whether their security control is compliant with the relevant policies.
+2.	Whether the controls are adequate to prevent bad actors from breaking through our layered defenses. 
+c.	Objective(s):
+i.	To determine the adequacy of the currently specified control structure of policies, standards, and configuration:
+1.	Is our boundary control structure adequate to keep out bad actors?
+2.	Could an authorized account holder obtain access to restricted resources?
+3.	Will our employees recognize and report social engineering attacks?
+4.	Can a bad actor break into our data center, telecommunications closets, or our branch offices inside leased buildings to obtain access to our infrastructure?
+d.	Scope:
+i.	Identifies the pen test target.
+ii.	Refines the pen test scenario.
+iii.	Pinpoints the included:
+1.	Networks with IP addresses or their range.
+2.	Applications, databases, accounts, employees, and physical control facilities.
+3.	Third-party back-end processes, supply chains, and other assets to be tested. 
+iv.	Identifies pen test priorities considering restricted time windows and resource limitations.
+v.	Specifies the number of defense layers to be peeled off. 
+vi.	Notes the number of hours of dictionary or rainbow table attacks against your account passwords. 
+vii.	Lists the accounts to target. 
+9.	The objectives of a PCI test can include determining the following:
+a.	Can a bad actor obtain identities along with needed payment card data to abuse and defraud the payment card?
+b.	What specific payment card data is relevant (the primary account number, expiration data, card verification value, zip code, etc.)?
+10.	In Finland (2020), a misconfigured remote access intended for administrators enabled attackers to exfiltrate psychotherapy records and to post them on the internet. 
+11.	Healthcare cybersecurity objectives can include determining whether a bad actor can obtain access to:
+a.	Electronic medical records and violate privacy of protected health information.
+b.	Electronic medical records and change or corrupt information that might endanger a life.
+c.	Electronic medical records and insert a record and abuse insurance information.
+d.	Computer-driven medical technology and disrupt medical care. 
+e.	Computer-driven medical technology and alter the delivery of radiation or chemotherapy or oxygen and endanger a life. 
+Pen Test Planning Requirements and Other Elements
+1.	When planning and preparing for a penetration test, you must determine the customer’s goals for the engagement to include the type of test and what level of access they will be given. It’s important to work with key stakeholders to decide whether you would like to inform security defenders that a test will be conducted or instead execute the test without any notice or notification to network defense staff. Furthermore, you must determine what level of access pen-testers will give in advance to assist with their testing. For instance, you will need to determine whether you will provide pen-test staff with network credentials, websites, systems access, or other identifying information. Giving them full internal access or privileged information, also known as conducting a white box test, can be common with a more open context such as a red team/blue team assessment. Conversely, a double-blind engagement may include a black box test that allows pen-testers to assess a system or network without any prior knowledge of the environment and generally does not entail notifications to administrators or network defense staff. This approach can help to accurately emulate an external attacker that may not have internal knowledge or contacts. These details should be codified with a succinct Statement of Work document outlining the test details. 
+2.	Planning Requirements:
+a.	Point of origin: External vs. internal
+i.	With an external point of origin, the pen tester seeks access through the technical security boundary control firewall and also through:
+1.	Social engineering attempts 
+2.	Supply chain
+3.	Phone modems
+4.	Fax machines
+5.	Wireless networks
+6.	Physically connected networks
+7.	Operational technology networks
+ii.	With an internal point of origin, the pen tester is within your internal network perimeter.
+1.	You assume that you already have a malicious internal actor committing fraud or a malicious external threat actor who has already made its way inside. 
+iii.	Planning should document for internal viewpoint, even when the pen tester begins with a general user account to demonstrate the exploitable breadth of a user. 
+b.	Knowledge to be shared with the pen tester (often described by color-coded boxes)
+i.	No knowledge/black box approach:
+1.	Pen tester is blind to the architecture and security controls. 
+ii.	Partial knowledge/gray box approach:
+1.	Simulates what an attacker could do with an unauthorized disclosure of your architecture or maybe part of your security control structure. 
+iii.	Full knowledge/white box approach:
+1.	Simulates an insider or what a former disgruntled insider could do with full knowledge of your environment. 
+c.	Overt (lights on) vs. covert (lights off)
+i.	Overt (lights on):
+1.	SOC/IR teams are on notice about the pen test run. 
+2.	Measures the adequacy of the security controls.
+3.	Offers training opportunity for the staff to observe IoC.
+4.	Minimizes risk.
+ii.	Covert (lights off):
+1.	SOC/IR teams are not on notice about the pen test run. 
+2.	Measures the staff’s responsiveness to the IoC and alerts from the security duals and also its compliance with policies and procedures. 
+d.	Level of stealth
+i.	Example 1:
+1.	Should the pen tester avoid triggering security tools by coming in lower and slower than your security tool thresholds?
+2.	Should the pen tester use lesser known and trickier exploits?
+ii.	Example 2:
+1.	What if you directed a partial-knowledge pen test?
+a.	Can they exploit a known vulnerability where you have:
+i.	Accepted the risk of that vulnerability.
+ii.	Employed compensating controls. 
+3.	Double-Blind Pen Test:
+a.	Characterized to best simulate real life.
+b.	Amount of knowledge is black box, so the pen tester is blind to your environment, and it’s being run covertly. 
+c.	SOC/IR teams are blind to the pen test, hence double-blind. 
+4.	Other Planning Elements:
+a.	Limitations:
+i.	Designate prohibited tactics.
+ii.	Examples:
+1.	Don’t want to use any tools from the dark web.
+2.	Place certain servers off-limits due to safety concerns. 
+3.	Place servers off-limits because another company owns them.
+4.	Play certain applications or directories off-limits. 
+5.	Prohibit the exfiltration of sensitive data. 
+b.	Success factors:
+c.	Resources
+d.	Timeline
+e.	Deliverables
+f.	Roles and responsibilities: 
+i.	Delineate the R&R of:
+1.	Pen tester
+2.	Organization
+3.	Point of contact
+4.	SOC/IR
+ii.	Many organizations place the pen testers under a confidentiality or non-disclosure agreement and intellectual property rights ownership. 
+g.	Risk:
+i.	Execute the pen test such that the approval authority can make an informed decision whether to proceed under the specific conditions. 
+Rules of Engagement
+The objective of this penetration test is to ensure testing of all apps requiring compliance meet payment card industry standards (PCI). Furthermore, this penetration test will ensure all apps with sensitive data and business critical apps are tested. These objectives will ensure that a hack of the main app does not result in severe business damage which can affect the organization’s public relations, a hack has no customer impact, and the cost of recovery of a breach is not triggered. In today’s digital age, every organization must question not if you will be hacked, but when. These objectives ensure that when the worst is to come the organization is prepared for the consequences. 
+	We must take into consideration, not only, the collection, processing, and storage of payment cardholder data, but also the fact that the organization’s software development teams are in the midst of critical development on product features and that their work is bound to tight suspense dates and cannot be interrupted; therefore, another consideration is to the availability of business-critical systems during work hours. The type of test we will be deploying is from the perspective of an external attacker. With the rise of supply chain compromises and their tendency to target organizations within the technology sector our organization must be prepared for the tactics, techniques, and procedures that come with defending from such attacks. Unfortunately, the weakest link can spell disaster for our organization, which is why an external attacker can utilize social engineering attempts, supply chain compromise, and misconfigured wireless networks to obtain a foothold within an organization. This penetration test will be gray box to emulate a real-world scenario and our penetration testers will utilize publicly available information on the internet to enter the organization’s systems. IP ranges will be advised upon in-scope to ensure only non-production systems are targeted. The time-window of these activities will not occur during business hours and while users are working to maximize availability of user systems and a strict scope that ensures our pen testers will not accidentally cause a denial of service must also be paramount and lessen the risk of damaging company’s systems. To ensure nondestructive techniques are properly utilized, penetration testing’s will not be allowed installation of programs on target systems, we will only test against nonproduction systems, since we will be looking at supply chain compromise, we will also ascertain that tester acquired open-source tools from trusted sites and performed a secure hash algorithm 2 (SHA2) checksum to verify integrity and that all tools are patched and upgraded.
+During offensive activities the test will be transparent, and we will have a company confederate knowledgeable of all activities and play by plays as they occur. Network defense staff will also be blind to the test as they recently received training and are at position ready to secure company systems in case of an attack. This penetration test’s goal is to also ensure Network Defense is ready for these types of attacks. Furthermore, expected deliverables will include an outbrief, draft, and a final report sent to our partner’s organization requesting the penetration test. The final report should include the outcome of the test in technical risk terms, indication of the skills necessary to exploit the vulnerabilities, explanation of false positives (if any were found), short-term recommendations, root-case, long-term recommendations, and a security improvement action plan. Furthermore, a report listing the cybersecurity controls currently in place that are working effectively and their categorization against industry best practices will also be laid out alongside any social-engineering methods used and the success rates the company being assessed will also be advised upon. 
+A penetration test utilizing a double-blind method with an approach to gray box testing is the best method to ensure availability of systems as the organization is currently under a tight schedule and cannot risk their systems going down for any reason. These non-production systems will be tested and imaged against production systems to ensure these systems are like the real thing. The return of investment for running a penetration test against a company in the technology sector is priceless because the objectives of this penetration test ensure that the organization follows PCI and also mitigates any PR damage that can effectively put the company out of business. Furthermore, PCI breaches can lead to a customer impact and cause the company to lose millions if a breach were to occur. The real cost of a data breach according to Surkeay Baykara in 2021 range from 5,000 to 100,000 USD a month in fines and according to Target the total cost of their major breach of credit card data exceeded 200 million, including 18.5 million in a legal settlement with 47 state attorneys. These types of events are only avoidable, insofar, as an organization is prepared for such an attack, because in this technological day and age it’s not about if the organization will be attacked; more so, it is an eventuality, and we must be prepared. 
+References: 
+Baykara, S. (2021, January 1). What are the PCI compliance fines and penalties? PCI DSS GUIDE. Retrieved July 9, 2022, from https://www.pcidssguide.com/what-are-the-pci-compliance-fines-and-penalties/#:~:text=If%20an%20error%20caused%20the,in%20which%20non%2Dcompliance%20persists. 
+Korpela, K. (2016, September 1). Planning for Information Security Testing-a practical approach. ISACA. Retrieved July 9, 2022, from https://www.isaca.org/resources/isaca-journal/issues/2016/volume-5/planning-for-information-security-testinga-practical-approach 
+Reconnaissance
+1.	In the Discovery phase, adversaries work to procure information regarding the target environment. Depending on the type and scope of a penetration test, testers may initiate open-source reconnaissance or scanning activities to collect information about the external and/or internal environment. Within the context of Discovery, you will explore the following key concepts:
+a.	Reconnaissance
+b.	Enumeration
+c.	Vulnerability mapping and analysis
+2.	In this phase, you’ll be gathering information on the target network and environment. This action generally entails scouting, surveying, observing, researching, and obtaining information about the resources of the target infrastructure. This information may include details about the organization as well as its people, information infrastructure, internal resources, operational technologies, and/or physical facilities. 
+3.	Discovery Phase:
+a.	Origin external to the security perimeter:
+i.	Pen test Planning Discovery internal (external) pen testExploitationReporting
+ii.	As an insider, you have access to more information to gain access to user and privileged accounts and could use that information to pivot onto other systems and networks. If management requested internal and external pen tests, which would you execute first? You should always test the external first. 
+iii.	Discovery in internal pen test can readily obtain knowledge of the architecture and system configurations that have access to the internal environment. 
+4.	The purpose of discovery is to learn about the in-scope environment so that you can identify potential entry points and targets. 
+5.	Discovery consists of three sub-phases:
+a.	Reconnaissance
+i.	A military term for the process of secretly:
+1.	Scouting
+2.	Surveying
+3.	Observing
+4.	Researching
+5.	Obtaining information about the enemy’s position, activities, and resources
+ii.	How Reconnaissance works:
+1.	Reconnaissance is carried out by researching, collecting, and analyzing public information about an organization and its:
+a.	People
+b.	Information technology (IT)
+c.	Operational technology (OT)
+d.	Facilities
+e.	Security
+f.	This can be done manually or by using tools such as:
+i.	Recon-ng
+ii.	OSINT Framework
+2.	Research and collect information Perform extraction to identify and select the data of interest Interrogate to discover indicators and relationships.
+b.	Enumeration
+c.	Vulnerability mapping and analysis
+d.	Note: Some pen testers combine reconnaissance and enumeration together into one step. 
+6.	Consequences of Readily Accessible Information on the Internet:
+a.	Brazil’s 2014 Olympics Security Center
+i.	The security center accidentally provided its Wi-Fi SSID and password.
+7.	Discovery: Reconnaissance
+a.	Sources of public information and how they can reveal useful information:
+i.	Organizations’ websites and social media.
+ii.	Social media of people
+iii.	Vendor testimonials
+iv.	Discussion boards
+b.	Consider an organization’s website and social media:
+i.	What does it tell you about the business and its business information?
+ii.	Does it provide physical location addresses, phone numbers, email addresses?
+iii.	Does it provide an organizational structure?
+iv.	Does it list names and contact details for IT, security, finance, sales, customer services, etc.?
+v.	Does it share the technology it uses?
+vi.	Do its job postings reveal its technology or security tools?
+c.	Examine a professional social media, such as LinkedIn, to search about its IT and security people. 
+i.	Do they identify their skills in technology programming languages or security tools?
+ii.	Do they offer contact details? 
+d.	In addition, consider doing the following: 
+i.	Investigate vendor websites for testimonials and use cases that might list the organization as a customer. 
+ii.	Search for the organization and its staff in community discussion or product support boards to possibly learn more about its IT, programming languages, security tools, operating systems and versions, or configuration. 
+iii.	Use search engines or web crawlers to search for the organization and names of its personnel in presentations, articles, and white papers on its technology or security. 
+iv.	With reconnaissance, one data discovery leads to more searches and therefore more information.
+8.	Regional Internet Registries:
+a.	How would a hacker or pen tester discover an organization’s range of public IP addresses?
+i.	Number Resource Organization
+ii.	American Registry for Internet Numbers
+iii.	African Network Information Center
+iv.	Asia-Pacific Network Information Center
+v.	Latin America and Caribbean Network Information Centre
+vi.	Reseaux IP Europeens Network Coordination Centre
+b.	Query WHOIS and DNS records
+c.	Examine metadata of files, images, emails
+Explore Reconnaissance
+For this exercise I chose to investigate Farmers Insurance and Akami Technologies a content delivery network for Farmers Insurance. I ran scans both in Maltego and Spiderfoot, which are ubiquitous OSINT automation collection tools. To start off with in any reconnaissance mission I use whois and Maltego has that tool incorporated as a transformation function. From simple transformations that allowed me information that is necessary for this task. Listed below is what I found:
+1.	Organization Domains and Public IP Address Range:
+a.	I was able to encounter 72 organization domains with 14 IPv4 addresses stemming from the entity domain that is https://www.farmers.com. The IP address ranges all over the world and start from 12.0.0.0 – 23.0.0.0 – 45.0.0.0 – 66.0.0.0 – 68.0.0.0 – 136.0.0.0 – 206.0.0.0. The domain names that came up seemed to be mostly mail, image, billing, test, staging, and cloud resources which are standard usually for an organization of this size. 
+2.	Associated Email Addresses:
+a.	I was quite surprised to find that most of the emails are either intentional honeypots or are truly test accounts. Associated email addresses included jane_doe@farmers.com, jane@farmers.com, jane.doe@farmers.com, harry.truman@farmers.com. Obviously these email addresses are undeliverable and is the reason why I utilized Spiderfoot to verify the validity and use of these addresses. Spiderfoot is a lot better at gathering email addresses since they can specifically scan spf emails and thus validate they are legitimate. 
+3.	Current and former employees:
+a.	Using Spiderfoot, the email addresses that are provided can be utilized to find social media accounts. Most of the email addresses follow a specific pattern of first.lastname and doing this I was able to find Angelia who was a senior trial attorney for Farmers up until June 2012. Spiderfoot is amazing when it comes to find email addresses, because they use SPF, a standard email authentication method to help protect the domain against spoofing and helps prevent outgoing messages from being marked as spam by receiving servers. Doing this and automating, using a python script to search for specific people utilizing google dorking techniques I was able to find in total 86 social media accounts from former and current employees. 
+4.	Brick-and-mortar facility locations:
+a.	In total for Farmers I was able to locate 10 unique physical addresses and 4 for Akamai Technologies. Akamai is based at 145 Broadway Cambridge, MA 02142 and Farmers has several addresses. As stated before Farmers utilizes cloud resources and one of the addresses points to 101 Townsend St San Francisco, CA 94107. Again, since Akamai Technologies is a CDN provider they are also listed as a physical address when scanning farmers.com. Another point of interest was the accounts’ payable location located at 415 Mission St, 3rd Floor in San Francisco CA 94105. 
+5.	Names of Key Employees:
+a.	As for the emails I was able to scrape against Farmers.com key employees including the regional Vice President for bodily injury field sales and distribution at Farmers was able to be located including his LinkedIn account. Knowing that his email is listed under SPF and cannot be marked as spam marks a key opportunity for a phishing campaign. Furthermore, Akamai Technologies is a little bit more restrictive and spf scans didn’t return any key employee data unfortunately. As a CDN provider they have key areas they must protect in order to ensure the integrity of their organization and its data, so this makes sense. 
+6.	Recent News Events:
+a.	Akamai Technologies has a Press Release section of their website, which has a couple recent news events such as awarding $1M in Products and Services to Future of Life Online Challenge Winner Bloomfield Robotics and a reveal on new research on top three internet security threats. Another point of interest is that on June 6th Akamai launched new malware protection for uploaded files. 
+7.	Insights into Technology stack, security products, or vendors:
+a.	I didn’t specifically add the tag for vulnerability scoring and URLs that accept uploads but given Akamai’s recent news events and the upgrades to their partner’s infrastructure I wonder whether or not uploaded files are vulnerable to the Follina Zero-day vulnerability, which is a recent remote code execution vulnerability. Using company stalker, I was able to find associated technology stacks for farmers.com which includes a content delivery network (Akamai in this case), an ads Yield Manager, Google Analytics with Ad tracking, JavaScript, Sun Java systems, Entrust SSL, Google Tag Manager, Rackspace CDN (cloudflare), Tapad, and hosting by ATT. This technology stack definitely tells me about a lot from both an external and internal standpoint. It tells me that supply chain compromise is a very big indicator of compromise for Farmers Insurance and the same goes for Akamai. Maltego was able to locate several VPNs, proxies, and firewalls that protect critical infrastructure for Akamai, but there are endpoints that connect directly to a specific endpoint to Farmers that is unprotected and was able to be researched further. Looking into this vendor it turns out it belongs to NTT Data Services who also has a foothold with usnews.com, Costco.com, finac.com, leagueoflegends.com, Disneyworld.disneygo.com, Autodesk.com, and so much more. This insight is particularly interesting, because as we’ve learned from a supply chain compromise it only takes one weak link to compromise an organization and if an attacker was able to turn this one endpoint into a command-and-control center while also distributing spyware in tools utilized by NTT Data services, then this could be a critical vulnerability indeed. Not only that, but this specific endpoint does in fact contain an upload functionality. This same endpoint is managed by the CDN that is Akamai technologies; therefore, can affect their services as well and the implications to customers visiting that endpoint to upload documents could be very disastrous to all parties involved. 
+Enumeration
+1.	The enumeration portion of the Discovery phase helps you to identify selected devices or systems within a specified range. For instance, a war dialer can be used to query devices within a defined range by calling specific numbers and determining what type of system may be on the other end (based on the response). In a more modern context, attackers used similar methods to enumerate open channels being used on Zoom for video calls. Once they identify a channel that’s open and unprotected, they can choose to surveil the call or initiate undesirable distractions and nefarious attacks, if desired. This type of activity became known as Zoom bombing.
+2.	With enumeration, you aim to estimate the IT environment, its assets, how they are laid out and connected to each other, communication protocols, OS versions, open ports, and their assigned services. 
+a.	Example:
+i.	Ping is an internet control message protocol request to reach out and contact a device at an IP address and anticipate a response if that device is active and awake. 
+b.	Enumeration with a ping scan:
+i.	Step through of the IP addresses within a range. 
+ii.	A ping command is sent, and response is awaited.
+iii.	The response tells you there’s an active device at that location, and further discovery of the device is carried on. 
+3.	Types of Enumeration:
+a.	Port Enumeration:
+i.	Each port number is contacted, and a response is anticipated.
+ii.	Open ports are identified by the response for further discovery. 
+b.	War dialing/Demon dialing:
+i.	Conducted over analog phone lines or VoIP connections. 
+ii.	Range of phone numbers are programmed into war dialing software and calls each number in that identified range. 
+iii.	War dialer listens to the phone for any response, such as a modem or fax machine tone. 
+iv.	Characterizes or types a response as a computer modem or fax machine so that a pen tester may attempt connection to that device in the exploitation phase. 
+v.	Pen testers attempt to exploit the connections on that data network if the devices are not secured properly. 
+vi.	Example tools:
+1.	ToneLoc
+2.	WarVOX
+3.	PhoneSweep
+c.	Wireless scanning/War driving/War walking
+i.	A pen tester could drive, walk, bicycle, or sail to a location in the reconnaissance sub-phase.
+ii.	Monitors the airwaves for radio frequency signals.
+iii.	Discovers, maps, and identifies the wireless networks, such as Wi-Fi or Bluetooth, along with the access point that might serve as a bridge to the wired network infrastructure. 
+4.	Nmap Tool:
+a.	Discovers:
+i.	Information about the security boundary and publicly accessible servers or other devices. 
+ii.	Environment’s footprint, its devices, and how they are connected to each other. 
+b.	Scans the range of IP addresses to identify active assets and their types and characterizes them.
+c.	Provides an estimate of accuracy. Then, it maps the network with its topology of how the devices are laid out and connected to each other. 
+d.	Fingerprints each asset’s OS, version, and patch level.
+e.	Identifies open ports, assigned surfaces, surface version, and patch level. 
+5.	Workings of a Wardriving Tool:
+a.	Antenna GPS connected with an adapter to a computer that has a wireless interface. 
+b.	Uses software to locate a radio frequency wireless signal.
+c.	Software can include:
+i.	Packet sniffers
+ii.	Traffic analyzers
+iii.	Strength
+iv.	Security monitors
+6.	Wired Equivalent Privacy (WEP):
+a.	Avoid/prohibit use of WEP:
+i.	If a pen tester discovers a WEP, they can often learn the WEP key to decrypt a wireless signal or use it to associate with and join the wireless access point, giving it on to the wired network. 
+ii.	WEP cracking tools:
+1.	Aircrack
+2.	AirSnort
+3.	Cain and Abel
+4.	Kismet
+5.	NetStumbler
+6.	Wireshark
+7.	WepAttack
+7.	A pen tester can use social engineering to contact administrators, a service desk, or even users to discover their assets, OSs, or applications. 
+Vulnerability Mapping
+1.	Using vulnerability mapping, you can cross-reference any identified vulnerabilities with known databases and exploitation information. Doing so helps to inform the testing process and can provide attackers with a potential wealth of information on relevant vulnerabilities as well as technical specifics and exploitation methods associated with them. Large databases such as the NVD as well as other available resources can be used to gather comprehensive technical information and vulnerability details. 
+2.	Organizations use vulnerability mapping to compare IT environments with databases of known vulnerabilities for particular device types, OSs, or applications and thereby identify asset vulnerabilities and weaknesses. 
+3.	Vulnerability Databases:
+a.	Pen testers can use proprietary knowledge vulnerability databases or publicly accessible vulnerability databases, such as:
+i.	Common Vulnerability Enumeration (CVE):
+1.	A reference list that identifies and categorizes publicly disclosed security vulnerabilities and exposures in software.
+2.	Informs the US National Vulnerability Database (NVD).
+ii.	Common Weakness Enumeration (CWE):
+1.	Community-sourced list of software and hardware weaknesses. 
+iii.	Open Web Application Security Project (OWASP):
+1.	Focuses on vulnerabilities in web applications and application programming interfaces. 
+4.	Vulnerability Scanning:
+a.	Automated vulnerability scanners:
+i.	Examine an in-scope environment to identify vulnerabilities as per the chosen vulnerability database. 
+ii.	Identify misconfigured systems as per a chosen secure baseline. 
+iii.	Can be cited to your security perimeter externally or internally. 
+iv.	Can execute without host credentials, although not always. 
+b.	During an external pen test, the external network-based vulnerability scanner:
+i.	It might be limited by security controls.
+ii.	It might miss inactive systems.
+iii.	It might have a higher false positive rate and require manual interpretation.
+iv.	It could generate more network traffic, which could affect networks or applications.
+v.	It might set off a denial of service by an inexperienced tester. 
+vi.	It does need to be populated with the latest vulnerability database since it is signature based. 
+5.	Nmap:
+a.	Is a free and well documented pen test tool.
+b.	Is usually less aggressive but also has more aggressive options to bypass firewall screens.
+c.	Avoids passive scans as they are less accurate.
+d.	Does the foot printing of the connected devices’ topology. 
+e.	Enumerates the scan actively to catalog the discovered devices, IP addresses, and MAC addresses. 
+f.	Looks up host names and footprints in the network topology through a reverse DNS resolution. 
+g.	Fingerprints the OS along with open ports and surfaces. 
+h.	Does banner grabbing including:
+i.	Login information.
+ii.	OS and application types and versions.
+iii.	HTTP header information. 
+i.	Has a database of heuristics to identify device types, OSs, and services based on how they respond to the TCP, UDP, or IP probes. 
+j.	Measures differences in responses to these probes against its database. 
+k.	Has crafted TCP and UDP probes. 
+6.	Zenmap:
+a.	Graphically displays the estimated topology with its:
+i.	Device type
+ii.	Estimated OS name and version
+iii.	Open ports
+iv.	Estimated service and version
+b.	Color codes a device based on its number of open ports. 
+7.	Microsoft Windows 7:
+a.	If Nmap identified a client device running on Microsoft Windows 7 with Service Pack 1, you could:
+i.	Choose to use the NVD for vulnerabilities associated with Microsoft Windows 7 Service Pack 1.
+ii.	Find at least 332 vulnerability records. 
+8.	Discovery: Wrap-Up
+a.	Reconnaissance:
+i.	Gathered public information about the organization, its lines of business, and its employees in order to identify targets. 
+ii.	Gathered information about people.
+iii.	Learned about:
+1.	Back-end processes
+2.	Supply chains
+3.	Weaknesses
+b.	Enumeration:
+i.	Drawn up network diagrams with:
+1.	Estimated technology
+2.	Network appliances
+3.	Wireless devices
+4.	Protocols
+5.	OS with version and patch level
+6.	Applications with version and patch level
+7.	Open ports with the surface’s version and patch level
+ii.	We learned about modems and fax machines. 
+c.	Vulnerability mapping:
+i.	Identified weaknesses that can be exploited. 
+Metasploit
+Metasploit is the penetration testing platform that enables users to find, exploit, and validate vulnerabilities. There are two versions Metasploit Pro and Metasploit Framework. The features included in pro that are not in the Framework include: task chains, social engineering, vulnerability validations, GUI, Quick Start Wizards, and Nexpose integration. According to the rapid7 documentation on Metasploit, an exploit executes a sequence of commands that target a specific vulnerability found in a system or application to provide the attacker with access to the system. Exploits include buffer overflow, code injection, and web application exploits (n.d.). In Metasploit there is a ton of payloads, but they are either single, staged, or meterpreter. A staged payload is demarcated by a forward slash and a single payload is demarcated by an underscore. A staged payload means that the payload consists of two main components: a small stub loader and the final stage payload. A single payload means it’s meant to be a fire-and-forget kind of payload. This can be used when the target has no network access. A meterpreter shell is the type of payload that is the most popular. Moreover, a vulnerability is essentially a pre-existing security gap in the target system. Once you’ve scanned your target and identified potential vulnerabilities, the next step is to search for applicable vulnerabilities inside of Metasploit. 
+According to the Metasploit documentation there are 7 different exploit rankings. An excellent ranking means the exploit will never crash the service. This is the case for SQL injection, CMD execution, RFI, LFI, etc. No typical memory corruption exploits should be given this ranking unless there are extraordinary circumstances. A great ranking means the exploit has a default target and either auto-detects the appropriate target or uses an application-specific return address after a version check. A good ranking means the exploit has a default target and it is the “common case” for this type of software – the exploit does not auto-detect the target. A normal ranking means the exploit is otherwise reliable but depends on a specific version that is not the “common case” for this type of software and cannot reliably autodetect. An average ranking means the exploit is generally unreliable or difficult to exploit but has a success rate of 50% or more for common platforms. A low ranking means the exploit is nearly impossible to exploit (under 50% success rate) for common platforms. A manual ranking means the exploit is unstable or difficult to exploit and is basically a denial of service (15% success rate or lower). This ranking is also used when the module has no use unless specifically configured by the user. 
+As of this time of writing in v6.2.4-dev the Metasploit Framework there are actually 6 different module categories. They include exploit modules, auxiliary modules, payload, listeners, shellcode, and encoders. An exploit module permits penetration testers to collect data from compromised machines, including hashes, tokens, cookies, and a whole lot more. As of this time of writing there are currently 2,666 exploits found in the Metasploit Framework (n.d.). There are currently 1,176 auxiliary modules within the Metasploit Framework. These types of modules utilize scanners, fuzzers, and SQL injection tools to list a few. Typically, a penetration tester will utilize an auxiliary module prior to exploitation of a system. Currently there are 1,342 payload modules that mix in with exploit modules as exploit modules can sometimes be considered payloads themselves as well. Payloads are demarcated by type and can include bind shells, reverse shells, and a Meterpreter shell. A bind shell lays dormant and listens for an attacker to connect or send instructions and are typically not a good choice for victim machines that are protected by firewall. Reverse shells are the golden shell and everything every penetration tester or security researcher strives for because a compromised machine exploited with a reverse payload will present the tester with shell access to the machine – essentially the tester has pwned the system and might as well be sitting at the keyboard on the victim’s machine. The Meterpreter shell is a special type of shell unique to Metasploit and can be added as a payload that is either a bind shell or a reverse shell. Listener modules are relatively few in number and are only used in certain circumstances. Most listeners are auxiliary or exploit modules and they interact with the sessions established by payloads. For example, the listener can either be embedded in a bin shell and sit waiting for a connection or actively sit listening for incoming connection on the security tester’s computer – the choice is up to the user and what type of shell access they are looking to establish. Shellcode currently has 65 modules in the Metasploit Framework and is typically utilized as a delivery system – much like payloads – to generate a hole, wherein, an attacker can upload malicious code and execute commands inside of the payload to generate a shell. Shellcode is different from payloads, because it essentially exploits vulnerabilities in native target shells like JavaScript shell for example. It places payloads into memory, adds the necessary protection flags, and calls it, without ever having to touch the disk itself. Currently there are 48 encoder modules within the Metasploit Framework. These encoders allow penetration testers to obfuscate shellcode and typically it’s best to use excellent ranking. A good example of an encoder is the polymorphic XOR additive feedback encoder and is generated based on dynamic instruction substitution and dynamic block ordering – registers are also selected dynamically (spoonm, n.d.). 
+In order to start the Metasploit Framework in Kali Linux you simply need to open up a terminal and run sudo msfconsole. If your user has root capabilities without authentication (this is a bad idea), then you just need to type msfconsole and hit enter. After searching for a specific module in Metasploit and using that module (i.e. use exploit/windows/smb/smb_delivery) you can type info to see basic options that need to be set or help for a more verbose idea of all available commands related to that particular module.  
+Gain Initial Access
+1.	Gaining access to a target system or network is generally a key objective for many pen tests. Assessors often attempt to find open vulnerabilities or software flaws in the target environment that they can exploit to gain unauthorized access. This section includes several key portions of the pen-testing process, including: 
+a.	Gaining initial access.
+b.	Maintaining persistence and escalating privilege. 
+2.	Additionally, you will examine the adversarial interplay of attack and defend in a red team and blue team context. Cybersecurity is a constant arms race, as attackers are often trying to outwit and outsmart defenders in order to attain their key objectives, including unauthorized access. 
+3.	“A penetration test demonstrates impact through exploitation. The exploitation shows an uncomfortable level of exposure but is harmless. Because it is uncomfortable and tangible, it helps organizations understand the impact and inspires prompt corrective action.” – Carrie Roberts, Black Hills Information Security
+a.	Methods employed by attackers to gain initial access to a victim environment vary based on the weaknesses identified in the target’s attack surface as well as the adversary’s capabilities and available opportunities. To explore the most common initial access methods, this video references the MITRE ATT&CK framework. ATT&CK is a publicly available repository of adversary tactics and techniques as observed in the wild. This expansive knowledge base includes multiple matrices that outline attacker techniques specific to a platform, industry, or environment. For this module, you will focus on the MITRE ATT&CK Enterprise matrices. Each matrix is a collection of techniques (rows) categorized into tactics (columns). Consider the tactic to be the reason that attackers perform a particular action. What objective are they seeking to accomplish? A technique is the specific manner in which an attacker chooses to accomplish the tactic (MITRE ATT&CK, n.d.). Attackers may adapt their technique to victim environment constraints in order to achieve success. 
+b.	The initial access tactic (TA001) includes common techniques employed by threat actors today, such as phishing (T1566), drive-by downloads (T1189), and valid account use (T1078) (e.g., credential-stuffing attacks). In addition, exploitation of public-facing applications (T1190) describes initial access gained through the exploitation of software, service, or web application vulnerabilities (MITRE ATT&CK, n.d.). Pen-testers will often look to leverage exploitation against a known vulnerability to gain access to a target system and/or network. In many cases, the vulnerability was identified during the engagement’s Discovery phase. Once the vulnerability is identified, the assessor can research it to better understand attack techniques and methods for exploitation. 
+c.	The assessor can use well-known exploitation techniques such as an SQL or command injection or a buffer overflow or can utilize popular tools such as the Metasploit Framework to craft specific exploits. By exploiting a known vulnerability, the pen-tester can gain initial access to the environment and download additional payloads. Based on the engagement objectives, the assessor may elevate privileges, obtain account credentials, and pursue further system and network access in accordance with the test scope and Rules of Engagement. 
+d.	Another ATT&CK tactic included in the Exploitation phase of pen testing is Execution (TA0002). This tactic consists of methods such as the frequently employed User Execution technique (T1204), which allows adversary-controlled code to run on a local or remote system (MITRE ATT&CK, n.d.). Through the use of strong incentives and social engineering, attackers commonly entice the user behind the keyboard to intentionally perform the initial execution of malicious code. The Command Scripting Interpreter (T1059) technique was ranked number one in the Top Techniques observed by Red Canary in its customers’ environments in 2020 (Red Canary, n.d.). 
+e.	Rarely will initial access and execution techniques succeed without attackers also employing Defense Evasion (TA0005) techniques. In order to maintain access to victim systems, attackers must ensure their code and attack tools are not detected by network and endpoint security controls and intrusion-detection systems. The Red Canary 2021 Threat Detection Report points to Obfuscating Files or Information (T1027), which is the encryption and/or encoding of executables or files, observed in 6% of attacks occurring in their customers’ environments during 2020, ranking this defense evasion technique seventh among the most commonly observed (Red Canary, n.d.). 
+4.	MITRE ATT&CK Framework: Enterprise Matrix:
+a.	Exploitation phase:
+i.	Gain initial access:
+1.	Drive-by enterprise (Client-side exploit):
+a.	Sending social engineering phishing emails to users’ email addresses discovered in the discovery phase.
+b.	A smishing attack (a short text message that tricks users into clicking a link) to get a mobile phone number information. 
+c.	The Browser Exploitation Framework (BeEF).
+2.	Exploit public-facing application (Server0side exploit):
+a.	A pen tester takes advantage of a weakness in an internet-facing computer or its web program in the form of a bug or design vulnerability, such as a lack of input validation.
+b.	A pen tester might use:
+i.	A buffer overflow attack to gain control.
+ii.	An operating system injection to reach the operating system interpreter. 
+iii.	An LDAP injection to reach the directory service. 
+iv.	An SQL injection to reach a back-end database. 
+v.	Elicit error messages that reveal extra information or details. 
+vi.	A Zed attack Proxy (ZAP) from OWASP. 
+ii.	Execute malware
+1.	A pen tester:
+a.	Tries to run malicious code on a local or remote system to gain access. 
+i.	The code might have command line interfaces, such as PowerShell or Visual Basic, to help achieve the objective. 
+ii.	Example: Open a backdoor into a system. 
+b.	Uses modern malware tactics to bypass antivirus security tools.
+i.	E.g., launching fileless malware or malware obfuscation.
+c.	Uses operational technology malware and phone-based malware if approved by the rules of engagement. 
+iii.	Maintain persistence
+iv.	Escalate privilege
+v.	Browse system for additional discovery and move laterally
+vi.	If objective calls for collection, command and control, and exfiltration
+vii.	Post-exploitation
+5.	Any user or system accounts used to perform penetration testing should be controlled and monitored to make sure they are only being used for legitimate purposes and are removed or restored to normal functionality after testing is over. – CIS v7.1 Control 20.8
+Maintain Persistence and Escalate Privilege
+1.	Once penetration-testing professionals gain access to a target environment, they will often take steps to implement a Persistence (TA0003) method that will maintain their access within that environment. In contrast to the various techniques available to real-world attackers, pen-testing teams may be barred from using invasive persistence methods such as modifying the authentication process (T1556), using a Pre-OS Boot compromise (T1542), or employing other persistence techniques that may depreciate an organization’s security posture and increase the chances of a real-world attack (MITRE ATT&CK, n.d.). This restriction serves multiple purposes, including countering any attempts by defenders to restrict or cut off access for the attacker. Furthermore, assessors may seek to maintain a persistent presence on a system or within a specific environment in order to potentially gain future access or expand their presence and ensure they can access targets as needed. Assessment professionals may use common methods such as a backdoor to ensure they can maintain access and return to specific systems. 
+2.	After entering the security perimeter, the pen tester should establish a way back in, which is also known as persistence, getting a foothold, or a beachhead. 
+3.	Maintaining Persistence:
+a.	This is important because the next time a pen tester uses the exploit, it could:
+i.	Crash the system or the service.
+ii.	Patch the vulnerability. 
+b.	To maintain persistence, a pen tester:
+i.	Sets up a backdoor.
+ii.	Implements a reverse callback through user login texts. 
+iii.	Schedules a local job or a con job to come back in.
+iv.	Adds an account to the directory. 
+v.	Uses the .bash startup file manipulation. 
+4.	Escalated Privileges for a Pen Tester: 
+a.	Needs to obtain local administrative access to a client or server, then work further to gain domain administrator access. 
+b.	Exploits privilege escalation through means, such as:
+i.	PowerShell scripts
+ii.	Unpatched OSs, kernel flaws, or software vulnerabilities.
+iii.	An improperly configured system (for example, an unquoted surface pass or improper surface permissions). 
+iv.	Information disclosure – sends passwords in plain text or have verbose error messages that can reveal information. 
+c.	May use privilege to evade being detected.
+5.	MITRE ATT&CK Framework Privilege Escalation Techniques:
+Abuse	Execution	Modification (2)
+Elevation	Boot or logon	Escape to host
+Control	Initialization	Event triggered execution (15)
+Mechanism (4)	Scripts (5)	Exploitation for privilege escalation
+Access token manipulation (5)	Create or modify system	Hijack execution flow (11)
+	Process (4)	Scheduled task/job (7)
+Autostart	Domain policy	Valid accounts (4)
+6.	Exploitation: Browsing the System for Objective:
+a.	Look through the local system directories and explores them.
+b.	Looks at running processes and installed programs.
+c.	Finds the targeted directory, data, or files. 
+d.	Leverage authorized accounts and/or create additional accounts. 
+e.	Installs additional tools to support the objectives.
+f.	Discovers information to move laterally and pivot onto other systems or networks, and looks for:
+i.	Network information and trusted network relationships. 
+ii.	Network documents. 
+iii.	Network scans. 
+7.	Exploitation: Collection Command Control, and Exfiltration
+a.	Depending on authorized actions, a pen tester would continue to move forward with collection, command and control, and exfiltration. 
+8.	Post-Exploitation Stage:
+a.	Modifies settings, adds, or modifies accounts, installs executables, scripts, or extra tools.
+b.	Needs to restore the integrity of the environment. 
+c.	Performs the clean-up actions, such as:
+i.	Safely restore configurations and parameters.
+ii.	Uninstall tools.
+iii.	Remove any exploits.
+iv.	Remove rootkits.
+v.	Remove accounts.
+9.	Exploitation: Wrap-Up
+a.	Pen tester has:
+i.	Validated or proven exploitable vulnerabilities and exploitable misconfigured systems to achieve the objectives of the pen test. 
+ii.	Cleaned up any modifications or installed code that the pen tester might have placed within that environment. 
+Red Team/Blue Team
+Excalibur Financial Bank
+•	Industry: financial services, banking
+•	Threat Actor: Lazarus Group
+•	Security operations strengths:
+o	Change control is tightly managed; all detections are tested prior to being rolled into production.
+o	SIEM data sources include network devices, firewall, proxy, flow data, DNS, and endpoint logs. 
+o	An in-house pen-testing team will be conducting offensive activity in this exercise. 
+•	Security operations opportunities:
+o	No findings from the last pen test have been actioned. 
+o	The SOC is currently understaffed, with only two analysts to cover the third shift.
+The objective of this exercise is to ensure Excalibur Financial Bank’s readiness in the event of a cybersecurity breach from a prominent adversary that targets financial organizations. In order to understand the Lazarus Group, we must understand their tactics, techniques, and procedures and be ready to anticipate and defend from their attack. Lazarus Group is a North Korean state-sponsored cyber threat group that has been attributed to the Reconnaissance General Bureau. The group has been active since at least 2009 and was reportedly responsible for the November 2014 destructive wiper attack against Sony Pictures Entertainment as part of a campaign named Operation Blockbuster by Novetta (MITRE ATT&CK, 2017). Since our blue team is currently understaffed with only two analysts to cover the third shift and no findings from the last pen test have been actioned this exercise will be an overt – lights-on test with a set communication cadence with blue team management and thus this penetration test will be more a test to train and further enhance our capabilities to defend and train future blue teamers. This test will be in-house utilizing a gray-box testing paradigm since we are all somewhat aware of internal accounts on the system and have had longer-term access to the network. The point of origin from this attack will assume the attacker has had longer-term access to the network as well. This test will last for a total of 48 hours and begin effective July 13th at 9PM CST (start of third shift) to give enough time for initial access and execution. By the start of the first shift at 6:00AM CST our red teamers will begin running persistence and privilege escalation techniques. IP addresses and domains in scope will be provided at 9PM CST and no external-facing services will be in scope to ensure availability of services. Techniques utilized will include access token manipulation (creating process with token), account discovery (domain account), account manipulation, acquire infrastructure (Domains, Server, Web Services), Adversary-in-the-Middle (LLMNR/NBT-NS Poisoning and SMB relay), application layer protocol (web protocols), application window discovery, archive collected data, via library, or custom method, boot or logon autostart execution (registry run keys/startup folder), boot or logon autostart execution (shortcut modification), brute force, password spraying, PowerShell, Windows Command Shell, Basic, Compromise Infrastructure (Domains and Server), modifications to windows services, data encoding for obfuscation, local data staging, exfiltration over C2 channel, exploitation for client execution, disablement or modifications to system firewalls, clearing of command history, file deletion, and timestomp for evasion. There will be expected deliverables including an outbrief, draft, and final report for results on this penetration test with formal approval and written agreement for the tactics, techniques, and procedures utilized to emulate a Lazarus Group attack. The impact of a Lazarus Group attack  doesn’t just stop at exfiltrating data that can cost us millions, but it includes data destruction, internal defacement of systems, disk content wipes, disk structure wipe, full service stops, and finally a full system shutdown. The techniques utilized by this group can spell disaster for any organization and is the reason we are utilizing a vetted system that is a production facing system and thus the metrics to be graded on for blue team readiness will be coverage and visibility – before our analyst even enters an incident, it’s important to make sure that the incidents they receive is not a false positive and as actions are taken on these incidents and tuning is performed, visibility of the threat landscape should increase. This metric requires that our blue team has constant awareness and goals for maintenance to remain healthy coverage and visibility of the threat landscape. Next, our analyst’s must keep an eye on documentation accuracy and ease of access to resources, because when either is taking too much time, then we may lose out on visibility and time to make crucial detection points. Response rate is another close metric we must keep an eye on and since our third shift and frankly the SOC as a whole is understaffed, then burnout can result in a poor response rate and thus, it’s crucial we look at automation wherever possible to discover indicators of compromise (IoCs) to be able to detect a fast-moving and destructive group such as the Lazarus Group. Our numbers must not impede our response rate and will only help the future of the SOC as we grow. Ratio of true positives to false positives or the accuracy to which we escalate incidents is another metric that will be closely monitored. We want to make sure analysts are not sending up a weird looking registry key but are actively looking to automate signature techniques utilized for persistence to escalate, as our threat actor will assume they have had internal access for a while now. 
+References: 
+Lazarus Group. Lazarus Group, Labyrinth Chollima, HIDDEN COBRA, Guardians of Peace, ZINC, NICKEL ACADEMY, Group G0032 | MITRE ATT&CK®. (2017, May 31). Retrieved July 12, 2022, from https://attack.mitre.org/groups/G0032/ 
+Model an External White Box Pen Test
+Background:
+In 2019 Capital One was breached due to a misconfiguration within their web application firewall “ModSecurity”, which was deployed along with the open-source Apache Web server to provide protections against several classes of vulnerabilities that attackers most commonly use to compromise the security of Web-based applications. The opposite rang true for Capital One and it caused a breach that will go down in history as one that ought to have taken them down completely. 106 million credit card applications which included names, addresses, phone numbers, and dates of birth, along with 140,000 social security numbers, 80,000 bank account numbers, and including credit scores and transaction data were leaked (Newman, 2019). 
+Objectives:
+The objectives of this penetration test are to ensure our organization’s readiness in the event of a cybersecurity breach and in order to understand and mitigate such an attack we are employing a external white box penetration test, which will include an assessment of AWS cloud services and configurations, specifically testing for the same misconfiguration that led to the critical breach suffered by Capital One. Considerations when testing against AWS is that we must follow the AWS Customer Support Policy for Penetration Testing. Permitted Services to test against include:
+1.	Amazon EC2 instances, NAT Gateways, and Elastic Load Balancers
+2.	Amazon RDS
+3.	Amazon CloudFront
+4.	Amazon Aurora
+5.	Amazon API Gateways
+6.	AWS Fargate
+7.	AWS Lambda and Lambda Edge functions
+8.	Amazon Lightsail resources
+9.	Amazon Elastic Beanstalk environments
+Prohibited activities include:
+1.	DNZ zone walking via Amazon Route 53 Hosted Zones
+2.	Denial of Service (DoS), Distributed Denial of Service (DDoS), Simulated DoS, Simulated DDoS (These are subject to the DDoS Simulation Testing policy)
+3.	Port flooding
+4.	Protocol flooding
+5.	Request flooding (login request flooding, API request flooding)
+If AWS receives an abuse report for activities related to our security testing it will be forwarded to us and when responding we will provide the root cause of the report activity, and detail what we’ve done to prevent the reported issue from recurring (Amidon, 2016). Since this test is white box our penetration testers will have full access to source code, architecture documentation and so forth; thus, giving the overwhelming amount of information will be a consuming penetration test . We will utilize static code analysis and dynamic analysis tools down the pipeline to catch any possible misconfigurations as we discover vulnerabilities. This will provide the organization with a comprehensive assessment of both internal and external vulnerabilities. This is the key reason why a white-box penetration test is beneficial in order to close security gaps Capital One did not think of. The misconfiguration of the web application firewall with Capital One allowed the intruder to trick the firewall into relaying requests to a key back-end resource on the AWS platform. This resource, known as the “metadata” service, is responsible for handing out temporary information to a cloud server, including current credentials sent from a security service to access and resource in the cloud to which that server has access. In AWS, exactly what those credentials can be used for hinges on the permissions assigned to the resource that is requesting them. In Capital One’s case, the misconfigured WAF for whatever reason was assigned too many permissions, i.e., it was allowed to list all of the files in any buckets of data and to read the contents of each of those files. This type of vulnerability is well documented by The Open Web Application Security Project (OWASP) as a “Server-side Request Forgery” (SSRF) attach, in which a server (in this case, Cap One’s WAF) can be tricked into running commands that it should never have been permitted to run, including those that allow it to talk to the metadata service (Krebs, 2019). 
+Utilizing static and dynamic analysis testing will bridge the security gap that misconfigurations cause. In this instance of our white-box penetration test we will be looking at preventing a SSRF attack from ever occurring in our external facing web application firewalls and we will be testing for this particular vulnerability to mitigate the potential risk it brings to the table. Expected deliverables on the outcome of our white-box penetration test include an outbrief, draft, and final report for our findings and mitigations/solutions to vulnerabilities we discovered. 
+References: 
+Amidon, S. (2016). Security. Amazon. Retrieved July 12, 2022, from https://aws.amazon.com/security/penetration-testing/ 
+Krebs, B. (2019, August 2). What we can learn from the capital one hack. Krebs on Security. Retrieved July 12, 2022, from https://krebsonsecurity.com/2019/08/what-we-can-learn-from-the-capital-one-hack/ 
+Managerial and Technical Reporting
+1.	Reporting constitutes the final phase of a pen-testing exercise and includes the delivery of an engagement outbrief as well as draft and final versions of the engagement report. It is important to reiterate that the pen-testing team will document all activities performed throughout all phases of a pen test engagement. Many of the most popular exploitation frameworks used by pen-testing teams include documenting functionality, which involves tracking every action taken by the tester within the framework. As mentioned, due diligence requires that critical findings be reported to the customer upon their discovery. 
+2.	Successful management of an engagement begins with a thorough planning pre-engagement phase and continues throughout the duration of the pen test. By managing customer expectations and maintaining clear and open communications, assessors can ensure that the final engagement deliverables meet customers’ needs and align with their objectives. Deliverables that summarize identified risks should be treated as extremely sensitive and must have limited distribution, in accordance with the customer’s request. 
+a.	A critical piece of the final deliverable in most pen-testing engagements is the summary report. Very often, the pen-testing services team prepares two district products: a management format and a technical format. The management report provides a summary of prioritized key findings with recommendations for mitigation or remediation for each. Though in-depth technical details about the pen test methodology are not included in the management report this product should include an appendix for the technical findings that refer to the CVE, CWE, or NVD, thus allowing additional research. The recommendations section of this report should include actions that are specific, measurable, attainable, realistic, and tangible for the customer. Some examples of recommendations include increased user security training and awareness and improved visibility of endpoints through event log aggregation to the SIEM. In addition, methods for post-remediation testing for each risk or vulnerability should be included to provide customers a way to verify that their corrective actions are effective. 
+b.	A much more in-depth capture of the pen test engagement, the technical report  provides a detailed overview of findings and testing methodology. In this deliverable, the pen-testing team includes specific methods and tools used in the Discovery and Exploitation phases, as well as the results of each action. Organizations derive greater value from findings that have been ranked with their specific requirements and environmental factors considered, so the pen-testing team should provide visibility in its rating matrix and how risk scores were determined. In addition, the technical report includes an explanation of how the customer’s environment was modified by the pen-testing team’s activities and how corrective actions and clean-up were performed. 
+c.	In summary, the pen-testing engagement deliverables provide the customer with an explanation, a criticality rating, and an understanding of the impact to the organization for all identified findings. Customer feedback should be solicited to verify a solid understanding of the pen test results and ensure that recommendations for the next steps are acknowledged. 
+3.	Reporting:
+a.	Provides records for each discovery item and each exploit tried, with success and failure. 
+b.	Engages in regular communications with the organization’s pen test point of contact or immediate communications on discovery of a critical issue. 
+c.	Reports on progress and any obstacles encountered.
+d.	Notifies if protected or sensitive information is exposed on the internet, such as passwords, payment cardholder data, or healthcare information. 
+e.	Notifies if the pen tester discovers that an unauthorized internal/external bad actor has access to root or system privileges. 
+4.	Reports from a Pen Tester:
+a.	Pen tester produces two final reports:
+i.	The managerial report would:
+1.	Remind management of the planning stage, the agreed upon goals and objectives, terms, conditions, and limitations. 
+2.	Provide a summary of findings with key priorities with specific measurable, attainable, realistic, and tangible recommendations for remediation. 
+3.	Include an appendix that lists each finding with a unique identifier for tracking purposes:
+a.	Testing method
+b.	Vulnerability name
+c.	Impact
+d.	Affected target
+e.	Recommendations for remediation or mitigation
+f.	References to the common vulnerability exposure (CVE) database
+g.	Common weakness enumeration (CWE) database
+h.	National vulnerability database
+ii.	The technical report would:
+1.	Provide a more in-depth look at the findings in the testing methodology.
+2.	Remind us of the objectives and scope of the pen test. 
+3.	Provide details traceable to the items in the summary report, such as:
+a.	Discovery actions and tools used with the findings and analysis. 
+b.	Exploitation actions and tools used with the findings and analysis.
+c.	Risk scoring and recommendations. 
+4.	Include an explanation of how the environment was modified by the pen tester and the actions taken post-exploitation clean-up. 
+5.	Risk responses include:
+a.	Improvement to policies, standards, baselines, and procedures.
+b.	Strengthening of training for users, network system or applications, database administrators, or even the security team.
+c.	Recommendations for the remediation of a vulnerability, such as through patching.
+d.	Recommendations for the mitigation of a vulnerability, such as through compensating control. 
+e.	Enhancement to security control structure. 
+What can go Wrong?
+Penetration testing is valuable to your organization because it tests your company’s ability to protect, mitigate, and prevent cyberattacks from occurring. Just because false assessments in security posture and breach readiness can provide compliance for standards such as PCI DSS, doesn’t mean your organization can’t fall prey to small vulnerabilities that can lead to big breaches. Penetration testing is a means to find security gaps and close them, not assume your security posture, and prevent breaches. They make it a lot harder for a would-be attacker to be able to breach your systems, however. Furthermore, if you’re worried about insufficient attack surface coverage our penetration testers are equipped with the understanding of your scope and since that can limit attack surface coverage we want to ensure that your organization is comfortable with the level of visibility the attack surface scope you provide and we will advise you based on the MITRE ATT&CK framework where that coverage can lie and what mitigation and detection techniques can be put in place to detect indicators of compromise that are either new or unknown ones for that matter. Our penetration team is also ready to communicate at all stages or none of the stages depending on the type of test your organization wishes to conduct. We will also inform you on how long a test can expect to take. Depending on an application a black box or gray box test may take as little as 5 days and if you are looking for a white box test, then the coverage and visibility provided by such a test can take longer depending on the application that needs to be worked but can take as little as 2 weeks and sometimes last up to a year. Finally, the cost of a penetration test may seem high up front, but the cost of a breach can possibly cost your organization and market cap even more. Furthermore, the security gaps that we close not only assist your organization to protect and assume readiness in the event of a breach but can also breed an organization with cybersecurity in mind and that it is a priceless effort that not too many companies have the luxury of having right off the gate in a changing cyberthreat landscape. 
+Reference:
+CyCognito. (n.d.). The failed practice of penetration testing. Retrieved from URL: https://www.cycognito.com/hubfs/PDF/WP2104-InformaTechv2.pdf
+Module Summary
+1.	In this module, you’ve learned about: 
+a.	Pen testing concepts, frameworks, processes, and tools.
+b.	The purpose of penetration testing.
+c.	Different pen testing frameworks, standards, and guidelines.
+d.	Various pen testing tools and skills and personality traits required from pen testers.
+e.	The importance of the planning phase, the discovery phase, the exploitation phase, and the reporting phase. 
+f.	The foundational pen testing security knowledge needed to interview a candidate for an apprentice pen test position. 
+g.	Pen testing information to support other cybersecurity positions, e.g., related to:
+i.	Security governance
+ii.	Security risk management
+iii.	Security training
+iv.	Security compliance testing.
+h.	Pen testing information for many IT positions, e.g., related to:
+i.	System administration
+ii.	Network administration
+iii.	Software development
+i.	The core educational content required to begin various certification studies, such as CISSP, SSCP, CISA, CISM, and CRISC.
+j.	Places where you can begin certification studies for pen test certifications, such as the CEH, CPEH, LPT, GPEN, GWAPT, and OSCP.
+Bibliography
+“2021 Threat Detection Report.” Red Canary. n.d. https://redcanary.com/threat-detection-report/.
+“APT41.” MITRE ATT&CK®. 26 Apr. 2021. https://attack.mitre.org/groups/G0096/. 
+Black Hills Information Security. “What to Expect When You're Expecting a Penetration Test, w/ CJ Cox & Bryan Strand.” YouTube video, 1:26:45. 18 Aug. 2020. https://www.youtube.com/watch?v=rN8Gy7JDRoQ.
+“Defense Evasion.” MITRE ATT&CK®. 19 Jul. 2019. https://attack.mitre.org/tactics/TA0005/. 
+“Enterprise Matrix.” MITRE ATT&CK®. n.d. https://attack.mitre.org/matrices/enterprise/. 
+“Execution.” MITRE ATT&CK®. 19 Jul. 2019. https://attack.mitre.org/tactics/TA0002/. 
+“Free Online Network Tools.” Central Ops.net. n.d. https://centralops.net/co/.
+Friis-Jensen, Esben. “7 Steps to Building a Yearly Pentest Plan.” Cobalt (blog). 17 Oct. 2017. https://cobalt.io/blog/7-steps-to-building-a-yearly-pentest-plan.
+Hardwick, Joshua. “Google Search Operators: The Complete List (42 Advanced Operators).” ahrefsblog. 3 Aug. 2020. https://ahrefs.com/blog/google-advanced-search-operators/.
+“Indrik Spider.” MITRE ATT&CK®. 20 Apr. 2021. https://attack.mitre.org/groups/G0119/. 
+“Initial Access.” MITRE ATT&CK®. 19 Jul. 2019. https://attack.mitre.org/tactics/TA0001/. 
+Korpela, Karina and Weatherhead, Paul. “Planning for Information Security Testing — A Practical Approach.” ISACA Journal 5. n.d. https://www.isaca.org/resources/isaca-journal/issues/2016/volume-5/planning-for-information-security-testinga-practical-approach. 
+“Lazarus Group.” MITRE ATT&CK®. 18 Mar. 2021. https://attack.mitre.org/groups/G0032/. 
+Maltego. n.d. https://www.maltego.com/downloads/.
+Metasploit. n.d. https://www.metasploit.com/.
+MITRE ATT&CK® Navigator. n.d. https://mitre-attack.github.io/attack-navigator/. 
+Newman, Lily Hay. “Everything We Know About the Capital One Hacking Case So Far.” Wired. 29 Aug. 2019. https://www.wired.com/story/capital-one-paige-thompson-case-hacking-spree/.
+“OSINT Framework.” OSINT Framework. n.d. https://osintframework.com/. 
+“Penetration Testing.” AWS Cloud Security. n.d. https://aws.amazon.com/security/penetration-testing/
+Pygas, Mark. “Capital One Fined $80 Million for 2019 Data Breach.” Market Realist. 7 Aug. 2020. https://marketrealist.com/p/capital-one-data-breach/.
+RSA Conference. “How to Get the Most Value Out of Your Penetration Test.” YouTube video, 55:15. 5 May. 2020. https://www.youtube.com/watch?v=LnC7Kcp3odY.
+SANS Institute. “Moving Past Just Googling It: Harvesting and Using OSINT.” YouTube video, 1:11:20. 17 Mar. 2020. https://www.youtube.com/watch?v=Vuthnc5UUuA.
+SpiderFoot. n.d. https://www.spiderfoot.net/. 
+TerBush, John. “List of Resource Links from Open-Source Intelligence Summit 2021.” SANS. 15 Feb. 2021. https://www.sans.org/blog/list-of-resource-links-from-open-source-intelligence-summit-2021/.
+“The Failed Practice of Penetration Testing: A Security Report from CyCognito.” PDF file. CyCognito. Apr. 2021. https://www.cycognito.com/hubfs/PDF/WP2104-InformaTechv2.pdf.
+The OSINT Curious Project. “10 Minute tip: Introduction into Google Dorking.” YouTube video, 9:00. 18 Jun. 2020. https://www.youtube.com/watch?v=-Psyw3ADNvo.
+“The Penetration Testing Execution Standard Documentation.” PDF file. The PTES Team. 16 Jun. 2021. https://buildmedia.readthedocs.org/media/pdf/pentest-standard/latest/pentest-standard.pdf.
+WayBackMachine. n.d. https://archive.org/web/.
+WhatsMyName. n.d. https://whatsmyname.app/.
+Williams, Jamie, Burns, Jen, Self, Cat and Pennington, Adam. “Data Sources, Containers, Cloud, and More: What’s New in ATT&CK v9?” ATT&CK®. 29 Apr. 2021. https://medium.com/mitre-attack/attack-april-2021-release-39accaf23c81. 
+
