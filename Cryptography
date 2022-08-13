@@ -1,0 +1,291 @@
+Module 10
+Network Security
+1.	Small networks consist of a small number of computers, and messages can be sent and received by various parties in that network.
+2.	As networks grow larger an adversary can corrupt, inject, modify, or snoop messages sent between computers in a network. 
+3.	The network is largely untrusted and is an important threat model to keep in mind when dealing with network systems. 
+4.	Cryptography protects the data by means of encryption, digital signature, and authentication. 
+5.	Data protection using cryptography:
+a.	Read/write data protection for storage devices, such as laptops or USB sticks.
+b.	Data protection for data stored in cloud storage systems such as Dropbox. 
+c.	Data protection in distribution networks such as a Content Distribution Network (CDN). 
+6.	Network security is one of the fundamental use cases for applied cryptography because it helps to secure and safeguard communications. The internetworking of various systems and devices provides fertile ground for an attacker to exploit unsecured communications. Therefore, cryptography is an essential technique that facilitates trust in an otherwise untrustworthy environment with a myriad of potential threats. Expecting a network to simply be secure is an unrealistic expectation in many modern networks. The use of cryptography secures the way computers connect over various networks.
+Capabilities of Adversaries
+Carbanak Crimeware
+Carbanak Crimeware is a cybercriminal group that utilizes Carbanak malware to target financial institutions since at least 2013. This group may be linked to other groups that are tracked separately such as Cobalt Group and FIN7 that have also used Carbanak malware. The Carbanak software is a full-featured, remote backdoor that is intended for espionage, data exfiltration, and also provides remote access to infected machines. The main techniques that Carbanak utilizes are: creating or modifying system processes to provide persistence and system privileges, impair defenses by using netsh to add local firewall rule exceptions, masquerading legitimate service names such as svchost.exe, using open source tools such as PsExec and Mimikatz, utilize remote access software such as AmmyyAdmin and Team Viewer for remote interactive C2 to target systems, installing VNC server software that executes through rundll32, use of legitimate credentials of banking employees to perform operations that sent them millions of dollars, and has used a VBScript named “ggldr” that uses Google Apps Script, Sheets, and Forms services for C2. Given the techniques they utilize and their motives in targeting financial institutions this is one group that should definitely be monitored for any malicious activity within the organization. 
+Gamaredon APT
+Gamaredon APT is a suspected Russian cyber espionage group that has targeted military, NGO, judiciary, law enforcement, and non-profit organizations in Ukraine since at least 2013. In November 2021, the Ukrainian government attributed the Gamaredon group to Russia’s Federal Security Service (FSB) Center 18. Given this group’s MO, it is unlikely they would pose as an adversary to the organization. 
+A Nation-state
+Nation-state adversaries are the biggest threat to any computer system as they well-funded and employ skilled actors. Since our organization is based in the UNITED States, the nation states that are most likely to be adversaries include China, Russia, North Korea, and Iran. These countries are listed as cyber threats by the Cybersecurity and Infrastructure Security Agency (CISA). 
+Who’s the biggest risk?
+Out of all of the actors listed above, Carbanak would be the biggest risk to the organization. Their main targets are financial institutions; therefore, it would not be a far-reaching assumption to suspect an attack from this group. The MITRE Attack framework has disclosed their known techniques which will help the organization understand what techniques and software they utilize, which will nevertheless assist the organization in closing those gaps. Carbanak mainly enters systems by spear phishing employees and after gaining a foothold in the system, they utilize dynamic data exchange (DDE) feature in Windows and legitimate cloud-based services to deliver malware or establish command-and-control communication. After this, Carbanak software can backdoor into systems to log keystrokes and capture screenshots, steal and delete cookies, inject malicious code on sites, and monitor various traffic. For lateral movement, the malware abuses remote and system administration tools (Trend Micro, 2021). 
+Protecting the Organization
+Given Carbanak’s initial access is through spear-phishing training and awareness communications must be adhered to within the organization and employees must be made aware that any attachments sent from outside of the organization must be detected and must be advised upon within messaging systems. Given their model of execution is through API, powershell, scripting, service execution, and windows management instrumentation a strong identity and access management policy based upon a zero-trust architecture is necessary to ensure we always verify any services that are executed.  Strong endpoint protection software must also take place-preferably something that utilizes AI and is able to learn based on common MITRE frameworks. Any new service or changed registry keys within valid accounts must be monitored and scrutinized to ensure valid accounts are utilizing their powers for good. 
+Securing Communications and Bolstering Defenses
+Carbanak is known for stealing data and sniffing network traffic, so ensuring strong encryption methods within communications of our network is also a must. Preventative measures can include hardening the virtual private network and maintaining that technology stack, whether it be through strong communication methods with the third-party provider and ensuring systems are up to date or ensuring that communication methods are unique for every employee that may be a possible target for spear phishing. Ensuring unique encryption for each employee ensures that all communications that are sniffed are not one and the same and cannot be easily broken. Maintaining that part of the organization and ensuring encryption is constantly updated as the cyber threat landscape changes will also ensure that communications are not stolen or cracked to inject malware into new messages being sent out or being received. 
+What if they control our router?
+If Carbanak were to ever gain control of our router and given their proclivity to utilize command and control techniques, then that means they have broken the rest of our defenses and having reliable encryption would be our last means of ensuring our data is confidential. Given that they have access to the router, isolating that router and establishing a honeynet (Crowdstrike, 2022) designed to look like a real network can lure adversaries deeper into the system to gather more intelligence about their capabilities or their identities. 
+References:
+Carbanak. Carbanak, Software S0030 | MITRE ATT&CK®. (2017, May 31). Retrieved May 1, 2022, from https://attack.mitre.org/software/S0030/ 
+Cybersecurity. Cybersecurity and Infrastructure Security Agency CISA. (n.d.). Retrieved May 1, 2022, from https://www.cisa.gov/cybersecurity 
+Gamaredon Group. Gamaredon Group, IRON TILDEN, Primitive Bear, ACTINIUM, Armageddon, Shuckworm, DEV-0157, Group G0047 | MITRE ATT&CK®. (2017, May 31). Retrieved May 1, 2022, from https://attack.mitre.org/groups/G0047/ 
+What is a honeypot? how it can trap cyberattackers: CrowdStrike. crowdstrike.com. (2022, March 9). Retrieved May 1, 2022, from https://www.crowdstrike.com/cybersecurity-101/honeypots-in-cybersecurity-explained/ 
+Trend Micro April. (2021, April 20). Carbanak and FIN7 attack techniques. Trend Micro. Retrieved May 1, 2022, from https://www.trendmicro.com/en_us/research/21/d/carbanak-and-fin7-attack-techniques.html 
+Hash Functions
+1.	Hash Function:
+a.	Take an arbitrary piece of data, a short string or a large executable binary, and produces a short fixed-width-hash value. 
+b.	#value/256-bits
+2.	Cryptographic Properties:
+a.	Collision-resistance H(x) = H(y):
+i.	States that it’s infeasible for an adversary to find two inputs that produce the same hash value. 
+ii.	For example, using the same hashing algorithm, the computed hash values of a legitimate and a corrupted software update version will be different. 
+iii.	The hash value is a secure signature used to authenticate the software update. 
+b.	One-wayness H(x)  x:
+i.	Given the hash value of something, it’s infeasible to reverse engineer the hashing process and figure out the original input, except for knowing whether it was exactly x or not. 
+ii.	For example, the hash of x confirms that the input might have been x.
+iii.	It’s not possible to know the input with only the hash value. 
+3.	Hash Function Authentication:
+a.	Software to be downloadedHash algorithm (example: SHA1)Hash value
+Software downloaded			Hash values of the downloaded
+If hash values match, software has been safely downloaded
+If hash values don’t match unsafe software has been downloaded
+4.	Common Hash Functions:
+a.	MD5/SHA1
+i.	Older hash functions
+ii.	Weak in terms of collision resistance
+iii.	No longer considered good choices
+b.	SHA2/SHA3
+i.	More modern hash functions 
+ii.	Hash values of 256-512 bits
+iii.	Secure in terms of collision resistance and one-wayness
+Explain the Purpose and Properties of a Hash Function
+Techniques Utilized:
+For this project I am utilizing CyberChef, an intuitive web app for for encoding, decoding, and hashing data. Within CyberChef there is a decoder module that allows the user to manipulate data and decode, encode or even hash filetypes. Hashing in CyberChef allows the user to generate hashsums for data.
+Hash Values:
+Using CyberChef I will be using 3 OpenSSH keys from Tryhackme’s Hashing room. 
+Key number 1: 
+Is a long hash I won’t be copying in here because it’s a long and OPENSSH key. The general idea is that I will be utilizing CyberChef to hash OPENSSH private keys into MD5 to find the desired value of: 3166226048d6ad776370dc105d40d9f8. 
+MD5: b523e7a5b4e82a254f2669e46a7c012a 
+Key number 2: 
+MD5: 915fb4c73cc1acc350fae502f6655500
+Key number 3: 
+MD5: 3166226048d6ad776370dc105d40d9f8
+It turns out key number 3 was the desired output and the correct OpenSSH private key. 
+Compared to the private OpenSSH keys converting those keys into MD5 processes data in 512-bit strings, broken down into 16 words composed of 32 bits each giving us an output of a 128-bit message-digest value and is much clearer to look at than the long expanse of a single private key. Given that hashing values into MD5 is easily crackable and noticing at this point it isn’t suggested to use these values going forward and has since been deprecated in favor of more robust hashing algorithms. 
+Message Authentication Code (MAC)
+1.	A Message Authentication Code (MAC) is a symmetric key cryptographic technique that helps authenticate messages sent over a network by ensuring they are from the original sender and have not been changed. Fundamentally, a MAC can be an encrypted checksum that is sent along with the message to verify its authenticity.
+2.	You can predetermine the data you will get by knowing the exact hash value. 
+3.	Operation of Message Authentication Codes (MACs)
+a.	KeyGen () operation:
+i.	Generates a key (k) that helps us authenticate messages (m) and is in the order of 128 bits long.
+b.	Mac function MAC (k, m):
+i.	Combines the generated key and a message to produce an authentication tag. 
+ii.	Provides security against an adversary who could determine the tag without knowing the key (k) required to compute the tag.
+iii.	Ensures that the only way to get a correct tag is by computing it with the key as an input. 
+4.	How do MACs work?
+a.	Authentication is not naming a computer by IP address but instead authenticating messages in terms of them coming from another computer with a certain key. 
+5.	How do MACs work? – An example
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+6.	Multiple Sharing of MACs:
+a.	Problem: Once you compute a MAC over a message, the adversary can observe it on the network and can send that MAC again with the same tag to the server. 
+Encryption
+1.	Encryption:
+a.	Keygen ()  k
+i.	Generates a key that is used to encrypt and decrypt data. 
+b.	Encrypt (k, m)  c
+i.	Takes the key and a message and produces a ciphertext (encrypted data).
+c.	Decrypt (k, c)  m
+i.	Takes the same key and a ciphertext and gives back the message that was encrypted originally. 
+d.	The encryption scheme is correct if the data before encryption remains identical to the data after decryption. 
+e.	They key k is a shared key that two parties share and must be shared ahead of time to use the encryption scheme. 
+2.	File Download Example:
+a.	When the server receives the request from my computer to download file 5. The server will take the contents of file 5 and encrypt it with the encryption function using the shared key and send the ciphertext over the untrusted network to the computer. Once the message is received back to the computer, it can decrypt the received message using the shared key and obtain the contents of file 5. 
+3.	Role of the Message Authentication Code (MAC):
+a.	Encryption itself never returns an error. 
+b.	Decrypt always returns a message even for invalid ciphertext. 
+c.	The adversary will not detect any tampering with the ciphertext. 
+4.	Authenticated Encryption with Associated Data (AEAD):
+a.	Combines encryption with a message authentication code (MAC).
+b.	Syntactically, authenticated encryption looks a lot like the encryption scheme where a key is generated, it is encrypted and then decrypted. 
+c.	The encryption takes an associated data argument (ADA) along with the key and the message to encrypt. 
+i.	The associated data are basically the details of the request from the client computer to the server. 
+ii.	The associated data produces:
+1.	Ciphertext
+2.	Message authentication tag
+d.	The authenticated decrypt function at the server takes the key, the ciphertext, and the associated data to execute the request-in this case, encryption of the contents of file 5. 
+e.	The schemes used for such encryptions are:
+i.	AES
+ii.	AES GCM
+iii.	ChaCha20
+Explain Symmetric Key Encryption
+	Setting up secure communication channels between two geographically separated offices is no easy feat and even more so when it is needed to provide a secure link for both teleconferencing and email. Given that Microsoft outlook is preconfigured to utilize standard protocols such as IMAP, SMTP and Exchange, these protocols alone are not sufficient to ensure end to end encryption of company data it sends and receives. That is why the creation of a virtual private network with true end to end encryption (E2EE) is necessary to secure our communications channels. E2EE is the gold standard when it comes to protecting communication. The only people who can access the data are the sender and the intended recipients-and no one else. In true E2EE, encryption begins at the device level. That is the device generates a key that is used to encrypt and decrypt data being sent out and received. The device then creates a ciphertext and is later sent to the intended recipient whose device will also decrypt that message and ensure the message authentication code equals the message that was sent. The benefits of utilizing E2EE is that it obfuscates data in transit and if a server has a time to live for a response from the sender/recipient then it’s clear that even if the data was able to be unencrypted it still requires both devices to decrypt the message. Now with that being said, E2EE also has its own caveats. If attackers aren’t able to get information from the server that manages encryption and decryption of messages (C2C attack), then the only two other objectives to gain their desired resources are the devices themselves and this opens up the possibility of increased spear phishing campaigns in order to get to their target resource, which could be the data and systems we as an organization utilize to encrypt those same messages. Given this blaring weakness as well, we can still say that the advantages of true E2EE is that it ensures our data that is sent and received is secure from hacks, protects the privacy of our users, and at the same time ensures that admins have less to work on and are not the subject of spear phishing campaigns. Without admins to monitor and hold decryption keys, any attack that targets administrators will come up short. 
+	Take for example a user connects with one of our customers through VoIP. Our customer is utilizing our own app on their phone to communicate with us as well. The E2EE system provides each with a public-private key pair, whereby their public keys are stored on servers that manage the VoIP communication/email method. Our customer sends our agent an encrypted message, and then our customer uses our agent’s public key to encrypt her message to him, Then, when our agent receives the message, he uses his private key on his device to decrypt the message from our customer. Now these steps aren’t that involved. To our agent, they are simply talking on the phone or sending an email in Outlook, but behind the scenes our system and the corresponding server that handles those communications are simply facilitating the message between each recipient. The server never actually stores or logs any information and is merely there to assist in the encryption and decryption of messages that belong to the sender and recipient (2021).
+References: 
+End-to-end encryption and guide on how it works. PreVeil. (2021, August 19). Retrieved May 3, 2022, from https://www.preveil.com/blog/end-to-end-encryption/ 
+Public-Key Encryption
+1.	Public-Key Encryption:
+a.	Produces two halves of a key instead of one shared key. 
+b.	Sender sends plaintext data to be encrypted by the public key and the encrypted message is sent across the internet to the receiver for the receiver to decrypt that information using their secret key. The decrypted data is sent as a ciphertext to the receiver. 
+i.	The secret key decrypts the ciphertext and acts as a counterpart of the public-key. 
+2.	How Public-Key Encryption Works
+a.	Client’s machine encrypts their credit card number and is sent across the internet to Amazon’s server to be decrypted. 
+3.	Public-Key Encryption and Symmetric Key Encryption
+a.	Public-key encryption:
+i.	Thought of in terms of operations per second. 
+ii.	Works on fixed-size values of about 256 or 1024 bits.
+iii.	Can perform 1000 or 100,000 of the public-key operations per second.
+iv.	Generate a temporary shared secret key to be used with shared symmetric key encryption. 
+v.	Take the large data that needs to be sent and encrypt using AEAD with the shared key and send it along. 
+b.	Symmetric key encryption:
+i.	Thought of in terms of  bytes per second.
+ii.	Can achieve a 100 MB to 1 GB per second on a single core. 
+iii.	Only someone who know the key can decrypt the data.
+iv.	Only someone who can decrypt the public-key encryption sent over the network (the owner of the secret key). 
+4.	Key Exchange:
+a.	Key generation of a public and a secret key and instead of having encrypt and decrypt as the primitives-it has combine as a function. Secret key for receiver and public key for sender combined create a shared secret of both the parties.
+b.	Direct way to get a shared secret between two parties that know each other’s public-keys and is used to go directly to symmetric key encryption from public-key encryption. 
+c.	Includes: Diffie-Hellman (DH), Elliptic-curve Diffie-Hellman (ECDH), and ECDH examples (P-256, X25519). 
+d.	Example:
+i.	Client machine has a secret key and Amazon’s server has a public key, and when combined together generate a shared key (k) that is later encrypted into a ciphertext. Ciphertext is later decrypted to either create a secret key or goes to Amazon’s server to be processed. 
+5.	Public-key encryption, also known as asymmetric cryptography, uses pairs of keys to encrypt and decrypt messages. Both keys are required as separate parts of encrypted communication, but the private key is kept secret and is used to decrypt the message, while the sender’s public key is used to encrypt the message. This is an effective and easy-to-use system since the public key can be openly distributed.
+Public Key Encryption and Shared Key Encryption
+Credit card use has only gone up in an increasingly digitized era that we are welcoming. With the help of public key encryption (PKI), organizations are able to manage the security of sharing credit card information over the internet. Common examples of PKI security today are SSL certificates on websites that are displayed to the user to advertise that their information and data is encrypted the moment they visit the organization’s website. Today both symmetric and asymmetric encryption are used, because asymmetric alone is often much slower than symmetric encryption, so the two are often utilized in tandem. However, with this in mind, both symmetric and asymmetric encryption have one major challenge: How can you trust the public key you received actually belongs to the person or entity you think it does? Given the prevalence of man-in-the-middle attacks PKI needs to resolve this challenge by issuing and governing digital certificates that confirm the identity of people, devices, or applications that own private keys and the corresponding public keys. Therefore, PKI governs encryption keys by issuing and managing digital certificates. A digital certificate has many qualities including: 
+1.	Is an electronic equivalent of a driver’s license or passport 
+2.	Contains information about an individual or entity 
+3.	Is issued from a trusted third party 
+4.	Is tamper-resistant 
+5.	Contains information that can prove its authenticity 
+6.	Can be traced back to the issuer 
+7.	Has an expiration date 
+8.	Is presented to someone (or something) for validation
+PKI and how it governs digital certificates to verify identities can be attributed to the likes of a digital DMV. Like the DMV, PKI introduces a trusted third party to make decisions about assigning identities to a digital certificate and much like a driver’s license that is awarded by the DMV, these licenses are difficult to spoof. The reason digital certificates are difficult to spoof, is because there are certificate authorities that determine the vetting methods for certificate recipients, types of certificates that are issued, parameters contained within the certificate, and security and operations procedures. Now assigning this to sharing credit card information over the internet is simple. We know that once we receive the server’s public key to decrypt our information we must trust that key. That trust comes from the certification creation process. Amazon for example has a public and a private key that are used to start a certificate signing request (CSR). The public key is used to fill out fields and attributes and the private key is used to sign the CSR. The CSR is later sent to the issuing certificate authority who verifies that these keys came from Amazon and Amazon sends that digital certificate to your browser showing you within the browser’s favicon that this website’s connection is secure, and the certificate is valid. In order to ensure these keys are valid and secure Keyfactor gives best practices to ensure keys are not leaked. Keyfactor suggests regular internal audits can provide a clear understanding of the organization’s certificate landscape and how it evolves over time. Incident reporting and alerts can also help organizations minimize the potential for holes in their security infrastructure. And finally, an external audit from these certificate authorities is a good thing, because all they want to know is that certificates are valid and aligned with defined security policies. 
+References:
+PKI: The New Best Practices. Keyfactor. (2021, October 4). Retrieved May 3, 2022, from https://www.keyfactor.com/resources/pki-new-best-practices/ 
+What is PKI? A public key infrastructure definitive guide. Keyfactor. (2021, September 13). Retrieved May 3, 2022, from https://www.keyfactor.com/resources/what-is-pki/ 
+Public-Key Signatures
+1.	Public-key signatures work with public keys to protect the integrity of messages and data. Public-key signatures are useful and effective for authenticating the message and vindicating the sender by using the secret key to check and validate it with the public-key.
+2.	The Need for Public-key Signatures:
+a.	Microsoft is distributing software updates.
+b.	Microsoft generates a secret key and a corresponding public key. The secret key is not released; however, Microsoft includes the public key in every copy of Windows. 
+c.	Microsoft uses the secret key to sign legitimate software updates that it distributes to clients. 
+d.	When Microsoft has a new update to distribute, it will:
+i.	Uses the secret key to sign the software update binary that it wants to distribute.
+ii.	Broadcast the software update and signature.
+3.	Message authentication codes require a unique secret to be shared between the recipient and the sender of a message.
+4.	Public-key signatures are the counterpart of public-key encryption-they protect the integrity of messages but not their confidentiality. 
+5.	Public-Key Signature Scheme:
+a.	A combination of three functions:
+i.	Public-key KeyGen:
+1.	Public key: open to everyone around the world.
+2.	Secret key: Kept secret by the signing and authenticating party.
+ii.	Sign:
+1.	Uses a secret key and a message to produce a signature that proves the message is genuine.
+iii.	Verify:
+1.	Give the public key to the function.
+2.	Give the message that you receive.
+3.	Give the corresponding secret key owner’s message signature.
+4.	This function confirms whether the signature is correct. 
+6.	Adversaries can’t fake signatures unless they know the secret keys. 
+7.	Public-Key Signatures:
+a.	Similar to public-key encryption, there’s a limitation on the underlying low-level signature scheme – it is capable of signing short messages approximately 256-1,024 bits long. 
+b.	The way public-key signatures are often used:
+i.	Take a large message that you want to sign, such as a software update, and hash it using one of the hash functions.
+ii.	Sign the relatively short hash value using the low-level public-key signature scheme.
+iii.	Hash functions are collision resistant and because of the security property of the signature schemes, you will get the same conclusion. 
+8.	Signature Schemes in Practice:
+a.	The RSA scheme generates signatures based on prime numbers.
+b.	Some signature schemes are based on the Elliptic Curve DSA (ECDSA) or on P256.
+c.	EdDSA constructions, for example Ed25519, use elliptic curves to sign messages. 
+Application of Public Key Signatures
+Public key signatures are used throughout the internet these days to ensure trust between the website and the user who accesses them. Every time a user accesses a website a favicon within the address bar will display either a padlock or a red padlock that’s open. What this means is that the website the user is accessing utilizes SSL and is secure. Ok, so how is this website secure? A PKI signature is a form of verifiable digital identity that helps to prove to the user that this website they are accessing is authentic and secure. A digital signature is that organization’s way to affirm its legitimacy through the use of a digital certificate. A PKI digital signature enables the organization to attach the user’s verifiable identity to software, code, emails, and other digital communications so people know they’re not fake. Essentially PKI is the wax seal of internet communications. A digital signature can be used to verify senders, because PKI attaches your identity to the communication method and ensures the integrity of their communications. PKI provides verification techniques by ensuring (in true end-to-end encryption) that the public key on the host machine was used to encrypt the message and can only be verified by the private key the receiver generated on their machine. PKI also advises the user on the integrity of the communication, such as displaying a banner advising: “This email came from outside of the organization” and we know not to trust emails like that even if the email looks like a good spoof. Organizations can use a document signing certificate that they can buy through websites like thesslstore.com. These document signing certificates enable users to apply digital signatures to many types of documents including Microsoft Office documents and PDFs. Another form can come from using an email signing certificate, which allows users to apply a digital signature to their emails. Working in IT as well securing your software and ensuring a code signing certificate ensures that no one uses their powers for evil, because a code signing certificate is utilized to help protect the supply chain. 
+References: 
+Crane, C. (2021, November 19). Public key signature: What it is & why it's everywhere. Hashed Out by The SSL Store™. Retrieved May 3, 2022, from https://www.thesslstore.com/blog/public-key-signature/ 
+Certificates
+1.	As cyber-attacks continue to increase in volume and sophistication, organizations and individuals operating on the internet need a way to authenticate each other securely, efficiently, and reliably at scale. Only by doing so can they verify if online subjects are whom they claim to be and trust that only their intended recipients will be able to view their communications.
+2.	In the physical world, we rely on passports or identification cards to verify a person's identity because we trust that the entity that issues those documents (i.e., government) has done the proper checks. In the virtual online world, we need a similar mechanism to independently verify identity claims.
+3.	Digital certificates are electronic documents that connect individuals, organizations, systems, or software with their unique public key. The unique nature of digital certificates provides a robust mechanism for verifying online identity claims and establishing secure communications. Digital certificates are issued by a trusted independent entity known as the CA. The CA is responsible for verifying the supporting documents that a subject provides to prove their identity claim. After successful verification, the CA endorses the subject's identity and assures its online authenticity until the expiration date. In essence, a digital certificate is the online equivalent of the ID card that you use in the physical world to verify your identity claims. To receive an ID card, you must provide a government agency with the necessary documents that prove your identity. The government agency verifies the authenticity of your documents, and once it is satisfied, it issues you an ID card with an expiration date. From that point, your valid ID card serves as your proof of identity, and others trust it due to their trust in the government agency.
+4.	Microsoft’s public-key works well for the systems and software that are part of Microsoft’s large ecosystem. 
+5.	How do you get the public-key of a website for secure transactions?
+6.	Registration with a Certificate Authority (CA):
+a.	Organization sends over documents and a digital signature to CA to have their public key listed. 
+7.	Establishing a Secure Connection:
+a.	Client request: A client asks the CA server for a given web entity’s public-key. 
+b.	Grant public-key: The CA grants the web entity public-key and signs the response using its secret key.
+c.	Key verification: The client verifies the web entity’s public-key with the CA’s known public-key. 
+8.	It is not practical for all clients to consult this phone book (CA) every time they want to connect to a website.
+a.	To avoid creating bottlenecks, CA’s pre-sign messages that attest to specific information about a given web entity, including its public key. 
+9.	Certificate Authority (CA) Certificate:
+a.	A certificate is a signed approval by the CA for a web entity using the CA’s secret key. 
+10.	Certificate Revocation:
+a.	Expiration date, name, and public-key, in every message.
+b.	Certificates may expire every 90 days or every year making it easy to steal the secret key. 
+c.	Check if a certificate has been revoked. 
+d.	Signed message with a serial number. 
+i.	Figures out whether a certificate is valid or has been revoked by the CA.
+11.	Certificate Revocation Approaches:
+a.	Certificate revocation lists:
+i.	Certificate authorities publish a list of old serial numbers of certificates they revoked.
+b.	Online checking/online certificate status protocol (OCSP):
+i.	The CA server potentially becomes a bottleneck and adds to the latency of verifying a certificate. 
+c.	OSCP stapling:
+i.	A scheme by which servers get short-term signatures from Cas attesting that their certificate is still valid. 
+12.	X.509-A certificate scheme’s name
+a.	Design:
+i.	A protocol for how certificates are formatted, signed, etc. prevalent in web browsers and other systems on the internet. 
+b.	In practice:
+i.	There are many CAs, the choice of which depends on the specific application. 
+ii.	Web browsers tend to trust many different CAs. 
+iii.	Enterprise networks may only trust a few CAs.
+c.	Certificates are widely used in web security, and X.509 is a common protocol for certificates. 
+Explaining how Certificates solve Authentication Issues
+	Certificate warnings on a website could occur for a variety of reasons, but they mainly arise from a website that isn’t configured properly, the system clock on the users end isn’t set correctly, missing windows updates, antivirus and firewalls blocking the site, and compatibility issues with the browser. There are many instances where you can see this warning, but one that comes to recent memory was loading up kasm workspaces in my web browser. Being that the web server was hosted in the cloud and the web service I was using was free it did not come with digital signing; so, every time I viewed the website I would be greeted with the “Your connection is not private” and a “Not secure” favicon in the address bar. Nonetheless, being that I created the container streaming platform in Linode and opted not to pay for the professional option which offers HTTPS and digital signing, then my web browser had no choice, but to display that navigation block error to alert me to that fact. However, there are other times when certificates do become invalid for other reasons. The most common reason to get a navigation blocked error stem from an expired certificate. This error means that the validity period of the SSL certificate has expired. The client or the web browser in this case will reject certificates that are not within its validity period. On the other end, if a certificate is revoked, then that means while loading the website, the browser checked if any of the certificates in the chain is present in the certificate revocation list (CRL) and if any of the certificates in your chain is present in CRL, then you get a navigation blocked error, and the certificate must be updated. The best thing for an organization to avoid SSL certificate issues is to monitor them according to Sivasamy Kaliappan on her blog post on SSL Certificate Errors. Organizations can utilize software like Sematext Synthetics or other SSL monitoring tools. Sematext Synthetics Browser monitor can check all the certificates in the chain-the leaf, intermediate, and root certificates. Synthetics also provides an SSL certificate report, with details of all the certificates in the chain and their expiry dates as well, which make it easy for organizations to know when to update. 
+References: 
+Congleton, N. (2020, June 11). Fix certificate error navigation blocked on Windows 10. Lifewire. Retrieved May 3, 2022, from https://www.lifewire.com/fix-certificate-error-navigation-blocked-4774773 
+Kaliappan, S. (2021, December 15). What do SSL certificate errors mean: Causes & how to fix them. Sematext. Retrieved May 3, 2022, from https://sematext.com/blog/ssl-certificate-error/#:~:text=Expired%20Certificate,certificate%20has%20a%20validity%20period. 
+Secure Channels
+1.	These days, only encrypting information at rest (i.e., stored locally on a system) is insufficient. You also need a way to share information with others while ensuring the security of the communication channel. Unfortunately, the internet was not designed with security in mind and is considered inherently insecure. Furthermore, when information is shared over an insecure channel, it is subject to eavesdropping, tampering, and impersonation. An example of an insecure channel is SMS text messaging. Fortunately, certain cryptographic internet protocols were developed that enable secure channels and guarantee the authenticity and confidentiality of everyone involved. For example, secure channels enable you and the person you are communicating with to identify each other and ensure that only you and your counterpart have access to the exchanged information. According to the NIST (Links to an external site.), a secure channel transfers data between two entities and ensures confidentiality, integrity, replay protection, and mutual authentication (NIST, n.d.).
+2.	Applications or systems don’t directly invoke the cryptographic primitives; instead, they use an abstraction that is often called a secure channel. 
+3.	Abstraction/Secure Channel:
+a.	Frees the application developer from worrying about the details of cryptographic primitives, which one to use, and how to use it.
+b.	Secure point-to-point connection realized by a correct use of cryptographic primitives in transport layer security (TLS), a widely used secure channel protocol on the internet.
+c.	Provides a function called Connect that connects you to a logical name that you expect to be on the other end. 
+d.	TLS provides a security guarantee that the messages would only reach the intended party. 
+4.	Establishing a TLS Connection:
+a.	When the browser calls Connect (amazon.com)
+i.	In the browser TLS establishes a TCP connection to Amazon’s web server.
+ii.	Amazon’s web server then sends a certificate verifying amazon.com’s public key. 
+iii.	The browser authenticates the public key to Amazon’s web server. 
+iv.	The browser then establishes a symmetric encryption and authentication key to Amazon’s web server. 
+v.	Client browser computes the session key K by combining the public and secret keys. 
+vi.	Amazon’s web server combines public key received over the network from the client with Amazon’s secret key. 
+vii.	Now the browser and Amazon’s web server can send and receive messages using AEAD. 
+5.	Almost all organizations today are custodians of sensitive data, including financial transactions, personal identification information, protected health information, or coveted intellectual property. Organizations must secure data in transit as well as data at rest in order to prevent unauthorized access and protect its confidentiality and integrity. Cryptography allows information to remain secure yet accessible to authorized parties.
+6.	Cryptographic keys are used in conjunction with encryption algorithms to secure data. While algorithms, such as RSA, ECC, and AES may be mathematically complex, the two main types of encryption—symmetric and asymmetric—are easier to understand. As explained in this module’s videos, symmetric encryption uses the same key for encryption and decryption. In contrast, asymmetric encryption uses two encryption keys—a public-key that everyone can access and a private key or secret that only the actual entity has in its possession.
+Bibliography
+“3 Simple Ways to Check a File's Hash with Windows.” Glasswire Blog. 20 Mar. 2020. https://blog.glasswire.com/2020/05/20/3-simple-ways-to-check-a-files-hash-with-windows/.
+Qureshi, Haseeb. “The Cyberpunks.” Nakamoto. 29 Dec. 2019. https://nakamoto.com/the-cypherpunks/.
+Rogaway, Phillip. “The Moral Character of Cryptographic Work.” PDF file. Department of Computer Science. Dec. 2015. https://web.cs.ucdavis.edu/~rogaway/papers/moral-fn.pdf.
+Schwartzbeck, Michael. “The Evolution of US Government Restrictions on Using and Exporting Encryption Technologies(U).” PDF file. CIA. n.d. https://www.cia.gov/readingroom/docs/DOC_0006231614.pdf.
+“Secure Channel.” NIST. n.d. https://csrc.nist.gov/glossary/term/Secure_channel.
+
