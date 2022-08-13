@@ -1,0 +1,688 @@
+Module 12 Introduction
+1.	“What would you do differently if you knew you were going to be robbed?” -Michael Sentonas, VP and CTO, McAfee Security Connected, Intel, USA, August 2015
+2.	A comprehensive, effective, and sustainable cybersecurity program starts with a change in the conventional mindset regarding cybersecurity incidents. This change includes realizing that cybersecurity incidents are inevitable. It isn’t a matter of if your organization will experience an incident, but rather when. This change in mindset is crucial because it moves the organization away from focusing solely on prevention to developing a plan on how to respond when the inevitable happens. An incident response (IR) plan and the related IR teams outline and execute the organization's strategy for cyber-attacks and incidents. Without this plan or the team, the organization may not detect attacks or know what to do when one occurs. This module will provide additional details on an IR plan's importance, including its various steps. Furthermore, you’ll learn the roles and responsibilities of an IR team. Lastly, you’ll review the relationship between IR and common investigation types.
+3.	According to the Ponemon Institute Data Breach Report:
+a.	The total cost of a data breach is 3.86 million. 
+b.	The average total cost of a data breach in the US is 8.6 million. 
+IR Overview
+1.	When an organization experiences a security incident, it can quickly escalate to a business crisis, leading to financial losses, legal implications, operational disruption, and reputational damage. It’s the job of the IR team (IRT) to react appropriately and correct incidents to limit damage to an organization. An IR plan (IRP) is a set of policies and procedures that an organization can use to identify, contain, and eradicate cyber-attacks. Furthermore, this plan includes having the right people with the right skill sets and experience.
+2.	Prepare for Security Incidents:
+a.	Errors and accidents
+b.	Internal policy violations or internally planted logic bombs or salami attacks.
+c.	Fraud, tampered data/applications, malware.
+d.	Data theft of an organization’s valuable information or customers’ PII. 
+e.	Denial of service against critical systems
+f.	Bots
+3.	IR prepares your organization to:
+a.	Detect and respond to security incidents.
+b.	Control and limit damage and business impacts to the organization and customers.
+c.	Educate users and customers to report a potential security incident. 
+d.	Coordinate and align key resources, IR team members, and decision-makers through the IR policy, standards, procedures, training, and exercises.
+e.	Implement the capabilities of IR, such as incident detection and analysis. 
+4.	In case of an incident:
+a.	Prioritize, escalate, and communicate the incident to decision-makers. 
+b.	Contain/eradicate the incident.
+c.	Support recovery to normal operations within agreed upon time limits.
+d.	Connect with business continuity and disaster recovery teams if recovery exceeds the time limit. 
+e.	Support investigations
+f.	Promote lessons learned to improve response capabilities and defend against internal and external security attacks. 
+5.	Attackers are always thinking of new ways to attack. Organizations need a tested plan and an experienced team to deflect attackers and effectively protect their assets. Responding to cyber incidents is often a high-pressure situation. Many critical decisions have to be made quickly and decisively, and there’s little room for error. Having no prior plan results in chaos, mistakes, and loss of time. On the other hand, having a proper IRP and IRT ensures an immediate and more organized response.
+6.	Incident Response (IR) Readiness:
+a.	When will an attack happen?
+b.	Will we recognize it when it does?
+c.	Will we respond effectively?
+7.	According to the Ponemon Institute:
+a.	Many organizations lack consistent enterprise-wide cybersecurity IR plans.
+b.	Organizations with IR teams and tested IR plans incur lower data breach costs by up to $2 million. 
+8.	Data breaches at:
+a.	Target
+b.	Yahoo
+c.	Sony Corporation
+d.	US Government Office of Personnel Management
+e.	Equifax
+f.	Capital One
+g.	Microsoft Exchange Server
+9.	After facing an incident, SolarWinds:
+a.	Stepped up and communicated with internal teams.
+b.	Provided definitions and indicators of compromise to customers.
+c.	Supported investigations.
+10.	IR is needed for security threats and incidents as they continue to grow in frequency, complexity, and sophistication. 
+11.	Incidents impacting human lives:
+a.	Ransomware crippling hospitals.
+b.	Attacks on life safety systems and embedded health technology.
+c.	Attacks on critical infrastructure. 
+12.	Advanced persistent threats:
+a.	Disrupt government, critical infrastructure, and industrial control systems.
+b.	Steal high technology information.
+c.	Embed malware into technology. 
+How IR Capability is Organized
+1.	Cybersecurity isn’t just a technology matter—it’s a business matter. For this reason, cybersecurity needs to be properly integrated into the organization's overall business goals and objectives. This integration includes the IRP and IRT. Every business has its own unique needs; however, it's recommended that you include all critical business functions and all necessary support functions when developing an IRP and IRT. This consists of a mix of experienced, technical, and non-technical internal and external resources, such as IT, human resources, legal, public relations, compliance, contractors, and managed service providers.
+2.	Although labeled as a security incident there can be business impacts; hence, it is really a business incident.
+3.	Incident Response Considerations:
+a.	What remediation actions will cause more harm to the business?
+b.	Are customers impacted?
+c.	Have contracts, laws, regulations been violated?
+d.	How will you handle communications and reporting?
+4.	A multitiered approach works for many organizations commanding control of a security incident.
+5.	IR Model: A Sample
+a.	Incident Response Team (IRT): 
+i.	Responsible for:
+1.	Receiving notice of or detecting a potential incident.
+2.	Analyzing the incident and offering resolutions.
+3.	Executing approved actions.
+4.	Documenting their analysis and actions.
+ii.	IRT permanent members:
+1.	Incident commander (IC)
+a.	Manages IRT activities
+b.	Confirms incidents as security incidents and confirms the official severity levels. 
+c.	Coordinates the IRT actions and writes the Incident After Action Report (AAR).
+d.	Escalates and communicates with the IMT and/or CMT. 
+e.	Maintains situational awareness or an incident’s severity level. 
+2.	Incident Handlers (IH)
+a.	Analyzes the details of security incidents.
+b.	Determines whether incidents are security incidents, IT operational incidents, or quirks.
+c.	Names the incident and determines the priority level.
+d.	Proposes responses and recovery resolutions.
+e.	Takes actions approved by the IC.
+f.	Documents the analyses and actions taken.
+iii.	Matrix-in members from other departments:
+1.	Security
+2.	IT
+3.	Corporate Security
+4.	Legal
+5.	HR 
+6.	Compliance
+7.	Other supported lines of business
+8.	Members detect a potential incident, support analysis, and offer recommendations. 
+9.	All members are also trained in exercise in the IR policy, standards, procedures, and playbooks. 
+b.	Incident Management Team (IMT):
+i.	Activates and manages mid-severity incidents.
+ii.	Members are more senior than IRT members.
+iii.	Has a broader set of representatives from across the organization, lines of business, and administration, such as:
+1.	Legal and compliance departments interpret third-party obligations and notifications for statutory, regulatory, or contractual violations.
+iv.	HR handles employee or contractor-sourced violations.
+v.	Accounting and finance allocate funding for the incident and assist with drafting investor and regulatory disclosures. 
+vi.	Communication supports internal and external messaging.
+vii.	Insurance or risk manager involvement.
+viii.	Other information or asset owners may be impacted.
+c.	Crisis Management Team (CMT):
+i.	Manages the strategic handling of an incident.
+ii.	Provides executive oversight for high-severity incidents.
+iii.	Consists of:
+1.	Chief information security officer
+2.	Chief information officer
+3.	Chief operating officer
+4.	Chief financial officer
+5.	Chief human resources
+6.	Chief general counsel
+7.	Chief auditor
+8.	Chief executive officer
+iv.	Crisis communication occurs at this layer.
+6.	Types of IR Models:
+a.	Centralized model:
+i.	In this IR model the organization has one IRT, IMT, and CMT to command control over incidents.
+b.	Distributed model:
+i.	In this model large organizations with international subsidiaries have individual IRT, IMT, and CMT.
+c.	Hybrid model:
+i.	In this model, organizations have a coordinating central authority with commanding control over decentralized teams. 
+7.	Sourcing Considerations:
+a.	Staff the IRT for 24x7 operations.
+b.	Arrange for on-call coverage for the IMT and CMT.
+c.	Insource all employees and some contractor contingent labor. 
+d.	Outsource to a vendor-managed security service provider.
+e.	Have a hybrid sourcing structure of insourced and outsourced staff.
+8.	It is important for an organization to structure its IRT, IMT, and CMT and to train all personnel in exercising their responsibilities. 
+Explain the IR and its importance
+According to the Privacy Rights Clearinghouse’ Database on Data Breaches it seems StateFarm encountered quite a few breaches in relation to employee activity. All six of the breaches involved a State Farm agent since 2008 to the most recent in 2016. Insider breaches likes these effected Business Financial and one involving a BSO (Business Other). It seems as if these data breaches that occur with State Farm are learned from an external party. The data breach that occurred in 2013 and effected over 687 customers were reported on by the media, 3 of the data breaches occurring in Bloomington Illinois were reported on by the California Attorney General and two were reported by Dataloss DB and Databreaches.net. Gauging the timeframe from initial compromise to the organization first learning about it is difficult to say, because these data breaches and their official documentation do not disclose them. However, one data breach that was reported on June 7th of 2016 advised they opened the investigation on January 21, 2016, but it was suspected that the date of the breach was August 7th of 2014. The Home office in Bloomington, IL sent out these notices with their response and plans for remediation in relation to this insider threat on January 9th of 2016 and included Transunion credit monitoring and up to 1 million dollars in identity theft insurance for 12 months. It’s difficult to ascertain StateFarm’s practices today compared to the incident in 2016, because of the significant improvements that have occurred since then to mitigate data breaches of any kind including a robust identity and access management model that incorporates logging and AI techniques to detect misuse of customer’s personally identifiable information and payment card industries standards improving on top of that as well. Given StateFarm’s last incident; again, occurred in 2016 it took at least 5 months to notify consumers about a potential breach and it seems as if StateFarm from the likes of these breaches mainly learned from external sources. Since then, they have incorporated a culture for cybersecurity and an SOC as well; therefore, it’s less likely that StateFarm may in the future end up notifying individuals until the attorney general or other external sources get involved. On the other hand, detection and recovery technologies/strategies may be going on in the background without the need for the public knowing about these breaches. These insider threats never end up hurting more than 1000 customers; therefore, given the amount of customers StateFarm services yearly, then these breaches may not be categorized as particularly severe in that context; however, it brings to light an issue with training employees on best cybersecurity practices and ensuring a robust identity and access management model that implements logging and monitoring of employee keystrokes. Given the last breach offered Transunion credit monitoring for up to a year for all of their customers; even the ones that weren’t affected on top of regulatory and industry fines for such an incident it’s clear that StateFarm’s detection technologies were the priority in essentially quarantining a threat that is difficult to manage. Given the historical data pertinent to StateFarm’s industry readiness to respond to incidents as it stands their response earns a D-. There were clear improvements up to 2016, but there was definitely more to be added on to that; the result of which may have been clear expectations set to monitor and log employee’s use of financial records and derive a mechanism for which to understand and proactively negate such behaviors. 
+Resources: 
+Data breaches. Privacy Rights Clearinghouse. (n.d.). Retrieved May 15, 2022, from https://privacyrights.org/data-breaches 
+Submitted breach notification sample. State of California - Department of Justice - Office of the Attorney General. (2016, June 9). Retrieved May 15, 2022, from https://oag.ca.gov/ecrime/databreach/reports/sb24-62237 
+Overview of IR Process
+1.	NIST and SANS are the dominant institutes whose IR frameworks have become the industry standard. SANS (Links to an external site.) (SysAdmin, Audit, Network, and Security) is a private organization founded in 1988 by Alan Paller, a former US Navy Engineer, and an entrepreneur. Today, SANS trains more than 40,000 cybersecurity technologists globally each year and provides the community with immense research and resources. (SANS, n.d.) 
+2.	There are two major incident response frameworks:
+a.	SANS breaks out each step of incident response.
+b.	NIST joins several steps into one, recognizing the iterative nature of IR. 
+3.	Overview of the Incident Response Process:
+a.	NIST/SANS:
+i.	Prepare the IR plan, policies, standards, procedures, and a variety of playbooks. 
+b.	NIST Detection and Analysis (AKA triaging)/ SANS Identification:
+i.	Detect deviations. 
+ii.	Confirm it’s a security or an imminent incident.
+iii.	Establish the incident type, using a naming convention.
+iv.	Prioritize it according to a risk or severity scale document. 
+v.	Notify the IRT and escalate as per the priority or severity. 
+c.	NIST Containment, eradication, and recovery/ SANS Containment:
+i.	Patch the vulnerability or remove the unauthorized account.
+ii.	Block the source IP address
+iii.	Isolate a network segment or a server.
+d.	SANS Eradication:
+i.	Remove malware or rootkit.
+e.	SANS Recovery: 
+i.	Restore integrity to data and applications
+ii.	Resume normal operations. 
+f.	NIST Post-incident activity/ SANS Lessons learned: 
+i.	Debrief and examine options for improvement. 
+ii.	Document the incident’s impact, cost of response, and recovery. 
+Preparation
+1.	"Proper planning and preparation prevents poor performance." —Stephen Keague
+2.	The organization's aim at the IR preparation step is to limit the risk of incidents by developing controls and taking preventive measures based on risk assessments. This step includes:
+a.	Reviewing the effectiveness of the existing security measures and policies.
+b.	Establishing the exact members of the IRT based on individual skill sets, availability, and roles.
+c.	Identifying and implementing the proper training, tools, and access for the members.
+d.	Creating incident communication guidelines to enable seamless communication across the different levels of the organization.
+e.	Developing playbooks for common incident scenarios, including how to triage, prioritize, and escalate incidents.
+3.	IR Preparation:
+a.	Plan:
+i.	Mission
+ii.	Goals 
+iii.	Strategies
+iv.	Organizational approach
+v.	Communications
+vi.	Metrics
+vii.	Roadmap
+b.	Policy:
+i.	Purpose
+ii.	Statement of management’s commitment
+iii.	Scope of authority
+iv.	Designated organizational structure with roles and responsibilities
+v.	Process
+vi.	Framework
+vii.	Reporting requirements
+viii.	Escalation points
+c.	Standards:
+i.	Prioritizing or rating the severity level
+ii.	Naming convention
+iii.	Forms for reporting and documentation
+d.	Procedures
+e.	Guidelines/playbooks for anticipated events
+f.	Communications
+g.	Training
+h.	Exercises and drills
+4.	Communications is a challenging aspect of IR in:
+a.	Determining the “need-to-know” to involve the right team members.
+b.	Broadening the circle of communications – knowing if, when, and how.
+c.	Considering internal and external communications.
+d.	Having the right technology for secure communications.
+5.	Sample Communication Audiences:
+a.	IR Incident Commander:
+i.	IRT
+ii.	Internal stakeholders
+iii.	Users
+iv.	Incident Management Team (IMT) and Crisis Management Team (CMT)
+b.	IRT/IMT:
+i.	Software vendors
+ii.	Incident response teams
+iii.	Third-party service vendors
+iv.	Internet and telecom service providers
+c.	IMT/CMT:
+i.	Potential customers
+ii.	External stakeholders
+iii.	Industry regulators/business partners
+iv.	Law enforcement
+v.	Owners of attacking domains or IP addresses
+d.	Further Preparation Activities:
+i.	Contact details for internal and external communication
+ii.	On-call contact lists for IRT, IMT, and CMT
+iii.	Incident reporting mechanisms and incident tracking systems
+iv.	Secure communications including phones, computers, and web meetings.
+v.	Secure command centers (physical or virtual)
+vi.	Analysis tools
+vii.	Secure storage facility for evidence
+6.	Incident Response Tools:
+a.	Threat intelligence platform
+b.	Vulnerability management
+c.	Security information and event management
+d.	Anti-malware
+e.	Firewall, IPS/IDS
+f.	Access management systems
+g.	Application and database logs
+h.	Endpoint detection and response
+i.	User and Entity Behavior Analytics (UEBA)
+j.	Security Orchestration, Automation, and Response (SOAR)
+k.	Malware forensic analysis
+i.	What is the intent of the malware tools?
+ii.	How is malware spreading through the environment?
+iii.	What resources does malware want to attach to (if it’s a virus)?
+7.	Use malware forensic tools to understand:
+a.	Raw host data, such as memory, processes, and configuration files.
+b.	Traffic analysis, flow data, full data capture.
+c.	Patch management
+d.	DOS mitigation
+Detection and Analysis (Identification)
+1.	Security operations use the tools and procedures defined in the preparation step to detect and identify any suspicious activity. Additionally, the identification can also be through a notification received by an external party. However, when an incident is identified, the goal is to determine its validity and scope. This step includes:
+a.	After the incident is confirmed, initiating an appropriate IR playbook, and involving the relevant teams.
+b.	Determining the size and scope of an incident, including the root cause. A critical mistake often made at this step is premature remediation, usually by rebuilding the compromised devices. Performing this before understanding the true scope of the incident can alert the attacker and allow them to adjust their operations. 
+c.	Gathering and corroborating information from various sources (log files, firewall events, intrusion detection systems, etc.).
+d.	Carefully organizing and protecting any collected evidence for later in-depth, specialist analysis. 
+2.	Identification Stage:
+a.	Different sources may receive or provide notification of potential anomalies.
+b.	Security assessments
+c.	SOC tools
+d.	People/users:
+i.	Legal department
+ii.	Audit department
+iii.	Ethics hotline
+iv.	Human resources
+v.	Corporate security
+vi.	IT operations or IT service desk
+vii.	Customers
+viii.	Third-party service providers
+3.	Detection and Analysis:
+a.	An example of the identification stage:
+i.	Multiple users were unable to use Office365 applications.
+ii.	Identified a global denial of service attack.
+iii.	Security worked with the IT department.
+iv.	The IT department worked with the service provider and discovered an error in Microsoft Azure.
+v.	IT service interruption caused business impacts.
+vi.	Companies used their incident response communication plans to issue statements and keep users informed. 
+b.	Incident Detection and Analysis:
+i.	Assigned IRT incident handler (IH):
+1.	Initiates incident documentation.
+2.	Begins an analysis of the reported issues, event precursors, and indicators of compromise.
+3.	Uses the threat and vulnerability intelligence system information.
+4.	Uses SOC tools, logs, and event correlation tools and logs.
+5.	Uses packet sniffers and traffic flow to analyze network communications data.
+6.	Filters the data to analyze indicators.
+7.	Seeks assistance from other IRT members.
+8.	Decides whether it is a security incident or a false positive.
+a.	If it is a false positive, the IH closes the security incident.
+b.	If it is a false positive for security, but an IT incident, they transfer the ticket to IT.
+4.	If it is a security incident, the IH needs to:
+a.	Prioritize the severity or risk level.
+b.	Handle timelines, resource allocation, escalation, and notification requirements.
+c.	Assign a category or name to the incident.
+d.	Bring in more team members and escalate per the priority level. 
+5.	Notification Actions Sample:
+Priority	Level	Threat category and threshold	Notification actions	Timeline
+Critical	1	•	Threat to life
+•	Threat to customer
+•	PII > # records	IC notifies the affected IMT and Privacy office, if applicable IMT notifies CMT	
+High	2	•	Threat to customer
+•	PII < # records
+•	Highly sensitive
+•	Legally Privileged Information	IC notifies the Privacy Office if applicable IC escalates to the affected IMT who notifies CMT. Depending on the scope and complexity of the incident the IC position may be reassigned to a member of the IMT. 	
+Medium	3	Threat to very sensitive information	IC escalates the incident to the affected IMT. The IC apprises the IMT and requests approval for incident response actions. 	
+Low	4	Threat to sensitive information	IC coordinates with the affected user and business stakeholder, e.g., Information/Asset owner. 	
+6.	Prioritization Sample:
+	Critical	High	Medium	Low
+Life safety and number of lives at risk				
+Data sensitivity classification (confidentiality)				
+Criticality level of impacted system (availability)				
+Reliability requirement level of impacted system (integrity)				
+Access to or exfiltration of regulated or contractually controlled data				
+Violation to federal or state law or contract				
+Root, system, network or database administration access (DBA)				
+Estimated incident recovery > Maximum Tolerable Downtime (MTD)				
+Level of the impacted user				
+Is system production or configuration-controlled library				
+Multiple machines, multiple subnets, multiple sites				
+Impact to brand/reputation and ranking level				
+7.	Prioritization Sample 2:
+Naming sample (an incident may carry multiple names)	
+Abuse of functionality	
+Abuse of authentication	
+Abuse of authentication and authorization	
+•	Data leakage
+•	Organization information and its classification level
+•	Customer contractually owned information and its classification level
+•	Personally identifiable information (data types and country/state residence of individual)	
+Injection (select OS, Directory, SQL)	
+Web attack (XSS, CSRF, Injection, Exfiltration)	
+Malware (select virus, worm, trojan horse, logic bomb, ransomware)	
+Reconnaissance	
+Resource depletion (DOS) (Indicate what resource)	
+Resource manipulation	
+Internal policy violation (misuse, etc)	
+Local administrative privilege	
+Privilege or elevated administration on (select server, DB, network appliance)	
+At third party (identify)	
+Multiple (select machines, network subnets, sites)	
+
+ 
+Explore the various Commercial and Open-source IR Tools
+TheHive
+TheHive is a 4-in-1 open-source and free security incident response platform. The platform makes it easy to collaborate between multiple SOC and CERT analysts. Cases and associated tasks can be created using a simple template engine automating tedious tasks through dynamic dashboards and allows analysts to import password protected ZIP archives containing malware or suspicious data without opening them. The platform also allows analysts to quickly triage and filter any alerts or even import MISP events to the platform. TheHive benefits the IRT, because its most intriguing capability lies within the fact that it is a malware information sharing platform and acting on investigations can be exported to IOCs or several MISP instances. Adding tactics, techniques, and procedures to a case essentially assists as a threat intelligence platform to understand who your possible adversary is and leads to a proper response all fueled by information sharing. 
+GRR Rapid Response 
+GRR is an incident response framework focused on remote live forensics. It consists of a python client that is installed on target systems, and python server infrastructure that can manage and talk to clients. GRR supports forensics and investigations in a fast and scalable manner to allow analysts to triage attacks and perform analysis remotely. GRR is beneficial to the IRT, because it is deployed on systems that one might want to investigate making it an indispensable process and procedure starting point for forensics. The most intriguing capability of the client is that it is built to run at scale so that analysts are capable of effectively collecting and processing data from large numbers of machines. Say someone wants you to scan over 100,000 machines to see if they are compromised. Well, this tool is capable of doing just that.
+SANS Investigative Forensic Toolkit (SIFT)
+The SIFT Workstation is a collection of free and open-source incident response and forensic tools designed to perform detailed digital forensic examinations in a variety of settings. The SIFT workstation accomplishes this, by helping incident responders identify and contain advanced threat groups, while providing robust capabilities for analyzing file systems, network evidence, memory images, and a whole lot more. This tool benefits the IRT in the fact that it not only identifies threat groups from a variety of data sources in supporting file systems, evidence images, incident response tools, and software, but also works to contain those same threat groups. The most intriguing capability of the tool is that it allows for the creation of a timeline for forensic analysis through a variety of methods such as checking the registry key last write time and filesystem time metadata, checking  registry hives, and checking the NTFS filesystem itself. 
+Volatility
+The Volatility Framework is a collection of open-sourced tools, implemented in python, for the extraction of digital artifacts from volatile memory (RAM) samples. The extraction techniques are performed completely independent of the system being investigated but offer visibility into the runtime state of the system. This framework is beneficial to the IRT because it supports Windows, Linux, and Mac OSX and ensures forensic analysis leaves no stone unturned by checking volatile memory. The most intriguing capability of the tool is its essential function in being able to read volatile memory. Most forensic analysis tools overlook this part, and this tool essentially covers that base as well. 
+Wazuh
+Wazuh is a security platform that provides unified XDR and SIEM protection for endpoints and cloud workloads. Wazuh is composed of a single universal agent and three central components: the Wazuh server, the Wazuh indexer, and the Wazuh dashboard and is open source. Wazuh benefits the IRT, because it assists in protecting endpoints for extended detection and response and security information and event management. Wazuh essentially unifies both to protect endpoints and cloud workloads and in an increasingly remote world this benefits the IRT. Using Wazuh to deploy cloud security solutions such as monitoring AWS, Microsoft Azure, GitHub, GCP services, and Office 365 are essential these days as insider threats grow and OSINT techniques get more and more clever is the most intriguing capability of the tool, since it essentially not only is an endpoint detection tool but can also be used to prevent and identify attacks at the information gathering stage. 
+Osquery
+Osquery is an operating system instrumentation framework for Windows, OS X, Linux, and FreeBSD. The tools within osquery make low-level operating system analytics and monitoring both performant and intuitive. Osquery essentially exposes an OS as a high-performance relational database, which allows you to write SQL queries to explore the OS data. This benefits the IRT, because osquery allows you to represent abstract concepts such as running processes, loaded kernel modules, open network connections, browser plugins, hardware events, or file hashes in SQL tables. What’s most intriguing about osquery is its main function in being able to abstract those concepts into SQL tables and ensure an analyst is able to search key identifiers in detecting anomalies, utilizing YARA scanning, process auditing, syslog consumption, and so much more. 
+MISP
+MISP is an open-source threat intelligence and sharing platform where you can share, store, correlate, and analyze threats in a sleek dashboard that offers an array of information looking at disinformation, ATT&CK framework, TTPS, TLP, GDPR, VERIS, document classification, and so much more. MISP is essentially a resource that is beneficial to the IRT, because it solely looks at threats and is the driving force behind this project. Storing and especially using information about threats and malware is designed to not be so difficult and is the reason this tool is so intriguing. It allows you too look at threats, drive threat intelligence, and visualize those threats and aggregate information in an ever-changing landscape.
+Zeek
+Zeek is an open-source network security monitoring tool and is of benefit to the IRT because it is a passive network traffic analyzer. Zeek is used as a network security monitor (NSM) to support investigations of suspicious or malicious activity. Zeek also supports performance measurement and troubleshooting outside of the security domain; therefore, it’s not only beneficial to the IRT, but also the Network Operations Center as well. At the network level Zeek comes with built-in functionality for a range of analysis and detection tasks, including extracting files from HTTP sessions, detecting malware by interfacing to external registries, reporting vulnerable versions of software seen on the network, identifying popular web applications, detecting SSH brute-forcing, validating SSL certificate chains, and so much more. 
+OwlH
+OwlH is essentially network IDS at scale-it allows analyzers to easily manage distributed IDS probes through dispersed traffic sources and assists security engineers to manage, analyze, and respond to network threats and anomalies using Open source network IDS suricata and Zeek. It’s beneficial to the IRT, because it centralizes rule management and network IDS nodes configuration management, software TAP to capture cloud and distributed traffic in cloud and hybrid dispersed environments, traffic forensics with Moloch, centralized visualization, and compliance mapping. The most intriguing capability that OwlH has is the fact that you can easily add Network IDS visibility to your Wazuh console, Wazuh agent for NIDS output transport, and Wazuh decoders/rules for Suricata and Zeek. 
+Autopsy
+Autopsy is an end-to-end open-source digital forensics platform capable of analyzing all types of mobile devices and digital media. Its plug-in architecture enables extensibility from community-developed or custom-built modules. Autopsy is beneficial to the IRT, because it allows for matrixed-in members to the IRT a glimpse into cybersecurity culture. Autopsy evolves to meet the needs of professionals in all types of departments who utilize mobile device management software. 
+References: 
+About. Autopsy. (2020, July 21). Retrieved May 15, 2022, from https://www.autopsy.com/about/ 
+About zeek. About Zeek - Book of Zeek (git/master). (2022, May 14). Retrieved May 15, 2022, from https://docs.zeek.org/en/master/about.html#what-is-zeek 
+Misp. (2022, April 20). MISP Open Source Threat Intelligence Platform & Open Standards for Threat Information Sharing. MISP Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing. Retrieved May 15, 2022, from https://www.misp-project.org/ 
+TheHive project. TheHive Project. (n.d.). Retrieved May 15, 2022, from https://thehive-project.org/ 
+V0.17.X. v0.17.x. (n.d.). Retrieved May 15, 2022, from https://www.owlh.net/ 
+Viviana Ross. SANS Institute. (2022, April 24). Retrieved May 15, 2022, from https://www.sans.org/tools/sift-workstation/ 
+Viviana Ross. SANS Digital Forensics and Incident Response Blog | Digital Forensic SIFTing: Registry and Filesystem Timeline Creation | SANS Institute. (2022, April 24). Retrieved May 15, 2022, from https://www.sans.org/blog/digital-forensic-sifting-registry-and-filesystem-timeline-creation/?msc=tool-sift 
+Volatilityfoundation. (n.d.). Volatilityfoundation/volatility: An advanced memory forensics framework. GitHub. Retrieved May 15, 2022, from https://github.com/volatilityfoundation/volatility 
+Wazuh. (n.d.). Getting started with Wazuh · Wazuh Documentation. · Wazuh documentation. Retrieved May 15, 2022, from https://documentation.wazuh.com/current/getting-started/index.html 
+Welcome to osquery. osquery. (n.d.). Retrieved May 15, 2022, from https://osquery.readthedocs.io/en/stable/ 
+What is GRR? What is GRR? - GRR documentation. (n.d.). Retrieved May 15, 2022, from https://grr-doc.readthedocs.io/en/latest/what-is-grr.html#grr-client-features 
+
+Containment
+1.	Containment:
+a.	Stems additional damage by stopping the source or the spread of attack.
+b.	Provides time for further analysis to develop and implement eradication and recovery strategies. 
+2.	Containment could be based on:
+a.	Reduction of damage and loss.
+b.	Impact to business operations, revenue, or service level.
+c.	Legal requirements for retaining and collecting incident-related evidence.
+3.	Containment Tactics:
+a.	Containment at the desktop:
+i.	Turn off wireless.
+ii.	Disconnect the network interface cable.
+b.	Containment on a mobile device:
+i.	Enable airplane mode.
+ii.	Turn off Bluetooth. 
+c.	Containment at the Network Segment:
+i.	Contain the spread logically.
+ii.	Physically air gap the network.
+d.	Containment at the server:
+i.	Employ containment strategies to stop the spread. 
+e.	Block the attacker’s entry with an emergency security patch. 
+f.	Block the malware’s entry through a vulnerability.
+g.	Block an attacker’s source IP address, accounts, or back doors through emergency change orders. 
+h.	Block exfiltration of data through emergency change orders by blocking the destination IP address.
+i.	Set the hacker’s destination IP address as null route/black hole route.
+4.	Reduce business and customer impact through better:
+a.	Protection
+b.	Detection
+c.	Response
+d.	Containment
+5.	Evidence Gathering:
+a.	Determine your eradication strategy-will you figure out the traces of the attack?
+b.	Determine your recovery strategy
+c.	Determine the root cause and propose remediation action-what underlying defect allowed this attack?
+d.	Forensic evidence gathering might be needed for investigations and legal proceedings.
+i.	Protect and preserve the digital evidence under a chain of custody.
+ii.	Ensure that the digital evidence is trustworthy.
+iii.	Acquire evidence through strict forensic tools and techniques.
+Eradication
+1.	While the containment step is short term (i.e., isolation), the eradication step focuses on a long-term solution. You not only want to entirely banish the attackers from your environment but also ensure that they’ll stay out. This step includes:
+a.	Appropriately addressing the root cause of the initial compromise. This can only happen if you’ve investigated the incident well and know precisely how attackers gained the initial unauthorized access. 
+b.	Some examples of eradication measures can involve patching the devices, removing malware, modifying device configurations, disabling or resetting the compromised accounts. 
+c.	Implementing additional monitoring to ensure that affected systems don’t re-exhibit compromised behavior. 
+d.	Being meticulous and properly communicating and coordinating across teams is crucial at this step. If any trace of the compromise or malware is left intact, the attackers may still have access to the environment.
+2.	Eradication Phase:
+a.	Threat removal and restoration:
+i.	Traces of malware and tampered files and software.
+ii.	Tools of a rootkit.
+iii.	Unauthorized accounts or unauthorized privilege to authorized accounts.
+iv.	Backdoors and remote access Trojans.
+v.	Exploited vulnerabilities. 
+vi.	Compromised systems or application files.
+vii.	Compromised utilities or dynamic link libraries (DLLs).
+viii.	Compromised data files. 
+b.	Recommend:
+i.	Changing password for the affected systems and users.
+ii.	Running additional virus and vulnerability scans to discover other issues.
+iii.	Obtaining approval to:
+1.	Enhance the secure baseline patch level.
+2.	Disable unused services. 
+3.	Increase the patch level of retained services.
+4.	Remove unused software.
+Recovery
+1.	At this step, the IRT needs to validate that all affected systems are no longer compromised. When that’s established, begin the process to return the systems and the business to normal operations. This step includes:
+a.	Confirming that systems restore from a clean or previously known good state. If not careful, you may inadvertently reintroduce infection to the environment. 
+b.	Continuing to monitor the environment for any suspicious or abnormal behavior.
+c.	Maintaining thorough documentation as you recover systems, including which systems are restored and from what source.
+2.	Recovery:
+a.	Objective is to establish control over accounts, systems, and data and return to normal operations with full integrity. 
+b.	Regain integrity by reimaging systems or rebuilding them from scratch.
+c.	Restore prior data and test, verify, and monitor operations for abnormal behavior. 
+d.	Coordinate the incident response with activities related to business continuity and disaster recovery. 
+3.	Integrity is the key to trustworthy information systems and the ability to have confidence in the data and its processing. 
+4.	Monitoring SOC file integrity can produce list of compromised files and incident timeline produces last known good points of integrity. 
+5.	Incident Analysis:
+a.	Coordinate with the IT operations’ data storage team to retrieve:
+i.	System images
+ii.	Application source code
+iii.	Application executables
+iv.	Configurations
+v.	Data files and transaction journal logs
+6.	Incident Response:
+a.	Organizations have critical information systems and services with high availability requirements.
+i.	Recovery must occur within agreed-upon timelines to minimize losses for all stakeholders. 
+ii.	The agreed-upon time to be back online after an outage is known as Recovery Time Objective (RTO).
+7.	The Identification Phase:
+a.	Role of Incident Response Team:
+i.	Determine which systems and services have been impacted whether they are critical.
+ii.	Pay careful attention to the established timelines.
+iii.	Report progress to the Incident Management Team (IMT).
+iv.	Communicate with the IMT if the timeline will be exceeded. 
+v.	Prepare to transfer operations if recovery within the RTO is in jeopardy.
+b.	Role of Incident Management Team:
+i.	Monitor business impacts and monitor recovery time estimate for the disrupted critical information systems and services against their RTO. 
+ii.	If necessary, work with the appropriate officials to declare a disaster and transfer operations to the disaster recovery plan team and site. 
+IR Scenario Plan
+Insider Abuse Scenario Plan
+Preparations
+Objective: Establish contacts, define procedures, and gather intel to save time during the incident handling phase. 
+Contacts:
+•	Public relations, human resources, and legal department. 
+•	Have a centralized logging facility.
+•	Global authorization and clearance process must take especially good care of removal of privileges on former employees. 
+•	Provide strong authentication procedures accordingly to the risk of the business application. 
+Identification
+Objective: Detect incidents, determine the scope, and involve the appropriate parties. Insider abuses are difficult to detect and there are no 100% success tips.
+Technical Identification:
+•	Alerts from SIEM or correlation tool tools: Malicious behavior can be detected with the correlation of several abnormal events.
+•	Alerts from an IDS/IPS detecting an intrusion: In case the insider tried to hack the system, an intrusion detection/intrusion prevention system can trigger an alert.
+Human Identification:
+•	Management: The manager of the insider might be able to notice suspicious behavior. 
+•	Governance, risk, compliance (GRC): These teams have their own systems to detect operational anomalies and they can also trigger alerts if something abnormal is detected.
+•	Colleagues: Insider’s colleagues are maybe the most valuable notification channel, because they should already have good cybersecurity culture instilled in them; they can easily guess what is happening within the organization.
+•	Managed Service Providers (MSPs): MSPs can also have their own detection capabilities. If operations have been falsified internally, these external entities can bring enlightenment. 
+Containment
+Objective: Mitigate the attack’s effects on the targeted resource. Don’t do anything, without a written request from the concerned CISO/incident management team (IMT). Based on your legal team advisory, a written permission from the concerned management personnel is required. 
+•	Involve people: Different departments should be informed about the abuse so they can assist within their role. This includes HR, legal management, PR management, and business management of the suspected insider. 
+•	Meeting: An HR manager should meet the suspected insider to explain to him/her what has been found and what will happen. Support is required from legal, technical, and management peoples.
+•	Privileges lowering: If the suspected insider is allowed to stay at work until the end of the investigation, provide him/her a computer with minimum authorizations.
+•	Authorization freeze: Suspend access and authorizations of the suspected insider. This must include application clearance. This can also include system account, keys, building facility badge, biometrics, etc. 
+•	Remote access: Suspend remote access capabilities, i.e.: smartphones, VPN accounts, tokens, etc. 
+•	Seizure: Seize all the professional computing devices of the suspected insider.
+Case 1: Abnormal activity
+	If nothing malicious or fraudulent is confirmed yet, two investigations should start right away: 
+•	Forensics investigation on the computing devices of the suspected insider.
+•	Log investigation on different audit trails components.
+Case 2: Malicious/Fraudulent activity
+	If malicious or fraudulent behavior is confirmed, file a complaint against the suspected insider. In this case, do not take any further technical actions. Provide the legal team and law enforcement all requested evidence and be ready to assist on demand. If collateral damages can result from the abuse, be sure to contain the incident impacts before making it public.
+Remediation
+Objective: Take action to eradicate the threat and devise a plan to avoid future incidents. Remediation of insider abuse is pretty limited; however, the following actions can be considered depending on the case:
+•	Take disciplinary action against the malicious employee (or terminate the contract) and remove all of his/her credentials.
+•	Delete all fictitious or fraudulent operations made by the insider.
+•	Review all programs or scripts made by the insider and remove all unnecessary codes. 
+Recovery
+Objective: Restore the system to normal operations. If the incident has not been made public yet, be sure to warn all the impacted stakeholders (customers, concerned partners, etc.) and required authorities. This communication must be made by the IMT. Eventually warn your employees or some local teams about the issue to raise awareness and increase security rules. 
+Aftermath
+Objective: Document the incident’s details, discuss lessons learned, and adjust plans and defenses. 
+Report: An incident report should be written and made available to all of the actors involved. The following themes should be described: 
+•	Initial detection
+•	Actions and timelines
+•	What went right
+•	What went wrong
+•	Incident impact
+Capitalize: Some improvement might be especially valuable considering insider abuse:
+•	Authorization process improvements
+•	Controls improvements in the organization
+•	Awareness on fraud and malicious activity
+Post-incident Activity (Lessons Learned)
+1.	Incident Commander:
+a.	Conducts lessons-learned debriefings to discover:
+i.	What went well.
+ii.	What obstacles were encountered. 
+b.	Recommends improvements that include:
+i.	Modifications to policy, procedures, and training. 
+ii.	Strengthen technical security controls. 
+iii.	Additional precursors and indicators to strengthen detection capabilities. 
+iv.	Additional incident response tools. 
+c.	Updates the knowledge database as appropriate.
+d.	Writes an After-Action Report (AAR) to summarize:
+i.	Incident scope, details, and timeline.
+ii.	Actions taken
+iii.	Business, operational, and customer impacts.
+iv.	Documentation of hours and expenses. 
+v.	Improvement recommendations.
+vi.	Root-cause analysis and remediation project recommendations. 
+e.	Provides input to meet third-party reporting requirements, E.g., PCI report. 
+f.	Closes the incident.
+2.	The collected incident data: 
+a.	Improves risk assessment data.
+b.	Justifies additional funding for incident response.
+c.	Justifies additional risk-mitigation controls. 
+d.	Justifies remediation projects.
+e.	Reports on key attributes regarding the incident response process, often known as “metrics”. 
+3.	Metric Examples:
+a.	Number of incidents handled as per priority level.
+b.	Time taken per incident as per priority level.
+c.	Time taken to detect an incident as per priority level. 
+d.	Time between incident initiation and damage caused.
+e.	Number of incidents recovered within the Recovery Time Objective (RTO).
+f.	Number of incidents that exceeded the RTO.
+g.	Number of incidents that triggered the Disaster Recovery Declaration.
+4.	Post-Incident Evidence Retention:
+a.	An organization’s record-retention policy may include keeping:
+i.	Incident documents, analysis, and the AAR.
+ii.	Forensic evidence. 
+IR Exercises and Drills
+1.	Are there any gaps or areas of confusion regarding the existing process or incident playbooks?
+2.	How well do the IRT members understand their roles and responsibilities?
+3.	How skilled are the teams on the current tools and technologies?
+4.	Are there gaps in the current technology portfolio, or are there better, more efficient options available?
+5.	Preparation for Incident Response Capability:
+a.	Verify that the current IR capability meets the IR requirements.
+b.	Validate that the IR is suitable for the business and its stakeholders.
+c.	Allow teams to rehearse and enhance their readiness. 
+d.	Exercises and drills including:
+i.	Send IR plans, policies, standards, and playbooks to stakeholders and performers. 
+ii.	Conduct a desk check.
+iii.	Conduct a tabletop exercise. 
+iv.	Conduct simulations with realistic scenarios. 
+v.	Prepare a testbed environment. 
+e.	Host integrated exercises across multiple team members and teams.
+i.	Integrated exercise with outsourced IR and IT teams.
+ii.	Communicate and coordinate across various providers.
+f.	Identify opportunities for improvement:
+i.	Correcting gaps.
+ii.	Correcting inefficiencies.
+iii.	Confirming assumptions.
+Investigations
+1.	Digital Forensics:
+a.	A branch of Forensic sciences, which according to NIST, is “the use of scientific methods or expertise to investigate crimes or examine evidence that is admissible in a court of law.”
+b.	In summary, DF is the process of preservation, identification, extraction, and documentation of computer-related evidence that is admissible in a court of law.
+c.	The most common types of DF investigations include Disk Forensics, Network Forensics, Wireless Forensics, Memory Forensics, and Mobile Devices Forensics.
+d.	Like IR, the DF process has several steps: Identification, Preservation, Analysis, Documentation, and Presentation.
+2.	eDiscovery:
+a.	In litigation, the term discovery refers to when the disputing parties share relevant information about the case.
+b.	eDiscovery is short for electronic discovery.
+c.	Typical eDiscovery investigations include emails, documents, presentations, databases, voicemail, audio and video files, social media, and websites.
+d.	The eDiscovery process consists of Information Governance, Identification, Preservation, Collection, Processing, Review, Analysis, Production, and Presentation.
+3.	Forensic Investigations:
+a.	Forensic investigations involve great expense and hours of dedicated work by a forensic investigator.
+b.	Be clear to the IRT when an investigation is mandatory. 
+c.	Have a decision point for an investigation of a forensic nature or opting out of that investigation.
+d.	Call out procedures for roles, responsibilities, and actions to be taken at that point.
+4.	The IRT has to:
+a.	Protect the evidence.
+b.	Prevent contamination.
+c.	Await a specially trained certified digital forensic investigator. 
+5.	Evidence Lifecycle:
+a.	Data collection:
+i.	Identify evidence and protect its integrity through a chain of custody.
+ii.	Use a diode/write blocker to protect evidence against accidental changes.
+iii.	Use a forensic acquisition toolkit for bit-stream evidence imaging. 
+b.	Examine data from the images for relevancy.
+c.	Analyze the data to draw conclusions.
+d.	Write up a report. 
+6.	eDiscovery Investigations:
+a.	eDiscovery investigations are often conducted in response to litigation. 
+b.	Analysts will have a special set of tools to identify, collect, and produce the electronically stored information in a manner that is directed by that search warrant or the subpoena.
+7.	Insurance is the classic way to transfer risk.
+8.	According to the Ponemon Institute’s 2020 AON global cyber risk transfer comparison report:
+a.	Only an average of 15% of information assets are covered by insurance.
+9.	Insurance Investigations:
+a.	Share and transfer security risk with an insurance company. 
+b.	Provide the internal risk management departments with IR documentation and after-action report.
+c.	The insurance company might send its own incident investigator.
+d.	The IRT might be interviewed as part of the insurance company’s investigation. 
+Describe the connections between IR and criminal digital forensics and data recovery
+The inside story of the biggest hack in history outlines the Saudi Aramco hack from the perspective of Chris Kubecka, a former security advisor to Saudi Aramco after the hack. Chris states the hack occurred sometime in mid-2012 and it occurred, because an information technology technician opened a bad link in a scam email. Part of the company’s plan in response to this attack was to unplug cables out of the backs of computer servers at data centers all over the world and every office was physically unplugged from the internet to prevent the virus from spreading further. Part of their plan also involved managing supplies, shipping, contracts with governments and business partners had to be done on paper. Kubecka, living in the Netherlands, was hired as an independent consultant to help secure all of Saudi Aramco’s satellite offices in Africa, Europe, and the Middle East along with “a massive army of IT people”. As part of the recovery phase, in one fell swoop, Saudi Aramco bought over 50,000 hard drives and paid higher prices to cut in line ahead of every computer company in the world. Five months later, with a newly secured computer network and an expanded cybersecurity team (partly lessons learned), Saudi Aramco brought its system back online. Given this brief overview of the attack and the role of incident response, digital forensics, and disaster recovery plans, it’s clear that Saudi Aramco coupled together a haphazard plan to bring its system back online and introduce experts around the world to help in the matter. From Chris Kubecka’s perspective, it seems as if Saudi Aramco’s plan was to throw a bunch of money at the situation and hope for the best; it didn’t seem as if he had anything to say about how these different roles/plans complimented each other; therefore, the plan that played the most dominant role was to actually just throw a bunch of money at IT peoples and hope for the best. It’s clear that incident responders or the computer technicians on hand with Saudi Aramco were developed enough to understand that all machines needed to be isolated from the internet to ensure the virus doesn’t get out of hand and infect the entire company network; however, there was no mention of digital forensics, and a disaster recovery plan aside from hiring an army of IT peoples to assist with the breach. However, in and of itself the hiring of all of these peoples meant they had at minimum a contact list at the ready to assist in digital forensics and formulate a disaster recovery plan. However, if there was an on-call digital forensic team to assist the computer technicians, alongside a robust disaster recovery plan could have brought down the recovery time objective (RTO). Bringing affected production systems back online is no easy feat after a virus infects a network, because it entails the need for digital forensics to ensure re-imaging is safe and ensures an understanding of how the virus propagates through the network. To prevent additional attacks of this nature it’s necessary to prepare first and once an incident does arise, then testing, verifying, and monitoring affected systems are necessary to ensure they are back to normal productivity levels. 
+References: 
+Pagliery, J. (2015, August 5). The inside story of the biggest hack in history. CNNMoney. Retrieved May 17, 2022, from https://money.cnn.com/2015/08/05/technology/aramco-hack/index.html 
+Analyze and compare the digital forensics lifecycle concepts
+In order for digital evidence to be admissible in a court of law, it must be handled in a very specific way so that there is no opportunity for bad actors involved to tamper with the evidence. The steps include Identification, preservation, analysis, documentation, and presentation. Identification involves first finding the evidence and noting where it is stored. Preservation involves isolating, securing, and preserving the data; this includes preventing people from possibly tampering with the evidence. Analysis reconstructs fragments of data and draw conclusions based on the evidence found. Documentation involves creating a record of all the data to recreate the crime scene and also establish a timeline of events. Finally, presentation summarizes and draws a conclusion based on the evidence to tie evidence to the actors involved (How Well do you Know Digital Forensics?). The NIST and SANS incident response lifecycle can also be comparable to the steps involved in digital forensics. First the NIST IR lifecycle begins with preparation, which covers the work an organization does to get ready for incident response, including establishing a toolkit, resources, and training the team and includes work done to prevent incidents from happening in the first place. Phase 2 is detection and analysis, which involves detecting and assessing incidents. Phase 3 involves 3 different steps: containment, eradication, and recovery; this phase focuses on keeping the incident impact as small as possible and mitigating service disruption. Phase 4 is post-event activity and involves learning and improving from said incident and the goal is to essentially limit the chances of the incident happening again and to identify ways of improving future IR activity. The SANS lifecycle is very similar to the NIST IR plan and again involves preparation, identification, containment, eradication, recovery, and lessons learned. Essentially the two IR lifecycles are similar only in that the steps are either merely steps or phases involving many different steps; such is the case with phase 3 in the NIST IR lifecycle, wherein, containment, eradication, and recovery are bundled into one phase and the SANS lifecycle distributes these into their own steps with their own objectives. The Digital Forensics steps are similar in that they incorporate both the steps that also involve phases within those steps. Phase 1 of digital forensics involves first response and is necessary to the digital forensics’ investigator, because it establishes the baseline from which they achieve the first step of identification. What happened, who found it, and what are the systems that are involved? Next search and seizure lie under the preservation step . Collecting evidence, securing the evidence, data acquisition, data analysis, and evidence assessment are their own phases, but are still a part of preservation and analysis. The NIST IR lifecycle is also similar in this manner in that detection and analysis, containment, eradication, and recovery phases are under the same steps. SANS IR lifecycle is also in the same boat because those steps are more defined and is comparable in the fact that they go more in depth just like the digital forensics’ lifecycle does when incorporating the phases into their digital forensics’ steps. It’s no wonder that with more prevalent use of cloud technology and growing storage sizes that the role of digital forensics is one that is wrought with challenges. Cloud technology for example creates new opportunities for criminal activities and new challenges for the digital forensics investigator by muddling evidence acquisition and research has suggested a clear segregation of duties is recommended in collecting that evidence (Meyer, 2). Second, big data is an issue that existing tools and infrastructures in digital forensics cannot meet the expected response time when investigating on a big dataset, which essentially means that the amount of digital information is growing beyond the capacity of current techniques and procedures (Sjöstrand. 5). These challenges are ones that are being improved upon everyday and it seems a new tool is brought to light in order to bridge that gap that increases the amount of data and everyday new infrastructure is built to handle that data to meet RTO. 
+References: 
+Atlassian. (n.d.). Get to know the incident response lifecycle. Atlassian. Retrieved May 17, 2022, from https://www.atlassian.com/incident-management/incident-response/lifecycle#:~:text=The%20NIST%20incident%20response%20lifecycle%20breaks%20incident%20response%20down%20into,%3B%20and%20Post%2DEvent%20Activity
+Digital Forensics. EC. (2021, September 8). Retrieved May 17, 2022, from https://www.eccouncil.org/what-is-digital-forensics/#phase-i---first-response 
+Incident response sans: The 6 steps in depth. Cynet XDR | Autonomous Breach Protection. (n.d.). Retrieved May 17, 2022, from https://www.cynet.com/incident-response/incident-response-sans-the-6-steps-in-depth/ 
+Meyer, G., & Stander, A. (2015). Cloud computing: The digital forensics challenge. Proceedings of Informing Science & IT Education Conference (InSITE) 2015, 285-299. Retrieved from http://Proceedings.InformingScience.org/InSITE2015/InSITE15p285-299Meyer1562.pdf
+Sjöstrand, M., & Kävrestad, J. (2020, June 29). Guiding principles of transformative education for ... - diva-portal.org. Retrieved May 18, 2022, from https://www.diva-portal.org/smash/get/diva2:1368940/FULLTEXT01.pdf 
+Roles and Responsibilities
+1.	IR Manager or Director:
+a.	Creates security incident response plans, policies, procedures, and training exercises. 
+b.	Understands the information systems with respect to boundaries, trust relationships, insource systems, outsource systems and services, and the entities. 
+c.	Supports organizational resiliency through readiness to resist, respond, and recover from attacks. 
+d.	Organizes exercises for the Incident Response Team (IRT), Incident Management Team (IMT), Crisis Management Team (CMT), and vendors. 
+e.	Monitors and uplifts the IRT morale. 
+f.	Considers contractors and outsourcing some activities. 
+g.	Seeks continual improvement of capabilities. 
+2.	IR Shift Supervisor: 
+a.	Performs shift workload planning.
+b.	Schedules staff for 24x7 operation.
+c.	Trains the team members. 
+d.	Can step into any IH role.
+e.	Develops and improves procedures. 
+3.	Tier 1 IH: 
+a.	Receives and investigates notifications of potential incidents. 
+b.	Performs triage to rule out a false-positive incident and ensures that a genuine security incident is occurring. 
+c.	Reviews and determines its relevance, priority, and naming convention. 
+4.	Tier 2 IH:
+a.	Evaluates security incidents identified by Tier 1 IH.
+b.	Uses threat intelligence such as updated rules and indicators of compromise (IOC). 
+c.	Analyzes running processes and configurations of the affected IT systems. 
+d.	Executes in-depth threat analysis to identify attack source, type, and scope.
+e.	Creates strategies for the incident response of containment, eradication, and recovery. 
+f.	Implements responses at the direction of a tier 3 or Incident Commander. 
+5.	Tier 3 IH:
+a.	Is more experienced than a tier 2 analyst.
+b.	Deals with critical security incidents. 
+c.	Reviews alerts, threat intelligence, and security data. 
+d.	Identifies previously unknown security gaps and vulnerabilities. 
+6.	Incident Handlers’ Skills:
+Versatile	Handles pressure
+Persistent	Ready to work various shifts
+Analytical	SOC experience
+Disciplined	Knowledge of SOC and IR Tools
+Documenter	Knowledge of threats, vulnerabilities, and indicators of compromise
+Problem solver	Knowledge of applications, databases, OS, and networks
+Communicator	Scripting skills
+Solo worker and a team player	Host-based forensics
+Professional	Investigative skills
+
+ 
+Bibliography
+“Alan Paller.” SANS. n.d. https://www.sans.org/profiles/alan-paller/.
+Cimpanu, Catalin. “Former Cisco Engineer Sentenced to Prison for Deleting 16k Webex Accounts.” ZDNet. 11 Dec. 2020. https://www.zdnet.com/article/former-cisco-engineer-sentenced-to-prison-for-deleting-16k-webex-accounts/.
+“Data Breaches.” Privacy Rights Clearninghouse. n.d. https://privacyrights.org/data-breaches.
+Eaton, Collin and Volz, Dustin. “Colonial Pipeline CEO Tells Why He Paid Hackers a $4.4 Million Ransom.”The Wall Street Journal. 19 May. 2021. https://www.wsj.com/articles/colonial-pipeline-ceo-tells-why-he-paid-hackers-a-4-4-million-ransom-11621435636.
+Hern, Alex. “NHS Could Have Avoided WannaCry Hack with 'Basic IT Security', Says Report.” The Guardian. 26 Oct. 2017. https://www.theguardian.com/technology/2017/oct/27/nhs-could-have-avoided-wannacry-hack-basic-it-security-national-audit-office.
+“IRM/EN.” GitHub. 1 Mar. 2016. https://github.com/certsocietegenerale/IRM/tree/master/EN.
+Pagliery, Jose. “The Inside Story of the Biggest Hack in History.” ICNN Business. 5 Aug. 2015. https://money.cnn.com/2015/08/05/technology/aramco-hack/index.html.
+Sheridan, Kelly. “77% of Businesses Lack Proper Incident Response Plans.” DarkReading. 14 Mar. 2018. https://www.darkreading.com/attacks-breaches/77-of-businesses-lack-proper-incident-response-plans.
+VanDerWerff, Emily and Lee, Timothy B. “The 2014 Sony Hacks, Explained.” Vox. 3 June. 2015. https://www.vox.com/2015/1/20/18089084/sony-hack-north-korea.
+
+
