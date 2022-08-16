@@ -1,0 +1,382 @@
+Module 23
+Module Introduction
+1.	IoT and OT systems and their underlying security concerns have an indelible and widespread impact on both technologies, because of how sophisticated attack frameworks, such as Mirai, can have a profound impact on the targeted systems and affect many of the IoT platforms that you have around your own house. These attack techniques, such as an event targeting the electric power grid in Ukraine, can be used against OT systems and infrastructure. Although, the highlighted attacks are very different in terms of technology, techniques, and impact, each respective case study illustrates their profound and resounding effects that can impact us directly or even deny us critical services. 
+What is IoT and OT?
+1.	Three key properties of IoT can be referred to as the following: 
+a.	Physical: everyday devices used by people and organizations to manage their lives and businesses.
+b.	Connected: Networks connecting devices to each other and to shared data and processing services, and their users to one another. 
+c.	Smart: devices, services, and networks sensing, sharing, and analyzing data and information to enable autonomous or semi-autonomous action. 
+2.	Although OT systems can be physical, connected, or even smart in some cases, they often do not meet these criteria. Furthermore, while the IoT is often associated with directly supporting human activities or facilitating productivity functions at home or work, OT will often be leveraged for larger business or industrial concerns. 
+3.	Several key elements of OT systems can be summarized as:
+a.	Real-time control of industrial physical processes
+b.	Distinct technologies [e.g., sensors, programmed logic controllers, actuators, supervisory control, and data acquisition (SCADA), etc.]
+c.	Systems that are often air-gapped and off-network.
+d.	Systems that are usually connected to conventional information technology (IT).
+4.	The IoT can include an array of devices or systems that are connected to the internet. Many of these may be everyday household items or integrated workplace devices. The Institute of Electrical and Electronics Engineers (IEEE) defines the IoT as “a self-configuring and adaptive system consisting of networks of sensors and smart objects whose purpose is to interconnect ‘all’ things, including everyday and industrial objects, in such a way as to make them intelligent, programmable, and more capable of interacting with humans” (n.d.).
+a.	Alternatively, the Internet Engineering Task Force (IETF) labels the IoT as “the networked interconnection of everyday objects. An ‘IoT’ means a world-wide network of interconnected objects, uniquely addressable, based on standard communication protocols” (2012). 
+b.	According to the National Institute of Standards and Technology (NIST), OT is defined as “Programmable systems or devices that interact with the physical environment (or manage devices that interact with the physical environment). These systems/devices detect or cause a direct change through the monitoring and/or control of devices, processes, and events. Examples include industrial control systems, building management systems, fire control systems, and physical access control mechanisms” (n.d.). 
+c.	It’s easy to say there are general similarities as well as stark differences between IoT and OT systems. For instance, both are often engineered to support specific tasks, functions, or computing sequences, and both can come in various forms and applications. However, it’s helpful to differentiate between the two since IoT will generally have a consumer-oriented approach to usability while OT is primarily focused on business or industrial applications (e.g., air-gapped manufacturing or production systems). 
+5.	What is the Internet of Things (IoT)? The general shared consensus is:
+a.	Devices of all kinds are connected to the internet. 
+i.	Home security monitors, appliances, thermostats, industrial control systems, home routers, smart refrigerators, smart power meters, cars, and so on. 
+b.	Not a separate internet; it’s the idea of connecting everything to the internet. 
+c.	They are typically high-volume devices produced at very low margins without a lot of thought about their cybersecurity. 
+6.	Different Definitions of IoT:
+a.	International Electrical Engineering Society (IEEE):
+i.	A self-configuring and adaptive system consisting of networks of sensors and smart objects, whose purpose is to interconnect all things, including everyday and industrial objects, in such a way as to make them intelligent, programmable, and more capable of interacting with humans.
+b.	Internet Engineering Taskforce (IETF):
+i.	The IoT refers to network interconnection of everyday objects. An IoT means a worldwide network of interconnected objects uniquely addressable based on standard communication protocols. 
+c.	Industrial IoT:
+i.	General Electric (GE):
+1.	New ways of connecting the world’s machines and networks with advanced sensors, controls, and software applications. 
+2.	Harnessing the power of physics-based analytics, predictive algorithms, automation, and deep domain expertise in material science, electrical engineering, and other key disciplines to understand how machines in larger systems operate. 
+3.	Connecting people to support more intelligent design, operations, and maintenance, as well as higher quality service and safety. 
+d.	Cyber-Physical Systems:
+i.	National Institute of Standards and Technology (NIST) definition:
+1.	Smart systems that encompass computational (i.e., hardware and software) and physical components, seamlessly integrated and closely interacting to sense the changing state of the real world. 
+a.	These systems involve a high degree of complexity at numerous spatial and temporal scales and highly networked communication, integrating computational and physical components. 
+7.	Properties of IoT:
+a.	Physical: IoT includes everyday objects used by people in organizations to manage their lives and businesses.
+b.	Connected: Networks connect devices to each other and to shared data and proceeding services. They also connect users to one another. 
+c.	Smart: Devices, services, and networks continually sense, share, and analyze data to enable autonomous or semi-autonomous action. 
+8.	Vision of IoT:
+ 
+9.	Motivations and Security Interests:
+a.	Motivations:
+i.	Make manufacturing more efficient.
+ii.	Manage supply lines better.
+iii.	Develop new marketplaces for new devices that never existed before. 
+b.	Risks:
+i.	Devices could be compromised and lead to disastrous outcomes. 
+10.	What is OT?
+a.	Real-time control of industrial physical processes. 
+i.	Production, chemical plants, and manufacturing plants. 
+b.	Distinct technology sector:
+i.	Sensors
+ii.	Programmed logic controllers
+iii.	Actuators
+iv.	Supervisory control and data acquisition (SCADA):
+1.	Collects information from individual processes that are being controlled, puts it together, and manages the global aspects of a production process. 
+v.	Human machine interface (HMI):
+1.	Operator’s console at this level of supervisory control. 
+c.	Considered air gapped. 
+d.	Connected to the conventional IT sector:
+i.	Billing 
+ii.	Remote access
+iii.	Analytics
+11.	Typical OT System:
+ 
+12.	Simple Industrial Control System:
+ 
+Scope of Technology
+1.	Understanding IoT and OT are just the beginning, next is examining the scope of these relevant technologies as it currently stands. According to Cisco, the IoT market is expected to eclipse $4.6 trillion in business over the next ten years in the public sector alone. That is on top of $14.4 trillion in additional spending in the private sector (Postscapes, 2019). Analysts also estimate that the global OT market will be worth $18.13 billion by 2023 (Business Wire, 2021). Collectively, these trends show no signs of abating. As you can clearly see, the market for IoT and OT systems will continue to grow exponentially due to strong consumer IoT and business demand (OT). 
+2.	Scope of the Technology:
+a.	Market size: 4.6 trillion business in public sector alone.
+b.	Market growth: 25% growth per year over the last several years.
+c.	Growth in different sectors: Manufacturing, logistics, finance, and planning.
+d.	Market drivers: New markets, improved service, and logistics. 
+The Scope of the Problem
+1.	Every year, hundreds of new smart technologies and gadgets are introduced to the market, all designed to make your lives more connected, convenient, and efficient. However, as soon as you introduce these technologies into your lives, they become indispensable, and you can’t imagine your life without them. It seems like no one is resistant to this growing dependence on technology and gadgets – not even the president of the United States.
+a.	Soon after moving to Washington, D.C. in 2021, the 46th president of the United States, Joe Biden, wanted his Peloton bike to also move to the White House. Peloton is a popular internet-connected smart stationary bicycle that allows you to take live online fitness classes and become part of their vibrant social network. And as is true for any piece of technology, let alone an internet-connected one, it is bound to introduce security vulnerabilities to the environment, increasing the overall attack surface. Fortunately, the president has the NSA that can customize gadgets, remove unnecessary features, and reduce their risk. This wasn’t the first time the NSA has done such device security hardening. They applied similar security measures to President Barack Obama’s BlackBerry, iPad, and iPhone that could not take pictures, send texts, or play music (Schneier, 2021). Unfortunately, unlike the president most people do not have the resources or the awareness to apply even the basic security measures to the devices they use regularly. As a result, their devices, along with their data and privacy, often get compromised without their knowledge.
+2.	It comes as no surprise that consumers are now more connected to the internet than ever. According to a study published by McKinsey & Company, approximately 127 new devices connect to the internet every second. Furthermore, the IoT is estimated to have an annual economic impact of the $3.9 trillion to $11.1 trillion by 2025 (Mark Patel et al., 2017). Unfortunately, attacks on IoT devices are also accelerating at an alarming rate. This increase is mainly due to the poor inherent security of most IoT devices and the lack of security awareness in most consumers. In fact, in 2019, a security organization, F-Secure, measured a threefold increase in attack traffic involving IoT devices (Michael, 2019). As our reliance on IoT devices grows and continues to ingrain in our daily lives, hackers continue to shift their focus to them, likely resulting in more disruptive and dangerous attacks. 
+3.	Unique Examples of IoT Attacks:
+a.	Smart refrigerator produced by Samsung:
+i.	Had a bug that allowed attackers to steal the owners’ Gmail logins.
+ii.	Having passwords stolen has a major consequence.
+b.	Internet-connected Barbie doll:
+c.	Sniper rifle connected through ethernet:
+i.	Hackers penetrated the device and changed the target of the rifle. 
+4.	OT and IoT Attacks:
+a.	Saudi Arabian oil field control system:
+i.	Failed at the last moment.
+ii.	Had it succeeded it would have destroyed the production capability of one of the world’s major oil fields.
+b.	WannaCry:
+i.	Was a ransomware attack that penetrated many hospitals in Great Britain and many other systems.
+1.	Ransomware is an attack where the attacker takes over a system, encrypts the files, and demands a ransom for the encryption key. 
+ii.	Prevented hospitals from accessing their data, so they had to work manually.
+iii.	Impeded the quality of the service delivered to the clients.
+c.	Aurora demonstration, Idaho Falls National Lab:
+i.	Had a diesel generator connected to the internet through a firewall.
+ii.	Demonstrated that a red team could penetrate the firewall take control of the diesel generator and destroy it by computer control.
+d.	Stuxnet:
+i.	Was an attack on the Iranian centrifuges at Natanz. 
+ii.	Allegedly conducted by US and Israeli intelligence. 
+iii.	Was a worm that propagated across the network, eventually penetrated the systems where the software controlling the centrifuges was developed and issued incorrect commands. 
+iv.	Led to the destruction of several centrifuges. 
+e.	Colonial Pipeline:
+i.	Was a ransomware attack that allowed the attackers to penetrate the IT systems of Colonial Pipeline. 
+ii.	Led Colonial to shut down the pipeline for a week.
+iii.	Caused oil production and delivery on the East Coast of the United States to be interrupted for up to a week. 
+iv.	Led to shutdowns of gas stations and panic buying. 
+IoT Experiences
+IoT has transformed the way we work and has definitely impacted my personal experience in a major way. Every time I interact with an IoT device I wonder if this is going to be the moment a session cookie is going to be stolen and allows an attacker a foothold into either my workplace or my home network. I generally keep IoT devices segmented onto their own virtual local area network tucked away past a PFSense Firewall I configured myself and in those regards hardening the security of my IoT devices is almost a disadvantage when it comes to the level of effort and time it takes to keep these devices up to date and to ensure they are working properly as a result. I couldn’t tell you the number of times my home security system went down, because of my firewall and it typically takes a restart or in some cases to wipe the slate clean and reinstall. However, it’s true that having IoT devices to monitor the security of your own home is a benefit not only to home insurance, but also gives me peace of mind when I am away from home, and I want to check on things. Overall, IoT is of benefit to cybersecurity professionals, because it teaches us how to harden our devices and secure them ourselves and can nevertheless, be a good idea to add as a project that you’ve completed on a resume showcasing your work and knowledge when it comes network securitization. However, it’s clear that with advancements in IoT, so must we advance in protecting these devices from attackers.
+Problems with the IoT
+“Things that were once the plot for a science fiction movie, such as household appliances being hacked and turned against humanity, now became a reality. IoT hacking can be extremely effective, producing DDoS attacks that can cripple our infrastructure, systems, and way of life.” – Daniel Markuson, digital privacy expert at NordVPN
+A Distributed Denial of Service (DDoS) attack interrupted heating distribution in two buildings managed by Valtia, a company who is in charge of managing the building’s overall operation and maintenance. The attack targeted Eastern Finland and lasted from late October to Thursday the 3rd of November. The systems that were attacked tried to respond to the attack by rebooting the main control circuit and this repeated over and over so that heating was never working. The devices under attack were built by the company Fidelix and according to a Building maintenance specialist Sami Orasaari “building automation security is often neglected.” Because of this many housing companies or private owners failed to invest in network firewalls to safeguard these devices provided by Fidelix and was the opener to the DDoS attack. Furthermore, due to staff’s level of security awareness and their role as to handle regular maintenance tasks there was little training related to network attacks against the systems they routinely operate. According to India Ashok in “Hackers leave Finnish residents cold after DDoS attack knocks out heating systems” that once the smart home systems affected had been disconnected from the internet, the heating systems began to function normally (2016). This particular incident is fascinating, because it goes to show how prevalent “ease-of-use” culture has propagated our most vulnerable industries particularly the ones that are deemed critical infrastructure. The lax regard to automation and improving the workplace has far outpaced our need for security and this is a perfect example of how critical security awareness training and network hardening is critical to the ongoing availability of our systems. As a Cybersecurity Researcher I would take inventory of all devices in the organization related to IoT and properly segment them from critical infrastructure and hide them behind a network firewall. Then, I would utilize a security information and event management (SIEM) application to monitor the firewall and implement YARA detection rules so Information Security analysts may be able to have a chance at responding to an attack beginning outside of the firewall. Not only this, but endpoint detection and response tools are also helpful to manage network communications between devices that are gated by a network firewall. 
+References:
+Ashok, I. (2016, November 9). Hackers leave Finnish residents cold after DDOS attack knocks out heating systems. International Business Times UK. Retrieved August 13, 2022, from https://www.ibtimes.co.uk/hackers-leave-finnish-residents-cold-after-ddos-attack-knocks-out-heating-systems-1590639 
+DDoS attack halts heating in Finland amidst winter. Metropolitan.fi. (n.d.). Retrieved August 13, 2022, from http://metropolitan.fi/entry/ddos-attack-halts-heating-in-finland-amidst-winter 
+Case Study 1: MIRAI
+1.	It would not be wrong to say that we are currently experiencing a technological revolution where previously disparate technologies are integrating to transform the way we live, work, and interact. This transformation is so dramatic and profound that the World Economic Forum (WEF) considers it the fourth industrial revolution (Schwab, 2016). The new technologies, such as autonomous vehicles, artificial intelligence, 3D printing, and the IoT, make right now an interesting and exciting time to live in. However, as is usually the case, criminals and hackers have also been closely monitoring and adapting to these emerging technology trends. The 2020 Nokia Threat Intelligence Report evidenced this tendency when they found that IoT devices are responsible for 32.72% of all infections observed in mobile networks, up from 16.17% in 2019. Furthermore, researchers believe the number of IoT infections will dramatically increase with the availability of 5G technology and as more devices become accessible directly from the internet (Nokia, 2020). 
+2.	Associated Reading/Resources:
+a.	A 2019 International Data Corporation (IDC) study forecast that there would be 41.6 billion internet-connected devices generating 89.4 zettabytes (ZB) of data by 2025 (Business Wire, 2019). Unfortunately, this rapid proliferation of internet-connected devices creates a severe cyber risk. An innocuous doorbell or a baby monitor to a nation’s solid and critical power grid are all susceptible to becoming targets of cyber attackers when they are accessible online. Numerous case studies have demonstrated how sophisticated cyberattacks targeted IoT and OT devices and, as a result, created havoc for organizations and people globally. However, two excellent case studies to start exploring and understanding the risk IoT and OT systems pose are the Mirai botnet and Ukraine’s power grid attack.
+i.	Case study 1: Mirai Botnet
+ii.	Case study 2: Ukraine’s Power Grid Attack
+3.	By allowing you to do such things as checking the refrigerator while being in the grocery store or seeing what your kids or pets are doing at home from anywhere in the world, there is no doubt that the IoT has made your lives more convenient and efficient. However, unfortunately, the security and integrity of the devices that allow you to do all these things are often questionable. Many real-life case studies exist that demonstrate the impact these IoT devices can have when compromised and abused. The worst example is the Mirai attack against Dyn that controls much of the internet’s domain name system (DNS) infrastructure. This attack brought vast parts of the internet down, and organizations such as Twitter, Reddit, CNN, and Netflix, along with millions of internet users worldwide, were affected. 
+4.	The Mirai Operation:
+a.	Mirai was a type of malware that penetrated thousands of everyday low-cost home devices shipped with default passwords. 
+b.	Logged in using default usernames and passwords. 
+c.	Once the device was penetrated it sent information to a central server.
+d.	Logged in from a remote host. 
+e.	Downloaded malware in the device and scanned other devices for login.
+f.	Took over machines and passed commands from the control center.
+g.	Directed the systems to carry out activities in concert. 
+5.	Mirai attacks:
+a.	Over a year, several hundred thousand machines were compromised. 
+b.	With a lot of effort put into reducing the attacks, the attackers still had hundreds of thousands of machines under their control.
+c.	Several attacks used all of these machines to concentrate 100GB of traffic at a particular target machine. 
+6.	Targets of Mirai Attacks:
+a.	Attack on KrebOnSecurity:
+i.	Using 100,000 bots, the attackers directed a huge flood of traffic to Krebs’ website, forcing the website to be turned off.
+b.	Attack on DynCorp:
+i.	Domain name servers are machines that resolve names of systems like mit.edu into an actual internet address. 
+ii.	The attackers disabled the services of DynCorp, which provides dns, and shut down most computing for a day. 
+Mirai Analysis
+“It’s a gold rush to capture these [IoT] devices for botnets.” – Chris Carlson, Vice President of Product Management at Qualys
+The Mirai botnet infects IoT devices with the primary goal of using their computing power to launch distributed denial of service attacks. Mirai’s method is to scan the internet for IoT devices and log in by brute-forcing with a list of insecure default passwords (i.e., username: admin, password: admin). Once inside, it blocks the legitimate users from accessing their own devices by disabling particular services. Then, it continues with the same technique to identify additional devices and propagate infection. According to one estimate, at one point, Mirai had over 500,000 devices under its control (Kan, 2017). As you can see, the methods that the attackers behind the Mirai operation used were not sophisticated. Essentially, they used known default credentials to log in to internet-accessible devices and then used their computing resources to launch DDoS attacks, creating havoc for many organizations and people. 
+The Mirai botnet or its methodology rather is a fascinating topic, because of how simple it truly is, and it goes to show how the need for cheap and effective cybersecurity is needed in order to protect the billions of IoT devices that are going to shape our future whether we like it or not. From a cybersecurity researcher’s standpoint, the Mirai botnet is rather simple to disrupt, either we develop security algorithms which thwart an attacker’s ability to establish a CNC server from connecting to vulnerable IoT devices or we learn to make our networks wiser to the attempted connection from a vulnerable IoT device. Either way it solves the issue of security awareness across a mass amount of people and helps protect them on the internet. The malware that now targets and infects IoT devices is fundamentally different from the viruses and worms that compromised early internet users, because viruses and worms are essentially the precursor evolutionary stages to IoT Malware. For example, the Linux.Darlloz worm was discovered in late 2013 and exploited an old PHP vulnerability (CVE-2012-1824) to access a system, it escalated privileges through default and common credential lists, it propagated through the network, and it established a backdoor on the system. The automation behind a worm shows that it does not rely on an end-user to trigger them and instead bide their time until they crack the sequence to allow an attacker to backdoor into a system. A virus on the other hand lays dormant in your system until you execute it, which an example can be any number of infected files that are downloaded from the internet or via attachment. What distinguishes IoT malware is the fact that its sole goal is to harm devices and the people who use them; such, is the case with the Mirai Botnet being utilized to DDoS systems all over the world using thousands, if not hundreds of thousands of bots to attack systems (XiaoluZhang et al., 2020).
+The detection and remediation of IoT malware is generally longer than those of traditional computers, because at present, end users cannot prevent IoT devices from being targeted by Mirai. Device owners can limit the exploitation of their device and limit attackers’ ability to develop massive botnets by unplugging and factory resetting the IoT devices, but this is cumbersome and difficult to ask out of the billions of IoT devices that are out there. On top of that, once they replug the device, Mirai will try again to reinfect the device and the user has a narrow sliver of time (about 2 minutes) to change their credentials; furthermore, the Mirai botnet could have easily not even gained access through default credentials but through vulnerable firmware and the user must be able to download and update their firmware within that timeframe as well to ensure their IoT device does not get reinfected. On top of this, a backdoor can easily have been made and users must also have the knowledge necessary to disable remote access ports, such as port 22 (SSH), port 23 (Telnet), port 80 (HTTP), and port 443 (HTTPS) (Scott, 2016). Detection of IoT malware is even more difficult as it requires a user to be analyzing TCP traffic at the right time. For example, Mirai used an exploit on TCP port 7547 to connect to home routers and adding a detection rule (YARA could be a good ruleset for detection) to monitor that port. Legitimate traffic should not be conted or recorded in logs, making it important for IT to understand normal traffic baselines and to understand when there is a possible IoT device at the right time (Strom, 2017). 
+The impact that the open-source nature of Mirai has definitely had its hand in its rise to fame and its use of credential theft has only began to show us its devastating nature in driving credential theft attacks as we propel ourselves well into 2023 and credential theft being a top contender for breaches; however, I believe the open-source nature of Mirai also helps us understand more when it comes to mitigating and remediating these problems in static analysis and dynamic analysis software testing as these products are pushed out. However, at the same time the culture at norm currently for IoT devices is to ship as many out despite their security vulnerabilities or unbeknownst to security holders. It is clear that regulation is required for any modern society to be safe from these types of attacks and help mitigate these attacks. To make this assumption clear, the Mirai attack on Dyn helped increase industry collaboration and IoT security in two domains – cybersecurity and legislative communities. In his written testimony before the Congressional Committee on Energy and Commerce, Bruce Schneier stated, “In many ways, the Dyn attack was benign. Some websites went offline for a while. No one was killed. No property was destroyed. But computers have permeated our lives. The internet now affects the world in a direct physical manner. The intent of things is bringing computerization and connectivity to many tens of millions of devices worldwide. We are connecting cars, drones, medical devices, and home thermostats. What was once benign is now dangerous.” In the wake of the attack on Dyn, MalwareTech.com setup a Twitter account (@MiraiAttacks) that live tweets Mirai attack instructions from honeypot systems. The automated live tweets include the botnet used, the type of traffic, the duration of the attack, the target IP address, and the port targeted (Scott, 2016). 
+Mirai was not the first malware to target the Internet of Things and is likely not going to be the last. Consumers need to ensure that they are safeguarding their credentials and ensuring they are strong against attacks and that their IoT devices are updated regularly to ensure they are not vulnerable. If possible users should also segment their networks and obfuscate their IoT devices behind a network firewall that is tuned to detect botnet attacks. Detection software on most home routers these days cover botnet attacks and ensuring those are enabled and working behind a properly segmented network for your IoT devices and your other devices is key to ensuring consumer safety. These precautions are essentially the same things that are being done at the corporate level; however, given the large attack surface of a corporation, corporations need to be more security aware and follow @MiraiAttacks, have YARA detection rules in place, utilize SIEMs and EDR to protect their end-users and above all train their users to harden their networks at home and in the workplace. Furthermore, government can be involved as well. IoT devices need to become regulated, otherwise, security will continue to be an afterthought in the face of profit. 
+References:
+Scott, J., & Spaniel, D. (2016, December). Rise of the machines – icit (Institute for Critical Infrastructure … Rise of the Machines The DYN Attack was just a Practice Run. Retrieved August 14, 2022, from https://icitech.org/wp-content/uploads/2016/12/ICIT-Brief-Rise-of-the-Machines.pdf 
+Strom, D. (2017, February 1). The Mirai botnet timeline and ddos prevention tactics. HPE. Retrieved August 13, 2022, from https://www.hpe.com/us/en/insights/articles/iot-security-8-lessons-learned-from-the-mirai-botnet-1702.html 
+XiaoluZhang, OrenUpton, LangBeebe, N., RaymondChoo, K.-K., & AbstractInternet of Things (IoT) bot malware is relatively new and not yet well understood forensically. (2020, May 29). IOT botnet forensics: A Comprehensive Digital Forensic Case Study on Mirai botnet servers. Forensic Science International: Digital Investigation. Retrieved August 13, 2022, from https://reader.elsevier.com/reader/sd/pii/S2666281720300214?token=A0EBC338357E7C343FDE1B80191C5943FE78DC95F37E4494D6219E49D47B40D6919EC135F6B80594D57CE251692887F2&originRegion=us-east-1&originCreation=20220814002247 
+Operational Technology (OT) and its Vulnerabilities
+1.	OT is an important subset of IT infrastructures and systems that may include ICS or other operational infrastructures (e.g., sensors, controllers). Often these systems are simple in nature but control relatively critical services or systems (e.g., manufacturing processes, assembly lines, or critical infrastructures, such as water, power, or lighting). Considering the crucial nature of these systems, it’s important that you examine the vulnerabilities associated with the relevant infrastructures and evaluate the requisite mitigations. 
+2.	Computational System: Types
+a.	Computational Systems
+b.	Conventional IT Systems:
+i.	Desktops/laptops
+ii.	Server machines
+c.	Cyber-Physical Systems: 
+i.	Involve both a physical process and computation
+ii.	Industrial control systems:
+1.	Industrial processes
+2.	Manufacturing
+3.	The Industrial Control System Environment
+a.	These systems have at the actual physical process, sensors that are picking up on the physical state of the system, then transmitting it over a network back to a command center in which we have backup storage, workstations, and other human I/O.
+ 
+4.	Simple Industrial Control System:
+a.	At the local level these systems are conducted in a fairly simple control loop, where the sensors pick up data giving us information about the state of the world, the control center computes some correction that needs to be made, then sends that correction to the actuators and then the loop begins again. 
+b.	In today’s OT environment, you see: 
+i.	Normal IT equipment
+ii.	Operator workstations
+iii.	Command and control center
+iv.	Parts of the system that have little to do with OT
+v.	Today’s OT environment exposes a much greater attack surface than the OT itself. 
+ 
+ 
+5.	Growth of Attacks:
+a.	The number of attacks has been doubling every two years since 2014.
+b.	Attacks on IoT and OT assets have grown by 2000% in the last few years on IoT. 
+6.	Types of Attack on OT Systems:
+a.	False Data Injection:
+i.	Makes the sensors report bad data.
+ii.	Gets in the network between the sensors and the controller to make the controller issue inappropriate commands. 
+b.	Controller Takeover:
+i.	Take control of the controller by:
+1.	Modifying the code.
+2.	Changing the set point of the system.
+3.	Modifying the parameters of the process.
+c.	Timing Disruption:
+i.	Make the system unstable by slowing down the controller. 
+ii.	One way of doing this through the use of a botnet (e.g., Mirai attack). 
+d.	Ransomware:
+i.	Conventional IT attack directed against OT systems. 
+7.	Attack on OT Technology: Example
+a.	A controller is trying to keep the water in the tank at a fixed level. So, you have a water level sensor, and you have a controller which gets a value from the sensor and compares it to a set point and issues a command to a pump and the pump will either move water in or out of the pump to maintain the intended level. 
+b.	An attacker can intercept the sensor and controller and change the value. An attacker can also penetrate the controller and change its code through code injection – controlling the set point for the pump or control some of the parameters that control the entire process. 
+ 
+Taking Stock of OT and IoT Risks
+Taking stock of my personal environment I realized IoT and OT pretty much dominate my life. Ranging from my television, to the remote that controls it (I only realized this when the remote asked to have its software updated), physical security systems such as my surveillance and door monitor connected to a single controller plugged into a wall, and then the smart outlets, HVAC, and thermostat themselves are all controlled from a little box inside of the master bedroom closet. In total I have 65 IoT and OT systems and the most I have in the home are OT systems. The single most prevalent one is the OT systems. I did not realize it until this module actually, but the electrical outlets, HVAC, and lights are the clear dominators in the case of OT systems. Most of these OT systems contain sensors that operate on 100kHz-300GHz and they don’t seem to have any rhyme or reason to them unless they’re being obfuscated or my alfa wireless band is not tuned correctly in promiscuous mode. From my understanding these SCADA systems communicate with a Web HMI which communicates with a Web Honeypot (logs HMI directed attacks) and then communicates to a network switch that communicates with a data historian capturing continuous packets which then communicates with the internet. So, in theory these sensors attached to these OT systems are only connected to the internet through an intermediary. What is extremely worrying about this is that the web honeypot in and of itself can be fed bad data, which is then sent to the network switch, which again is not a router and doesn’t have any type of packet filtering and send it along to the management analytics station that consolidates logging and control through a back channel and can theoretically gain remote code execution in that manner and suddenly the whole system has been pwned. That is the single most worrying aspect about OT systems is that there truly isn’t very much security engineered into the collection of sensor data. 
+Preventing Vulnerabilities
+According to Fortinet the top IoT device vulnerabilities include weak/hardcoded passwords, insecure networks, insecure ecosystem interfaces, insecure update mechanisms, insecure or outdated components, lack of proper privacy protection, insecure data transfer storage, improper device management, insecure default settings, and lack of physical hardening. According to Check Point Software Technologies LTD the top vulnerabilities to critical infrastructure and SCADA/ICS cybersecurity is legacy software, default configurations, lack of encryption, remote access policies, and the policies and procedures themselves within the organization that manufactures these technologies. It’s clear that across IoT and OT devices that manufacturers must begin addressing known vulnerabilities in their products, releasing patches for existing vulnerabilities, and reporting when support ends. It’s also crucial that manufacturers bake in security as the base of their IoT/OT product design and conduct penetration tests, static application security testing and dynamic application security testing (SAST/DAST) to ensure no vulnerabilities have opened up throughout production of said technology. Finally, manufacturers must also implement processes for accepting vulnerability reports on their products or even establish a bug bounty program to ensure the continued security of their product. Next, users must understand the security risks that surround IoT connected devices and they must prioritize IoT device security and protect laptops, mobile phones, and routers that connect to them. Users must also be aware of how to secure IoT devices on home networks, change default passwords, update device firmware and software, enable automatic updates, and ensure secure settings are in place to prevent vulnerabilities from being exploited. Finally, organizations also need to protect all connected devices and secure their networks using encryption or public key infrastructure methods and must continuously monitor their systems for unusual and potentially malicious activity using tools like an IoT vulnerability scanner. 
+References: 
+Top 10 cybersecurity vulnerabilities and threats for critical ... (n.d.). Retrieved August 14, 2022, from https://www.checkpoint.com/downloads/products/top-10-cybersecurity-vulnerabilities-threat-for-critical-infrastructure-scada-ics.pdf 
+Top IOT device vulnerabilities: How to secure IOT devices. Fortinet. (n.d.). Retrieved August 14, 2022, from https://www.fortinet.com/resources/cyberglossary/iot-device-vulnerabilities 
+Case Study 2: The Ukraine Power Grid Attack
+1.	Ukraine’s power grid attack clearly illustrated both the inherent vulnerability of critical infrastructure systems to attack and the respective desire of attackers to take advantage of this point. Attacks against critical infrastructure systems, such as the power grid in Kiev, can have profound and widespread results, such as business disruptions, power outages, loss of critical services, and potential loss of life. These potential results cannot be understated when considering the far-reaching effects of long-term disruptions involving critical infrastructure technology and services. 
+2.	Background:
+a.	On December 23, 2015, and again a year later, several regional power distribution systems in Kyiv were disconnected. 
+b.	A foreign attacker remotely took control of the supervisory control and data acquisition (SCADA) systems. 
+c.	Approximately 225,000 customers lost power across various areas. 
+3.	The Electrical Distribution System:
+a.	At the power plant there was high voltage, but when leaving the substation there was much lower voltage being distributed to buildings and it was in the substations where the attack took place. 
+4.	The Ukraine Power Grid Attack: Key Components:
+a.	Spear phishing: Gained initial access to the system via carefully crafted phishing emails to workers on computers connected to the outside world. 
+i.	Used to gain access to the organization.
+ii.	Sent emails with Microsoft word or excel attachments embedded with macros.
+iii.	Downloaded malware packages (Hancitor and BlackEnergy 3) when the macros were activated. 
+b.	Credential theft: Scanned for credentials that provided administrative access once the system was penetrated. 
+i.	Scanned files within the domain controller of a Microsoft network.
+1.	The domain controller:
+a.	Is a central control system.
+b.	Coordinates central operations across the network. 
+c.	Contains files that have passwords and other credentials in clear text. 
+ii.	These credentials can also be accessed in other ways, such as with the Mimikatz malware package. 
+c.	Privilege escalation: Acted as legitimate administrators of the system. 
+i.	With administrative privilege, the attackers could:
+1.	Appear as normal users with admin rights.
+2.	Carry out reconnaissance of the system.
+3.	Map out all parts of the system, including the part that connected the ethernet to a serial network. 
+d.	Operator workstation control: Used the VPN to gain control of the main operator console. 
+i.	Installed another piece of malware, KillDisk, which when activated overwrites the master boot record of a computer. 
+ii.	Rendered the computer impossible to reboot.
+iii.	Discovered and penetrated uninterrupted power supplies at several stations to disable them at critical times. 
+e.	Control and operate: Controlled the distribution system and other assets. 
+i.	After taking control of the workstation, the attackers:
+1.	Disabled the operator console.
+2.	Issued commands from the operator console and disconnected relays. 
+3.	Installed malware on the special device connecting the ethernet to the serial level and disabled it. 
+4.	Disabled the uninterrupted power supplies.
+5.	Issued a denial-of-service attack on the phone network to prevent the operators from communicating and coordinating with each other. 
+5.	The Ukraine Power Grid Attack: Enablers
+a.	Most of the electrical equipment used in the system was standard and had open-source information and documentation available. 
+b.	The VPN that connected into the ICS from the business network did not use two-factor authentication.
+c.	The firewall allowed the adversary to get through in a variety of ways because they had administrative credentials. 
+d.	There was no resident capability for continuously monitoring the system and detecting the hack. 
+6.	The Ukraine Power Grid Attack: Key Observations
+a.	Much of the cyber attack used common IT malware, such as KillDisk and BlackEnergy 3. 
+b.	The attackers did significant amount of work to obfuscate the attack and to avoid anti-virus technology and intrusion detection systems. 
+c.	Most of the tools used by the attackers were commercial products that are readily available in the dark world. 
+d.	Key steps used were initial penetration, privilege escalation, lateral motion, and establishing persistence. 
+e.	The attackers used some cyber techniques to disable some of the devices, such as the serial-to-ethernet bridge.
+f.	When the attack was launched, it was rapid and pervasive, and the operators were locked out. 
+The Ukrainian Power Grid Attack Analysis
+ “It was brilliant. In terms of sophistication, most people always [focus on the] malware [that’s used in an attack]; to me what makes sophistication is logistics and planning and operations and what’s going on during the length of it. And this was highly sophisticated.” – Robert M. Lee, former cyber warfare operations officer of the US Air Force and cofounder of Dragos
+Closely studying the cyberattack against Ukraine’s power grid holds tremendous value for both network defenders and offensive operators. For instance, it was the first attack that demonstrated how highly skilled and disciplined attackers could exploit a chain of technical, process, and social vulnerabilities to take over a SCADA system to cause a power outage that affected 225,000 people (BBC News, 2017). Other attacks on OT systems, notably by Stuxnet, have been precisely targeted against a military objective, whereas this attack targeted the civilian infrastructure. 
+	Operational technology (OT), industrial control systems (ICS), and supervisory control and data acquisition (SCADA) all played major roles in the cyberattack against Ukraine’s power grid. These terms, their relationship, and how they were attacked are all integral to understanding the vulnerability of our critical infrastructure. OT is an important subset of IT infrastructures and systems that includes ICS or other operational infrastructures (e.g., sensors, controllers). Often these systems are simple in nature but control relatively critical services or systems. The ICS on the other hand, are systems that have the actual physical process, sensors that are picking up on the physical state of the system, then transmitting it over a network back to a command center in which have backup storage, workstations, and other human interfaces. Finally, SCADA collects information from individual processes that are being controlled, puts it together, and manages the global aspects of a production process.
+	On December 23, 2015, Ukraine’s regional electricity distribution company Ukrainian Kyivoblenergo’s computer and SCADA systems were attacked, disconnected 30 substations for three hours and as many as 230,000 customers lost power – approximately half of the homes in the Ivano-Frankivsk region in Ukraine (population about 1.4 million). The tool used by these attackers is known as BlackEnergy. The attack began in the afternoon, when an employee who was organizing papers saw their cursor on their computer began to move on the screen on its own and as he watched in dismay the cursor began to shut down their substation’s circuit breakers – not only this, but attackers also hit two other power distribution centers, nearly doubling the number of substations taken offline. To provide a concise timeline of the attack we need to go back to the Spring of 2015, where a spear-phishing campaign targeted IT staff and system admins working for various electricity distribution companies throughout the Ukraine. The campaign delivered a malicious email to employees at three companies and by clicking on the attachment, a popup displayed asking the email user to enable macros for the document; by doing so, a program called BlackEnergy3 infected their machines and opened a backdoor to the hackers. Over several months the hackers conducted extensive reconnaissance, ultimately gaining access to the Windows Domain Controllers, where user accounts for networks are managed. Here they harvested worker credentials, some of them for VPNs the grid workers used to remotely log in to the SCADA network. This all culminated to the attack at approximately 3:30PM on December 23, 2015, when the attackers began to open breakers, and the employees at the Prikarpattyaoblenergo control center realized they had lost control of their systems. Per Kaspersky, BlackEnergy – the Trojan used in the Ukraine attack – began circulating in 2014 and it was deployed specifically to conduct DDoS attacks, cyber espionage, and information destruction attacks – and especially companies in the energy industry and those that use SCADA systems. These attacks are representative of the Sandworm team who has been attributed to Russian-Nation State hacking group. Sandworm took plenty of time to study Ukraine’s ICS’ and SCADA computer systems from Spring up until the attack in December. In a Youtube video uploaded by NATO “What happens when a power plant comes under cyber-attack” we get an inside look at how quickly these SCADA systems can be breached and lock out end-users. Bohdan Soichuk, an operational dispatcher serviceman details the calls from different regional energy operators and the timely decision to go to these substations that were attacked and turn on manual power from there. The expertise needed to correctly disable 30 substations and not cause harm unto human life was the saving grace of this operation, because any attempt on industrial control systems in a cyber environment does have real world consequences and these systems can cause loss of human life given the proper conditions. It took several months of reconnaissance to understand what these switches do and how to power them off for this attack to be done in this manner and were it anyone else or any attacker that tries to inflict real-world damage can cause real-world harm. BlackEnergy3 is the malware responsible for making their SCADA/ICS systems inoperable. BlackEnergy3 is a modular malware delivered in attachments through spearphishing emails and it creates a backdoor in systems giving the Sandworm Team an entry point to steal information and work through further reaches of the network. BlackEnergy was also used to deliver Killdisk malware that wipes files and makes computers unable to reboot. Not only did Sandworm attack these systems, they had the foresight to also launch a telephone denial-of-service attack against customer call centers to prevent customers from calling in to report the outage. They flooded the call center with fake calls to stop company personnel from identifying the blackout area. At other control centers, supporting equipment was tampered with to slow recovery operations. 
+	The key lessons to be learned from an attack like this is to first provide security awareness training for employees to reduce the risk of employees clicking on malicious links or attachments and disable macros by default. Organizations implementing phishing simulation programs through with they send phishing messages to their employees to test their ability to recognize phishing campaigns is a good way to reward security-aware behavior and lessen the chance of a phishing campaigns success. From a technology perspective, organizations should deploy a sandboxing solution that inspects inbound emails for malicious links or attachments before allowing the email to land in an employee’s inbox – a good example of this would be Proofpoint email solutions. Now assuming that the adversary has breached the utilities through a phishing attack, organizations should implement a robust network security architecture that includes proper segregation between the IT and control system networks using firewalls and intrusion prevention/detection tools. Organizations ought to perform continuous network security monitoring in order to baseline and understand normal activity, thus enabling the identification of abnormalities on the network. Finally, the blaring red flag was the key term remotely connect to the SCADA systems. To go deeper into this aspect, the IT systems involved in creating this VPN to allow remote access did not call for two-factor authentications; thus organizations, should limit remote access to control system networks to the full extent if possible. If remote access to networks is unavoidable the connections should be time limited and controlled using two-factor authentication. Finally, organizations should document a detailed incident response plan and test that plan on a regular basis to cover any vulnerabilities in the attack surface. These drills should include active participation from all team members who play a role in the incident response effort, including IT, OT, Cybersecurity, operations, and key partners like the control system vendors who sell the OT. 
+	The most terrifying aspect that comes with this attack was its brilliance to avoid loss of life. The key areas to be terrified about is the fact that BlackEnergy3 is a dark web malware hosting tool, and anyone can do this type of attack and the key area to be terrified about is that industrial control systems do indeed affect real world environments and can cause real world harm. After reviewing the attack on Ukraine’s power grid, it’s clear that my appreciation of operational technology has clearly diminished, because of its inherent vulnerabilities and how it can affect us in the real world without ever having any real knowledge about an attack taking place to begin with. 
+References:
+Krigman, A. (2020, October 28). Ukrainian Power Grid Attack - blog. GlobalSign. Retrieved August 15, 2022, from https://www.globalsign.com/en/blog/cyber-autopsy-series-ukranian-power-grid-attack-makes-history 
+Park, D., & Walstrom, M. (2021, March 15). Cyberattack on Critical Infrastructure: Russia and the Ukrainian Power Grid attacks. The Henry M. Jackson School of International Studies. Retrieved August 15, 2022, from https://jsis.washington.edu/news/cyberattack-critical-infrastructure-russia-ukrainian-power-grid-attacks/ 
+YouTube. (2016). YouTube. Retrieved August 15, 2022, from https://www.youtube.com/watch?v=bV47gBsrDkc. 
+YouTube. (2020). YouTube. Retrieved August 15, 2022, from https://www.youtube.com/watch?v=sCd--Tsj4sM. 
+Mitigations
+1.	Now that you have a deeper understanding of how key systems – such as the power grid controller in Ukraine – can be exploited and compromised to disrupt services, it’s important to examine options for mitigating such attacks. For example, attack tools such as Mirai can be mitigated with simple techniques, such as password changes. You’ll examine several examples and options that you can employ to mitigate attack techniques, from small to large. 
+2.	Recommendations Based on the Study of the Ukraine Power Grid Attack:
+a.	Architectural defenses
+i.	Properly isolate subnetworks.
+ii.	Ensure more logging.
+b.	Passive defenses
+i.	Whitelist applications so you only install certain software.
+ii.	Setup a demilitarized zone (DMZ) and properly tuned firewalls. 
+c.	Active defenses
+i.	Train your defenders.
+ii.	Perform network security monitoring. 
+3.	Recommendations based on the study of the Mirai attack: 
+a.	Incentivize manufacturers to ship systems with unique rather than default credentials. 
+i.	Some devices have very low profit margins, so manufacturers may have to make investments they cannot recoup. 
+4.	Goal-Directed Defense Planning: A Systematic Approach
+a.	Think like the attacker and make a plan
+i.	Examples:
+1.	Mirai attack: To use a botnet against some targets.
+2.	Ukraine power grid attack: To disable the power distribution system.
+ii.	For attackers to plan an attack they need:
+1.	Knowledge of your environment.
+2.	Knowledge about how computers and networks work.
+3.	Rules for carrying out attacks. 
+b.	Think about mitigations that can disable the plan and at what stage
+i.	Example:
+1.	Mirai attack: Default credentials in the systems.
+ii.	Manually – Bruce Schneider laid out a process for building attack trees:
+1.	Start with a top-level goal.
+2.	Reduce that goal to subgoals.
+3.	Reduce the subgoals to actionable items. 
+iii.	Automatically – using tools. 
+c.	Think about reduction in risk
+i.	Add a control that can be measured.
+ii.	Installing more controls at later levels of the process increases the defense and allows you to measure the reduced risk and its cost. 
+d.	Think about the cost of deploying the mitigation.
+i.	Features	ii.	Range
+iii.	Cost	iv.	Low, medium, high
+v.	Complexity	vi.	Low, medium high
+vii.	Manageability	viii.	1,2,3
+ix.	Scalability	x.	1-4, 4-6, 6-10
+xi.	Time	xii.	2 days, 10 days, 15 days, 20 days
+xiii.	Different preferences regarding features can be combined to calculate a single numerical rating (a multi-attribute utility function). 
+e.	Make rational choices in making investments. 
+i.	Use utility vs. benefit and cost vs. benefit graphs to eliminate interventions. 
+ii.	Identify the preferred mitigations and plan to install one or more of them. 
+5.	Mitigation Example: The Ukraine Attack Map
+a.	The macros embedded in the Microsoft documents were the crucial first step – if macros had been disabled, it is highly likely that the first step, and consequently the entire attack, would have failed. 
+b.	Disabling macros may incur operational costs if you have software that relies on macros. 
+Research an OT Attack
+OT is an indispensable element of a functional economy, society, and nation. Behind the scenes, it makes factories, energy generation, transportation networks, and other vital utilities that we all depend on possible. Historically, these technologies have been physically isolated from unsecured networks, such as the public internet. However, the need to improve operational efficiency and profitability brought significant investments to converge OT infrastructures with general IT networks. Now, to effectively manage the operations of an industrial plant, OT systems depend on IT systems and even connectivity to the public internet. Unfortunately, with this improved agility comes a heightened security risk. Previously, with air-gapped OT systems, the attack surface was limited to an insider physically uploading malicious software. But now, OT systems are faced with the same threats that IT systems are (Fortinet, 2020). 
+Stuxnet is a sophisticated computer worm that exploits multiple previously unknown Windows zero-day vulnerabilities to infect computers and spread without input from an end-user. All it needs is infection and it worms through a computer system to its end goal. Stuxnet was engineered to target centrifuges used to produce enriched uranium that powers nuclear weapons and reactors. Despite all of this, Stuxnet’s sole goal was to derail or at least delay the Iranian program to develop nuclear weapons. The Bush and Obama administrations believed that if Iran were on the verge of developing atomic weapons, Israel would launch airstrikes against Iranian nuclear facilities in a move that could have set off a regional war. Operation Olympic Games was seen as a nonviolent alternative. Stuxnet’s scope was never intended to spread beyond the Iranian nuclear facility at Natanz. The facility was air-gapped and not connected to the internet and that meant that it had to be infected via USB sticks transported inside by intelligence agents or unwilling dupes, but also meant the infection should have been easy to contain. However, the malware did end up on the internet and began to spread in the wild due to its extremely sophisticated and aggressive nature. Liam O’Murchu, who’s the director of the Security Technology and Response group at Symantec was on the team there that first unraveled Stuxnet, states “it was pretty obvious from the first time we analyzed this app that it was looking for some Siemens equipment… We could see in the code that it was looking for eight or ten arrays of 168 frequency converters each… You can read the International Atomic Energy Association’s documentation online about how to inspect a uranium enrichment facility, and in that documentation they specific exactly what you would see in the uranium facility – how many frequency converters there will be, how many centrifuges there would be. They would be arranged in eight arrays and that there would be 168 centrifuges in each array. That’s exactly what we were seeing in the code.” O’Murchu essentially found what the Stuxnet worm was searching for – the worm was intended to obfuscate changes in code that would affect the SIEMENS industrial control system and thus cause centrifuges to slow down to the point that they wobble or speed up and cause equipment failure. The attacks were quickly resolved in lab, because of the high-pitched noise that would be emitted when these centrifuges were starting to wobble or break down. People would be fired, and equipment taken apart and eventually, the Iranians discovered that their equipment itself may have been compromised, but they had no proof, because of how closed the loop was. Eventually, however, the downfall according to an undisclosed NSA agent in the Zero Days film shows that Mossad agents pressured engineers to be more aggressive and thus led to the spread of Stuxnet. It was due to the spread of the worm throughout the internet that people were able to determine its origins and its purpose. The attack was 100% effective and is credited with setting the Iranian nuclear enrichment program back by almost 2 years. Stuxnet achieved its goals of infecting the intended systems and performed its job in disabling SIEMENS ICS and then would go dormant with a kill switch that is the perfect evasion clearing all logs of its existence within a system. Furthermore, engineers would look at their systems and they would emit normal values even though there’s a high-pitched noise signaling impending doom or catastrophic failure within one of the centrifuges.  The sheer comparability that comes with Stuxnet and Ukraine’s power grid attack shows that we have entered the age of cyber warfare, wherein, physical, and critical infrastructure can be affected by cyber attacks and to learn from this organizations ought to provide more focus on general security in these areas. Security awareness, two-factor authentication, network segmentation, zero-trust architecture, and a general inventory of all control systems and a manual bypass to these systems are incredibly necessary these days and I would say critical to their maintained integrity. The most terrifying aspect beyond this attack is that the worm operated on its own once it was plugged into a computer. No one knew what would happen and if it would work effectively or too effectively. The permutations with which these arrays to execute code on the SIEMENS PLC and evade detection is of astronomical probability and maintains an extreme level of sophistication the world has ever seen in terms of a worm. 
+Module Summary
+1.	“The Phenomenon referred to as ‘IoT’ is in large part about the physical merging of many traditional OT and IT components. Whereas a network managing an oil well could be conceived as separate from the front office of that oil company, a new office tower may well have a single network for computers as well as various building systems from light bulbs to air conditioning.” – Chris Blask, executive director of Webster University’s Knowledge Sharing Directorate. 
+a.	Until recently, traditional IT and OT worked separately. The IT function focused on internet connectivity and the processing of information. In contrast, OT concentrated on supporting the actual hardware and software devices and sensors that made physical creation and manufacturing possible. However, due to recent developments to increase efficiency and profitability, the gaps between the two domains are beginning to shrink. A key driving factor behind this convergence has been the IoT proliferation. 
+b.	The IoT and OT both play an important and growing role in business and your everyday life. The IoT can be used ubiquitously throughout your home and personal life to help digitally enable everyday devices, such as thermostats, coffee makers, refrigerators, washing machines, lights, or door locks. Similarly, OT has become commonplace in many commercial operational processes of manufacturing activities. It can be used to support industrial systems and intricate assembly line networks. Similar to the IoT, it’s growth will continue as it proves its value within business environments. 
+2.	Module Summary:
+a.	OT and IoT are both rapidly growing sectors.
+b.	OT constitutes critical infrastructure.
+c.	Both IoT and OT have weaknesses and vulnerabilities that can be exploited by cyber attackers.
+i.	The vulnerabilities can be both traditional and new failure modes that depend on sensors, control systems, and timing issues. 
+d.	Mirai attack:
+i.	Captured hundreds of thousands of systems.
+ii.	Launched denial-of-service attacks on different websites.
+1.	KrebsOnSecurity
+2.	Provider of root domain name services
+e.	Colonial Pipeline attack (ransomware)
+i.	Penetrated companies running OT.
+ii.	Shut down the actual OT system just by compromising the IT part of the system.
+f.	Ukraine Power grid attack (OT)
+i.	Shut off an entire city for several hours.
+g.	What’s left then is a framework that tends to engage in checklists and compliance frameworks. These things help, as they provide a sanity check and allow people to take a systematic look at their systems. 
+h.	Think like an attacker and make a plan.
+i.	Think about mitigations that can be put in place.
+j.	Think about reduction in risk.
+k.	Think about the cost of deploying the mitigation.
+l.	Prioritize those mitigations. 
+Bibliography
+“197-Big Sur Update & Amazon Sidewalk.” SoundCloud. n.d. https://soundcloud.com/user-98066669/197-big-sur-update-amazon-sidewalk. 
+“2020 State of Operational Technology and Cybersecurity Report.” PDF file. Fortinet. n.d. https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGuard_Security_Services.pdf. 
+“Amazon Sidewalk.” Amazon. n.d. https://www.amazon.com/Amazon-Sidewalk/b?node=21328123011. 
+“Analysis of the Cyber Attack on the Ukrainian Power Grid.” PDF file. SANS ICS. 18 Mar. 2016. http://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2016/05/20081514/E-ISAC_SANS_Ukraine_DUC_5.pdf. 
+Ashok, India. “Hackers Leave Finnish Residents Cold after DDos Attack Knocks Out Heating Systems.” International Business Times. 9 Nov. 2016. https://www.ibtimes.co.uk/hackers-leave-finnish-residents-cold-after-ddos-attack-knocks-out-heating-systems-1590639.
+Collins, Katie. “That Smart Doll Could Be a Spy. Parents, Smash!” c|net. 17 Feb. 2017. https://www.cnet.com/tech/computing/parents-told-to-destroy-connected-dolls-over-hacking-fears/.
+Drozhzhin, Alex. “Black Hat USA 2015: The Full Story of How That Jeep Was Hacked.” Black Hat. 6 Aug. 2015. https://www.kaspersky.com/blog/blackhat-jeep-cherokee-hack-explained/9493/.
+“Equifax Breach: Will Your Company Get Burned Like This on Social Media?” SecureWorld. n.d. https://www.secureworld.io/industry-news/equifax-breach-social-media. 
+“Equifax, Post Breach: Why the CEO Survived Just 19 Days.” SecureWorld. 26 Sept. 2017. https://www.secureworld.io/industry-news/equifax-post-breach-why-the-ceo-survived-just-19-days. 
+Equifax. “Rick Smith, Chairman and CEO of Equifax, on Cybersecurity Incident Involving Consumer Data.” YouTube video, 2:37. 7 Sept. 2017. https://www.youtube.com/watch?v=bh1gzJFVFLc. 
+“Global Operational Technology (OT) Cybersecurity Market Report 2020-2023 — IT/OT Convergence are Accelerating Growth Opportunities — ResearchAndMarkets.com.” Businesswire. 25 Jan. 2021. https://www.businesswire.com/news/home/20210125005375/en/Global-Operational-Technology-OT-Cybersecurity-Market-Report-2020-2023---ITOT-Convergence-are-Accelerating-Growth-Opportunities---ResearchAndMarkets.com.
+“Government and the Internet of Things.” Postcapes. n.d. https://www.postscapes.com/roundup-government-and-the-internet-of-things/.
+Green, Emily. “Hacker Terrorizes Family by Hijacking Baby Monitor.” NordVPN. 18 Dec. 2018. https://nordvpn.com/blog/baby-monitor-iot-hacking/. 
+“The Growth in Connected IOT Devices Is Expected to Generate 79.4ZB of Data in 2025, According to a New IDC Forecast.” Businesswire. 18 June. 2019. https://www.businesswire.com/news/home/20190618005012/en/The-Growth-in-Connected-IoT-Devices-is-Expected-to-Generate-79.4ZB-of-Data-in-2025-According-to-a-New-IDC-Forecast. 
+“IoT Security: 8 Lessons Learned from the Mirai Botnet.” HPE. 1 Feb. 2017. https://www.hpe.com/us/en/insights/articles/iot-security-8-lessons-learned-from-the-mirai-botnet-1702.html. 
+“Is Your Peleton Spinning Up Malware?” McAfree. 15 June. 2021. https://www.mcafee.com/blogs/mobile-security/is-your-peloton-spinning-up-malware/
+Kan, Michael. “Mirai is the Hydra of IoT Security: Too Many Heads to Cut Off.” Computerworld. 13 Mar. 2017. https://www.computerworld.com/article/3180454/mirai-is-the-hydra-of-iot-security-too-many-heads-to-cut-off.html.
+Fazzini, Kate. “The Great Equifax Mystery: 17 Months Later, the Stolen Data Has Never Been Found, and Experts Are Starting to Suspect a Spy Scheme.” CNBC. 13 Feb. 2019. https://www.cnbc.com/2019/02/13/equifax-mystery-where-is-the-data.html.
+Lee, Gyu Myoung, Jungsoo Park, Ning Kong, Noel Crespi, and Ilyoung Chong. “The Internet of Things — Concept and Problem Statement.” IETF Trust. 30 Jul. 2012. https://datatracker.ietf.org/doc/html/draft-lee-iot-problem-statement-05. 
+Matthews, Lee. “Criminals Hacked a Fish Tank to Steal Data from a Casino.” Forbes. 27 Jul. 2017. https://www.forbes.com/sites/leemathews/2017/07/27/criminals-hacked-a-fish-tank-to-steal-data-from-a-casino/?sh=2bf2fc7f32b9.
+McCrank, John and Jim Finkle. “Equifax Breach Could Be Most Costly in Corporate History.” Reuters. 2 Mar. 2018. https://www.reuters.com/article/us-equifax-cyber/equifax-breach-could-be-most-costly-in-corporate-history-idUSKCN1GE257.
+Michael, Melissa. “Attack Landscape H1 2019: IoT, SMB Traffic Abound.” F-Secure. 9 Dec. 2019. https://blog.f-secure.com/attack-landscape-h1-2019-iot-smb-traffic-abound/.
+Moyer, Liz. “Former Equifax Executive Charged with Insider Trading for Dumping Nearly $1 Million in Stock Ahead of Data Breach.” CNBC. 14 Mar. 2018. https://www.cnbc.com/2018/03/14/former-equifax-executive-charged-with-insider-trading-ahead-of-data-breach.html. 
+“New Technology Connections: Future Directions.” IEEE. n.d. https://www.ieee.org/about/technologies.html?techId=70. 
+“Operational Technology.” NIST. n.d. https://csrc.nist.gov/glossary/term/operational_technology.
+Patel, Mark, Jason Shankuan and Christopher Thomas. “What’s New with the Internet of Things?” McKinsey & Company. 10 May. 2017. https://www.mckinsey.com/industries/semiconductors/our-insights/whats-new-with-the-internet-of-things.
+Ranger, Steve. “What Is the IoT? Everything You Need to Know bbout the Internet of Things Right Now.” ZDNet. 3 Feb. 2020. https://www.zdnet.com/article/what-is-the-internet-of-things-everything-you-need-to-know-about-the-iot-right-now/.
+Schneier, Bruce. “The Government Will Guard Biden’s Peloton from Hackers. What about the Rest of Us?” The Washington Post. 2 Feb. 2021. https://www.washingtonpost.com/outlook/2021/02/02/biden-peloton-internet-security/.
+Schwab, Klaus. “The Fourth Industrial Revolution: What It Means, How to Respond.” World Economic Forum. 14 Jan. 2016. https://www.weforum.org/agenda/2016/01/the-fourth-industrial-revolution-what-it-means-and-how-to-respond/.
+Scott, James and Drew Spaniel. “Rise of the Machines.” PDF file. ICIT. 2016. https://icitech.org/wp-content/uploads/2016/12/ICIT-Brief-Rise-of-the-Machines.pdf.
+Stacey On IoT. “Episode 323: Stick with Sidewalk, Y'all.” YouTube video, 1:01:36. 3 June. 2021. https://www.youtube.com/watch?v=hqcCb1iLBiw. 
+Srinivasan, Suraj, Quinn Pitcher, and Jonah S Goldberg. “Data Breach at Equifax.” HBS Case Collection. Apr. 2019. https://www.hbs.edu/faculty/Pages/item.aspx?num=53509. 
+Sussman, Bruce. “Day-by-Day Timeline of Equifax Breach from Former CEO.” SecureWorld. 2 Oct. 2017. https://www.secureworld.io/industry-news/day-by-day-timeline-of-equifax-breach. 
+“Threat Intelligence Report 2020.” Nokia. n.d. https://onestore.nokia.com/asset/210088.
+“Ukraine Power Cut 'Was Cyber-Attack'.” BBC News. 11 Jan. 2017. https://www.bbc.com/news/technology-38573074. 
+Zhang, Xiaolu, Oren Upton, Nicole Lang Beebe and Kim-Kwang Raymond Choo. "IoT Botnet Forensics: A Comprehensive Digital Forensic Case Study on Mirai Botnet Servers." ScienceDirect. Apr. 2020. https://doi.org/10.1016/j.fsidi.2020.300926.
+
