@@ -1,0 +1,147 @@
+Module 24
+Introduction
+1.	There are several important skills that enable professionals to stand out within their specific organization. Often, this can be through the use of indispensable characteristics, such as soft skills. Other times, it will be through using many of the skills and lessons that you have learned in this course and applying them in beneficial and strategic ways. 
+2.	Recap:
+a.	Focused on offensive cybersecurity and some of the more advanced topics.
+b.	Looked at four primary ways organizations set up their offensive activities:
+i.	Pen testing
+ii.	Red team testing
+iii.	Vulnerability testing
+iv.	Social engineering preparation
+c.	Talked about some of the additional topics that you are likely to run across in your cyber career.
+d.	Read through some research on industrial environments shared by Professor Shrobe. 
+e.	Read through some research on policy and privacy and data governance shared by Professor Weitzner. 
+f.	Discussed some research on AI and ML by Professor O’Reilly. Some of the applications/technologies include:
+i.	Finding previously undetectable vulnerabilities.
+ii.	Noticing anomalies, logs, and activities that indicate mischief or possibly malicious actors.
+iii.	Filtering data flows to weed out malware before it gets into your systems. 
+g.	Discussed critical issues that you will face as a cyber professional. 
+Cybersecurity Toolkit
+1.	There is a wide array of cybersecurity tools that you may use depending on the specific needs, roles, or use cases. Some are security and protection specific tools that enable you to secure and defend environments. Others, such as penetration testing tools, allow you to probe your own environment for vulnerabilities or flaws in very much the same way an attacker would profile the network. These tools can be indispensable and serve some very specific functions or use cases, depending on the need. 
+2.	There are hundreds of different cybersecurity tools that you can use to enhance the security and defense of critical network assets. In this section, you’ll learn about selecting specific types of tools to address specific use cases, such as:
+a.	Penetration testing tools
+b.	Encryption tools
+c.	Network security monitoring
+d.	Security information and event management
+e.	Security orchestration automation and response
+f.	Social engineering toolkit
+3.	Tools you can use:
+a.	Pen testing tools:
+i.	Assist penetration testers.
+ii.	One of the most common tools is Kali Linux, which is an operating system with hundreds of tools for security auditing and testing. 
+b.	Password auditing and packet sniffing tools
+i.	Analyze passwords looking for weak ones.
+ii.	Find open ports on networks.
+iii.	Analyze routing to make sure data packets are not being deflected to malicious actors. 
+c.	Encryption tools:
+i.	Encrypt disks, files, storage devices, or anything else that needs encryption. 
+ii.	Plays a role in password protection and identity management. 
+d.	Monitoring network security tools
+i.	One well-known tool, Splunk is a part of this group.
+ii.	Monitor networks for unexpected behavior and unreported capabilities for communicating anomalies to managers. 
+iii.	Have ways to detect intrusions and report suspicious activities. 
+e.	Cybersecurity tools
+i.	Firewalls, anti-malware, and antivirus protection  are an important part of this group.
+ii.	There are many multifunctional tools that make them work as management tools as well as security software tools. 
+f.	Security information and event management (SIEM) tools
+i.	Collect data from the logs and the events in the system, analyze them in real time, and identify any security issues.
+ii.	Rank the events they uncover based on criticality that helps a security professional know where to start. 
+g.	Security orchestration, automation, and response (SOAR)
+i.	Aggregate security data from multiple sources not just the log and event data. 
+ii.	Automation refers to the automatic handling of security operational tasks.
+iii.	Orchestrating is the method of connecting security tools and integrating them, even if they are from different security systems. 
+h.	Social engineering toolkit (SET)
+i.	Combat social engineering
+ii.	Kali Linux – a big set source.
+i.	Many tools are available through open source; that means they are free or at low cost. The code is made freely available and may be redistributed or modified because it’s part of the open-source community. 
+4.	Beware that open-source code may be free, but it might not be secure. 
+a.	Be sure to investigate the source and the security of the tools that you use, particularly if they are open source.
+b.	Be sure to know that those tools are secure for your environment. 
+c.	Avoid using flawed security software that may introduce a cyber vulnerability. 
+Cyber Tools
+As a seasoned penetration tester, I use a variety of penetration testing tools found within Kali Linux and several others discovered through github or the apt/nala repository. Typically speaking package managers like APT is pretty old and archaic, slow, and its mirror system is dubious at best these days. That is what got me into cybersecurity-protecting myself online and ensuring I have the right toolset to do so. After learning so much from this bootcamp I’ve created my own home lab equipped with PFSense firewalls, IoT segmentation, antivirus protection, SIEM tools like Splunk, and I’m now incorporating SOAR as well. If it weren’t for this course I wouldn’t have been able to take my home lab to the enterprise level and it shows that I’m ready for a cybersecurity role.
+Certifications and Future Education
+1.	Certifications and education can help equip you with essential skills, as well as set you up for success. There are several industry leading certifications to explore and evaluate, depending on your professional goals and objectives. Examples include CompTIA+, ISACA Cyber Security Fundamentals, and ISC2 Systems Security Certified Practitioner. There are also some more advanced certifications, such as the OSCP and CEH that are options for security practitioners and professional penetration testers alike. 
+2.	Industry-recognized certifications:
+a.	Validate your skills and tell the industry that you’ve taken the time to learn the industry standards, terms, and skills. 
+b.	Are attractive to recruiters who see the certifications that you’ve earned on your resume or in your cover letter.
+c.	Might lead to higher salaries, as many organizations pay more to those with such certifications. 
+3.	Examples of industry-recognized certifications:
+a.	OSCP
+b.	CEH
+4.	Entry-Level Cybersecurity Certifications:
+a.	CompTIA Security+
+i.	Vendor-neutral and approved by the US Department of Defense
+ii.	Certifies a good grounding in basic security skills and knowledge, such as:
+1.	Threats and vulnerabilities
+2.	Access controls
+3.	Cryptography
+4.	Risk management
+b.	ISACA CSX Cybersecurity Fundamentals Certificate
+i.	Offers cybersecurity certificates that are widely recognized.
+ii.	Covers cybersecurity fundamentals and gives you a chance to demonstrate that you know cybersecurity concepts, principles, and terms. 
+c.	Systems Security Certified Practitioner (SSCP)
+i.	Certification for security administrators.
+ii.	Vendor-neutral and globally recognized.
+iii.	Recommended certificate for someone who is more hands-on with technical skills and practical knowledge. 
+d.	CISSP
+i.	To get this certification, you must have worked in the cyber field for a few years and pass an exam. This certification also meets the US Department of Defense directive. 
+ii.	Covers eight knowledge domains:
+1.	Security and risk management
+2.	Security architecture and engineering
+3.	Identity and access management
+4.	Security operations
+5.	Asset security
+6.	Communication and network security
+7.	Security assessment and testing
+8.	Software development security
+Next Steps and Entry Level Jobs
+1.	There are several types of cybersecurity jobs and available positions that may appeal to you. Some will be highly technical, some may require management skills, and others may require relevant complementary skills (auditing, consulting, etc.). 
+2.	IAM Analyst:
+a.	You will be working with users and cyber professionals to help ensure that only the right individuals and systems have access to the systems and data in the organization.
+3.	SOC Analyst:
+a.	You will:
+i.	Analyze logs or watch dashboards designed to collect operational data. 
+ii.	Use tools that would identify suspicious activities.
+iii.	Have protocols and procedures to follow if suspicious activities are found.
+4.	IR Analyst:
+a.	You will set up alerts around the systems that inform you when something is different. 
+5.	Pen tester apprentice:
+a.	Work with senior or experienced pen testers.
+b.	Be a part of the pen testing team. 
+6.	Social Engineering Analyst:
+a.	Find ways to help your colleagues notice and be more secure, as it is a high priority for every security group. 
+b.	Run phishing tests of your employees to teach them what to look for and to identify potentially weak links.
+c.	Be a part of a team that analyzes the results and educates colleagues who habitually fail them.
+7.	Security Policy Analyst:
+a.	Examine security policies and match them with controls.
+b.	Help the organization make sure they have the controls in place to meet their goals. 
+Soft Skills, Tech Skills, and Research
+1.	Having a technical background is not an essential requirement, but it can be useful depending on the role you may be interested in pursuing. For instance, if you’re interested in developing computer code and engineering computer systems, it is helpful to understand how the system components interact with each other and how the internal elements work. Conversely, there are a plethora of roles that may not require such an extensive technical background and have different requirements. General skills, such as soft skills, are ubiquitous to both technical and non-technical roles, and they can prove to be highly beneficial for you in a team environment or even as an individual contributor. 
+2.	Many roles need a heavy emphasis on soft skills, such as:
+a.	Critical thinking
+b.	Curiosity
+c.	Problem solving
+d.	Attention to detail
+e.	Collaboration and teamwork
+f.	Written communication
+g.	Oral communication
+h.	Self-learner
+i.	Innovative thinking
+j.	Time/project management
+k.	Customer relationship management
+3.	If you happen to love puzzles and putting together clues to solve a problem, cybersecurity has a role for you. 
+4.	Technical skills:
+a.	Cybersecurity frameworks
+b.	Risk assessment
+c.	Tools to detect/identify issues
+d.	Cloud technologies
+e.	Vulnerability assessment
+f.	Operating systems
+g.	Incident response
+h.	Regulatory/Legal requirements
+i.	Networking/Telecom
+5.	Takeaways:
+a.	Knowledge of all technical skills needed to get started in cybersecurity are covered in this course.
+b.	Make sure to sharpen your professional or softer skills. 
+c.	Make sure you are strong in these skills and then demonstrate that to potential employers. 
